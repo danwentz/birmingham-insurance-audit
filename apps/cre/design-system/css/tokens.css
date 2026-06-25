@@ -1,0 +1,91 @@
+/* =====================================================================
+   ACREInsure — Design Tokens (source of truth)
+   Never hard-code a color, size, or space. Reference these properties.
+   ===================================================================== */
+
+:root {
+  /* ---- Base color tokens ---- */
+  --color-midnight: #1c2035; /* Primary bg — deep navy-charcoal */
+  --color-obsidian: #10131e; /* Deepest anchor — nav, footers, body type */
+  --color-gold: #bfa46a; /* Accent — CTAs, dividers, icon highlights */
+  --color-gold-dark: #a8915a; /* Accent hover (no glow, just deeper gold) */
+  --color-champagne: #ede2c8; /* Warm accent — card borders, warm type */
+  --color-ivory: #f8f5ee; /* Body background — breathing room */
+  --color-slate: #7a8494; /* Supporting — body text on dark, captions */
+  --color-white: #ffffff; /* High-contrast surfaces */
+
+  /* ---- Semantic color aliases ---- */
+  --bg-primary: var(--color-midnight);
+  --bg-deep: var(--color-obsidian);
+  --bg-light: var(--color-ivory);
+  --bg-surface: var(--color-white);
+
+  --text-primary-dark: var(--color-obsidian);
+  --text-primary-light: var(--color-champagne);
+  --text-body-dark: var(--color-slate);
+  --text-accent: var(--color-gold);
+
+  --border-accent: var(--color-gold);
+  --border-subtle: rgba(191, 164, 106, 0.2);
+  --border-divider: rgba(191, 164, 106, 0.25);
+  --border-dark: rgba(255, 255, 255, 0.07);
+
+  /* ---- Typography ---- */
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-mono: "DM Mono", "Courier New", monospace;
+
+  --text-xs: 0.6875rem; /* 11px — labels, caps, eyebrows */
+  --text-sm: 0.8125rem; /* 13px — captions, meta */
+  --text-base: 0.9375rem; /* 15px — body copy */
+  --text-md: 1.0625rem; /* 17px — lead text */
+  --text-lg: 1.25rem; /* 20px — subheadings */
+  --text-xl: 1.5rem; /* 24px — section headings */
+  --text-2xl: 2rem; /* 32px — page headings */
+  --text-3xl: 2.75rem; /* 44px — hero headings */
+  --text-4xl: 3.5rem; /* 56px — hero display */
+
+  --leading-tight: 1.2;
+  --leading-snug: 1.35;
+  --leading-normal: 1.6;
+  --leading-loose: 1.75;
+
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.06em;
+  --tracking-wider: 0.12em;
+  --tracking-widest: 0.18em;
+
+  /* ---- Spacing ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* ---- Border & shape ---- */
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-full: 9999px;
+
+  --border-width-thin: 1px;
+  --border-width-accent: 2px;
+  --border-width-rule: 3px;
+
+  --shadow-card: 0 1px 4px rgba(28, 32, 53, 0.08);
+  --shadow-elevated: 0 6px 24px rgba(28, 32, 53, 0.12);
+  --shadow-deep: 0 12px 40px rgba(16, 19, 30, 0.2);
+
+  /* ---- Layout ---- */
+  --container-max: 1200px;
+  --container-narrow: 760px;
+}

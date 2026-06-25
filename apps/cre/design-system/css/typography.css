@@ -1,0 +1,114 @@
+/* =====================================================================
+   ACREInsure — Typography
+   Font loading + base reset + heading hierarchy + text utilities.
+   @import must stay first.
+   ===================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap");
+
+/* ---- Minimal reset (no framework bleed) ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--text-primary-dark);
+  background-color: var(--bg-light);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---- Headings: Playfair Display ---- */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 var(--space-4);
+  color: inherit;
+}
+
+h1 {
+  font-size: var(--text-3xl);
+}
+
+h2 {
+  font-size: var(--text-2xl);
+}
+
+h3 {
+  font-size: var(--text-xl);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: var(--text-4xl);
+  }
+}
+
+p {
+  margin: 0 0 var(--space-4);
+  line-height: var(--leading-normal);
+}
+
+a {
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
+/* ---- Lead / body helpers ---- */
+.lead {
+  font-size: var(--text-md);
+  line-height: var(--leading-loose);
+  color: var(--text-body-dark);
+}
+
+.caption {
+  font-size: var(--text-sm);
+  color: var(--text-body-dark);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-normal);
+}
+
+/* ---- Color helpers ---- */
+.text-on-dark {
+  color: var(--text-primary-light);
+}
+
+.text-body-dark {
+  color: var(--text-body-dark);
+}
+
+.text-accent {
+  color: var(--text-accent);
+}

@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ACREInsure — Design System</title>
+    <meta
+      name="description"
+      content="ACREInsure design system — tokens, typography, and components. Institutional-grade coverage for serious Alabama portfolios."
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- ============================ NAV ============================ -->
+    <nav class="site-nav">
+      <div class="container site-nav__inner">
+        <span class="site-nav__brand"><b>ACRE</b>Insure</span>
+        <ul class="site-nav__links">
+          <li><a href="#" aria-current="page">Coverage</a></li>
+          <li><a href="#">Property Types</a></li>
+          <li><a href="#">Markets</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Request a Quote</a></li>
+        </ul>
+        <button class="site-nav__toggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ============================ HERO ============================ -->
+    <header class="hero">
+      <span class="hero__watermark" aria-hidden="true">INSURE</span>
+      <div class="container hero__inner">
+        <span class="eyebrow eyebrow--bordered"
+          >Institutional-grade coverage for serious Alabama portfolios</span
+        >
+        <h1 class="hero__title">
+          Commercial Real Estate Insurance Built for Property Owners Who Mean
+          Business
+        </h1>
+        <p class="hero__lead">
+          Admitted and E&amp;S placements for Alabama hotels, multifamily,
+          self-storage, and mixed-use portfolios with $5M+ TIV.
+        </p>
+        <div class="hero__actions">
+          <a href="#" class="btn btn-primary">Request a Quote</a>
+          <a href="#" class="btn btn-secondary">See Coverage Options</a>
+        </div>
+      </div>
+      <div class="container hero__base">
+        <hr class="divider-fade" />
+      </div>
+    </header>
+
+    <!-- ========================== STATS BAR ========================= -->
+    <section class="stats-bar">
+      <div class="container">
+        <div class="stats-bar__grid">
+          <div class="stat">
+            <div class="stat__number">$500M+</div>
+            <div class="stat__label">TIV Placed</div>
+          </div>
+          <div class="stat">
+            <div class="stat__number">Admitted + E&amp;S</div>
+            <div class="stat__label">Markets</div>
+          </div>
+          <div class="stat">
+            <div class="stat__number">Hotels · Multifamily · Storage</div>
+            <div class="stat__label">Specialties</div>
+          </div>
+          <div class="stat">
+            <div class="stat__number">Birmingham</div>
+            <div class="stat__label">Alabama</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROPERTY TYPES ========================= -->
+    <section class="section section--light">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Asset Classes</span>
+          <h2>Coverage tuned to how you actually own real estate</h2>
+        </div>
+        <div class="grid grid--3 grid--5">
+          <article class="card-property">
+            <div class="card-property__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M15 9h.01M9 13h.01M15 13h.01M10 21v-4h4v4"/></svg>
+            </div>
+            <h3 class="card-property__title">Hotels &amp; Hospitality</h3>
+            <p class="card-property__desc">
+              Flagged and independent properties, coastal wind, and brand-required limits.
+            </p>
+          </article>
+          <article class="card-property">
+            <div class="card-property__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16M10 8h.01M14 8h.01M10 12h.01M14 12h.01M10 16h.01M14 16h.01"/></svg>
+            </div>
+            <h3 class="card-property__title">Multifamily</h3>
+            <p class="card-property__desc">
+              Habitational property, liability, and umbrella for apartment portfolios.
+            </p>
+          </article>
+          <article class="card-property">
+            <div class="card-property__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h18v12H3zM3 8l3-4h12l3 4M8 12h.01M12 12h.01M16 12h.01M8 16h8"/></svg>
+            </div>
+            <h3 class="card-property__title">Self-Storage</h3>
+            <p class="card-property__desc">
+              Single-asset and portfolio facilities, including climate-controlled.
+            </p>
+          </article>
+          <article class="card-property">
+            <div class="card-property__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M4 21V9l8-5 8 5v12M4 13h16M9 21v-5h6v5"/></svg>
+            </div>
+            <h3 class="card-property__title">Strip Centers</h3>
+            <p class="card-property__desc">
+              Multi-tenant retail with premises liability and COI tracking.
+            </p>
+          </article>
+          <article class="card-property">
+            <div class="card-property__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21V8l9-4 9 4v13M3 21h18M8 21v-6h8v6M7 11h.01M11 11h.01M15 11h.01"/></svg>
+            </div>
+            <h3 class="card-property__title">Industrial</h3>
+            <p class="card-property__desc">
+              Warehouse, distribution, and flex with high-TIV property capacity.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= STYLE GUIDE ======================== -->
+    <main class="section section--light" style="padding-top: 0">
+      <div class="container">
+        <hr class="section-divider" />
+        <div class="section-head" style="margin-top: var(--space-16)">
+          <span class="eyebrow">Reference</span>
+          <h2>The Design System</h2>
+          <p class="lead">
+            Every value below is a token. Colors, type, and spacing reference
+            CSS custom properties — never a hard-coded value.
+          </p>
+        </div>
+
+        <!-- COLOR -->
+        <div class="guide-block">
+          <span class="eyebrow eyebrow--bordered">Color</span>
+          <div class="grid grid--2 grid--4" style="margin-top: var(--space-6)">
+            <div class="swatch">
+              <div class="swatch__chip" style="background: var(--color-midnight)"></div>
+              <div class="swatch__meta"><div class="swatch__name">Midnight</div><div class="swatch__token">--color-midnight · #1C2035</div></div>
+            </div>
+            <div class="swatch">
+              <div class="swatch__chip" style="background: var(--color-obsidian)"></div>
+              <div class="swatch__meta"><div class="swatch__name">Obsidian</div><div class="swatch__token">--color-obsidian · #10131E</div></div>
+            </div>
+            <div class="swatch">
+              <div class="swatch__chip" style="background: var(--color-gold)"></div>
+              <div class="swatch__meta"><div class="swatch__name">Gold</div><div class="swatch__token">--color-gold · #BFA46A</div></div>
+            </div>
+            <div class="swatch">
+              <div class="swatch__chip" style="background: var(--color-champagne)"></div>
+              <div class="swatch__meta"><div class="swatch__name">Champagne</div><div class="swatch__token">--color-champagne · #EDE2C8</div></div>
+            </div>
+            <div class="swatch">
+              <div class="swatch__chip" style="background: var(--color-ivory)"></div>
+              <div class="swatch__meta"><div class="swatch__name">Ivory</div><div class="swatch__token">--color-ivory · #F8F5EE</div></div>
+            </div>
+            <div class="swatch">
+              <div class="swatch__chip" style="background: var(--color-slate)"></div>
+              <div class="swatch__meta"><div class="swatch__name">Slate</div><div class="swatch__token">--color-slate · #7A8494</div></div>
+            </div>
+            <div class="swatch">
+              <div class="swatch__chip" style="background: var(--color-gold-dark)"></div>
+              <div class="swatch__meta"><div class="swatch__name">Gold (hover)</div><div class="swatch__token">--color-gold-dark · #A8915A</div></div>
+            </div>
+            <div class="swatch">
+              <div class="swatch__chip" style="background: var(--color-white)"></div>
+              <div class="swatch__meta"><div class="swatch__name">White</div><div class="swatch__token">--color-white · #FFFFFF</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TYPE -->
+        <div class="guide-block">
+          <span class="eyebrow eyebrow--bordered">Typography</span>
+          <div style="margin-top: var(--space-6)">
+            <div class="specimen">
+              <div class="specimen__meta">Display · Playfair Display 700 · --text-4xl</div>
+              <div style="font-family: var(--font-display); font-weight: 700; font-size: var(--text-4xl); letter-spacing: var(--tracking-tight); line-height: var(--leading-tight)">Serious money, quietly communicated</div>
+            </div>
+            <div class="specimen">
+              <div class="specimen__meta">Hero · Playfair Display 700 · --text-3xl</div>
+              <div style="font-family: var(--font-display); font-weight: 700; font-size: var(--text-3xl); letter-spacing: var(--tracking-tight)">Coverage built for portfolios</div>
+            </div>
+            <div class="specimen">
+              <div class="specimen__meta">Section · Playfair Display 700 · --text-2xl</div>
+              <div style="font-family: var(--font-display); font-weight: 700; font-size: var(--text-2xl)">Admitted &amp; E&amp;S placements</div>
+            </div>
+            <div class="specimen">
+              <div class="specimen__meta">Subhead / card title · Playfair Display 600 · --text-lg</div>
+              <div style="font-family: var(--font-display); font-weight: 600; font-size: var(--text-lg)">Specialty property &amp; coastal wind</div>
+            </div>
+            <div class="specimen">
+              <div class="specimen__meta">Lead · DM Sans 400 · --text-md</div>
+              <div class="lead" style="margin: 0">Admitted and E&amp;S placements for Alabama hotels, multifamily, self-storage, and mixed-use portfolios.</div>
+            </div>
+            <div class="specimen">
+              <div class="specimen__meta">Body · DM Sans 400 · --text-base</div>
+              <div>We place coverage with the markets that actually want your risk — and structure it to satisfy lender and brand requirements without leaving gaps.</div>
+            </div>
+            <div class="specimen">
+              <div class="specimen__meta">Eyebrow · DM Sans 600 · --text-xs · widest tracking</div>
+              <span class="eyebrow">Institutional Authority</span>
+            </div>
+            <div class="specimen">
+              <div class="specimen__meta">Mono / data · DM Mono · --text-sm</div>
+              <span class="mono">TIV $12,400,000 · WIND 5% · X-WIND DED</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="guide-block">
+          <span class="eyebrow eyebrow--bordered">Buttons</span>
+          <div class="cluster" style="margin-top: var(--space-6)">
+            <a href="#" class="btn btn-primary">Request a Quote</a>
+            <a href="#" class="btn btn-ghost">See coverage options</a>
+          </div>
+          <div class="cluster" style="margin-top: var(--space-5); background: var(--color-midnight); padding: var(--space-6); border-radius: var(--radius-md)">
+            <a href="#" class="btn btn-primary">Request a Quote</a>
+            <a href="#" class="btn btn-secondary">See Coverage Options</a>
+            <a href="#" class="btn btn-ghost">Learn more</a>
+          </div>
+        </div>
+
+        <!-- CARDS -->
+        <div class="guide-block">
+          <span class="eyebrow eyebrow--bordered">Cards</span>
+          <div class="grid grid--3" style="margin-top: var(--space-6)">
+            <article class="card-property">
+              <div class="card-property__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16M10 8h.01M14 8h.01M10 12h.01M14 12h.01"/></svg>
+              </div>
+              <h3 class="card-property__title">.card-property</h3>
+              <p class="card-property__desc">Ivory surface, gold top rule, icon + title + description.</p>
+            </article>
+            <div class="card-stat">
+              <div class="card-stat__number">$500M+</div>
+              <div class="card-stat__label">.card-stat — TIV placed</div>
+            </div>
+            <div class="card-testimonial">
+              <p class="card-testimonial__quote">“They placed a coastal hotel three other brokers couldn’t.”</p>
+              <div class="card-testimonial__attr">.card-testimonial — Owner, Gulf Shores</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORM -->
+        <div class="guide-block">
+          <span class="eyebrow eyebrow--bordered">Quote Request Form</span>
+          <div class="split" style="margin-top: var(--space-6)">
+            <div>
+              <p class="lead">
+                Bottom-border inputs, gold focus state, a gold top rule, and an
+                elevated white surface. Restrained, not retail.
+              </p>
+            </div>
+            <form class="quote-form" onsubmit="return false">
+              <h3 class="quote-form__title">Request a Quote</h3>
+              <div class="field-row">
+                <div class="field">
+                  <label for="f-name">Name</label>
+                  <input id="f-name" type="text" placeholder="Full name" />
+                </div>
+                <div class="field">
+                  <label for="f-co">Company</label>
+                  <input id="f-co" type="text" placeholder="Ownership entity" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="f-type">Property Type</label>
+                <select id="f-type">
+                  <option>Hotel / Hospitality</option>
+                  <option>Multifamily</option>
+                  <option>Self-Storage</option>
+                  <option>Strip Center / Retail</option>
+                  <option>Industrial</option>
+                  <option>Mixed-Use Portfolio</option>
+                </select>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="f-tiv">Estimated TIV</label>
+                  <input id="f-tiv" type="text" placeholder="$5,000,000+" />
+                </div>
+                <div class="field">
+                  <label for="f-contact">Phone / Email</label>
+                  <input id="f-contact" type="text" placeholder="Best way to reach you" />
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Request a Quote</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ============================ FOOTER ========================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div>
+            <p class="site-footer__brand-name"><b>ACRE</b>Insure</p>
+            <p class="site-footer__tag">
+              Institutional-grade coverage for serious Alabama portfolios.
+            </p>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col__title">Services</p>
+            <ul>
+              <li><a href="#">Property &amp; Coastal Wind</a></li>
+              <li><a href="#">General Liability</a></li>
+              <li><a href="#">Umbrella / Excess</a></li>
+              <li><a href="#">Program Review</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col__title">Markets</p>
+            <ul>
+              <li><a href="#">Admitted</a></li>
+              <li><a href="#">Excess &amp; Surplus (E&amp;S)</a></li>
+              <li><a href="#">Specialty Property</a></li>
+              <li><a href="#">Hospitality</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col__title">Contact</p>
+            <ul>
+              <li><a href="#">Dan Wentz</a></li>
+              <li><a href="#">Birmingham, Alabama</a></li>
+              <li><a href="#">Request a Quote</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <div class="container site-footer__bottom-inner">
+          <span>© ACREInsure. All rights reserved.</span>
+          <span>Insurance produced through Dan Wentz, USI Insurance Services.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+/* =====================================================================
+   ACREInsure — Layout
+   Containers, section wrappers, and the responsive grid system.
+   Mobile-first: single column by default, grid at breakpoints.
+   ===================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+.container--narrow {
+  max-width: var(--container-narrow);
+}
+
+/* ---- Section wrappers ---- */
+.section {
+  padding-block: var(--space-20);
+}
+
+.section--tight {
+  padding-block: var(--space-12);
+}
+
+.section--light {
+  background: var(--bg-light);
+  color: var(--text-primary-dark);
+}
+
+.section--primary {
+  background: var(--bg-primary);
+  color: var(--text-primary-light);
+}
+
+.section--deep {
+  background: var(--bg-deep);
+  color: var(--text-primary-light);
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-block: var(--space-24);
+  }
+}
+
+/* ---- Section header (eyebrow + heading) ---- */
+.section-head {
+  max-width: var(--container-narrow);
+  margin-bottom: var(--space-12);
+}
+
+.section-head .eyebrow {
+  margin-bottom: var(--space-4);
+}
+
+/* ---- Grid ---- */
+.grid {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .grid--5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* ---- Two-column split (content + form/aside) ---- */
+.split {
+  display: grid;
+  gap: var(--space-12);
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .split {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--space-16);
+  }
+}
+
+/* ---- Spacing helpers ---- */
+.stack > * + * {
+  margin-top: var(--space-4);
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+}
