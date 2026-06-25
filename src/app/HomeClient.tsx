@@ -17,9 +17,10 @@ import {
   PHONE_DISPLAY,
   PHONE_HREF,
   YEARS_EXPERIENCE,
-  SERVICE_AREAS,
 } from "@/lib/site";
 import { LeadForm, trackCall } from "@/components/LeadForm";
+import Link from "next/link";
+import { CITIES } from "@/lib/cities";
 
 export default function HomeClient() {
   const [isOpen, setIsOpen] = useState(false);
@@ -315,25 +316,26 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* SERVICE AREA (SEO) */}
+      {/* AREAS WE SERVE (SEO + internal links) */}
       <section className="py-12 px-4 bg-slate-50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-gray-900">
-            Helping Business Owners Across Central & North Alabama
+            Insurance Audit Help Across Alabama
           </h2>
           <p className="mt-3 text-gray-600">
-            Local guidance on commercial insurance and premium audits for businesses in:
+            Local guidance on commercial insurance and premium audits. Find help in your area:
           </p>
           <div className="mt-5 flex flex-wrap justify-center gap-2">
-            {SERVICE_AREAS.map((city) => (
-              <span
-                key={city}
-                className="text-sm bg-white border border-gray-200 text-gray-700 px-3 py-1 rounded-full"
+            {CITIES.map((city) => (
+              <Link
+                key={city.slug}
+                href={`/${city.slug}`}
+                className="text-sm bg-white border border-gray-200 text-gray-700 px-3 py-1 rounded-full hover:border-[#2A8E9E] hover:text-[#1f6d79] transition"
               >
-                {city}
-              </span>
+                {city.name}
+              </Link>
             ))}
-            <span className="text-sm bg-white border border-gray-200 text-gray-700 px-3 py-1 rounded-full">
+            <span className="text-sm bg-white border border-gray-200 text-gray-500 px-3 py-1 rounded-full">
               & surrounding areas
             </span>
           </div>
