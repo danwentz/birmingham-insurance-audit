@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  /* Modern light premium palette */
+  --color-paper: #f7f5ef; /* ivory background */
+  --color-paper-card: #ffffff;
+  --color-paper-tint: #efece3; /* subtle banded section */
+
+  --color-ink: #0f1e2e; /* deep navy text / headlines */
+  --color-ink-soft: #41505f; /* secondary text */
+  --color-ink-muted: #6b7785;
+
+  --color-accent: #1b5e4a; /* forest green */
+  --color-accent-dark: #15493a;
+  --color-accent-soft: #e7efe9;
+
+  --color-line: #e3ded3; /* hairline borders on ivory */
+
+  --font-sans: var(--font-jakarta);
+  --font-serif: var(--font-fraunces);
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
