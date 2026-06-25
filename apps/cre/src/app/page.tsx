@@ -1,26 +1,42 @@
 import Link from "next/link";
-import { ArrowRight, Building2, ShieldCheck, Layers, Waves, HardHat, CheckCircle2 } from "lucide-react";
+import {
+  ArrowRight,
+  Building2,
+  ShieldCheck,
+  Layers,
+  Waves,
+  HardHat,
+  Store,
+  Warehouse,
+  Hotel,
+  GraduationCap,
+  LineChart,
+  ClipboardCheck,
+  CheckCircle2,
+} from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/chrome";
 import { ContactSection } from "@/components/ContactSection";
 import { LeadForm } from "@/components/LeadForm";
-import { PROGRAMS } from "@/lib/programs";
+import { programsByCategory } from "@/lib/programs";
 import { BRAND_NAME, DOMAIN, PHONE_E164, PREMIUM_FLOOR, YEARS_EXPERIENCE } from "@/lib/site";
 
-const PROGRAM_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
+const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   "multifamily-apartment-insurance": Building2,
   "real-estate-portfolio-insurance": Layers,
   "catastrophe-coastal-property-insurance": Waves,
   "builders-risk-ocip": HardHat,
+  "office-building-insurance": Building2,
+  "retail-shopping-center-insurance": Store,
+  "industrial-warehouse-insurance": Warehouse,
+  "hospitality-hotel-insurance": Hotel,
+  "student-senior-housing-insurance": GraduationCap,
+  "real-estate-risk-management": LineChart,
+  "insurance-program-review": ClipboardCheck,
 };
 
-const ASSET_CLASSES = [
-  "Multifamily & Apartments",
-  "Office",
-  "Retail & Shopping Centers",
-  "Industrial & Warehouse",
-  "Hospitality & Hotels",
-  "Mixed-Use & Development",
-];
+const SPECIALTY = programsByCategory("program");
+const ASSETS = programsByCategory("asset");
+const ADVISORY = programsByCategory("advisory");
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -102,8 +118,8 @@ export default function Home() {
               The hard-to-place classes where a specialist broker changes the outcome.
             </p>
             <div className="mt-10 grid gap-5 md:grid-cols-2">
-              {PROGRAMS.map((p) => {
-                const Icon = PROGRAM_ICONS[p.slug] ?? Building2;
+              {SPECIALTY.map((p) => {
+                const Icon = ICONS[p.slug] ?? Building2;
                 return (
                   <Link
                     key={p.slug}
@@ -134,15 +150,54 @@ export default function Home() {
               We work across the asset classes that carry real premium — owners, operators, funds,
               and developers.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              {ASSET_CLASSES.map((a) => (
-                <span
-                  key={a}
-                  className="rounded-full border border-line bg-paper-card px-4 py-2 text-sm font-medium text-ink-soft"
-                >
-                  {a}
-                </span>
-              ))}
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {ASSETS.map((p) => {
+                const Icon = ICONS[p.slug] ?? Building2;
+                return (
+                  <Link
+                    key={p.slug}
+                    href={`/${p.slug}`}
+                    className="group flex items-center gap-3 rounded-xl border border-line bg-paper-card p-5 transition hover:border-accent hover:shadow-sm"
+                  >
+                    <Icon className="h-6 w-6 shrink-0 text-accent" />
+                    <span className="font-semibold text-ink">{p.shortName}</span>
+                    <ArrowRight className="ml-auto h-4 w-4 text-ink-muted transition group-hover:translate-x-1 group-hover:text-accent" />
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* ADVISORY */}
+        <section className="border-t border-line bg-paper-card px-5 py-20">
+          <div className="mx-auto max-w-6xl">
+            <h2 className="font-serif text-3xl font-semibold text-ink sm:text-4xl">
+              Advisory, not just placement
+            </h2>
+            <p className="mt-3 max-w-2xl text-ink-soft">
+              The strategic work that lowers your total cost of risk — for owners and CFOs who want
+              more than a renewal quote.
+            </p>
+            <div className="mt-8 grid gap-5 md:grid-cols-2">
+              {ADVISORY.map((p) => {
+                const Icon = ICONS[p.slug] ?? ClipboardCheck;
+                return (
+                  <Link
+                    key={p.slug}
+                    href={`/${p.slug}`}
+                    className="group rounded-xl border border-line bg-paper p-6 transition hover:border-accent hover:shadow-md"
+                  >
+                    <Icon className="h-7 w-7 text-accent" />
+                    <h3 className="mt-4 font-serif text-xl font-semibold text-ink">{p.name}</h3>
+                    <p className="mt-2 text-ink-soft">{p.hook}</p>
+                    <span className="mt-4 inline-flex items-center gap-1 font-semibold text-accent">
+                      Learn more{" "}
+                      <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+                    </span>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>

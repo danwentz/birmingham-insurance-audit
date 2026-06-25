@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Phone } from "lucide-react";
 import { BRAND_NAME, PHONE_DISPLAY, PHONE_HREF } from "@/lib/site";
-import { PROGRAMS } from "@/lib/programs";
+import { programsByCategory } from "@/lib/programs";
 import { trackCall } from "@/components/LeadForm";
 
 export function SiteHeader() {
@@ -34,11 +34,34 @@ export function SiteHeader() {
   );
 }
 
+function FooterColumn({
+  title,
+  items,
+}: {
+  title: string;
+  items: { slug: string; shortName: string }[];
+}) {
+  return (
+    <div>
+      <p className="text-sm font-semibold uppercase tracking-wide text-ink-muted">{title}</p>
+      <ul className="mt-3 space-y-2 text-sm">
+        {items.map((p) => (
+          <li key={p.slug}>
+            <Link href={`/${p.slug}`} className="text-ink-soft hover:text-accent">
+              {p.shortName}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 export function SiteFooter() {
   return (
     <footer className="border-t border-line bg-paper-tint">
       <div className="mx-auto max-w-6xl px-5 py-12">
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <p className="font-serif text-lg font-semibold text-ink">{BRAND_NAME}</p>
             <p className="mt-2 text-sm text-ink-soft">
@@ -52,34 +75,13 @@ export function SiteFooter() {
             >
               <Phone className="h-4 w-4" /> {PHONE_DISPLAY}
             </a>
+            <a href="#contact" className="mt-3 block text-sm font-semibold text-accent hover:underline">
+              Request a renewal review →
+            </a>
           </div>
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-ink-muted">Programs</p>
-            <ul className="mt-3 space-y-2 text-sm">
-              {PROGRAMS.map((p) => (
-                <li key={p.slug}>
-                  <Link href={`/${p.slug}`} className="text-ink-soft hover:text-accent">
-                    {p.shortName}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-ink-muted">Get started</p>
-            <ul className="mt-3 space-y-2 text-sm">
-              <li>
-                <a href="#contact" className="text-ink-soft hover:text-accent">
-                  Request a renewal review
-                </a>
-              </li>
-              <li>
-                <Link href="/" className="text-ink-soft hover:text-accent">
-                  Home
-                </Link>
-              </li>
-            </ul>
-          </div>
+          <FooterColumn title="Specialty programs" items={programsByCategory("program")} />
+          <FooterColumn title="By asset class" items={programsByCategory("asset")} />
+          <FooterColumn title="Advisory" items={programsByCategory("advisory")} />
         </div>
         <div className="mt-10 border-t border-line pt-6 text-xs text-ink-muted">
           &copy; {new Date().getFullYear()} {BRAND_NAME}. All rights reserved. Coverage is subject to

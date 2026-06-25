@@ -44,7 +44,10 @@ export default async function ProgramPage({
   const program = getProgram(slug);
   if (!program) notFound();
 
-  const others = PROGRAMS.filter((p) => p.slug !== program.slug);
+  const others = [
+    ...PROGRAMS.filter((p) => p.slug !== program.slug && p.category === program.category),
+    ...PROGRAMS.filter((p) => p.slug !== program.slug && p.category !== program.category),
+  ].slice(0, 3);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -121,7 +124,9 @@ export default async function ProgramPage({
         {/* COVERAGES */}
         <section className="border-t border-line bg-paper-tint px-5 py-16">
           <div className="mx-auto max-w-5xl">
-            <h2 className="font-serif text-2xl font-semibold text-ink sm:text-3xl">What we structure</h2>
+            <h2 className="font-serif text-2xl font-semibold text-ink sm:text-3xl">
+              {program.coveragesTitle ?? "What we structure"}
+            </h2>
             <div className="mt-8 grid gap-6 md:grid-cols-2">
               {program.coverages.map((c) => (
                 <div key={c.title}>
