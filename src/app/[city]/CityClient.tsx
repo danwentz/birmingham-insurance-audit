@@ -214,7 +214,7 @@ export default function CityClient({ city }: { city: City }) {
       <section className="py-12 px-4 bg-slate-50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-gray-900">
-            Serving {city.name} &amp; Surrounding {city.region}
+            Serving {city.name} &amp; the Surrounding Area
           </h2>
           <p className="mt-3 text-gray-600">
             Local help with commercial insurance and premium audits for businesses in:
@@ -259,8 +259,8 @@ export default function CityClient({ city }: { city: City }) {
                 Do you help businesses in {city.name}?
               </summary>
               <p className="mt-2 text-gray-600">
-                Yes. We work with business owners in {city.name}, {city.county}, and the
-                surrounding {city.region} on workers&apos; compensation and general
+                Yes. We work with business owners in {city.name}, {city.county}, and
+                across {city.region} on workers&apos; compensation and general
                 liability premium audits — reviewing, disputing, and reducing inflated
                 bills.
               </p>

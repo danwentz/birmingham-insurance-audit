@@ -80,7 +80,7 @@ export default async function CityPage({
             name: `Do you help businesses in ${city.name}?`,
             acceptedAnswer: {
               "@type": "Answer",
-              text: `Yes. We work with business owners in ${city.name}, ${city.county}, and the surrounding ${city.region} on workers' compensation and general liability premium audits — reviewing, disputing, and reducing inflated bills.`,
+              text: `Yes. We work with business owners in ${city.name}, ${city.county}, and across ${city.region} on workers' compensation and general liability premium audits — reviewing, disputing, and reducing inflated bills.`,
             },
           },
           {
