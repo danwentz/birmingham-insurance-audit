@@ -1,16 +1,14 @@
 // Shared CRE-site constants. Edit brand / phone / domain / GA here only.
 
-// TODO: replace with the real brand name for the CRE site
-export const BRAND_NAME = "Meridian Commercial Real Estate Insurance";
-export const BRAND_SHORT = "Meridian CRE Insurance";
+export const BRAND_NAME = "Alabama Commercial Real Estate Insurance";
+export const BRAND_SHORT = "ACREInsure";
 
 // Same advisor/number as the audit site by default — swap if you use a separate line.
 export const PHONE_DISPLAY = "(205) 999-4884";
 export const PHONE_HREF = "tel:+12059994884";
 export const PHONE_E164 = "+1-205-999-4884";
 
-// TODO: replace with the real production domain for the CRE site
-export const DOMAIN = "https://yourcredomain.com";
+export const DOMAIN = "https://acreinsure.com";
 
 // TODO: replace with the CRE site's own GA4 measurement ID (keep separate from the audit site)
 export const GA_ID = "G-XXXXXXXXXX";

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Phone } from "lucide-react";
-import { BRAND_SHORT, BRAND_NAME, PHONE_DISPLAY, PHONE_HREF } from "@/lib/site";
+import { BRAND_NAME, PHONE_DISPLAY, PHONE_HREF } from "@/lib/site";
 import { PROGRAMS } from "@/lib/programs";
 import { trackCall } from "@/components/LeadForm";
 
@@ -10,8 +10,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-4">
-        <Link href="/" className="font-serif text-lg font-semibold tracking-tight text-ink">
-          {BRAND_SHORT}
+        <Link href="/" className="text-xl font-extrabold tracking-tight text-ink">
+          <span className="text-accent">ACRE</span>Insure
         </Link>
         <nav className="flex items-center gap-5">
           <a
