@@ -44,6 +44,78 @@ export const CITIES: City[] = [
     blurb:
       "From shipbuilding and logistics to construction and hospitality along the Gulf Coast, Mobile and Baldwin County businesses see large surprise audit bills more often than most realize.",
   },
+  {
+    slug: "decatur",
+    name: "Decatur",
+    region: "North Alabama",
+    county: "Morgan County",
+    nearby: ["Hartselle", "Priceville", "Trinity", "Moulton", "Athens", "Madison"],
+    blurb:
+      "Manufacturers, distribution centers, and trades along the Tennessee River drive Decatur's economy — and all of them are routine targets for workers' comp and liability premium audits.",
+  },
+  {
+    slug: "florence",
+    name: "Florence",
+    region: "The Shoals, North Alabama",
+    county: "Lauderdale County",
+    nearby: ["Muscle Shoals", "Sheffield", "Tuscumbia", "Killen", "Russellville"],
+    blurb:
+      "Across the Shoals, manufacturers, healthcare practices, hospitality, and construction firms regularly get hit with surprise audit bills they never budgeted for.",
+  },
+  {
+    slug: "auburn",
+    name: "Auburn",
+    region: "East-Central Alabama",
+    county: "Lee County",
+    nearby: ["Opelika", "Smiths Station", "Notasulga", "Loachapoka", "Salem"],
+    blurb:
+      "Construction, restaurants, retail, and service businesses across the Auburn–Opelika area face workers' comp and general liability audits every year.",
+  },
+  {
+    slug: "opelika",
+    name: "Opelika",
+    region: "East-Central Alabama",
+    county: "Lee County",
+    nearby: ["Auburn", "Smiths Station", "Beauregard", "Salem", "Notasulga"],
+    blurb:
+      "Opelika's manufacturers, logistics operators, and trades are common targets for premium audits — often with bills no one saw coming.",
+  },
+  {
+    slug: "dothan",
+    name: "Dothan",
+    region: "Southeast Alabama (the Wiregrass)",
+    county: "Houston County",
+    nearby: ["Enterprise", "Ozark", "Headland", "Midland City", "Rehobeth"],
+    blurb:
+      "Across the Wiregrass, agriculture, healthcare, trucking, and retail businesses see large surprise audit bills more often than most owners realize.",
+  },
+  {
+    slug: "gadsden",
+    name: "Gadsden",
+    region: "Northeast Alabama",
+    county: "Etowah County",
+    nearby: ["Rainbow City", "Attalla", "Southside", "Glencoe", "Hokes Bluff"],
+    blurb:
+      "Manufacturers, trades, and service businesses around Gadsden and Etowah County are routine targets for workers' comp and general liability premium audits.",
+  },
+  {
+    slug: "anniston",
+    name: "Anniston",
+    region: "East Alabama",
+    county: "Calhoun County",
+    nearby: ["Oxford", "Jacksonville", "Weaver", "Hobson City", "Saks"],
+    blurb:
+      "From manufacturing and logistics to healthcare and the trades, Anniston and Oxford businesses regularly face audit bills that inflate their premiums.",
+  },
+  {
+    slug: "cullman",
+    name: "Cullman",
+    region: "North Alabama",
+    county: "Cullman County",
+    nearby: ["Hanceville", "Good Hope", "Baileyton", "Holly Pond", "Vinemont"],
+    blurb:
+      "Agriculture, poultry, manufacturing, and construction power Cullman County — and all of them get hit with surprise workers' comp and liability audits.",
+  },
 ];
 
 export function getCity(slug: string): City | undefined {
