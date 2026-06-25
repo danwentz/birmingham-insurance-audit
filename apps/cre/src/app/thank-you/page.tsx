@@ -10,22 +10,24 @@ export const metadata: Metadata = {
 
 export default function ThankYou() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center px-6 text-center">
+    <main className="flex min-h-screen flex-col items-center justify-center bg-midnight px-6 text-center text-champagne">
       <ConversionTracker />
-      <h1 className="font-serif text-4xl font-semibold text-ink">Thank you — request received</h1>
-      <p className="mt-4 max-w-md text-lg text-ink-soft">
+      <h1 className="font-display text-4xl font-bold tracking-tight text-white">
+        Thank you — request received
+      </h1>
+      <p className="mt-4 max-w-md text-lg text-slate">
         A specialist will review your account and reach out within one business day.
       </p>
-      <p className="mt-2 text-ink-soft">
+      <p className="mt-2 text-slate">
         Need to talk sooner? Call{" "}
-        <a href={PHONE_HREF} className="font-semibold text-accent hover:underline">
+        <a href={PHONE_HREF} className="font-semibold text-gold hover:underline">
           {PHONE_DISPLAY}
         </a>
         .
       </p>
       <Link
         href="/"
-        className="mt-8 inline-block rounded-md bg-accent px-6 py-3 font-semibold text-white hover:bg-accent-dark"
+        className="mt-8 inline-block rounded-sm bg-gold px-6 py-3 text-sm font-semibold uppercase tracking-wide text-obsidian transition-colors hover:bg-gold-dark"
       >
         Back to home
       </Link>

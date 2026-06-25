@@ -1,18 +1,25 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Fraunces } from "next/font/google";
+import { Playfair_Display, DM_Sans, DM_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { BRAND_NAME, DOMAIN, GA_ID } from "@/lib/site";
 
-const jakarta = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
   display: "swap",
 });
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const dmSans = DM_Sans({
+  variable: "--font-dmsans",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const dmMono = DM_Mono({
+  variable: "--font-dmmono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
   display: "swap",
 });
 
@@ -46,7 +53,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${jakarta.variable} ${fraunces.variable} font-sans`}>
+      <body className={`${playfair.variable} ${dmSans.variable} ${dmMono.variable} font-body`}>
         {GA_ID && !GA_ID.includes("X") && (
           <>
             <Script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />

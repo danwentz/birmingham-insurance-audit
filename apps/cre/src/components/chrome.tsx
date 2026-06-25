@@ -6,27 +6,35 @@ import { BRAND_NAME, PHONE_DISPLAY, PHONE_HREF } from "@/lib/site";
 import { programsByCategory } from "@/lib/programs";
 import { trackCall } from "@/components/LeadForm";
 
+function Wordmark({ className = "" }: { className?: string }) {
+  return (
+    <span className={`font-display font-bold tracking-tight ${className}`}>
+      <span className="text-gold">ACRE</span>Insure
+    </span>
+  );
+}
+
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur">
+    <header className="gold-rule-top sticky top-0 z-40 bg-obsidian">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-4">
-        <Link href="/" className="text-xl font-extrabold tracking-tight text-ink">
-          <span className="text-accent">ACRE</span>Insure
+        <Link href="/">
+          <Wordmark className="text-xl text-white" />
         </Link>
-        <nav className="flex items-center gap-5">
+        <nav className="flex items-center gap-6">
           <a
             href={PHONE_HREF}
             onClick={trackCall}
-            className="hidden items-center gap-2 text-sm font-semibold text-ink hover:text-accent sm:inline-flex"
+            className="hidden items-center gap-2 text-xs font-semibold uppercase tracking-wide text-slate transition-colors hover:text-champagne sm:inline-flex"
           >
             <Phone className="h-4 w-4" />
             {PHONE_DISPLAY}
           </a>
           <a
             href="#contact"
-            className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-white hover:bg-accent-dark"
+            className="rounded-sm bg-gold px-4 py-2 text-xs font-semibold uppercase tracking-wide text-obsidian transition-colors hover:bg-gold-dark"
           >
-            Request a Review
+            Request a Quote
           </a>
         </nav>
       </div>
@@ -43,11 +51,11 @@ function FooterColumn({
 }) {
   return (
     <div>
-      <p className="text-sm font-semibold uppercase tracking-wide text-ink-muted">{title}</p>
-      <ul className="mt-3 space-y-2 text-sm">
+      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-champagne">{title}</p>
+      <ul className="mt-4 space-y-3 text-sm">
         {items.map((p) => (
           <li key={p.slug}>
-            <Link href={`/${p.slug}`} className="text-ink-soft hover:text-accent">
+            <Link href={`/${p.slug}`} className="text-slate transition-colors hover:text-gold">
               {p.shortName}
             </Link>
           </li>
@@ -59,34 +67,36 @@ function FooterColumn({
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-line bg-paper-tint">
-      <div className="mx-auto max-w-6xl px-5 py-12">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="bg-obsidian text-slate">
+      <div className="mx-auto max-w-6xl px-5">
+        <div className="grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="font-serif text-lg font-semibold text-ink">{BRAND_NAME}</p>
-            <p className="mt-2 text-sm text-ink-soft">
-              A commercial real estate insurance brokerage for large accounts. Alabama-based,
-              placing deals nationwide.
+            <Wordmark className="text-lg text-white" />
+            <p className="mt-3 max-w-[34ch] text-sm text-slate">
+              Institutional-grade coverage for serious Alabama portfolios.
             </p>
             <a
               href={PHONE_HREF}
               onClick={trackCall}
-              className="mt-3 inline-flex items-center gap-2 font-semibold text-ink hover:text-accent"
+              className="mt-4 inline-flex items-center gap-2 font-semibold text-champagne transition-colors hover:text-gold"
             >
               <Phone className="h-4 w-4" /> {PHONE_DISPLAY}
             </a>
-            <a href="#contact" className="mt-3 block text-sm font-semibold text-accent hover:underline">
-              Request a renewal review →
+            <a href="#contact" className="mt-3 block text-sm font-semibold text-gold hover:underline">
+              Request a quote →
             </a>
           </div>
-          <FooterColumn title="Specialty programs" items={programsByCategory("program")} />
-          <FooterColumn title="By asset class" items={programsByCategory("asset")} />
+          <FooterColumn title="Specialty Programs" items={programsByCategory("program")} />
+          <FooterColumn title="By Asset Class" items={programsByCategory("asset")} />
           <FooterColumn title="Advisory" items={programsByCategory("advisory")} />
         </div>
-        <div className="mt-10 border-t border-line pt-6 text-xs text-ink-muted">
-          &copy; {new Date().getFullYear()} {BRAND_NAME}. All rights reserved. Coverage is subject to
-          policy terms and underwriting. This site is informational and not an offer of insurance or
-          legal advice.
+      </div>
+      <div className="border-t border-gold/20">
+        <div className="mx-auto flex max-w-6xl flex-wrap justify-between gap-x-6 gap-y-2 px-5 py-6 text-xs text-slate">
+          <span>
+            &copy; {new Date().getFullYear()} {BRAND_NAME}. All rights reserved.
+          </span>
+          <span>Insurance produced through Dan Wentz, USI Insurance Services, Birmingham, AL.</span>
         </div>
       </div>
     </footer>

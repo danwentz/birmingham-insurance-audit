@@ -21,7 +21,7 @@ export const trackFormSubmit = (source: string) => () =>
   });
 
 const inputClass =
-  "w-full rounded-md border border-line bg-paper-card px-4 py-3 text-ink placeholder:text-ink-muted focus:outline-none focus:ring-2 focus:ring-accent/40 focus:border-accent";
+  "w-full border-0 border-b border-gold/20 bg-transparent px-0 py-3 text-obsidian placeholder:text-slate focus:border-b-2 focus:border-gold focus:outline-none";
 
 export function LeadForm({ source = "homepage" }: { source?: string }) {
   return (
@@ -83,11 +83,11 @@ export function LeadForm({ source = "homepage" }: { source?: string }) {
 
       <button
         type="submit"
-        className="w-full rounded-md bg-accent px-4 py-3 font-semibold text-white hover:bg-accent-dark transition"
+        className="mt-2 w-full rounded-sm bg-gold px-4 py-3 text-sm font-semibold uppercase tracking-wide text-obsidian transition-colors hover:bg-gold-dark"
       >
-        Request a Renewal Review →
+        Request a Quote
       </button>
-      <p className="text-xs text-ink-muted text-center">
+      <p className="text-center text-xs text-slate">
         Confidential. No obligation. We respond within one business day.
       </p>
     </form>

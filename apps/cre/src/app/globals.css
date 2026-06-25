@@ -1,23 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  /* Modern light premium palette */
-  --color-paper: #f7f5ef; /* ivory background */
-  --color-paper-card: #ffffff;
-  --color-paper-tint: #efece3; /* subtle banded section */
+  /* ACREInsure palette (see design-system/css/tokens.css) */
+  --color-midnight: #1c2035;
+  --color-obsidian: #10131e;
+  --color-gold: #bfa46a;
+  --color-gold-dark: #a8915a;
+  --color-champagne: #ede2c8;
+  --color-ivory: #f8f5ee;
+  --color-slate: #7a8494;
 
-  --color-ink: #0f1e2e; /* deep navy text / headlines */
-  --color-ink-soft: #41505f; /* secondary text */
-  --color-ink-muted: #6b7785;
-
-  --color-accent: #1b5e4a; /* forest green */
-  --color-accent-dark: #15493a;
-  --color-accent-soft: #e7efe9;
-
-  --color-line: #e3ded3; /* hairline borders on ivory */
-
-  --font-sans: var(--font-jakarta);
-  --font-serif: var(--font-fraunces);
+  --font-display: var(--font-playfair);
+  --font-body: var(--font-dmsans);
+  --font-mono: var(--font-dmmono);
 }
 
 :root {
@@ -29,7 +24,30 @@ html {
 }
 
 body {
-  background-color: var(--color-paper);
-  color: var(--color-ink);
+  background-color: var(--color-ivory);
+  color: var(--color-obsidian);
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
+}
+
+/* Signature burnished-gold rule for dark panels/cards */
+.gold-rule-top {
+  position: relative;
+}
+.gold-rule-top::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-gold), transparent);
+}
+
+/* Gold focus, never the default blue ring */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
 }
