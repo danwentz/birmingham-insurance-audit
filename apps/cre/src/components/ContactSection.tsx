@@ -22,7 +22,7 @@ export function ContactSection({
           </h2>
           <p className="mt-4 max-w-md text-lg text-slate">
             {sub ??
-              `Send us your current program or renewal date. We'll review the structure, pricing, and coverage and tell you where it can be improved. Built for accounts with ${PREMIUM_FLOOR}+ in annual premium.`}
+              `Send us the current program, or just the renewal date. We'll tell you whether the structure, the pricing, or the coverage can be beaten. Built for accounts with ${PREMIUM_FLOOR}+ in annual premium.`}
           </p>
           <ul className="mt-6 space-y-2 text-slate">
             <li className="border-l-2 border-gold pl-3">A second set of expert eyes on your program, free.</li>

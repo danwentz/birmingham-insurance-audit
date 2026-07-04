@@ -24,13 +24,12 @@ export const PROGRAMS: Program[] = [
     category: "program",
     shortName: "Multifamily & Apartment",
     name: "Multifamily & Apartment (Habitational) Insurance",
-    metaTitle:
-      "Multifamily & Apartment Insurance Broker | Habitational Property & Liability",
+    metaTitle: "Multifamily & Apartment Insurance Broker | ACREInsure",
     metaDescription:
-      "Specialist broker for multifamily and apartment portfolios. Habitational property, general liability, and umbrella for owners and operators facing carrier non-renewals and steep premium hikes. $50k+ premiums.",
+      "Habitational property, GL, and umbrella for apartment portfolios from 50 to 10,000+ units. We fix non-renewals, re-rates, and deductible shock. $50k+ premiums.",
     hook: "Habitational property, liability, and umbrella for owners and operators of 50 to 10,000+ units.",
     intro:
-      "Multifamily has been the hardest-hit class in property insurance — premiums climbed more than 75% from 2019 to 2024, carriers pulled capacity, and renewals arrived with surprise deductibles and exclusions. If your habitational program is being non-renewed, re-rated, or simply isn't being marketed aggressively, you are likely overpaying. We rebuild the program from the ground up and take it to the markets that still want quality habitational risk.",
+      "No property class got repriced harder than multifamily. Premiums rose more than 75% between 2019 and 2024, carriers pulled capacity, and most standard markets quit writing apartment general liability altogether. So renewals now show up with a percentage wind/hail deductible you never agreed to and an assault-and-battery sublimit buried in the forms. If your program has been non-renewed, re-rated, or quietly rolled over with the same carrier every year, you are probably overpaying. We rebuild it from scratch and take it to the habitational markets that still want the business.",
     idealFor: [
       "Apartment communities and garden/mid-rise portfolios (50+ units)",
       "Owner-operators, syndicators, and multifamily funds",
@@ -38,23 +37,23 @@ export const PROGRAMS: Program[] = [
       "Accounts facing non-renewal, large rate increases, or wind/hail deductible shock",
     ],
     coverages: [
-      { title: "Habitational property", body: "Building, BPP, and loss of rents with realistic insurance-to-value and deductible structuring." },
-      { title: "General liability", body: "Premises liability built for habitational exposures — assault & battery, animal, and habitability." },
-      { title: "Real estate umbrella / excess", body: "Layered excess towers up to $100M+ for portfolios and lender requirements." },
-      { title: "Catastrophe & deductible solutions", body: "Wind/hail, named storm, and parametric or captive options where the standard market is distressed." },
+      { title: "Habitational property", body: "Building, business personal property, and loss of rents, valued so a coinsurance clause can't cut your claim check." },
+      { title: "General liability", body: "Premises liability built for apartments: assault and battery, animal liability, habitability. The exposures standard forms now exclude or cap." },
+      { title: "Real estate umbrella / excess", body: "Layered excess towers to $100M+ when the portfolio or the lender requires it." },
+      { title: "Catastrophe & deductible solutions", body: "Wind/hail and named-storm structures, deductible buy-downs, and parametric or captive options where the standard market has walked." },
     ],
     faqs: [
       {
         q: "Why did my apartment insurance premium jump so much?",
-        a: "Habitational property was repriced hard between 2019 and 2024 as carriers absorbed catastrophe losses and pulled capacity. Even clean accounts saw large increases, higher wind/hail deductibles, and new exclusions. The fix is a fully remarketed program — many owners are paying yesterday's hard-market rate when better terms now exist.",
+        a: "Because the whole class got repriced. Between 2019 and 2024 carriers absorbed heavy catastrophe losses, capacity left habitational, and even clean accounts took large increases plus new wind/hail deductibles and exclusions. Here's the part that matters now: plenty of owners are still paying that hard-market rate when better terms exist. A full remarketing usually proves it.",
       },
       {
         q: "Can you help if my carrier non-renewed me?",
-        a: "Yes. Non-renewals are common in this class and rarely mean the risk is uninsurable — it usually means the program needs to go to specialist habitational and surplus-lines markets. We market the account broadly and structure it to be insurable on better terms.",
+        a: "Yes. Non-renewals are routine in this class, and they almost never mean the property is uninsurable. They mean the account needs to go to specialist habitational and surplus-lines markets, presented well enough that an underwriter can say yes. We market it broadly and structure it to get there.",
       },
       {
         q: "How large of a portfolio do you handle?",
-        a: "We focus on accounts with roughly $50,000+ in annual premium — from a single large community to portfolios of 10,000+ units across multiple states.",
+        a: "We work on accounts with roughly $50,000 and up in annual premium. That runs from a single large community to portfolios of 10,000+ units across several states.",
       },
     ],
     searchTerms: [
@@ -69,13 +68,12 @@ export const PROGRAMS: Program[] = [
     category: "program",
     shortName: "Portfolio & High-TIV",
     name: "Real Estate Portfolio & High-TIV Master Programs",
-    metaTitle:
-      "Real Estate Portfolio Insurance | High-TIV Master Property Programs Broker",
+    metaTitle: "Real Estate Portfolio Insurance & Master Programs | ACREInsure",
     metaDescription:
-      "Master property and schedule programs for real estate portfolios with $100M–$2B+ in total insured value (TIV). Layered and shared placements, lender compliance, and total-cost-of-risk strategy.",
+      "Master and schedule property programs for real estate portfolios with $100M to $2B+ in total insured value. Layered placements, agreed value, lender compliance.",
     hook: "Master property and schedule programs for portfolios with $100M to $2B+ in total insured value.",
     intro:
-      "Once a real estate portfolio crosses into nine figures of TIV, single-carrier policies stop making sense. The right structure is a master or schedule program — layered and shared across carriers, with blanket limits, agreed valuation, and clean lender compliance. We design and broker these placements, market them to domestic and London capacity, and manage the renewal as a strategic event rather than a fire drill.",
+      "Once a portfolio crosses into nine figures of insured value, a policy per building stops making sense. The right structure is a master program: every asset on the schedule of values under blanket limits, with agreed valuation, capacity layered and shared across carriers, and lender compliance handled once instead of loan by loan. We design these placements, take them to domestic and London markets, and run the renewal as the strategic event it is. Not a fire drill in the last two weeks of the term.",
     idealFor: [
       "Owners and funds with multi-property, multi-state schedules",
       "Portfolios with $100M+ total insured value",
@@ -83,23 +81,23 @@ export const PROGRAMS: Program[] = [
       "Sponsors with lender insurance requirements and complex SOV management",
     ],
     coverages: [
-      { title: "Master / schedule property", body: "Blanket building and rents limits across the SOV with agreed valuation and modeled CAT." },
-      { title: "Layered & shared placements", body: "Quota-share and excess towers across domestic, E&S, and London markets for capacity." },
-      { title: "Insurance-to-value strategy", body: "Defensible valuations to avoid coinsurance and margin-clause penalties at claim time." },
-      { title: "Lender & loan compliance", body: "Evidence of insurance, waiver/endorsement management, and SOV reconciliation for lenders." },
+      { title: "Master / schedule property", body: "Blanket building and rents limits across the SOV, agreed valuation, and catastrophe exposure that has been modeled rather than guessed at." },
+      { title: "Layered & shared placements", body: "Quota-share and excess towers across domestic, E&S, and London capacity when one carrier shouldn't hold the whole limit." },
+      { title: "Insurance-to-value strategy", body: "Roughly three-quarters of commercial properties are underinsured by 40% or more. We build valuations that survive a coinsurance or margin-clause test at claim time." },
+      { title: "Lender & loan compliance", body: "Evidence of insurance, waiver and endorsement management, and SOV reconciliation so closings and servicer audits don't stall." },
     ],
     faqs: [
       {
         q: "What is a master or schedule insurance program?",
-        a: "It's a single property program that covers every asset on your schedule of values (SOV) under blanket limits, instead of a separate policy per building. For portfolios it lowers total cost of risk, simplifies lender compliance, and gives you leverage with carriers at renewal.",
+        a: "One property program covering every asset on your schedule of values (SOV) under blanket limits, instead of a separate policy per building. Total cost of risk drops and lender compliance gets simpler. Just as important at renewal: you become one large account a carrier wants to keep, not forty small ones it barely notices.",
       },
       {
         q: "What TIV do you work with?",
-        a: "We structure programs across the middle market and up — roughly $100M to $2B+ in total insured value — using layered and shared placements when a single carrier won't or shouldn't hold the whole limit.",
+        a: "Middle market and up: roughly $100M to $2B+ in total insured value. Past a certain size, no single carrier will (or should) hold the whole limit, so we build layered and shared structures instead.",
       },
       {
         q: "Can you handle multi-state and CAT-exposed schedules?",
-        a: "Yes. We model the catastrophe exposure on your SOV and place the program with the right mix of carriers and capacity, including coastal, wind/hail, and quake-exposed locations.",
+        a: "Yes. We model the catastrophe exposure on your SOV first, then place the program with the mix of carriers and capacity the modeling supports, including coastal wind, hail-belt, and quake-exposed locations.",
       },
     ],
     searchTerms: [
@@ -114,13 +112,12 @@ export const PROGRAMS: Program[] = [
     category: "program",
     shortName: "CAT / Coastal Property",
     name: "Catastrophe, Coastal & Wind/Hail Property Insurance",
-    metaTitle:
-      "Catastrophe & Coastal Property Insurance Broker | Wind, Hail & Named Storm",
+    metaTitle: "Coastal & Catastrophe Property Insurance Broker | ACREInsure",
     metaDescription:
-      "Capacity for hard-to-place CAT property: coastal wind, named storm, hail-belt, flood, and quake. Layered programs, E&S and London markets, parametric and captive options for distressed accounts.",
-    hook: "Capacity for the hard-to-place risk — coastal wind, named storm, hail belt, flood, and quake.",
+      "Wind, named storm, hail, flood, and quake capacity for hard-to-place commercial property. E&S and London placements, layered limits, deductible buy-downs.",
+    hook: "Capacity for the hard-to-place risk: coastal wind, named storm, hail belt, flood, and quake.",
     intro:
-      "Catastrophe-exposed property is where the standard market still says no. Gulf Coast wind, Florida named-storm, hail-belt, wildfire, and quake accounts face capacity shortfalls, big deductibles, and sublimits. Placing these takes access to surplus-lines and London capacity and a willingness to build the program in layers. That's the work we do — finding the capacity, structuring the deductibles, and keeping the limit adequate and lender-compliant.",
+      "Catastrophe-exposed property is where the standard market still says no. Near the Gulf, most standard carriers won't write windstorm at all, so the coverage moves to E&S and London markets and named-storm deductibles start around 5% of insured value. On a $20M building, that's the first $1 million out of your pocket before the carrier pays a dime. Placing this well takes real market access and a willingness to build the program in layers. Find the capacity, engineer the deductible, keep the limit adequate and the lender satisfied. That's the job.",
     idealFor: [
       "Coastal and Gulf Coast property (wind / named storm exposed)",
       "Hail-belt, wildfire, and earthquake-exposed assets",
@@ -128,23 +125,23 @@ export const PROGRAMS: Program[] = [
       "Portfolios needing layered or excess CAT limits",
     ],
     coverages: [
-      { title: "Wind & named storm", body: "Primary and excess wind, including named-storm placements via E&S and Lloyd's syndicates." },
-      { title: "Hail, wildfire & quake", body: "Specialty capacity for hail-belt, wildfire, and earthquake-exposed locations." },
-      { title: "Deductible engineering", body: "Percentage-deductible buy-downs and structures that protect cash flow after a loss." },
-      { title: "Parametric & captive options", body: "Alternative risk transfer where traditional capacity is scarce or uneconomic." },
+      { title: "Wind & named storm", body: "Primary and excess wind, including named-storm placements through E&S markets and Lloyd's syndicates." },
+      { title: "Hail, wildfire & quake", body: "Specialty capacity for hail-belt, wildfire, and earthquake-exposed locations that standard markets have sublimited or declined." },
+      { title: "Deductible engineering", body: "Percentage-deductible buy-downs and structures that keep one storm from wrecking a year of cash flow." },
+      { title: "Parametric & captive options", body: "Alternative risk transfer for when traditional capacity is scarce or priced past the point of sense." },
     ],
     faqs: [
       {
-        q: "My coastal property is hard to insure — can you place it?",
-        a: "Usually, yes. CAT-exposed property typically isn't uninsurable; it just has to go to surplus-lines and London markets and often be built in layers. We assemble the capacity and engineer the deductibles so the limit is adequate and the cost is manageable.",
+        q: "My coastal property is hard to insure. Can you place it?",
+        a: "Usually, yes. CAT-exposed property is rarely uninsurable. It just has to go to surplus-lines and London markets, often in layers, and it has to be presented by someone those markets know. We assemble the capacity and structure the deductibles so the limit is adequate and the cost is survivable.",
       },
       {
         q: "Can you reduce my wind/hail deductible?",
-        a: "Often we can improve it through deductible buy-downs or by restructuring the program. We'll model the trade-off between premium and retained risk so the structure fits your balance sheet.",
+        a: "Often. Deductible buy-downs and program restructuring can both move it. We model the trade-off between premium saved and risk retained so you can see what the structure does to your balance sheet before you commit.",
       },
       {
         q: "Do you use parametric or captive solutions?",
-        a: "When the traditional market is distressed, parametric covers and captive structures can be the most economical way to finance catastrophe risk. We'll tell you when they make sense and when they don't.",
+        a: "When they make sense, which is not always. Parametric covers and captives can be the cheapest way to finance catastrophe risk in a distressed market, and a waste of money outside one. We'll show you the math either way.",
       },
     ],
     searchTerms: [
@@ -159,13 +156,12 @@ export const PROGRAMS: Program[] = [
     category: "program",
     shortName: "Builders Risk / OCIP",
     name: "Builders Risk & Owner-Controlled Insurance Programs (OCIP)",
-    metaTitle:
-      "Builders Risk & OCIP Insurance Broker | Wrap-Up Programs for Large Projects",
+    metaTitle: "Builders Risk & OCIP Insurance Broker | ACREInsure",
     metaDescription:
-      "Builders risk and owner-controlled insurance programs (OCIP / wrap-ups) for large commercial developments. Project values from $25M to $100M+. Coordinated property, GL, excess, and workers' comp.",
+      "Builders risk and OCIP wrap-up programs for commercial developments from $25M to $100M+. GL, excess, and workers' comp under one owner-controlled master.",
     hook: "Builders risk and wrap-up (OCIP) programs for ground-up and value-add projects from $25M to $100M+.",
     intro:
-      "On a large development, the way you structure insurance materially changes the budget. A coordinated builders risk policy — and on larger jobs an owner-controlled insurance program (OCIP / wrap-up) that pulls GL, excess, and workers' comp under one owner-controlled master — reduces duplicated markup, closes coverage gaps between trades, and gives the owner control of claims and limits. We design the program, market it, and administer it through completion.",
+      "On a big development, insurance structure is one of the few budget lines you can actually move. Builders risk covers the course of construction on any project. On larger jobs, an owner-controlled insurance program (an OCIP, or wrap-up) also pulls general liability, excess, and workers' comp under one owner-controlled master, which strips the duplicated insurance markup out of every trade's bid and closes the gaps between contractors' policies. It also puts you, not your GC, in control of claims and limits. We design the program up front and administer it all the way through substantial completion.",
     idealFor: [
       "Ground-up and major value-add developments",
       "Projects with $25M+ hard construction cost (OCIP territory)",
@@ -173,23 +169,23 @@ export const PROGRAMS: Program[] = [
       "Deals with lender and equity insurance requirements",
     ],
     coverages: [
-      { title: "Builders risk", body: "Course-of-construction property including soft costs, delay in completion, and CAT perils." },
-      { title: "Owner-controlled program (OCIP)", body: "Owner-controlled GL, excess, and workers' comp across all enrolled trades on the project." },
-      { title: "Excess / umbrella towers", body: "Project-specific excess limits structured to lender and contract requirements." },
-      { title: "Program administration", body: "Enrollment, payroll audit, and closeout managed through substantial completion." },
+      { title: "Builders risk", body: "Course-of-construction property including soft costs, delay in completion, and catastrophe perils on exposed sites." },
+      { title: "Owner-controlled program (OCIP)", body: "GL, excess, and workers' comp for every enrolled trade on the project, controlled by the owner instead of scattered across subcontractors." },
+      { title: "Excess / umbrella towers", body: "Project-specific excess limits built to what the loan documents and contracts require." },
+      { title: "Program administration", body: "Enrollment, payroll audits, and closeout, managed until the last certificate clears." },
     ],
     faqs: [
       {
-        q: "OCIP or builders risk — which do I need?",
-        a: "Builders risk covers the course-of-construction property on virtually every project. An OCIP (wrap-up) makes sense on larger jobs — generally $25M+ hard cost — where consolidating GL, excess, and workers' comp under the owner reduces markup and gives you control of claims and safety. We model both and recommend the right fit.",
+        q: "OCIP or builders risk: which do I need?",
+        a: "Builders risk, always: it covers the course-of-construction property on virtually every project. The OCIP question is about size. Once hard cost clears roughly $25M, consolidating GL, excess, and workers' comp under the owner starts paying for itself in stripped-out markup and claim control. We model both and show you the break-even.",
       },
       {
         q: "How big does a project need to be for a wrap-up?",
-        a: "As a rule of thumb, GL-only wrap-ups start to pay off around $25M of hard construction cost, and full OCIPs are common on $50M–$100M+ projects. Below that, a well-structured builders risk plus contractor-placed coverage is usually more efficient.",
+        a: "Rule of thumb: GL-only wrap-ups start earning their keep around $25M of hard construction cost, and full OCIPs are common on $50M–$100M+ projects. Below that, a well-structured builders risk plus contractor-placed coverage usually wins on cost.",
       },
       {
         q: "Can you coordinate with our lender and equity requirements?",
-        a: "Yes. We build the program to satisfy loan and joint-venture insurance requirements — limits, additional insureds, waivers, and evidence of coverage — and keep it compliant through completion.",
+        a: "Yes. Limits, additional insureds, waivers, evidence of coverage: we build the program to the loan and joint-venture requirements from day one and keep it compliant through completion, so insurance is never the reason a draw or a closing stalls.",
       },
     ],
     searchTerms: [
@@ -206,12 +202,12 @@ export const PROGRAMS: Program[] = [
     category: "asset",
     shortName: "Office",
     name: "Office Building Insurance",
-    metaTitle: "Office Building Insurance Broker | Property, Liability & Portfolio Programs",
+    metaTitle: "Office Building Insurance Broker | ACREInsure",
     metaDescription:
-      "Insurance for office buildings and portfolios — property, general liability, and umbrella for owners, REITs, and funds. Vacancy, tenant build-out, and lender compliance handled. $50k+ premiums.",
+      "Property, liability, and umbrella for office towers and portfolios. Vacancy, repositioning, tenant build-outs, and lender requirements handled. $50k+ premiums.",
     hook: "Property, liability, and umbrella for office towers, suburban buildings, and portfolios.",
     intro:
-      "Office has its own underwriting story right now — rising vacancy, tenant-improvement exposure, and carriers reading the same headlines you do. Quality assets get penalized for the sector's reputation unless the risk is presented well. We position the account — occupancy, life-safety, capital improvements, and tenancy — and market it so a well-run office building isn't priced like a distressed one.",
+      "Office is getting underwritten by headline right now. Carriers read the same return-to-office stories you do, and a well-run building can get priced like a distressed one just for sharing the sector. That's a presentation problem, and presentation problems can be fixed. We put the occupancy, the life-safety record, the capital improvements, and the tenancy in front of underwriters properly, then market the account so the price reflects your building rather than the sector's reputation.",
     idealFor: [
       "Single-asset towers and suburban office portfolios",
       "Owners, REITs, and funds",
@@ -219,15 +215,15 @@ export const PROGRAMS: Program[] = [
       "Deals with lender and joint-venture insurance requirements",
     ],
     coverages: [
-      { title: "Property", body: "Building, rents, and tenant-improvement exposure with defensible insurance-to-value." },
-      { title: "General liability", body: "Premises liability for common areas, garages, and visitor exposure." },
-      { title: "Umbrella / excess", body: "Excess towers sized to lender and contractual requirements." },
-      { title: "Vacancy & repositioning", body: "Vacant-building and builders risk solutions for assets under renovation or lease-up." },
+      { title: "Property", body: "Building, rents, and tenant-improvement exposure with a valuation you can defend at claim time." },
+      { title: "General liability", body: "Premises liability for lobbies, common areas, garages, and everyone who walks through them." },
+      { title: "Umbrella / excess", body: "Excess towers sized to what your lender and your leases demand." },
+      { title: "Vacancy & repositioning", body: "Vacant-building and builders risk solutions for assets in renovation or lease-up." },
     ],
     faqs: [
-      { q: "Does vacancy raise my office premium?", a: "It can — vacant or partially vacant space changes the property and liability picture and can trigger vacancy provisions. We present occupancy and security accurately and place the risk with markets that underwrite repositioning office, rather than declining it outright." },
-      { q: "Can you cover a building under renovation?", a: "Yes. Major tenant build-outs or repositioning are typically handled with a builders risk or course-of-construction layer alongside the property program, structured so there's no gap between owner and contractor coverage." },
-      { q: "How large of an office portfolio do you handle?", a: "We focus on accounts with roughly $50,000+ in annual premium, from a single tower to multi-state office portfolios." },
+      { q: "Does vacancy raise my office premium?", a: "It can. Vacant or partially vacant space changes both the property and the liability picture, and most policies carry vacancy provisions that quietly cut coverage once occupancy drops far enough. We present occupancy and security accurately and place the account with markets that underwrite repositioning office instead of reflexively declining it." },
+      { q: "Can you cover a building under renovation?", a: "Yes. A major tenant build-out or repositioning typically gets a builders risk or course-of-construction layer alongside the property program, structured so nothing falls in the gap between your coverage and the contractor's." },
+      { q: "How large of an office portfolio do you handle?", a: "Accounts from roughly $50,000 in annual premium and up, whether that's one tower or a multi-state office portfolio." },
     ],
     searchTerms: ["office building insurance broker", "office property insurance", "commercial office insurance portfolio"],
   },
@@ -236,12 +232,12 @@ export const PROGRAMS: Program[] = [
     category: "asset",
     shortName: "Retail & Shopping Centers",
     name: "Retail & Shopping Center Insurance",
-    metaTitle: "Shopping Center & Retail Property Insurance Broker | Strip & Power Centers",
+    metaTitle: "Shopping Center & Retail Property Insurance | ACREInsure",
     metaDescription:
-      "Insurance for shopping centers, strip malls, and retail portfolios — property, general liability with broad tenant exposure, and umbrella. CAM/COI tracking and lender compliance. $50k+ premiums.",
+      "Property and liability for strip centers, power centers, and retail portfolios. Parking-lot premises risk, tenant COI tracking, CAT structure. $50k+ premiums.",
     hook: "Property and liability for strip centers, power centers, and multi-tenant retail portfolios.",
     intro:
-      "Multi-tenant retail concentrates liability — common areas, parking lots, and a constantly changing tenant mix — on top of property and catastrophe exposure. The program has to handle premises liability, certificate-of-insurance tracking on tenants, and lender requirements without leaving the owner exposed in the gaps. That's the program we build and market.",
+      "A multi-tenant center concentrates liability in exactly the places you control: the parking lot, the sidewalks, the common areas. Tenants turn over; the slip-and-fall exposure stays yours. So the program has to carry that premises risk, keep tenant certificates of insurance current so their gaps never become your loss, and still satisfy the lender. If the center sits in wind or hail territory, the property side needs real CAT structure on top. We build all of that into one program and then make carriers compete for it.",
     idealFor: [
       "Strip, neighborhood, and power centers",
       "Multi-tenant and mixed retail portfolios",
@@ -249,15 +245,15 @@ export const PROGRAMS: Program[] = [
       "CAT-exposed retail (wind/hail/coastal)",
     ],
     coverages: [
-      { title: "Property", body: "Building and rents with CAT structuring for wind, hail, and coastal exposure." },
-      { title: "Premises liability", body: "Slip-and-fall, parking-lot, and common-area exposure built for multi-tenant retail." },
+      { title: "Property", body: "Building and rents with catastrophe structure for wind, hail, and coastal exposure." },
+      { title: "Premises liability", body: "Slip-and-fall, parking-lot, and common-area exposure, underwritten for how multi-tenant retail actually operates." },
       { title: "Umbrella / excess", body: "Excess limits for high-traffic centers and lender requirements." },
-      { title: "Tenant insurance tracking", body: "COI/CAM compliance so tenant coverage gaps don't fall back on the owner." },
+      { title: "Tenant insurance tracking", body: "COI and CAM compliance so an uninsured tenant's loss doesn't land on the owner." },
     ],
     faqs: [
-      { q: "Who's liable for parking-lot injuries at my center?", a: "As the owner you carry premises liability for common areas including parking lots, even where tenants operate. We structure the GL and umbrella for that exposure and help enforce tenant insurance requirements so risk is shared correctly." },
-      { q: "Do you track tenant certificates of insurance?", a: "Yes. We help set the tenant insurance requirements in your leases and track certificates so an uninsured tenant loss doesn't become your loss." },
-      { q: "How large of a retail portfolio do you handle?", a: "Accounts with roughly $50,000+ in annual premium, from a single center to multi-state retail portfolios." },
+      { q: "Who's liable for parking-lot injuries at my center?", a: "You are, mostly. The owner carries premises liability for common areas, and the parking lot counts even when it's a tenant's customers using it. We structure the GL and umbrella around that reality and help you enforce tenant insurance requirements so the risk gets shared the way the lease says it should." },
+      { q: "Do you track tenant certificates of insurance?", a: "Yes. We help set the insurance requirements in your leases, then track the certificates against them. An expired COI you discover after a loss is the most expensive piece of paper in real estate." },
+      { q: "How large of a retail portfolio do you handle?", a: "Roughly $50,000+ in annual premium, from one center to a multi-state retail portfolio." },
     ],
     searchTerms: ["shopping center insurance", "retail property insurance broker", "strip mall insurance"],
   },
@@ -266,12 +262,12 @@ export const PROGRAMS: Program[] = [
     category: "asset",
     shortName: "Industrial & Warehouse",
     name: "Industrial & Warehouse Insurance",
-    metaTitle: "Industrial & Warehouse Insurance Broker | Logistics, Distribution & Flex",
+    metaTitle: "Warehouse & Industrial Insurance Broker | ACREInsure",
     metaDescription:
-      "Property and liability for warehouses, distribution centers, and industrial/flex portfolios. High-TIV buildings, sprinkler/protection scrutiny, NNN lessor's risk, and CAT capacity. $50k+ premiums.",
+      "Property and liability for warehouses, distribution centers, and industrial/flex portfolios. High-TIV placements, sprinkler scrutiny, NNN lessor's risk. $50k+.",
     hook: "Property and liability for distribution centers, logistics, flex, and industrial portfolios.",
     intro:
-      "Industrial is the asset class everyone wants — but big-box distribution puts a lot of insured value under one roof, with sprinkler and protection scrutiny and tenant-operation liability to match. Placing high-TIV industrial well means getting the property capacity, the protection story, and the lease structure right. We do, and we market it accordingly.",
+      "Industrial is the asset class everyone wants to own, and underwriters still read it hard. A single big-box distribution building can put $100M of insured value under one roof, which means the sprinkler design, the protection class, and what's actually stored inside get scrutinized before anyone offers a limit. Get those details right in the submission and capacity shows up. Get them wrong and you're buying layers at a worse price. We get them right.",
     idealFor: [
       "Distribution, fulfillment, and logistics centers",
       "Flex and light-industrial portfolios",
@@ -279,15 +275,15 @@ export const PROGRAMS: Program[] = [
       "High-TIV single buildings",
     ],
     coverages: [
-      { title: "Property (high TIV)", body: "Large sprinklered buildings with protection-class and valuation done right to hold capacity." },
+      { title: "Property (high TIV)", body: "Large sprinklered buildings with the protection and valuation detail that lets a carrier hold real capacity." },
       { title: "General liability", body: "Premises and tenant-operations liability for logistics and industrial use." },
-      { title: "Lessor's risk / NNN", body: "Owner programs for single-tenant net-leased industrial." },
+      { title: "Lessor's risk / NNN", body: "Owner programs for single-tenant net-leased industrial, coordinated with the tenant's coverage." },
       { title: "Umbrella / excess", body: "Excess towers for fleet, tenant, and contractual exposure." },
     ],
     faqs: [
-      { q: "Can you place a high-TIV single distribution building?", a: "Yes. A single big-box can carry $100M+ of insured value; we assemble the property capacity — single carrier or layered — with the sprinkler and protection details that let underwriters say yes." },
-      { q: "Do you write lessor's risk only (NNN) industrial?", a: "We do. For single-tenant net-leased industrial we structure an owner program that coordinates with the tenant's coverage and your lender's requirements." },
-      { q: "What size accounts do you take?", a: "Roughly $50,000+ in annual premium, from one building to a multi-state industrial portfolio." },
+      { q: "Can you place a high-TIV single distribution building?", a: "Yes. A single big-box can carry $100M+ of insured value, and whether one carrier takes it or we layer it comes down to the sprinkler and protection story in the submission. We build that story properly so underwriters can say yes at a number that works." },
+      { q: "Do you write lessor's risk only (NNN) industrial?", a: "We do. For single-tenant net-leased industrial we structure an owner's program that lines up with the tenant's coverage and the lender's requirements, without paying twice for the same risk." },
+      { q: "What size accounts do you take?", a: "Roughly $50,000 and up in annual premium, from one building to a multi-state industrial portfolio." },
     ],
     searchTerms: ["warehouse insurance broker", "industrial property insurance", "distribution center insurance", "lessors risk NNN insurance"],
   },
@@ -296,12 +292,12 @@ export const PROGRAMS: Program[] = [
     category: "asset",
     shortName: "Hospitality & Hotels",
     name: "Hospitality & Hotel Insurance",
-    metaTitle: "Hotel & Hospitality Insurance Broker | Property, Liquor & Guest Liability",
+    metaTitle: "Hotel & Hospitality Insurance Broker | ACREInsure",
     metaDescription:
-      "Insurance for hotels, resorts, and hospitality portfolios — property (incl. coastal/CAT), guest and premises liability, liquor liability, and umbrella. Flagged and independent. $50k+ premiums.",
+      "Property, guest liability, liquor, and umbrella for hotels and resorts, flagged or independent. Coastal CAT capacity and brand-standard compliance. $50k+.",
     hook: "Property, guest liability, liquor, and umbrella for hotels, resorts, and hospitality portfolios.",
     intro:
-      "Hotels combine high-value property with heavy foot traffic, food and beverage, pools, and — frequently — coastal catastrophe exposure, all under brand or flag standards that dictate coverage. The program has to satisfy the franchise agreement and place the CAT property at the same time. We build hospitality programs that do both.",
+      "A hotel is high-value property with a crowd inside it: pools, bars, banquets, and guests who sue. Premises liability verdicts against hotels now routinely clear $10 million, and a clean claims history won't protect you in the wrong venue or brand tier. Put the property on the coast and you're also placing named-storm coverage in a market that keeps shrinking, all while the flag dictates limits and terms in the franchise agreement. The program has to do everything at once. We build hospitality programs that do.",
     idealFor: [
       "Flagged and independent hotels",
       "Resorts and coastal properties",
@@ -309,15 +305,15 @@ export const PROGRAMS: Program[] = [
       "Assets with food & beverage and liquor exposure",
     ],
     coverages: [
-      { title: "Property (incl. wind/named storm)", body: "High-value property with coastal and CAT capacity where the standard market pulls back." },
-      { title: "Guest & premises liability", body: "Liability for guests, pools, amenities, and common areas." },
-      { title: "Liquor liability", body: "Coverage for on-site bars, restaurants, and events." },
-      { title: "Umbrella & brand-required limits", body: "Excess towers sized to franchise and lender requirements." },
+      { title: "Property (incl. wind/named storm)", body: "High-value property with coastal and CAT capacity where the standard market has pulled back." },
+      { title: "Guest & premises liability", body: "Liability for guests, pools, amenities, and common areas, sized for what hospitality verdicts cost now." },
+      { title: "Liquor liability", body: "Coverage for on-site bars, restaurants, banquets, and events." },
+      { title: "Umbrella & brand-required limits", body: "Excess towers built to franchise and lender requirements." },
     ],
     faqs: [
-      { q: "Can you meet my franchise / brand insurance requirements?", a: "Yes. Flags specify limits, additional insureds, and coverage terms; we build the program to satisfy the brand standard and provide compliant evidence of insurance, while still marketing for competitive pricing." },
-      { q: "My resort is coastal — can you place the property?", a: "Usually. Coastal and named-storm hospitality goes to surplus-lines and London capacity, often in layers. We assemble the capacity and engineer the wind deductible so the limit stays adequate." },
-      { q: "Do you handle liquor liability for hotel F&B?", a: "Yes — on-site bars, restaurants, banquets, and events are covered through liquor liability coordinated with the GL and umbrella." },
+      { q: "Can you meet my franchise / brand insurance requirements?", a: "Yes. Flags spell out limits, additional insureds, and coverage terms, and the evidence of insurance has to match or you hear about it. We build the program to the brand standard first, then market it for price. Compliance and competitiveness aren't in conflict when the account is presented well." },
+      { q: "My resort is coastal. Can you place the property?", a: "Usually. Coastal and named-storm hospitality goes to surplus-lines and London capacity, often in layers, and the wind deductible is where the real negotiation happens. We assemble the capacity and structure the deductible so the limit stays adequate without gutting your cash position after a storm." },
+      { q: "Do you handle liquor liability for hotel F&B?", a: "Yes. Bars, restaurants, banquets, and events all run through liquor liability coordinated with the GL and umbrella, so a claim doesn't fall between policies." },
     ],
     searchTerms: ["hotel insurance broker", "hospitality insurance", "resort property insurance", "hotel liquor liability"],
   },
@@ -326,12 +322,12 @@ export const PROGRAMS: Program[] = [
     category: "asset",
     shortName: "Student & Senior Housing",
     name: "Student & Senior Housing Insurance",
-    metaTitle: "Student Housing & Senior Living Insurance Broker | Habitational Specialty",
+    metaTitle: "Student Housing & Senior Living Insurance | ACREInsure",
     metaDescription:
-      "Specialty habitational insurance for student housing and senior living / assisted living — property, general liability, professional liability, abuse & molestation, and umbrella. $50k+ premiums.",
+      "Specialty habitational coverage for student housing and senior living: property, GL, professional liability, abuse & molestation, umbrella. $50k+ premiums.",
     hook: "Specialty habitational property and liability for student housing and senior living portfolios.",
     intro:
-      "Student and senior housing are habitational sub-classes with liability profiles all their own — turnover, life-safety, and seasonal vacancy in student housing; resident care, professional, and abuse & molestation exposure in senior living. These accounts belong with specialty markets that understand the care and occupancy model, not a generic apartment carrier.",
+      "Student and senior housing look like apartments on paper and underwrite like nothing else. Student housing turns over every August, sits half-empty through the summer, and lives on life-safety compliance. Senior living adds resident care, professional liability, and abuse & molestation exposure that a generic apartment carrier wants no part of. These accounts belong with specialty markets that understand the occupancy model. That's where we take them.",
     idealFor: [
       "Purpose-built and off-campus student housing",
       "Assisted living, memory care, and senior living",
@@ -339,15 +335,15 @@ export const PROGRAMS: Program[] = [
       "Accounts needing professional and abuse & molestation coverage",
     ],
     coverages: [
-      { title: "Habitational property", body: "Building and rents with realistic valuation and CAT structuring." },
-      { title: "General liability", body: "Premises liability tuned to student or senior occupancy." },
+      { title: "Habitational property", body: "Building and rents with realistic valuation and catastrophe structure." },
+      { title: "General liability", body: "Premises liability tuned to student or senior occupancy, not a generic apartment form." },
       { title: "Professional & resident care", body: "Professional liability for senior living and care operations." },
-      { title: "Abuse & molestation + umbrella", body: "A&M coverage and excess towers for these higher-sensitivity classes." },
+      { title: "Abuse & molestation + umbrella", body: "A&M coverage placed explicitly, with excess towers for these higher-sensitivity classes." },
     ],
     faqs: [
-      { q: "Do you cover senior living professional liability?", a: "Yes. Senior and assisted living carries resident-care (professional) exposure beyond ordinary premises liability; we place professional liability coordinated with the GL, A&M, and umbrella through specialty senior-care markets." },
-      { q: "Is abuse & molestation coverage included?", a: "It's essential in these classes and we place it explicitly — often with its own limit — rather than leaving it to a buried sublimit or exclusion." },
-      { q: "How is student housing summer vacancy handled?", a: "We present the seasonal occupancy pattern accurately so the property program is priced for the real risk and doesn't trip vacancy provisions during breaks." },
+      { q: "Do you cover senior living professional liability?", a: "Yes. Senior and assisted living carries resident-care exposure that ordinary premises liability was never built for. We place professional liability through specialty senior-care markets and coordinate it with the GL, the A&M coverage, and the umbrella so the policies respond together instead of pointing at each other." },
+      { q: "Is abuse & molestation coverage included?", a: "It has to be, and we place it explicitly, often with its own limit. A&M left to a buried sublimit or a silent exclusion is one of the most expensive discoveries a housing owner can make after a claim." },
+      { q: "How is student housing summer vacancy handled?", a: "By telling the truth about it up front. We present the seasonal occupancy pattern accurately so the program is priced for the real risk and a vacancy provision doesn't void coverage over winter break." },
     ],
     searchTerms: ["student housing insurance", "senior living insurance broker", "assisted living insurance", "habitational specialty insurance"],
   },
@@ -358,13 +354,13 @@ export const PROGRAMS: Program[] = [
     category: "advisory",
     shortName: "Risk Management",
     name: "Real Estate Risk Management & Total Cost of Risk",
-    metaTitle: "Real Estate Risk Management | Total Cost of Risk Advisory for Owners & CFOs",
+    metaTitle: "Real Estate Risk Management & TCOR Advisory | ACREInsure",
     metaDescription:
-      "Beyond placement — total cost of risk (TCOR) strategy for real estate owners, funds, and CFOs. Valuation, deductibles, retentions, captives, claims advocacy, and renewal strategy. $50k+ programs.",
-    hook: "Total cost of risk strategy for owners, funds, and CFOs — not just a policy.",
+      "Total cost of risk advisory for real estate owners, funds, and CFOs. Retention strategy, captive analysis, valuation, claims advocacy. $50k+ programs.",
+    hook: "Total cost of risk strategy for owners, funds, and CFOs. Not just a policy.",
     coveragesTitle: "What we bring to the table",
     intro:
-      "For a real estate portfolio, premium is only part of the cost of risk. Deductibles, retained losses, valuation accuracy, claims handling, and the capital tied up in risk all move the real number. We work as your outsourced risk function — modeling total cost of risk, advising on retentions and captives, and advocating on claims — so insurance becomes a managed line item instead of an annual surprise.",
+      "Premium is the number on the invoice. It is not your cost of risk. Deductibles, retained losses, valuation accuracy, claims outcomes, and the capital sitting against all of it move the real figure, usually more than rate does. We work as an outsourced risk function for owners and CFOs, which means modeling total cost of risk instead of quoting a renewal, setting retentions on purpose instead of by default, and pressing claims until the recovery matches the coverage you paid for.",
     idealFor: [
       "CFOs and risk managers at owner/operator platforms",
       "Funds and multi-entity ownership structures",
@@ -372,15 +368,15 @@ export const PROGRAMS: Program[] = [
       "Accounts that want real claims advocacy",
     ],
     coverages: [
-      { title: "Total cost of risk modeling", body: "Premium, retained losses, deductibles, and cost of capital in one defensible picture." },
-      { title: "Deductible & retention strategy", body: "Where to retain, where to transfer, and what it does to cash flow." },
-      { title: "Captive & alternative risk", body: "Evaluation of group or single-parent captives and parametric structures." },
+      { title: "Total cost of risk modeling", body: "Premium, retained losses, deductibles, and cost of capital in one number you can defend to a board." },
+      { title: "Deductible & retention strategy", body: "Where to retain, where to transfer, and what each choice does to cash flow." },
+      { title: "Captive & alternative risk", body: "Group and single-parent captive evaluation, plus parametric structures where they beat the traditional market." },
       { title: "Claims advocacy", body: "We manage and push claims so recoveries match the coverage you bought." },
     ],
     faqs: [
-      { q: "What is total cost of risk?", a: "TCOR is the full cost of carrying risk — premiums plus retained/uninsured losses, deductibles, risk-control spend, and the cost of capital tied up in it. Optimizing TCOR, not just premium, is how sophisticated owners actually lower the number over time." },
-      { q: "Should our portfolio consider a captive?", a: "Sometimes. When you have enough predictable, retainable risk, a captive can recapture underwriting profit and smooth volatility. We model whether the economics work for your portfolio before recommending one." },
-      { q: "Do you handle claims for us?", a: "Yes. Claims advocacy is core to the work — we manage the process and press the carrier so the recovery reflects the coverage you paid for." },
+      { q: "What is total cost of risk?", a: "TCOR is everything carrying risk actually costs you: premiums, retained and uninsured losses, deductibles, risk-control spend, and the capital tied up behind it. Owners who manage that whole number are the ones whose insurance cost falls over time. Chasing premium alone mostly just moves cost around." },
+      { q: "Should our portfolio consider a captive?", a: "Sometimes. With enough predictable, retainable risk, a captive recaptures underwriting profit and smooths volatility. Without it, a captive is an expensive hobby. We model your portfolio's economics honestly before recommending one either way." },
+      { q: "Do you handle claims for us?", a: "Yes, and it's core to the work. We manage the claim process and press the carrier so the recovery reflects the coverage you paid for, not the first number the adjuster offers." },
     ],
     searchTerms: ["real estate risk management", "total cost of risk", "real estate captive insurance", "outsourced risk management"],
   },
@@ -389,13 +385,13 @@ export const PROGRAMS: Program[] = [
     category: "advisory",
     shortName: "Program Review",
     name: "Insurance Program Review & Renewal Marketing",
-    metaTitle: "Commercial Insurance Program Review | Renewal RFP & Second Opinion",
+    metaTitle: "Free Commercial Insurance Program Review | ACREInsure",
     metaDescription:
-      "A free, confidential review of your real estate insurance program and renewal. We benchmark pricing, find coverage gaps, and run a competitive marketing/RFP so carriers compete. $50k+ premiums.",
-    hook: "A free second opinion on your program — then a competitive renewal marketed to the right carriers.",
+      "A free, confidential review of your CRE insurance program: pricing benchmark, coverage gaps, valuation check, then a real competitive renewal. $50k+ premiums.",
+    hook: "A free second opinion on your program, then a competitive renewal marketed to the right carriers.",
     coveragesTitle: "What the review covers",
     intro:
-      "Most owners never see their program truly shopped. The incumbent agent renews it with the same carrier year after year, and pricing drifts. A program review changes that: we benchmark your pricing against the market, flag coverage gaps and valuation problems, and — when it's time — run a disciplined marketing process so carriers compete for your account. It costs nothing to look.",
+      "Most insurance programs are never actually shopped. The incumbent agent renews with the same carrier, the rate drifts a few points a year, and nobody reads the forms until there's a claim. A review changes that. We benchmark your pricing against where comparable risk is placing today, flag the exclusions and valuation problems that bite at claim time, and when you're ready, run a disciplined marketing process so carriers have to compete for the account. It costs nothing to look.",
     idealFor: [
       "Owners renewing in the next 60–120 days",
       "Programs that haven't been marketed in years",
@@ -403,15 +399,15 @@ export const PROGRAMS: Program[] = [
       "CFOs who want an independent benchmark",
     ],
     coverages: [
-      { title: "Pricing benchmark", body: "Where your rate sits versus current market for comparable risk." },
-      { title: "Coverage gap & valuation analysis", body: "Exclusions, sublimits, and insurance-to-value issues that bite at claim time." },
-      { title: "Structure & deductible review", body: "Whether the program structure still fits the portfolio and balance sheet." },
-      { title: "Competitive marketing (RFP)", body: "A disciplined process taking the account to the right carriers for real competition." },
+      { title: "Pricing benchmark", body: "Where your rate sits against the current market for comparable risk, in numbers rather than adjectives." },
+      { title: "Coverage gap & valuation analysis", body: "The exclusions, sublimits, and insurance-to-value problems that only show up at claim time." },
+      { title: "Structure & deductible review", body: "Whether the program still fits the portfolio and the balance sheet, or just fits last year's renewal." },
+      { title: "Competitive marketing (RFP)", body: "A disciplined process that takes the account to the right carriers and makes them compete." },
     ],
     faqs: [
-      { q: "Is the review really free?", a: "Yes. The review and benchmark are free and confidential. If we then market the account and you place through us, we're compensated like any broker — but there's no cost and no obligation to look." },
-      { q: "When should we start before renewal?", a: "Ideally 90–120 days out. That leaves time to gather data, model the exposure, and market the account properly. We can work faster when a renewal or non-renewal forces it." },
-      { q: "Will this disrupt our current agent relationship?", a: "Not unless you want it to. Many owners use the review purely as a benchmark. If we find material savings or better coverage, you decide whether to make a change — on your timeline." },
+      { q: "Is the review really free?", a: "Yes. The review and the benchmark cost nothing and stay confidential. If we later market the account and you place coverage through us, we're compensated the way any broker is. There's no fee and no obligation attached to looking." },
+      { q: "When should we start before renewal?", a: "Ideally 90 to 120 days out. That's enough time to gather data, model the exposure, and market the account properly instead of begging carriers for extensions. We can move faster when a non-renewal forces the issue; we'd just rather not have to." },
+      { q: "Will this disrupt our current agent relationship?", a: "Not unless you want it to. Plenty of owners use the review purely as a benchmark. If we find material savings or better coverage, the decision and the timing stay yours." },
     ],
     searchTerms: ["commercial insurance program review", "insurance renewal RFP", "second opinion commercial insurance", "insurance broker of record"],
   },

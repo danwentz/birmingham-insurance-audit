@@ -42,7 +42,7 @@ const jsonLd = {
   "@id": `${DOMAIN}/#org`,
   name: BRAND_NAME,
   description:
-    "Commercial real estate insurance brokerage for large accounts — multifamily/habitational, high-TIV portfolios, catastrophe property, and builders risk/OCIP.",
+    "Commercial real estate insurance brokerage for large accounts: multifamily/habitational, high-TIV portfolios, catastrophe property, and builders risk/OCIP.",
   url: DOMAIN,
   telephone: PHONE_E164,
   areaServed: "US",
@@ -74,8 +74,8 @@ export default function Home() {
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate">
                 Multifamily, high-TIV master programs, catastrophe-exposed property, and builders
-                risk/OCIP. We rebuild and remarket programs that standard agents can&apos;t — and put
-                your account in front of the carriers that actually want it.
+                risk/OCIP. We rebuild and remarket the programs standard agents can&apos;t place, and
+                put your account in front of the carriers that actually want it.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
@@ -152,7 +152,7 @@ export default function Home() {
               Built for institutional real estate
             </h2>
             <p className="mt-3 max-w-2xl text-slate">
-              The asset classes that carry real premium — owners, operators, funds, and developers.
+              Owners, operators, funds, and developers in the asset classes that carry real premium.
             </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {ASSETS.map((p) => {
@@ -181,8 +181,8 @@ export default function Home() {
               Advisory, not just placement
             </h2>
             <p className="mt-3 max-w-2xl text-slate">
-              The strategic work that lowers your total cost of risk — for owners and CFOs who want
-              more than a renewal quote.
+              The strategic work that lowers total cost of risk, for owners and CFOs who want more
+              than a renewal quote.
             </p>
             <div className="mt-8 grid gap-5 md:grid-cols-2">
               {ADVISORY.map((p) => {
@@ -215,9 +215,9 @@ export default function Home() {
             </h2>
             <div className="mt-10 grid gap-8 md:grid-cols-3">
               {[
-                { n: "01", t: "We dissect your current program", b: "Coverage, valuation, deductibles, and pricing — line by line — to find what's costing you and what's exposed." },
-                { n: "02", t: "We market it broadly", b: "Domestic, E&S, and London capacity — including the specialty markets standard agents don't reach." },
-                { n: "03", t: "We structure & manage it", b: "Layered limits, lender compliance, and a renewal run as a strategy — not a last-minute scramble." },
+                { n: "01", t: "We dissect your current program", b: "Coverage, valuation, deductibles, pricing. Line by line, until we know what's costing you money and where you're exposed." },
+                { n: "02", t: "We market it broadly", b: "Domestic, E&S, and London capacity, including the specialty markets a standard agent never calls." },
+                { n: "03", t: "We structure & manage it", b: "Layered limits, lender compliance, and a renewal that starts 90+ days out instead of two weeks before the term expires." },
               ].map((s) => (
                 <div key={s.n} className="border-l-2 border-gold pl-5">
                   <p className="font-display text-3xl font-bold text-gold">{s.n}</p>
@@ -238,7 +238,7 @@ export default function Home() {
             </h2>
             <ul className="mt-8 space-y-4">
               {[
-                `We only take large accounts — ${PREMIUM_FLOOR}+ in premium — so the work goes deep, not wide.`,
+                `We only take large accounts, ${PREMIUM_FLOOR}+ in premium, so the work goes deep instead of wide.`,
                 "Direct access to specialty and surplus-lines markets for hard-to-place and CAT-exposed risk.",
                 "We manage lender and equity insurance requirements so closings don't stall.",
                 `${YEARS_EXPERIENCE} years in commercial insurance, licensed in Alabama, placing deals across the country.`,

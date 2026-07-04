@@ -10,8 +10,8 @@ export const PHONE_E164 = "+1-205-999-4884";
 
 export const DOMAIN = "https://acreinsure.com";
 
-// TODO: replace with the CRE site's own GA4 measurement ID (keep separate from the audit site)
-export const GA_ID = "G-XXXXXXXXXX";
+// CRE site GA4 measurement ID (separate from the audit site)
+export const GA_ID = "G-RJ6FTGFFZH";
 
 export const YEARS_EXPERIENCE = "20";
 

@@ -26,18 +26,16 @@ const dmMono = DM_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(DOMAIN),
   title: {
-    default:
-      "Commercial Real Estate Insurance Broker | Large Portfolios & Hard-to-Place Property",
+    default: "Commercial Real Estate Insurance Broker | ACREInsure",
     template: `%s | ${BRAND_NAME}`,
   },
   description:
-    "A commercial real estate insurance broker for large accounts — multifamily, high-TIV portfolios, catastrophe property, and builders risk/OCIP. Alabama-based, placing deals nationwide. $50k+ premiums.",
+    "Broker for large CRE accounts: multifamily, high-TIV portfolios, coastal CAT property, and builders risk/OCIP. Alabama-based, placing nationwide. $50k+ premiums.",
   alternates: { canonical: "/" },
   openGraph: {
-    title:
-      "Commercial Real Estate Insurance Broker | Large Portfolios & Hard-to-Place Property",
+    title: "Commercial Real Estate Insurance Broker | ACREInsure",
     description:
-      "Specialist brokerage for institutional real estate: multifamily, high-TIV master programs, catastrophe property, and OCIP/builders risk.",
+      "Broker for large CRE accounts: multifamily, high-TIV portfolios, coastal CAT property, and builders risk/OCIP. Alabama-based, placing nationwide. $50k+ premiums.",
     url: DOMAIN,
     siteName: BRAND_NAME,
     locale: "en_US",

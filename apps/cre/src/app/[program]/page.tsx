@@ -22,7 +22,8 @@ export async function generateMetadata({
   const program = getProgram(slug);
   if (!program) return {};
   return {
-    title: program.metaTitle,
+    // Absolute: prevents the root template from appending the 42-char brand name.
+    title: { absolute: program.metaTitle },
     description: program.metaDescription,
     alternates: { canonical: `/${program.slug}` },
     openGraph: {

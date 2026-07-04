@@ -5,6 +5,7 @@ import { PROGRAMS } from "@/lib/programs";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: DOMAIN, changeFrequency: "monthly", priority: 1 },
+    { url: `${DOMAIN}/about`, changeFrequency: "yearly", priority: 0.5 },
     ...PROGRAMS.map((p) => ({
       url: `${DOMAIN}/${p.slug}`,
       changeFrequency: "monthly" as const,

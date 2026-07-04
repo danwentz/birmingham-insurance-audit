@@ -22,6 +22,12 @@ export function SiteHeader() {
           <Wordmark className="text-xl text-white" />
         </Link>
         <nav className="flex items-center gap-6">
+          <Link
+            href="/about"
+            className="hidden text-xs font-semibold uppercase tracking-wide text-slate transition-colors hover:text-champagne sm:inline"
+          >
+            About
+          </Link>
           <a
             href={PHONE_HREF}
             onClick={trackCall}
@@ -73,7 +79,7 @@ export function SiteFooter() {
           <div>
             <Wordmark className="text-lg text-white" />
             <p className="mt-3 max-w-[34ch] text-sm text-slate">
-              Institutional-grade coverage for serious Alabama portfolios.
+              Large-account CRE insurance. Brokered from Birmingham, placed nationwide.
             </p>
             <a
               href={PHONE_HREF}
@@ -85,6 +91,9 @@ export function SiteFooter() {
             <a href="#contact" className="mt-3 block text-sm font-semibold text-gold hover:underline">
               Request a quote →
             </a>
+            <Link href="/about" className="mt-2 block text-sm text-slate transition-colors hover:text-gold">
+              About Dan Wentz
+            </Link>
           </div>
           <FooterColumn title="Specialty Programs" items={programsByCategory("program")} />
           <FooterColumn title="By Asset Class" items={programsByCategory("asset")} />
