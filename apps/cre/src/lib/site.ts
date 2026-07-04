@@ -13,7 +13,5 @@ export const DOMAIN = "https://acreinsure.com";
 // CRE site GA4 measurement ID (separate from the audit site)
 export const GA_ID = "G-RJ6FTGFFZH";
 
-export const YEARS_EXPERIENCE = "20";
-
 // Positioning: large-account CRE only.
 export const PREMIUM_FLOOR = "$50,000";
