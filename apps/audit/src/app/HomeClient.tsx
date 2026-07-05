@@ -40,8 +40,8 @@ export default function HomeClient() {
             </a>
             <a
               href="#help"
-              style={{ backgroundColor: BRAND }}
-              className="text-white text-sm font-semibold px-4 py-2 rounded-md hover:opacity-90"
+              style={{ backgroundColor: BRAND_DARK }}
+              className="text-white text-sm font-semibold px-4 py-2 rounded-md hover:opacity-90 transition active:scale-[0.98]"
             >
               Get Help
             </a>
@@ -87,8 +87,8 @@ export default function HomeClient() {
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <a
                 href="#help"
-                style={{ backgroundColor: BRAND }}
-                className="inline-flex justify-center items-center text-white font-semibold px-6 py-3 rounded-md hover:opacity-90"
+                style={{ backgroundColor: BRAND_DARK }}
+                className="inline-flex justify-center items-center text-white font-semibold px-6 py-3 rounded-md hover:opacity-90 transition active:scale-[0.98]"
               >
                 Get My Free Audit Review
               </a>
@@ -104,7 +104,7 @@ export default function HomeClient() {
           </div>
 
           {/* Right: form card */}
-          <div id="help" className="bg-white rounded-xl shadow-lg p-6 sm:p-8 border border-gray-100">
+          <div id="help" className="bg-white rounded-xl shadow-lg shadow-slate-200/60 p-6 sm:p-8 border border-gray-100">
             <h2 className="text-2xl font-bold text-gray-900">
               Get a Free, Confidential Audit Review
             </h2>
@@ -183,42 +183,49 @@ export default function HomeClient() {
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-gray-900">How We Help You</h2>
           <p className="mt-2 text-gray-600">Three steps. No pressure at any of them.</p>
-          <div className="mt-10 grid md:grid-cols-3 gap-6 text-left">
-            <div className="bg-slate-50 p-6 rounded-xl border border-gray-100">
-              <span className="text-sm font-bold text-[#2A8E9E]">Step 1</span>
-              <h3 className="mt-1 font-semibold text-lg">Send Us the Letter</h3>
-              <p className="mt-2 text-gray-600">
-                The audit statement, the worksheet, even a photo of the bill. We go
-                through it line by line and tell you what the carrier did: which class
-                codes they used, whose payroll they counted, and where the number came
-                from.
-              </p>
+          <div className="mt-10 max-w-3xl mx-auto text-left divide-y divide-gray-200">
+            <div className="flex gap-6 py-8 pt-0">
+              <span className="text-4xl font-bold tabular-nums text-[#2A8E9E] w-10 shrink-0">1</span>
+              <div>
+                <h3 className="font-semibold text-lg">Send Us the Letter</h3>
+                <p className="mt-2 text-gray-600">
+                  The audit statement, the worksheet, even a photo of the bill. We go
+                  through it line by line and tell you what the carrier did: which
+                  class codes they used, whose payroll they counted, and where the
+                  number came from.
+                </p>
+              </div>
             </div>
-            <div className="bg-slate-50 p-6 rounded-xl border border-gray-100">
-              <span className="text-sm font-bold text-[#2A8E9E]">Step 2</span>
-              <h3 className="mt-1 font-semibold text-lg">We Look for the Usual Suspects</h3>
-              <p className="mt-2 text-gray-600">
-                Misclassified employees. Payroll counted twice. Sub costs picked up
-                because a certificate of insurance was missing. Overtime charged at
-                full freight. After enough audits, the errors show up fast.
-              </p>
+            <div className="flex gap-6 py-8">
+              <span className="text-4xl font-bold tabular-nums text-[#2A8E9E] w-10 shrink-0">2</span>
+              <div>
+                <h3 className="font-semibold text-lg">We Look for the Usual Suspects</h3>
+                <p className="mt-2 text-gray-600">
+                  Misclassified employees. Payroll counted twice. Sub costs picked up
+                  because a certificate of insurance was missing. Overtime charged at
+                  full freight. After enough audits, the errors show up fast.
+                </p>
+              </div>
             </div>
-            <div className="bg-slate-50 p-6 rounded-xl border border-gray-100">
-              <span className="text-sm font-bold text-[#2A8E9E]">Step 3</span>
-              <h3 className="mt-1 font-semibold text-lg">You Dispute With Documentation</h3>
-              <p className="mt-2 text-gray-600">
-                Carriers don&apos;t reverse an audit because you&apos;re upset. They
-                reverse it when you hand them corrected payroll records, certificates,
-                and the right class code argument. We help you build that package, and
-                we&apos;re straight with you about anything you legitimately owe.
-              </p>
+            <div className="flex gap-6 py-8 pb-0">
+              <span className="text-4xl font-bold tabular-nums text-[#2A8E9E] w-10 shrink-0">3</span>
+              <div>
+                <h3 className="font-semibold text-lg">You Dispute With Documentation</h3>
+                <p className="mt-2 text-gray-600">
+                  Carriers don&apos;t reverse an audit because you&apos;re upset. They
+                  reverse it when you hand them corrected payroll records,
+                  certificates, and the right class code argument. We help you build
+                  that package, and we&apos;re straight with you about anything you
+                  legitimately owe.
+                </p>
+              </div>
             </div>
           </div>
           <div className="mt-10">
             <a
               href="#help"
-              style={{ backgroundColor: BRAND }}
-              className="inline-block text-white font-semibold px-6 py-3 rounded-md hover:opacity-90"
+              style={{ backgroundColor: BRAND_DARK }}
+              className="inline-block text-white font-semibold px-6 py-3 rounded-md hover:opacity-90 transition active:scale-[0.98]"
             >
               Start My Free Review
             </a>
@@ -247,7 +254,7 @@ export default function HomeClient() {
               "Charges you believe are wrong or unfair",
               "An audit estimate based on the wrong job classifications",
             ].map((item) => (
-              <div key={item} className="flex items-start gap-3 bg-white p-4 rounded-lg border border-gray-100">
+              <div key={item} className="flex items-start gap-3 py-1">
                 <CheckCircle2 className="h-5 w-5 text-[#2A8E9E] mt-0.5 shrink-0" />
                 <span className="text-gray-800">{item}</span>
               </div>
@@ -262,8 +269,8 @@ export default function HomeClient() {
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
             Frequently Asked Questions
           </h2>
-          <div className="space-y-4">
-            <details className="border border-gray-200 rounded-lg p-4">
+          <div className="divide-y divide-gray-200 border-y border-gray-200">
+            <details className="py-5">
               <summary className="font-semibold cursor-pointer">
                 I just got a huge audit bill. Do I really have to pay all of it?
               </summary>
@@ -276,7 +283,7 @@ export default function HomeClient() {
               </p>
             </details>
 
-            <details className="border border-gray-200 rounded-lg p-4">
+            <details className="py-5">
               <summary className="font-semibold cursor-pointer">
                 What is a commercial insurance audit?
               </summary>
@@ -289,7 +296,7 @@ export default function HomeClient() {
               </p>
             </details>
 
-            <details className="border border-gray-200 rounded-lg p-4">
+            <details className="py-5">
               <summary className="font-semibold cursor-pointer">
                 Why didn&apos;t my agent warn me this was coming?
               </summary>
@@ -302,7 +309,7 @@ export default function HomeClient() {
               </p>
             </details>
 
-            <details className="border border-gray-200 rounded-lg p-4">
+            <details className="py-5">
               <summary className="font-semibold cursor-pointer">
                 Can an audit result actually be disputed?
               </summary>
@@ -315,7 +322,7 @@ export default function HomeClient() {
               </p>
             </details>
 
-            <details className="border border-gray-200 rounded-lg p-4">
+            <details className="py-5">
               <summary className="font-semibold cursor-pointer">
                 How much does your help cost?
               </summary>
@@ -419,7 +426,7 @@ export default function HomeClient() {
         </a>
         <a
           href="#help"
-          style={{ backgroundColor: BRAND }}
+          style={{ backgroundColor: BRAND_DARK }}
           className="flex items-center justify-center py-3 font-semibold text-white"
         >
           Get Free Review

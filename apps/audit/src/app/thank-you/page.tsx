@@ -26,7 +26,7 @@ export default function ThankYou() {
       <Link
         href="/"
         className="mt-8 inline-block text-white font-semibold px-6 py-3 rounded-md"
-        style={{ backgroundColor: "#2A8E9E" }}
+        style={{ backgroundColor: "#1f6d79" }}
       >
         Back to Home
       </Link>

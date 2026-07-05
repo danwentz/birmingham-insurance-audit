@@ -1,6 +1,6 @@
 "use client";
 
-import { BRAND, DOMAIN } from "@/lib/site";
+import { BRAND_DARK, DOMAIN } from "@/lib/site";
 
 declare global {
   interface Window {
@@ -82,8 +82,8 @@ export function LeadForm({
       )}
       <button
         type="submit"
-        style={{ backgroundColor: BRAND }}
-        className="w-full text-white font-semibold px-4 py-3 rounded-md hover:opacity-90 transition"
+        style={{ backgroundColor: BRAND_DARK }}
+        className="w-full text-white font-semibold px-4 py-3 rounded-md hover:opacity-90 transition active:scale-[0.98]"
       >
         Get My Free Audit Review →
       </button>
