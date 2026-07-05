@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 
 export default function ThankYou() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-midnight px-6 text-center text-champagne">
+    <main className="flex min-h-[100dvh] flex-col items-center justify-center bg-midnight px-6 text-center text-champagne">
       <ConversionTracker />
       <h1 className="font-display text-4xl font-bold tracking-tight text-white">
-        Thank you — request received
+        Thank you. Request received.
       </h1>
       <p className="mt-4 max-w-md text-lg text-slate">
         A specialist will review your account and reach out within one business day.

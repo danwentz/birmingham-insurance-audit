@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, ArrowLeft, CheckCircle2 } from "lucide-react";
@@ -81,12 +82,30 @@ export default async function ProgramPage({
       <main>
         {/* HERO (dark) */}
         <section className="relative overflow-hidden bg-midnight px-5 pt-14 pb-16 text-champagne">
-          <span
-            aria-hidden
-            className="pointer-events-none absolute top-1/2 right-[-2%] -translate-y-1/2 select-none font-display text-[30vw] font-bold leading-none tracking-tight text-gold opacity-[0.04]"
-          >
-            CRE
-          </span>
+          {program.heroImage ? (
+            <>
+              <Image
+                src={program.heroImage}
+                alt=""
+                aria-hidden
+                fill
+                priority
+                sizes="100vw"
+                className="pointer-events-none select-none object-cover opacity-25"
+              />
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-0 bg-gradient-to-r from-midnight via-midnight/85 to-midnight/40"
+              />
+            </>
+          ) : (
+            <span
+              aria-hidden
+              className="pointer-events-none absolute top-1/2 right-[-2%] -translate-y-1/2 select-none font-display text-[30vw] font-bold leading-none tracking-tight text-gold opacity-[0.04]"
+            >
+              CRE
+            </span>
+          )}
           <div className="relative mx-auto max-w-4xl">
             <Link href="/" className="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wide text-gold hover:underline">
               <ArrowLeft className="h-4 w-4" /> All programs

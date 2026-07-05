@@ -115,8 +115,7 @@ export default function Home() {
         {/* SPECIALTY PROGRAMS */}
         <section id="programs" className="bg-white px-5 py-20">
           <div className="mx-auto max-w-6xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Specialty programs</p>
-            <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-obsidian sm:text-4xl">
+            <h2 className="font-display text-3xl font-bold tracking-tight text-obsidian sm:text-4xl">
               The hard-to-place classes we place
             </h2>
             <p className="mt-3 max-w-2xl text-slate">
@@ -147,8 +146,7 @@ export default function Home() {
         {/* ASSET CLASSES */}
         <section className="px-5 py-20">
           <div className="mx-auto max-w-6xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Asset classes</p>
-            <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-obsidian sm:text-4xl">
+            <h2 className="font-display text-3xl font-bold tracking-tight text-obsidian sm:text-4xl">
               Built for institutional real estate
             </h2>
             <p className="mt-3 max-w-2xl text-slate">
@@ -176,29 +174,28 @@ export default function Home() {
         {/* ADVISORY */}
         <section className="bg-white px-5 py-20">
           <div className="mx-auto max-w-6xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Advisory</p>
-            <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-obsidian sm:text-4xl">
+            <h2 className="font-display text-3xl font-bold tracking-tight text-obsidian sm:text-4xl">
               Advisory, not just placement
             </h2>
             <p className="mt-3 max-w-2xl text-slate">
               The strategic work that lowers total cost of risk, for owners and CFOs who want more
               than a renewal quote.
             </p>
-            <div className="mt-8 grid gap-5 md:grid-cols-2">
+            <div className="mt-8 border-y border-gold/15 divide-y divide-gold/15">
               {ADVISORY.map((p) => {
                 const Icon = ICONS[p.slug] ?? ClipboardCheck;
                 return (
                   <Link
                     key={p.slug}
                     href={`/${p.slug}`}
-                    className="gold-rule-top group relative overflow-hidden rounded-md bg-ivory p-6 shadow-sm transition hover:shadow-lg"
+                    className="group flex items-start gap-5 py-6"
                   >
-                    <Icon className="h-7 w-7 text-gold" />
-                    <h3 className="mt-4 font-display text-xl font-semibold text-obsidian">{p.name}</h3>
-                    <p className="mt-2 text-slate">{p.hook}</p>
-                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold uppercase tracking-wide text-gold">
-                      Learn more <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-                    </span>
+                    <Icon className="h-7 w-7 shrink-0 text-gold" />
+                    <div className="flex-1">
+                      <h3 className="font-display text-xl font-semibold text-obsidian">{p.name}</h3>
+                      <p className="mt-1 text-slate">{p.hook}</p>
+                    </div>
+                    <ArrowRight className="mt-1 h-5 w-5 shrink-0 text-slate transition group-hover:translate-x-1 group-hover:text-gold" />
                   </Link>
                 );
               })}
@@ -232,8 +229,7 @@ export default function Home() {
         {/* WHY US */}
         <section className="px-5 py-20">
           <div className="mx-auto max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Why ACREInsure</p>
-            <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-obsidian sm:text-4xl">
+            <h2 className="font-display text-3xl font-bold tracking-tight text-obsidian sm:text-4xl">
               Why owners and CFOs work with us
             </h2>
             <ul className="mt-8 space-y-4">

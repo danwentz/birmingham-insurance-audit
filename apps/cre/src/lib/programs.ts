@@ -13,6 +13,7 @@ export type Program = {
   intro: string; // problem/context paragraph
   idealFor: string[]; // qualifier bullets
   coveragesTitle?: string; // section heading override (default "What we structure")
+  heroImage?: string; // 16:9 hero photo in /public; falls back to the "CRE" watermark
   coverages: { title: string; body: string }[];
   faqs: Faq[];
   searchTerms: string[]; // the high-intent terms this page targets
@@ -28,6 +29,7 @@ export const PROGRAMS: Program[] = [
     metaDescription:
       "Habitational property, GL, and umbrella for apartment portfolios from 50 to 10,000+ units. We fix non-renewals, re-rates, and deductible shock. $50k+ premiums.",
     hook: "Habitational property, liability, and umbrella for owners and operators of 50 to 10,000+ units.",
+    heroImage: "/IMG_3543.JPG",
     intro:
       "No property class got repriced harder than multifamily. Premiums rose more than 75% between 2019 and 2024, carriers pulled capacity, and most standard markets quit writing apartment general liability altogether. So renewals now show up with a percentage wind/hail deductible you never agreed to and an assault-and-battery sublimit buried in the forms. If your program has been non-renewed, re-rated, or quietly rolled over with the same carrier every year, you are probably overpaying. We rebuild it from scratch and take it to the habitational markets that still want the business.",
     idealFor: [
@@ -72,6 +74,7 @@ export const PROGRAMS: Program[] = [
     metaDescription:
       "Master and schedule property programs for real estate portfolios with $100M to $2B+ in total insured value. Layered placements, agreed value, lender compliance.",
     hook: "Master property and schedule programs for portfolios with $100M to $2B+ in total insured value.",
+    heroImage: "/Portfolio.JPG",
     intro:
       "Once a portfolio crosses into nine figures of insured value, a policy per building stops making sense. The right structure is a master program: every asset on the schedule of values under blanket limits, with agreed valuation, capacity layered and shared across carriers, and lender compliance handled once instead of loan by loan. We design these placements, take them to domestic and London markets, and run the renewal as the strategic event it is. Not a fire drill in the last two weeks of the term.",
     idealFor: [
@@ -116,6 +119,7 @@ export const PROGRAMS: Program[] = [
     metaDescription:
       "Wind, named storm, hail, flood, and quake capacity for hard-to-place commercial property. E&S and London placements, layered limits, deductible buy-downs.",
     hook: "Capacity for the hard-to-place risk: coastal wind, named storm, hail belt, flood, and quake.",
+    heroImage: "/Coastal.JPG",
     intro:
       "Catastrophe-exposed property is where the standard market still says no. Near the Gulf, most standard carriers won't write windstorm at all, so the coverage moves to E&S and London markets and named-storm deductibles start around 5% of insured value. On a $20M building, that's the first $1 million out of your pocket before the carrier pays a dime. Placing this well takes real market access and a willingness to build the program in layers. Find the capacity, engineer the deductible, keep the limit adequate and the lender satisfied. That's the job.",
     idealFor: [
@@ -160,6 +164,7 @@ export const PROGRAMS: Program[] = [
     metaDescription:
       "Builders risk and OCIP wrap-up programs for commercial developments from $25M to $100M+. GL, excess, and workers' comp under one owner-controlled master.",
     hook: "Builders risk and wrap-up (OCIP) programs for ground-up and value-add projects from $25M to $100M+.",
+    heroImage: "/Construction.JPG",
     intro:
       "On a big development, insurance structure is one of the few budget lines you can actually move. Builders risk covers the course of construction on any project. On larger jobs, an owner-controlled insurance program (an OCIP, or wrap-up) also pulls general liability, excess, and workers' comp under one owner-controlled master, which strips the duplicated insurance markup out of every trade's bid and closes the gaps between contractors' policies. It also puts you, not your GC, in control of claims and limits. We design the program up front and administer it all the way through substantial completion.",
     idealFor: [
@@ -181,7 +186,7 @@ export const PROGRAMS: Program[] = [
       },
       {
         q: "How big does a project need to be for a wrap-up?",
-        a: "Rule of thumb: GL-only wrap-ups start earning their keep around $25M of hard construction cost, and full OCIPs are common on $50M–$100M+ projects. Below that, a well-structured builders risk plus contractor-placed coverage usually wins on cost.",
+        a: "Rule of thumb: GL-only wrap-ups start earning their keep around $25M of hard construction cost, and full OCIPs are common on $50M-$100M+ projects. Below that, a well-structured builders risk plus contractor-placed coverage usually wins on cost.",
       },
       {
         q: "Can you coordinate with our lender and equity requirements?",
@@ -206,6 +211,7 @@ export const PROGRAMS: Program[] = [
     metaDescription:
       "Property, liability, and umbrella for office towers and portfolios. Vacancy, repositioning, tenant build-outs, and lender requirements handled. $50k+ premiums.",
     hook: "Property, liability, and umbrella for office towers, suburban buildings, and portfolios.",
+    heroImage: "/Office.JPG",
     intro:
       "Office is getting underwritten by headline right now. Carriers read the same return-to-office stories you do, and a well-run building can get priced like a distressed one just for sharing the sector. That's a presentation problem, and presentation problems can be fixed. We put the occupancy, the life-safety record, the capital improvements, and the tenancy in front of underwriters properly, then market the account so the price reflects your building rather than the sector's reputation.",
     idealFor: [
@@ -236,6 +242,7 @@ export const PROGRAMS: Program[] = [
     metaDescription:
       "Property and liability for strip centers, power centers, and retail portfolios. Parking-lot premises risk, tenant COI tracking, CAT structure. $50k+ premiums.",
     hook: "Property and liability for strip centers, power centers, and multi-tenant retail portfolios.",
+    heroImage: "/Retail.JPG",
     intro:
       "A multi-tenant center concentrates liability in exactly the places you control: the parking lot, the sidewalks, the common areas. Tenants turn over; the slip-and-fall exposure stays yours. So the program has to carry that premises risk, keep tenant certificates of insurance current so their gaps never become your loss, and still satisfy the lender. If the center sits in wind or hail territory, the property side needs real CAT structure on top. We build all of that into one program and then make carriers compete for it.",
     idealFor: [
@@ -266,6 +273,7 @@ export const PROGRAMS: Program[] = [
     metaDescription:
       "Property and liability for warehouses, distribution centers, and industrial/flex portfolios. High-TIV placements, sprinkler scrutiny, NNN lessor's risk. $50k+.",
     hook: "Property and liability for distribution centers, logistics, flex, and industrial portfolios.",
+    heroImage: "/Industrial.JPG",
     intro:
       "Industrial is the asset class everyone wants to own, and underwriters still read it hard. A single big-box distribution building can put $100M of insured value under one roof, which means the sprinkler design, the protection class, and what's actually stored inside get scrutinized before anyone offers a limit. Get those details right in the submission and capacity shows up. Get them wrong and you're buying layers at a worse price. We get them right.",
     idealFor: [
@@ -296,6 +304,7 @@ export const PROGRAMS: Program[] = [
     metaDescription:
       "Property, guest liability, liquor, and umbrella for hotels and resorts, flagged or independent. Coastal CAT capacity and brand-standard compliance. $50k+.",
     hook: "Property, guest liability, liquor, and umbrella for hotels, resorts, and hospitality portfolios.",
+    heroImage: "/Hotel.JPG",
     intro:
       "A hotel is high-value property with a crowd inside it: pools, bars, banquets, and guests who sue. Premises liability verdicts against hotels now routinely clear $10 million, and a clean claims history won't protect you in the wrong venue or brand tier. Put the property on the coast and you're also placing named-storm coverage in a market that keeps shrinking, all while the flag dictates limits and terms in the franchise agreement. The program has to do everything at once. We build hospitality programs that do.",
     idealFor: [
@@ -325,6 +334,7 @@ export const PROGRAMS: Program[] = [
     metaTitle: "Student Housing & Senior Living Insurance | ACREInsure",
     metaDescription:
       "Specialty habitational coverage for student housing and senior living: property, GL, professional liability, abuse & molestation, umbrella. $50k+ premiums.",
+    heroImage: "/student.JPG",
     hook: "Specialty habitational property and liability for student housing and senior living portfolios.",
     intro:
       "Student and senior housing look like apartments on paper and underwrite like nothing else. Student housing turns over every August, sits half-empty through the summer, and lives on life-safety compliance. Senior living adds resident care, professional liability, and abuse & molestation exposure that a generic apartment carrier wants no part of. These accounts belong with specialty markets that understand the occupancy model. That's where we take them.",
@@ -393,7 +403,7 @@ export const PROGRAMS: Program[] = [
     intro:
       "Most insurance programs are never actually shopped. The incumbent agent renews with the same carrier, the rate drifts a few points a year, and nobody reads the forms until there's a claim. A review changes that. We benchmark your pricing against where comparable risk is placing today, flag the exclusions and valuation problems that bite at claim time, and when you're ready, run a disciplined marketing process so carriers have to compete for the account. It costs nothing to look.",
     idealFor: [
-      "Owners renewing in the next 60–120 days",
+      "Owners renewing in the next 60-120 days",
       "Programs that haven't been marketed in years",
       "Anyone facing a large increase or a non-renewal",
       "CFOs who want an independent benchmark",

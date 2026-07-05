@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { SiteHeader, SiteFooter } from "@/components/chrome";
 import { ContactSection } from "@/components/ContactSection";
@@ -69,13 +70,28 @@ export default function About() {
             <Link href="/" className="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wide text-gold hover:underline">
               <ArrowLeft className="h-4 w-4" /> Home
             </Link>
-            <p className="mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-gold">About</p>
-            <h1 className="mt-3 font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
-              Dan Wentz
-            </h1>
-            <p className="mt-5 text-xl text-slate">
-              The person behind the programs on this site.
-            </p>
+            <div className="mt-8 flex flex-col items-start gap-8 sm:flex-row sm:items-center">
+              <div className="shrink-0">
+                <Image
+                  src="/dan-wentz-headshot.jpg"
+                  alt="Dan Wentz"
+                  width={896}
+                  height={896}
+                  priority
+                  sizes="(min-width: 640px) 176px, 128px"
+                  className="h-32 w-32 rounded-full object-cover ring-2 ring-gold/60 sm:h-44 sm:w-44"
+                />
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">About</p>
+                <h1 className="mt-3 font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
+                  Dan Wentz
+                </h1>
+                <p className="mt-5 text-xl text-slate">
+                  The person behind the programs on this site.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
