@@ -11,13 +11,7 @@ import {
   AlertTriangle,
   MapPin,
 } from "lucide-react";
-import {
-  BRAND,
-  BRAND_DARK,
-  PHONE_DISPLAY,
-  PHONE_HREF,
-  YEARS_EXPERIENCE,
-} from "@/lib/site";
+import { BRAND, BRAND_DARK, PHONE_DISPLAY, PHONE_HREF } from "@/lib/site";
 import { LeadForm, trackCall } from "@/components/LeadForm";
 import type { City } from "@/lib/cities";
 
@@ -64,27 +58,27 @@ export default function CityClient({ city }: { city: City }) {
               <MapPin className="h-4 w-4" /> Serving {city.name} &amp; {city.county}
             </span>
             <h1 className="mt-4 text-4xl sm:text-5xl font-bold tracking-tight text-gray-900">
-              {city.name} Insurance Audit Help — Surprised by a Big Premium Bill?
+              Insurance Audit Help in {city.name}: Don&apos;t Pay That Bill Yet
             </h1>
             <p className="mt-5 text-lg text-gray-700">
-              If your insurer says you owe thousands more after a workers&apos; comp or
-              general liability audit, <strong>don&apos;t pay it before you talk to us.</strong>{" "}
-              We help {city.name}-area business owners review, dispute, and reduce
-              inflated audit bills.
+              The carrier says you owe thousands more after a workers&apos; comp or
+              general liability audit. <strong>Before you pay it, let somebody read it.</strong>{" "}
+              We help {city.name}-area business owners dispute audit bills built on
+              wrong class codes and inflated payroll.
             </p>
 
             <ul className="mt-6 space-y-2 text-gray-800">
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-[#2A8E9E] mt-0.5 shrink-0" />
-                You don&apos;t have to just write the check — you have options.
+                An audit bill is the carrier&apos;s math. Math gets checked.
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-[#2A8E9E] mt-0.5 shrink-0" />
-                We explain your audit in plain English — no jargon, no judgment.
+                We explain what happened in plain English. No jargon, no judgment.
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-[#2A8E9E] mt-0.5 shrink-0" />
-                Free review. No obligation. Local help for {city.region}.
+                The review is free, and we know {city.region}.
               </li>
             </ul>
 
@@ -112,8 +106,8 @@ export default function CityClient({ city }: { city: City }) {
               Free {city.name} Audit Review
             </h2>
             <p className="mt-1 text-gray-600 text-sm">
-              Tell us what happened. We&apos;ll review your situation and lay out your
-              options — at no cost.
+              Tell us what happened, and send the letter if you have it. We&apos;ll lay
+              out your options at no cost.
             </p>
             <div className="mt-5">
               <LeadForm source={source} />
@@ -132,18 +126,18 @@ export default function CityClient({ city }: { city: City }) {
           </div>
           <div>
             <Clock className="h-6 w-6 mx-auto text-[#2A8E9E]" />
-            <p className="mt-2 text-sm font-semibold text-gray-800">{YEARS_EXPERIENCE} Years Experience</p>
-            <p className="text-xs text-gray-500">Commercial insurance audits</p>
+            <p className="mt-2 text-sm font-semibold text-gray-800">Same-Day Response</p>
+            <p className="text-xs text-gray-500">Usually within one business day</p>
           </div>
           <div>
             <FileSearch className="h-6 w-6 mx-auto text-[#2A8E9E]" />
             <p className="mt-2 text-sm font-semibold text-gray-800">Free Audit Review</p>
-            <p className="text-xs text-gray-500">No cost, no obligation</p>
+            <p className="text-xs text-gray-500">No cost to have us look</p>
           </div>
           <div>
             <Scale className="h-6 w-6 mx-auto text-[#2A8E9E]" />
-            <p className="mt-2 text-sm font-semibold text-gray-800">Dispute & Reduce</p>
-            <p className="text-xs text-gray-500">Contest inaccurate charges</p>
+            <p className="mt-2 text-sm font-semibold text-gray-800">We Check the Math</p>
+            <p className="text-xs text-gray-500">Class codes, payroll, subs</p>
           </div>
         </div>
       </section>
@@ -157,10 +151,10 @@ export default function CityClient({ city }: { city: City }) {
           </h2>
           <p className="mt-4 text-lg text-gray-700">{city.blurb}</p>
           <p className="mt-4 text-lg text-gray-700">
-            Take a breath. A surprise audit bill is <strong>not</strong> automatically a
-            final bill. Insurers make mistakes — wrong job classifications, payroll
-            counted twice, subcontractors miscategorized, ineligible figures included.
-            Those mistakes are exactly what we look for.
+            Take a breath. An audit bill is the carrier&apos;s calculation, not a
+            verdict. Wrong class codes, payroll counted twice, sub costs picked up
+            because a certificate was missing. Those are the mistakes we go looking
+            for, and we find them more often than you&apos;d think.
           </p>
         </div>
       </section>
@@ -169,32 +163,35 @@ export default function CityClient({ city }: { city: City }) {
       <section className="py-16 bg-white px-4">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-gray-900">How We Help {city.name} Owners</h2>
-          <p className="mt-2 text-gray-600">A simple, no-pressure process built for stressed business owners.</p>
+          <p className="mt-2 text-gray-600">Three steps. No pressure at any of them.</p>
           <div className="mt-10 grid md:grid-cols-3 gap-6 text-left">
             <div className="bg-slate-50 p-6 rounded-xl border border-gray-100">
               <span className="text-sm font-bold text-[#2A8E9E]">Step 1</span>
-              <h3 className="mt-1 font-semibold text-lg">We Review Your Audit — Free</h3>
+              <h3 className="mt-1 font-semibold text-lg">Send Us the Letter</h3>
               <p className="mt-2 text-gray-600">
-                Send us the audit letter or worksheet. We&apos;ll go through it line by
-                line and tell you, in plain English, what it says and whether it looks
-                accurate.
+                The audit statement, the worksheet, even a photo of the bill. We go
+                through it line by line and tell you what the carrier did: which class
+                codes they used, whose payroll they counted, and where the number came
+                from.
               </p>
             </div>
             <div className="bg-slate-50 p-6 rounded-xl border border-gray-100">
               <span className="text-sm font-bold text-[#2A8E9E]">Step 2</span>
-              <h3 className="mt-1 font-semibold text-lg">We Find the Errors</h3>
+              <h3 className="mt-1 font-semibold text-lg">We Look for the Usual Suspects</h3>
               <p className="mt-2 text-gray-600">
-                Misclassified employees, double-counted payroll, ineligible
-                subcontractor costs, and bad estimates can all inflate your bill. We
-                identify what can be challenged.
+                Misclassified employees. Payroll counted twice. Sub costs picked up
+                because a certificate of insurance was missing. Overtime charged at
+                full freight. After enough audits, the errors show up fast.
               </p>
             </div>
             <div className="bg-slate-50 p-6 rounded-xl border border-gray-100">
               <span className="text-sm font-bold text-[#2A8E9E]">Step 3</span>
-              <h3 className="mt-1 font-semibold text-lg">We Help You Dispute & Plan</h3>
+              <h3 className="mt-1 font-semibold text-lg">You Dispute With Documentation</h3>
               <p className="mt-2 text-gray-600">
-                We help you contest inaccurate charges with the right documentation and
-                map out your options — including how to handle what you legitimately owe.
+                Carriers don&apos;t reverse an audit because you&apos;re upset. They
+                reverse it when you hand them corrected payroll records, certificates,
+                and the right class code argument. We help you build that package, and
+                we&apos;re straight with you about anything you legitimately owe.
               </p>
             </div>
           </div>
@@ -217,7 +214,7 @@ export default function CityClient({ city }: { city: City }) {
             Serving {city.name} &amp; the Surrounding Area
           </h2>
           <p className="mt-3 text-gray-600">
-            Local help with commercial insurance and premium audits for businesses in:
+            Premium audit reviews for business owners in:
           </p>
           <div className="mt-5 flex flex-wrap justify-center gap-2">
             {[city.name, ...city.nearby].map((place) => (
@@ -247,11 +244,11 @@ export default function CityClient({ city }: { city: City }) {
                 I just got a huge audit bill. Do I really have to pay all of it?
               </summary>
               <p className="mt-2 text-gray-600">
-                Not necessarily. An audit bill is the insurer&apos;s calculation — and
-                calculations can be wrong. If your business was misclassified, your
-                payroll was overstated, or ineligible figures were included, those
-                amounts can often be disputed and reduced. Before you pay a lump sum,
-                have someone review exactly how the number was reached.
+                Not necessarily. An audit bill is the carrier&apos;s calculation, and
+                the inputs are wrong more often than you&apos;d think. Wrong class
+                codes. Overstated payroll. Sub costs picked up as wages. Any of those
+                can be disputed with the right records. Find out how they got the
+                number before you pay it.
               </p>
             </details>
             <details className="border border-gray-200 rounded-lg p-4">
@@ -259,10 +256,10 @@ export default function CityClient({ city }: { city: City }) {
                 Do you help businesses in {city.name}?
               </summary>
               <p className="mt-2 text-gray-600">
-                Yes. We work with business owners in {city.name}, {city.county}, and
-                across {city.region} on workers&apos; compensation and general
-                liability premium audits — reviewing, disputing, and reducing inflated
-                bills.
+                Yes. We work with owners in {city.name}, {city.county}, and across{" "}
+                {city.region} on workers&apos; compensation and general liability
+                premium audits. Send the letter and we&apos;ll tell you whether the
+                number holds up.
               </p>
             </details>
             <details className="border border-gray-200 rounded-lg p-4">
@@ -270,10 +267,11 @@ export default function CityClient({ city }: { city: City }) {
                 Why didn&apos;t my agent warn me this was coming?
               </summary>
               <p className="mt-2 text-gray-600">
-                Most commercial policies include an annual audit right in the contract,
-                but it&apos;s often glossed over at sale. That&apos;s why so many owners
-                feel blindsided. It doesn&apos;t mean you did anything wrong — it means
-                you need someone in your corner now.
+                The audit clause sits in nearly every workers&apos; comp and general
+                liability policy, but plenty of agents never walk their clients through
+                it at sale. So the first time most owners hear the word
+                &quot;audit&quot; is when the bill lands. That&apos;s not on you. It
+                does mean you want someone reading the fine print now.
               </p>
             </details>
             <details className="border border-gray-200 rounded-lg p-4">
@@ -281,9 +279,10 @@ export default function CityClient({ city }: { city: City }) {
                 How much does your help cost?
               </summary>
               <p className="mt-2 text-gray-600">
-                The initial review is free with no obligation. We&apos;ll look at your
-                audit, explain what we see, and lay out your options. If we can help
-                further, we&apos;ll be upfront about that before you commit to anything.
+                The first review costs nothing and commits you to nothing. We read the
+                audit, tell you what we see, and lay out the options. If there&apos;s
+                more we can do from there, we&apos;ll price it plainly before you
+                decide anything.
               </p>
             </details>
           </div>
@@ -293,11 +292,12 @@ export default function CityClient({ city }: { city: City }) {
       {/* FINAL CTA */}
       <section style={{ backgroundColor: BRAND }} className="py-16 px-4 text-center text-white">
         <h2 className="text-3xl font-bold">
-          {city.name}: Don&apos;t Pay That Audit Bill Until You Talk to Us
+          {city.name}: Don&apos;t Pay That Audit Bill Until Someone Reads It
         </h2>
         <p className="mt-3 max-w-xl mx-auto text-white/90">
-          A few minutes today could save you thousands. Get your free, confidential
-          audit review — no cost, no obligation.
+          Send the letter over. If the bill is right, we&apos;ll tell you, and
+          you&apos;ve lost nothing. If it&apos;s wrong, you&apos;ll be glad you
+          didn&apos;t pay it.
         </p>
         <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
           <a
@@ -331,8 +331,8 @@ export default function CityClient({ city }: { city: City }) {
             </a>
           </p>
           <p className="mt-2 max-w-2xl mx-auto text-gray-400">
-            Helping {city.name} and {city.region} business owners understand, dispute,
-            and resolve commercial insurance premium audits.
+            Helping {city.name} and {city.region} business owners dispute inaccurate
+            premium audit bills and settle the rest on fair terms.
           </p>
           <p className="mt-4">
             <Link href="/" className="text-gray-300 hover:underline">

@@ -15,7 +15,7 @@ export const CITIES: City[] = [
     county: "Madison County",
     nearby: ["Madison", "Decatur", "Athens", "Meridianville", "Hampton Cove", "Owens Cross Roads"],
     blurb:
-      "From aerospace and defense contractors to the trades, construction, and staffing firms powering the Rocket City, Huntsville businesses get hit with workers' comp and general liability audits every year.",
+      "Huntsville is growing faster than anywhere else in Alabama, and the companies doing the building, from framing crews to the defense subcontractors around Redstone Arsenal, are exactly who premium auditors scrutinize hardest. Fast-growing payroll means the estimate your policy was priced on is already stale by audit time.",
   },
   {
     slug: "tuscaloosa",
@@ -24,7 +24,7 @@ export const CITIES: City[] = [
     county: "Tuscaloosa County",
     nearby: ["Northport", "Cottondale", "Brookwood", "Moundville", "Coaling", "Vance"],
     blurb:
-      "Contractors, restaurants, auto suppliers, and service businesses across Tuscaloosa and Northport are common targets for premium audits — often with bills no one saw coming.",
+      "Between the Mercedes-Benz plant in Vance, its supplier network, and everything the University keeps busy, Tuscaloosa and Northport run on payroll-heavy businesses. When actual payroll beats the estimate your policy was priced on, the audit bill follows, and it isn't always calculated right.",
   },
   {
     slug: "montgomery",
@@ -33,7 +33,7 @@ export const CITIES: City[] = [
     county: "Montgomery County",
     nearby: ["Prattville", "Wetumpka", "Pike Road", "Millbrook", "Pratt", "Deatsville"],
     blurb:
-      "Montgomery-area contractors, manufacturers, healthcare practices, and trucking companies regularly face workers' comp and liability audits that inflate their premiums.",
+      "Hyundai and its suppliers, state contractors, and the trucking firms working the I-65 and I-85 corridors make Montgomery payrolls complicated. Complicated payroll is where audit errors live: split class codes, missed overtime credits, subs without certificates on file.",
   },
   {
     slug: "mobile",
@@ -42,7 +42,7 @@ export const CITIES: City[] = [
     county: "Mobile County",
     nearby: ["Daphne", "Spanish Fort", "Saraland", "Theodore", "Tillmans Corner", "Prichard"],
     blurb:
-      "From shipbuilding and logistics to construction and hospitality along the Gulf Coast, Mobile and Baldwin County businesses see large surprise audit bills more often than most realize.",
+      "Shipyards, port logistics, and the trades along the Gulf Coast run big, seasonal payrolls. Seasonal payroll rarely matches the estimate a premium was priced on, which is why Mobile and Baldwin County owners see so many additional-premium letters.",
   },
   {
     slug: "decatur",
@@ -51,7 +51,7 @@ export const CITIES: City[] = [
     county: "Morgan County",
     nearby: ["Hartselle", "Priceville", "Trinity", "Moulton", "Athens", "Madison"],
     blurb:
-      "Manufacturers, distribution centers, and trades along the Tennessee River drive Decatur's economy — and all of them are routine targets for workers' comp and liability premium audits.",
+      "Decatur's riverfront plants and the contractors who serve them run the kind of mixed payrolls auditors get wrong: maintenance crews rated as new construction, office staff rated as shop floor. Those are the bills worth a second read before anyone writes a check.",
   },
   {
     slug: "florence",
@@ -60,7 +60,7 @@ export const CITIES: City[] = [
     county: "Lauderdale County",
     nearby: ["Muscle Shoals", "Sheffield", "Tuscumbia", "Killen", "Russellville"],
     blurb:
-      "Across the Shoals, manufacturers, healthcare practices, hospitality, and construction firms regularly get hit with surprise audit bills they never budgeted for.",
+      "The Shoals economy runs on manufacturers, healthcare practices, and construction firms, businesses where a single wrong class code can swing a premium by thousands. If your audit came back higher than the estimate, that class code is the first thing to check.",
   },
   {
     slug: "auburn",
@@ -69,7 +69,7 @@ export const CITIES: City[] = [
     county: "Lee County",
     nearby: ["Opelika", "Smiths Station", "Notasulga", "Loachapoka", "Salem"],
     blurb:
-      "Construction, restaurants, retail, and service businesses across the Auburn–Opelika area face workers' comp and general liability audits every year.",
+      "Auburn's growth means construction, and construction is the most-audited business there is. Sub costs, certificates of insurance, and class codes give an auditor plenty of room to get it wrong. The restaurants and student-housing contractors around town see it too.",
   },
   {
     slug: "opelika",
@@ -78,7 +78,7 @@ export const CITIES: City[] = [
     county: "Lee County",
     nearby: ["Auburn", "Smiths Station", "Beauregard", "Salem", "Notasulga"],
     blurb:
-      "Opelika's manufacturers, logistics operators, and trades are common targets for premium audits — often with bills no one saw coming.",
+      "Opelika's manufacturers and logistics operators run payrolls that shift with production schedules. When the real numbers come in above the estimate your policy was priced on, the audit bill lands. Whether it was calculated correctly is a separate question.",
   },
   {
     slug: "dothan",
@@ -87,7 +87,7 @@ export const CITIES: City[] = [
     county: "Houston County",
     nearby: ["Enterprise", "Ozark", "Headland", "Midland City", "Rehobeth"],
     blurb:
-      "Across the Wiregrass, agriculture, healthcare, trucking, and retail businesses see large surprise audit bills more often than most owners realize.",
+      "The Wiregrass runs on agriculture, trucking, and healthcare, businesses with seasonal or high-turnover payroll. That churn is exactly what premium auditors misread, and it shows up as an additional-premium bill bigger than it should be.",
   },
   {
     slug: "gadsden",
@@ -96,7 +96,7 @@ export const CITIES: City[] = [
     county: "Etowah County",
     nearby: ["Rainbow City", "Attalla", "Southside", "Glencoe", "Hokes Bluff"],
     blurb:
-      "Manufacturers, trades, and service businesses around Gadsden and Etowah County are routine targets for workers' comp and general liability premium audits.",
+      "Manufacturing and the trades carry some of the highest workers' comp rates on the books, so a classification error on a Gadsden or Etowah County audit costs more than the same mistake would in an office park. Worth checking before you pay.",
   },
   {
     slug: "anniston",
@@ -105,7 +105,7 @@ export const CITIES: City[] = [
     county: "Calhoun County",
     nearby: ["Oxford", "Jacksonville", "Weaver", "Hobson City", "Saks"],
     blurb:
-      "From manufacturing and logistics to healthcare and the trades, Anniston and Oxford businesses regularly face audit bills that inflate their premiums.",
+      "Between the Anniston Army Depot's contractor ecosystem and the manufacturers around Oxford, Calhoun County payrolls mix defense work, logistics, and the trades. Mixed operations are where auditors misapply class codes most, and misapplied class codes inflate bills.",
   },
   {
     slug: "cullman",
@@ -114,7 +114,7 @@ export const CITIES: City[] = [
     county: "Cullman County",
     nearby: ["Hanceville", "Good Hope", "Baileyton", "Holly Pond", "Vinemont"],
     blurb:
-      "Agriculture, poultry, manufacturing, and construction power Cullman County — and all of them get hit with surprise workers' comp and liability audits.",
+      "Poultry, agriculture, and construction drive Cullman County, and every one of them runs the seasonal, high-turnover payroll that premium audits misjudge. If your audit assumed year-round payroll you didn't actually carry, that's disputable.",
   },
 ];
 

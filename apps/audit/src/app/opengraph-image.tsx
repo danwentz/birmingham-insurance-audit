@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const alt =
-  "Surprise insurance audit bill? Free, confidential review for central & north Alabama business owners.";
+  "Surprise insurance audit bill? Free, confidential review for Alabama business owners.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -34,7 +34,7 @@ export default function Image() {
             color: "rgba(255,255,255,0.85)",
           }}
         >
-          Serving Central &amp; North Alabama
+          Serving Business Owners Across Alabama
         </div>
 
         <div style={{ display: "flex", flexDirection: "column" }}>
@@ -51,8 +51,8 @@ export default function Image() {
               maxWidth: 950,
             }}
           >
-            Don&apos;t pay it until you talk to us. Free, confidential review — we help
-            dispute and reduce what you owe.
+            Don&apos;t pay it until someone reads it. Free, confidential review from
+            licensed Alabama advisors.
           </div>
         </div>
 

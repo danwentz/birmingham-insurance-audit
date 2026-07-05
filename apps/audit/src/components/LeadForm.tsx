@@ -88,7 +88,7 @@ export function LeadForm({
         Get My Free Audit Review →
       </button>
       <p className="text-xs text-gray-500 text-center">
-        No cost. No obligation. 100% confidential. We typically respond the same business day.
+        Free and confidential. We usually respond the same business day.
       </p>
     </form>
   );

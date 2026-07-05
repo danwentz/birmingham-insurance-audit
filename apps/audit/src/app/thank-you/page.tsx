@@ -11,13 +11,13 @@ export default function ThankYou() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen p-6 text-center">
       <ConversionTracker />
-      <h1 className="text-3xl font-bold text-gray-900">Thank You — We Got It</h1>
+      <h1 className="text-3xl font-bold text-gray-900">Got It. Your Request Is In.</h1>
       <p className="mt-4 max-w-md text-gray-700">
-        Your request is in. A local advisor will review your audit situation and reach
-        out — usually the same business day.
+        A local advisor will read through what you sent and reach out, usually the
+        same business day. Have the audit letter handy when we talk.
       </p>
       <p className="mt-2 max-w-md text-gray-600">
-        If you&apos;d like help sooner, call us at{" "}
+        If it&apos;s urgent, call us now at{" "}
         <a href="tel:+12059994884" className="font-semibold text-[#1f6d79] hover:underline">
           (205) 999-4884
         </a>

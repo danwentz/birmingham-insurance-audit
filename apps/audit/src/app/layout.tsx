@@ -19,19 +19,20 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default:
-      "Insurance Audit Help in Alabama | Dispute a Surprise Premium Audit Bill",
+      "Insurance Audit Help in Alabama | Dispute a Workers' Comp Audit Bill",
     template: "%s | Birmingham Commercial Insurance Audit Solutions",
   },
   description:
-    "Hit with a surprise workers' comp or general liability audit bill in central or north Alabama? Get a free, confidential review. We help business owners dispute inaccurate charges and reduce what they owe. No cost, no obligation.",
+    "Surprise workers' comp or general liability audit bill? Get a free review before you pay it. Wrong class codes and double-counted payroll inflate audit bills. Licensed, Alabama-based.",
   keywords: [
     "insurance audit help Alabama",
     "workers comp audit dispute",
+    "dispute workers comp audit Alabama",
     "commercial insurance audit Birmingham",
     "premium audit help",
     "general liability audit Alabama",
     "surprise insurance audit bill",
-    "dispute insurance audit",
+    "workers comp class code error",
   ],
   alternates: {
     canonical: "/",
@@ -41,9 +42,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Surprise Insurance Audit Bill? Get Free Help in Central & North Alabama",
+      "Surprise Insurance Audit Bill? Get a Free Review Before You Pay It",
     description:
-      "Don't pay an inflated audit bill until you talk to us. Free, confidential review for Alabama business owners. We help dispute and reduce premium audit charges.",
+      "An audit bill is the carrier's math, and math gets checked. Free, confidential review for Alabama business owners facing a workers' comp or GL premium audit.",
     url: SITE_URL,
     siteName: "Birmingham Commercial Insurance Audit Solutions",
     locale: "en_US",
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Surprise Insurance Audit Bill? Get Free Help in Central & North Alabama",
+      "Surprise Insurance Audit Bill? Get a Free Review Before You Pay It",
     description:
       "Free, confidential review for Alabama business owners facing a workers' comp or general liability premium audit.",
   },

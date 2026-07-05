@@ -11,13 +11,7 @@ import {
   AlertTriangle,
   MapPin,
 } from "lucide-react";
-import {
-  BRAND,
-  BRAND_DARK,
-  PHONE_DISPLAY,
-  PHONE_HREF,
-  YEARS_EXPERIENCE,
-} from "@/lib/site";
+import { BRAND, BRAND_DARK, PHONE_DISPLAY, PHONE_HREF } from "@/lib/site";
 import { LeadForm, trackCall } from "@/components/LeadForm";
 import Link from "next/link";
 import { CITIES } from "@/lib/cities";
@@ -61,31 +55,32 @@ export default function HomeClient() {
           {/* Left: message */}
           <div>
             <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#1f6d79] bg-[#2A8E9E]/10 px-3 py-1 rounded-full">
-              <MapPin className="h-4 w-4" /> Serving Central & North Alabama
+              <MapPin className="h-4 w-4" /> Serving Business Owners Across Alabama
             </span>
             <h1 className="mt-4 text-4xl sm:text-5xl font-bold tracking-tight text-gray-900">
-              Hit With a Surprise Insurance Audit Bill You Can&apos;t Afford?
+              Got a Surprise Insurance Audit Bill? Don&apos;t Pay It Yet.
             </h1>
             <p className="mt-5 text-lg text-gray-700">
-              If your insurance company says you owe thousands more in premium after a
-              workers&apos; comp or general liability audit — <strong>stop before you pay it.</strong>{" "}
-              Many audit bills are inflated, miscalculated, or based on the wrong
-              classifications. We help Alabama business owners review, dispute, and
-              reduce what they really owe.
+              Your workers&apos; comp or general liability policy got audited, and now
+              the carrier says you owe thousands more than you planned for.{" "}
+              <strong>Before you write that check, let somebody read the audit.</strong>{" "}
+              A lot of these bills are built on the wrong class codes or payroll that
+              got counted twice. We review them for Alabama business owners and help
+              dispute the ones that are wrong.
             </p>
 
             <ul className="mt-6 space-y-2 text-gray-800">
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-[#2A8E9E] mt-0.5 shrink-0" />
-                You don&apos;t have to just write the check — you have options.
+                An audit bill is the carrier&apos;s math. Math gets checked.
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-[#2A8E9E] mt-0.5 shrink-0" />
-                We explain your audit in plain English — no jargon, no judgment.
+                We explain what happened in plain English. No jargon, no judgment.
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-[#2A8E9E] mt-0.5 shrink-0" />
-                Free review. No obligation. We only reach out to help.
+                The review is free. If the bill is right, we&apos;ll tell you that too.
               </li>
             </ul>
 
@@ -114,8 +109,8 @@ export default function HomeClient() {
               Get a Free, Confidential Audit Review
             </h2>
             <p className="mt-1 text-gray-600 text-sm">
-              Tell us what happened. We&apos;ll review your situation and lay out your
-              options — at no cost.
+              Tell us what happened, and send the letter if you have it. We&apos;ll lay
+              out your options at no cost.
             </p>
             <div className="mt-5">
               <LeadForm />
@@ -134,18 +129,18 @@ export default function HomeClient() {
           </div>
           <div>
             <Clock className="h-6 w-6 mx-auto text-[#2A8E9E]" />
-            <p className="mt-2 text-sm font-semibold text-gray-800">{YEARS_EXPERIENCE} Years Experience</p>
-            <p className="text-xs text-gray-500">Commercial insurance audits</p>
+            <p className="mt-2 text-sm font-semibold text-gray-800">Same-Day Response</p>
+            <p className="text-xs text-gray-500">Usually within one business day</p>
           </div>
           <div>
             <FileSearch className="h-6 w-6 mx-auto text-[#2A8E9E]" />
             <p className="mt-2 text-sm font-semibold text-gray-800">Free Audit Review</p>
-            <p className="text-xs text-gray-500">No cost, no obligation</p>
+            <p className="text-xs text-gray-500">No cost to have us look</p>
           </div>
           <div>
             <Scale className="h-6 w-6 mx-auto text-[#2A8E9E]" />
-            <p className="mt-2 text-sm font-semibold text-gray-800">Dispute & Reduce</p>
-            <p className="text-xs text-gray-500">Contest inaccurate charges</p>
+            <p className="mt-2 text-sm font-semibold text-gray-800">We Check the Math</p>
+            <p className="text-xs text-gray-500">Class codes, payroll, subs</p>
           </div>
         </div>
       </section>
@@ -155,19 +150,30 @@ export default function HomeClient() {
         <div className="max-w-3xl mx-auto text-center">
           <AlertTriangle className="h-8 w-8 mx-auto text-[#2A8E9E]" />
           <h2 className="mt-4 text-3xl font-bold text-gray-900">
-            That &quot;Additional Premium Due&quot; Letter Doesn&apos;t Have to Sink You
+            That &quot;Additional Premium Due&quot; Letter Is a Calculation, Not a Verdict
           </h2>
           <p className="mt-4 text-lg text-gray-700">
-            You ran your business in good faith. Then a letter shows up demanding
-            thousands — sometimes tens of thousands — in extra premium you never
-            budgeted for. Maybe your agent never explained that an audit was even
-            coming.
+            Here&apos;s what actually happened. When your policy started, the premium
+            was an estimate: your best guess at payroll, the carrier&apos;s guess at
+            what your people do all day. The audit is where they true it up. It&apos;s
+            also where things go sideways.
           </p>
           <p className="mt-4 text-lg text-gray-700">
-            Take a breath. A surprise audit bill is <strong>not</strong> automatically
-            a final bill. Insurers make mistakes — wrong job classifications, payroll
-            counted twice, subcontractors miscategorized, ineligible figures included.
-            Those mistakes are exactly what we look for.
+            We&apos;ve seen office managers rated as if they swing hammers. Sub costs
+            charged as payroll because a certificate of insurance never made it into
+            the file. Estimated audits that inflate payroll because a worksheet went
+            unanswered. Every one of those makes the number bigger, and every one of
+            them can be challenged.
+          </p>
+          <p className="mt-4 text-lg text-gray-700">
+            The class code piece alone is real money. Workers&apos; comp rates for
+            carpentry work can run $15 or more per $100 of payroll in Alabama.
+            Clerical staff rate closer to 15 cents. Put one $50,000 office salary in
+            the wrong bucket and that line reads $7,500 instead of $75.
+          </p>
+          <p className="mt-4 text-lg font-semibold text-gray-800">
+            So is your bill wrong? Maybe not. But you won&apos;t know until someone
+            reads it.
           </p>
         </div>
       </section>
@@ -176,33 +182,35 @@ export default function HomeClient() {
       <section className="py-16 bg-white px-4">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-gray-900">How We Help You</h2>
-          <p className="mt-2 text-gray-600">A simple, no-pressure process built for stressed business owners.</p>
+          <p className="mt-2 text-gray-600">Three steps. No pressure at any of them.</p>
           <div className="mt-10 grid md:grid-cols-3 gap-6 text-left">
             <div className="bg-slate-50 p-6 rounded-xl border border-gray-100">
               <span className="text-sm font-bold text-[#2A8E9E]">Step 1</span>
-              <h3 className="mt-1 font-semibold text-lg">We Review Your Audit — Free</h3>
+              <h3 className="mt-1 font-semibold text-lg">Send Us the Letter</h3>
               <p className="mt-2 text-gray-600">
-                Send us the audit letter or worksheet. We&apos;ll go through it line by
-                line and tell you, in plain English, what it actually says and whether
-                it looks accurate.
+                The audit statement, the worksheet, even a photo of the bill. We go
+                through it line by line and tell you what the carrier did: which class
+                codes they used, whose payroll they counted, and where the number came
+                from.
               </p>
             </div>
             <div className="bg-slate-50 p-6 rounded-xl border border-gray-100">
               <span className="text-sm font-bold text-[#2A8E9E]">Step 2</span>
-              <h3 className="mt-1 font-semibold text-lg">We Find the Errors</h3>
+              <h3 className="mt-1 font-semibold text-lg">We Look for the Usual Suspects</h3>
               <p className="mt-2 text-gray-600">
-                Misclassified employees, double-counted payroll, ineligible
-                subcontractor costs, and bad estimates can all inflate your bill. We
-                identify what can be challenged.
+                Misclassified employees. Payroll counted twice. Sub costs picked up
+                because a certificate of insurance was missing. Overtime charged at
+                full freight. After enough audits, the errors show up fast.
               </p>
             </div>
             <div className="bg-slate-50 p-6 rounded-xl border border-gray-100">
               <span className="text-sm font-bold text-[#2A8E9E]">Step 3</span>
-              <h3 className="mt-1 font-semibold text-lg">We Help You Dispute & Plan</h3>
+              <h3 className="mt-1 font-semibold text-lg">You Dispute With Documentation</h3>
               <p className="mt-2 text-gray-600">
-                We help you contest inaccurate charges with the right documentation and
-                map out your options — including how to handle what you legitimately
-                owe.
+                Carriers don&apos;t reverse an audit because you&apos;re upset. They
+                reverse it when you hand them corrected payroll records, certificates,
+                and the right class code argument. We help you build that package, and
+                we&apos;re straight with you about anything you legitimately owe.
               </p>
             </div>
           </div>
@@ -225,8 +233,10 @@ export default function HomeClient() {
             Who We Help
           </h2>
           <p className="mt-2 text-center text-gray-600">
-            We work with established Alabama business owners — contractors, trades,
-            staffing, trucking, manufacturing, restaurants, and more — facing:
+            Contractors and the trades get audited hardest, because class codes and sub
+            costs give an auditor the most room to get it wrong. We also work with
+            staffing, trucking, manufacturing, and restaurant owners across Alabama
+            facing:
           </p>
           <div className="mt-8 grid sm:grid-cols-2 gap-4">
             {[
@@ -258,11 +268,11 @@ export default function HomeClient() {
                 I just got a huge audit bill. Do I really have to pay all of it?
               </summary>
               <p className="mt-2 text-gray-600">
-                Not necessarily. An audit bill is the insurer&apos;s calculation — and
-                calculations can be wrong. If your business was misclassified, your
-                payroll was overstated, or ineligible figures were included, those
-                amounts can often be disputed and reduced. Before you pay a lump sum,
-                it&apos;s worth having someone review exactly how the number was reached.
+                Not necessarily. An audit bill is the carrier&apos;s calculation, and
+                the inputs are wrong more often than you&apos;d think. Wrong class
+                codes. Overstated payroll. Sub costs picked up as wages. Any of those
+                can be disputed with the right records. Find out how they got the
+                number before you pay it.
               </p>
             </details>
 
@@ -271,10 +281,11 @@ export default function HomeClient() {
                 What is a commercial insurance audit?
               </summary>
               <p className="mt-2 text-gray-600">
-                It&apos;s a review by your insurer to verify the information used to set
-                your premium — payroll, sales, job classifications, or square footage.
-                If your actual figures came in higher than estimated, they bill you the
-                difference. If lower, you may be owed a refund.
+                At the end of your policy term, the carrier checks the real numbers
+                behind your premium: payroll, sales, class codes, sometimes square
+                footage. If the actuals came in higher than the estimate, you owe the
+                difference. Lower, and they owe you. The catch is that the checking is
+                done by a person on a deadline, and people on deadlines make mistakes.
               </p>
             </details>
 
@@ -283,10 +294,11 @@ export default function HomeClient() {
                 Why didn&apos;t my agent warn me this was coming?
               </summary>
               <p className="mt-2 text-gray-600">
-                Most commercial policies include an annual audit right in the contract,
-                but it&apos;s often glossed over at sale. That&apos;s why so many owners feel
-                blindsided. You&apos;re not alone, and it doesn&apos;t mean you did anything
-                wrong — it means you need someone in your corner now.
+                The audit clause sits in nearly every workers&apos; comp and general
+                liability policy, but plenty of agents never walk their clients through
+                it at sale. So the first time most owners hear the word
+                &quot;audit&quot; is when the bill lands. That&apos;s not on you. It
+                does mean you want someone reading the fine print now.
               </p>
             </details>
 
@@ -295,10 +307,11 @@ export default function HomeClient() {
                 Can an audit result actually be disputed?
               </summary>
               <p className="mt-2 text-gray-600">
-                Yes. If errors are found in how your insurer classified your business,
-                calculated your payroll, or included ineligible figures, you can dispute
-                or appeal the results. We help you review the auditor&apos;s findings and
-                present corrections and supporting documentation.
+                Yes. Carriers have dispute processes for exactly this. If the auditor
+                used the wrong classification, counted payroll that shouldn&apos;t be
+                there, or estimated your numbers instead of using real ones, you can
+                challenge the result with corrected records. We help you figure out
+                what to send and how to present it.
               </p>
             </details>
 
@@ -307,9 +320,10 @@ export default function HomeClient() {
                 How much does your help cost?
               </summary>
               <p className="mt-2 text-gray-600">
-                The initial review is free with no obligation. We&apos;ll look at your
-                audit, explain what we see, and lay out your options. If we can help
-                further, we&apos;ll be upfront about that before you commit to anything.
+                The first review costs nothing and commits you to nothing. We read the
+                audit, tell you what we see, and lay out the options. If there&apos;s
+                more we can do from there, we&apos;ll price it plainly before you
+                decide anything.
               </p>
             </details>
           </div>
@@ -323,7 +337,8 @@ export default function HomeClient() {
             Insurance Audit Help Across Alabama
           </h2>
           <p className="mt-3 text-gray-600">
-            Local guidance on commercial insurance and premium audits. Find help in your area:
+            We work with owners statewide, from the Shoals to the Wiregrass. Find your
+            area:
           </p>
           <div className="mt-5 flex flex-wrap justify-center gap-2">
             {CITIES.map((city) => (
@@ -344,10 +359,11 @@ export default function HomeClient() {
 
       {/* FINAL CTA */}
       <section style={{ backgroundColor: BRAND }} className="py-16 px-4 text-center text-white">
-        <h2 className="text-3xl font-bold">Don&apos;t Pay That Audit Bill Until You Talk to Us</h2>
+        <h2 className="text-3xl font-bold">Don&apos;t Pay That Audit Bill Until Someone Reads It</h2>
         <p className="mt-3 max-w-xl mx-auto text-white/90">
-          A few minutes today could save you thousands. Get your free, confidential
-          audit review — no cost, no obligation.
+          Send the letter over. If the bill is right, we&apos;ll tell you, and
+          you&apos;ve lost nothing. If it&apos;s wrong, you&apos;ll be glad you
+          didn&apos;t pay it.
         </p>
         <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
           <a
@@ -381,9 +397,9 @@ export default function HomeClient() {
             </a>
           </p>
           <p className="mt-2 max-w-2xl mx-auto text-gray-400">
-            Birmingham Commercial Insurance Audit Solutions helps business owners across
-            central and north Alabama understand, dispute, and resolve commercial
-            insurance premium audits.
+            Birmingham Commercial Insurance Audit Solutions helps Alabama business
+            owners dispute inaccurate premium audit bills and settle the rest on fair
+            terms.
           </p>
           <p className="mt-4 text-gray-500">
             &copy; {new Date().getFullYear()} Birmingham Commercial Insurance Audit

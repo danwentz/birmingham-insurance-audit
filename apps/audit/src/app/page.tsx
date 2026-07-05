@@ -11,7 +11,7 @@ const jsonLd = {
       "@id": `${SITE_URL}/#business`,
       name: "Birmingham Commercial Insurance Audit Solutions",
       description:
-        "Help for business owners facing commercial insurance premium audits in central and north Alabama. We review, dispute, and reduce surprise workers' compensation and general liability audit bills.",
+        "Help for Alabama business owners facing commercial insurance premium audits. We review surprise workers' compensation and general liability audit bills and help dispute the ones built on wrong class codes or inflated payroll.",
       url: SITE_URL,
       telephone: PHONE,
       areaServed: [
@@ -19,12 +19,17 @@ const jsonLd = {
         "Hoover, AL",
         "Huntsville, AL",
         "Tuscaloosa, AL",
+        "Montgomery, AL",
+        "Mobile, AL",
         "Decatur, AL",
+        "Florence, AL",
+        "Auburn, AL",
+        "Opelika, AL",
+        "Dothan, AL",
         "Gadsden, AL",
         "Cullman, AL",
         "Anniston, AL",
-        "Central Alabama",
-        "North Alabama",
+        "Alabama",
       ],
       address: {
         "@type": "PostalAddress",
@@ -40,7 +45,7 @@ const jsonLd = {
           name: "I just got a huge audit bill. Do I really have to pay all of it?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Not necessarily. An audit bill is the insurer's calculation, and calculations can be wrong. If your business was misclassified, your payroll was overstated, or ineligible figures were included, those amounts can often be disputed and reduced. Before you pay a lump sum, have someone review exactly how the number was reached.",
+            text: "Not necessarily. An audit bill is the carrier's calculation, and the inputs are wrong more often than you'd think. Wrong class codes, overstated payroll, and sub costs picked up as wages can all be disputed with the right records. Find out how they got the number before you pay it.",
           },
         },
         {
@@ -48,7 +53,7 @@ const jsonLd = {
           name: "What is a commercial insurance audit?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "It's a review by your insurer to verify the information used to set your premium — payroll, sales, job classifications, or square footage. If your actual figures came in higher than estimated, they bill you the difference. If lower, you may be owed a refund.",
+            text: "At the end of your policy term, the carrier checks the real numbers behind your premium: payroll, sales, class codes, sometimes square footage. If the actuals came in higher than the estimate, you owe the difference. Lower, and they owe you. The catch is that the checking is done by a person on a deadline, and people on deadlines make mistakes.",
           },
         },
         {
@@ -56,7 +61,7 @@ const jsonLd = {
           name: "Why didn't my agent warn me this was coming?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Most commercial policies include an annual audit in the contract, but it's often glossed over at sale, which is why so many owners feel blindsided. It doesn't mean you did anything wrong — it means you need someone in your corner now.",
+            text: "The audit clause sits in nearly every workers' comp and general liability policy, but plenty of agents never walk their clients through it at sale. So the first time most owners hear the word 'audit' is when the bill lands. That's not on you. It does mean you want someone reading the fine print now.",
           },
         },
         {
@@ -64,7 +69,7 @@ const jsonLd = {
           name: "Can an audit result actually be disputed?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. If errors are found in how your insurer classified your business, calculated your payroll, or included ineligible figures, you can dispute or appeal the results. We help you review the auditor's findings and present corrections and supporting documentation.",
+            text: "Yes. Carriers have dispute processes for exactly this. If the auditor used the wrong classification, counted payroll that shouldn't be there, or estimated your numbers instead of using real ones, you can challenge the result with corrected records. We help you figure out what to send and how to present it.",
           },
         },
         {
@@ -72,7 +77,7 @@ const jsonLd = {
           name: "How much does your help cost?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "The initial review is free with no obligation. We'll look at your audit, explain what we see, and lay out your options. If we can help further, we'll be upfront about that before you commit to anything.",
+            text: "The first review costs nothing and commits you to nothing. We read the audit, tell you what we see, and lay out the options. If there's more we can do from there, we'll price it plainly before you decide anything.",
           },
         },
       ],

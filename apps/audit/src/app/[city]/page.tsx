@@ -19,8 +19,8 @@ export async function generateMetadata({
   const city = getCity(slug);
   if (!city) return {};
 
-  const title = `${city.name} Insurance Audit Help | Dispute a Surprise Premium Bill`;
-  const description = `Hit with a surprise workers' comp or general liability audit bill in ${city.name}, ${city.region}? Get a free, confidential review. We help ${city.name}-area business owners dispute inaccurate charges and reduce what they owe.`;
+  const title = `${city.name} Insurance Audit Help | Dispute a Workers' Comp Audit Bill`;
+  const description = `Surprise workers' comp or GL audit bill in ${city.name}? Get a free review before you pay it. We help ${city.county} owners dispute wrong class codes and inflated payroll.`;
 
   return {
     title,
@@ -53,7 +53,7 @@ export default async function CityPage({
         "@type": ["LocalBusiness", "InsuranceAgency"],
         "@id": `${DOMAIN}/${city.slug}#business`,
         name: BUSINESS_NAME,
-        description: `Help for ${city.name}, ${city.county} business owners facing commercial insurance premium audits. We review, dispute, and reduce surprise workers' compensation and general liability audit bills.`,
+        description: `Help for ${city.name}, ${city.county} business owners facing commercial insurance premium audits. We review surprise workers' compensation and general liability audit bills and help dispute the ones built on wrong class codes or inflated payroll.`,
         url: `${DOMAIN}/${city.slug}`,
         telephone: PHONE_E164,
         areaServed: [`${city.name}, AL`, ...city.nearby.map((n) => `${n}, AL`), city.region],
@@ -72,7 +72,7 @@ export default async function CityPage({
             name: "I just got a huge audit bill. Do I really have to pay all of it?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Not necessarily. An audit bill is the insurer's calculation, and calculations can be wrong. If your business was misclassified, your payroll was overstated, or ineligible figures were included, those amounts can often be disputed and reduced.",
+              text: "Not necessarily. An audit bill is the carrier's calculation, and the inputs are wrong more often than you'd think. Wrong class codes, overstated payroll, and sub costs picked up as wages can all be disputed with the right records.",
             },
           },
           {
@@ -80,7 +80,7 @@ export default async function CityPage({
             name: `Do you help businesses in ${city.name}?`,
             acceptedAnswer: {
               "@type": "Answer",
-              text: `Yes. We work with business owners in ${city.name}, ${city.county}, and across ${city.region} on workers' compensation and general liability premium audits — reviewing, disputing, and reducing inflated bills.`,
+              text: `Yes. We work with owners in ${city.name}, ${city.county}, and across ${city.region} on workers' compensation and general liability premium audits. Send the letter and we'll tell you whether the number holds up.`,
             },
           },
           {
@@ -88,7 +88,7 @@ export default async function CityPage({
             name: "How much does your help cost?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "The initial review is free with no obligation. We'll look at your audit, explain what we see, and lay out your options before you commit to anything.",
+              text: "The first review costs nothing and commits you to nothing. We read the audit, tell you what we see, and lay out the options before you decide anything.",
             },
           },
         ],
