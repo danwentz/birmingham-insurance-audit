@@ -72,7 +72,7 @@ export async function POST(req: NextRequest) {
       signal: AbortSignal.timeout(10_000),
       body: verifyBody,
     });
-    if (!verifyRes.ok) throw new Error(`siteverify ${verifyRes.status}`);
+    // Siteverify answers 400 with a JSON body (error-codes) on rejection, so parse regardless of status.
     verifyResult = await verifyRes.json();
   } catch (err) {
     return failResponse(`siteverify error: ${err instanceof Error ? err.message : String(err)}`);
