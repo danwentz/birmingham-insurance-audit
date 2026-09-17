@@ -9,6 +9,7 @@ import {
   Warehouse,
   Hotel,
   GraduationCap,
+  Boxes,
   LineChart,
   ClipboardCheck,
 } from "lucide-react";
@@ -28,6 +29,7 @@ const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   "industrial-warehouse-insurance": Warehouse,
   "hospitality-hotel-insurance": Hotel,
   "student-senior-housing-insurance": GraduationCap,
+  "self-storage-insurance": Boxes,
   "real-estate-risk-management": LineChart,
   "insurance-program-review": ClipboardCheck,
 };

@@ -357,6 +357,55 @@ export const PROGRAMS: Program[] = [
     ],
     searchTerms: ["student housing insurance", "senior living insurance broker", "assisted living insurance", "habitational specialty insurance"],
   },
+  {
+    slug: "self-storage-insurance",
+    category: "asset",
+    shortName: "Self-Storage",
+    name: "Self-Storage Facility Insurance",
+    metaTitle: "Self-Storage Insurance Broker for Multi-Location Operators | ACREInsure",
+    metaDescription:
+      "Property, customer goods legal liability, and umbrella for multi-location self-storage operators. Coastal wind capacity, truck rental exposure. $50k+ premiums.",
+    hook: "Master property, customer goods liability, and umbrella for self-storage operators with multiple locations and 400+ units.",
+    heroImage: "/SelfStorage.jpg",
+    intro:
+      "Self-storage gets sold as the simple asset class: metal buildings, no plumbing, no tenants sleeping there. Then you grow. Now it's eight locations in three states, two of them inside a wind zone, a truck rental counter at half of them, and thousands of units full of property you don't own and can't inspect. Most operators at that size are still insured the way they were at one location, with a package policy per facility and a general liability form that excludes the customer's goods outright. We rebuild it as one program, priced as the account it has become.",
+    idealFor: [
+      "Operators and owners with multiple locations or 400+ units",
+      "Coastal and wind-exposed facilities across the Gulf and Southeast",
+      "Facilities with truck rental, boat/RV parking, or retail sales on site",
+      "Portfolios growing by acquisition, development, or conversion",
+    ],
+    coverages: [
+      { title: "Master property & business income", body: "Every location on one schedule under blanket limits, with loss of rents and a wind deductible that applies the way you think it does. New acquisitions get added mid-term without starting over." },
+      { title: "Customer goods legal liability", body: "Standard GL excludes property in your care, custody, or control, which describes every unit you rent. This covers it, along with sale and disposal liability for the lien sale that gets challenged." },
+      { title: "Truck rental & auto exposure", body: "Hired and non-owned auto, and the gap between what the rental company's dealer agreement covers and what lands on you when a customer wrecks a box truck in your lot." },
+      { title: "Umbrella, crime & cyber", body: "Excess limits over GL, auto, and customer goods. Crime for the cash and the managers who handle it. Cyber for the gate system, the autopay cards, and the tenant data behind both." },
+    ],
+    faqs: [
+      {
+        q: "Does my general liability policy cover my customers' stored property?",
+        a: "Almost never. GL forms exclude property in your care, custody, or control, and an underwriter will argue that a locked unit on your premises qualifies. Customer goods legal liability fills that hole. It responds when you're legally responsible for the damage: a roof leak you knew about, a break-in through a gate that had been broken for a month. Pair it with sale and disposal coverage, because a wrongful lien sale claim is the one most operators eventually see.",
+      },
+      {
+        q: "We rent trucks at several locations. Doesn't the rental company insure that?",
+        a: "They insure their trucks. Your exposure as the dealer is a different question, and the answer is in a dealer agreement most operators signed without reading the insurance section. Your employee hands over keys to an unfit driver, or moves a truck across the lot and hits a customer. Those claims come to you. We read the agreement, then close the gap with hired and non-owned auto and an umbrella that sits over it.",
+      },
+      {
+        q: "Can you place our coastal locations?",
+        a: "Usually, and they shouldn't be placed alone. Gulf wind goes to surplus-lines and London capacity, where named-storm deductibles start around 5% of insured value. On a schedule, the inland locations help carry the coastal ones, and the deductible can be negotiated per location instead of across the whole program. One storm shouldn't trigger a deductible on buildings it never touched.",
+      },
+      {
+        q: "How large of an operator do you work with?",
+        a: "Accounts with roughly $50,000 and up in annual premium. In self-storage that usually means several locations, or one or two large facilities with coastal exposure. If you're a single inland facility under 400 units, a standard package policy is probably the right answer and we'll tell you so.",
+      },
+    ],
+    searchTerms: [
+      "self storage insurance broker",
+      "self-storage facility insurance",
+      "customer goods legal liability",
+      "multi-location self storage insurance program",
+    ],
+  },
 
   /* ─── Advisory ─── */
   {

@@ -1,6 +1,6 @@
 "use client";
 
-import { DOMAIN } from "@/lib/site";
+import Script from "next/script";
 
 declare global {
   interface Window {
@@ -23,19 +23,22 @@ export const trackFormSubmit = (source: string) => () =>
 const inputClass =
   "w-full border-0 border-b border-gold/20 bg-transparent px-0 py-3 text-obsidian placeholder:text-slate focus:border-b-2 focus:border-gold focus:outline-none";
 
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "1x00000000000000000000AA";
+
 export function LeadForm({ source = "homepage" }: { source?: string }) {
   return (
     <form
-      // TODO: point at a dedicated CRE inbox/endpoint (reusing the audit FormSubmit id for now)
-      action="https://formsubmit.co/88e98acda98937d69e8fea30fa6274a4"
+      action="/api/lead"
       method="POST"
       onSubmit={trackFormSubmit(source)}
       className="space-y-3 text-left"
     >
-      <input type="hidden" name="_subject" value="New CRE Insurance Inquiry" />
-      <input type="hidden" name="_template" value="table" />
-      <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_next" value={`${DOMAIN}/thank-you`} />
+      <Script
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+        async
+        defer
+        strategy="lazyOnload"
+      />
       <input type="hidden" name="site" value="CRE" />
       <input type="hidden" name="source" value={source} />
       <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
@@ -58,6 +61,7 @@ export function LeadForm({ source = "homepage" }: { source?: string }) {
         <option>Retail / Shopping Center</option>
         <option>Industrial / Warehouse</option>
         <option>Hospitality / Hotel</option>
+        <option>Self-Storage</option>
         <option>Mixed portfolio</option>
         <option>New construction / Development</option>
         <option>Other</option>
@@ -80,6 +84,8 @@ export function LeadForm({ source = "homepage" }: { source?: string }) {
         placeholder="Briefly: total insured value, # of units/locations, renewal date, or what you need."
         className={inputClass}
       />
+
+      <div className="cf-turnstile mt-2" data-sitekey={TURNSTILE_SITE_KEY} data-theme="light" data-size="flexible" />
 
       <button
         type="submit"
