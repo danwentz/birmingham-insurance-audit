@@ -11,7 +11,8 @@ const TURNSTILE_ACTION = "lead";
 // TODO: point at a dedicated CRE inbox/endpoint (reusing the audit FormSubmit id for now)
 const FORMSUBMIT_ENDPOINT = "https://formsubmit.co/ajax/88e98acda98937d69e8fea30fa6274a4";
 
-function failResponse() {
+function failResponse(reason: string) {
+  console.warn("lead rejected:", reason);
   return new NextResponse(
     `Verification failed. Please go back and try again, or call ${PHONE_DISPLAY}.`,
     { status: 400 }
@@ -29,7 +30,7 @@ export async function POST(req: NextRequest) {
 
   const token = formData.get("cf-turnstile-response");
   if (typeof token !== "string" || token === "" || token.length > 2048) {
-    return failResponse();
+    return failResponse(`bad token (length ${typeof token === "string" ? token.length : typeof token})`);
   }
 
   const forwardedFor = req.headers.get("x-forwarded-for");
@@ -38,7 +39,7 @@ export async function POST(req: NextRequest) {
   // Real secret: enforce action + hostname. No secret: test keys, except in production (fail closed).
   const realSecret = process.env.TURNSTILE_SECRET_KEY;
   if (!realSecret && process.env.VERCEL_ENV === "production") {
-    return failResponse();
+    return failResponse("TURNSTILE_SECRET_KEY not set in production");
   }
   const secret = realSecret ?? TURNSTILE_TEST_SECRET;
   const expectedHostnames = new Set(
@@ -48,7 +49,7 @@ export async function POST(req: NextRequest) {
       .filter(Boolean)
   );
   if (realSecret && expectedHostnames.size === 0) {
-    return failResponse();
+    return failResponse("TURNSTILE_HOSTNAMES empty");
   }
 
   const verifyBody = new URLSearchParams();
@@ -73,8 +74,8 @@ export async function POST(req: NextRequest) {
     });
     if (!verifyRes.ok) throw new Error(`siteverify ${verifyRes.status}`);
     verifyResult = await verifyRes.json();
-  } catch {
-    return failResponse();
+  } catch (err) {
+    return failResponse(`siteverify error: ${err instanceof Error ? err.message : String(err)}`);
   }
 
   if (
@@ -82,13 +83,12 @@ export async function POST(req: NextRequest) {
     (realSecret &&
       (verifyResult.action !== TURNSTILE_ACTION || !expectedHostnames.has(verifyResult.hostname ?? "")))
   ) {
-    console.warn("turnstile rejected", {
+    return failResponse(`siteverify rejected: ${JSON.stringify({
       errorCodes: verifyResult["error-codes"],
       action: verifyResult.action,
       hostname: verifyResult.hostname,
       expectedHostnames: [...expectedHostnames],
-    });
-    return failResponse();
+    })}`);
   }
 
   const payload = {
