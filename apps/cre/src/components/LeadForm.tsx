@@ -85,7 +85,7 @@ export function LeadForm({ source = "homepage" }: { source?: string }) {
         className={inputClass}
       />
 
-      <div className="cf-turnstile mt-2" data-sitekey={TURNSTILE_SITE_KEY} data-theme="light" data-size="flexible" />
+      <div className="cf-turnstile mt-2" data-sitekey={TURNSTILE_SITE_KEY} data-action="lead" data-theme="light" data-size="flexible" />
 
       <button
         type="submit"

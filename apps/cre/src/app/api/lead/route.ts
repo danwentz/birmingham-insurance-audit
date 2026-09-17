@@ -5,6 +5,8 @@ export const runtime = "nodejs";
 
 // Cloudflare's always-pass test secret — used as a dev fallback so the form works without setup.
 const TURNSTILE_TEST_SECRET = "1x0000000000000000000000000000000AA";
+// Must match data-action on the widget in LeadForm.
+const TURNSTILE_ACTION = "lead";
 
 // TODO: point at a dedicated CRE inbox/endpoint (reusing the audit FormSubmit id for now)
 const FORMSUBMIT_ENDPOINT = "https://formsubmit.co/ajax/88e98acda98937d69e8fea30fa6274a4";
@@ -26,14 +28,28 @@ export async function POST(req: NextRequest) {
   }
 
   const token = formData.get("cf-turnstile-response");
-  if (typeof token !== "string" || token === "") {
+  if (typeof token !== "string" || token === "" || token.length > 2048) {
     return failResponse();
   }
 
   const forwardedFor = req.headers.get("x-forwarded-for");
   const remoteIp = forwardedFor?.split(",")[0]?.trim();
 
-  const secret = process.env.TURNSTILE_SECRET_KEY ?? TURNSTILE_TEST_SECRET;
+  // Real secret: enforce action + hostname. No secret: test keys, except in production (fail closed).
+  const realSecret = process.env.TURNSTILE_SECRET_KEY;
+  if (!realSecret && process.env.VERCEL_ENV === "production") {
+    return failResponse();
+  }
+  const secret = realSecret ?? TURNSTILE_TEST_SECRET;
+  const expectedHostnames = new Set(
+    (process.env.TURNSTILE_HOSTNAMES ?? "")
+      .split(",")
+      .map((hostname) => hostname.trim())
+      .filter(Boolean)
+  );
+  if (realSecret && expectedHostnames.size === 0) {
+    return failResponse();
+  }
 
   const verifyBody = new URLSearchParams();
   verifyBody.set("secret", secret);
@@ -42,19 +58,27 @@ export async function POST(req: NextRequest) {
     verifyBody.set("remoteip", remoteIp);
   }
 
-  let verifyResult: { success?: boolean };
+  let verifyResult: { success?: boolean; action?: string; hostname?: string };
   try {
     const verifyRes = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      signal: AbortSignal.timeout(10_000),
       body: verifyBody,
     });
+    if (!verifyRes.ok) throw new Error(`siteverify ${verifyRes.status}`);
     verifyResult = await verifyRes.json();
   } catch {
     return failResponse();
   }
 
   if (!verifyResult.success) {
+    return failResponse();
+  }
+  if (
+    realSecret &&
+    (verifyResult.action !== TURNSTILE_ACTION || !expectedHostnames.has(verifyResult.hostname ?? ""))
+  ) {
     return failResponse();
   }
 
