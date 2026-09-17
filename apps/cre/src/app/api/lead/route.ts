@@ -58,7 +58,12 @@ export async function POST(req: NextRequest) {
     verifyBody.set("remoteip", remoteIp);
   }
 
-  let verifyResult: { success?: boolean; action?: string; hostname?: string };
+  let verifyResult: {
+    success?: boolean;
+    action?: string;
+    hostname?: string;
+    "error-codes"?: string[];
+  };
   try {
     const verifyRes = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
       method: "POST",
@@ -72,13 +77,17 @@ export async function POST(req: NextRequest) {
     return failResponse();
   }
 
-  if (!verifyResult.success) {
-    return failResponse();
-  }
   if (
-    realSecret &&
-    (verifyResult.action !== TURNSTILE_ACTION || !expectedHostnames.has(verifyResult.hostname ?? ""))
+    !verifyResult.success ||
+    (realSecret &&
+      (verifyResult.action !== TURNSTILE_ACTION || !expectedHostnames.has(verifyResult.hostname ?? "")))
   ) {
+    console.warn("turnstile rejected", {
+      errorCodes: verifyResult["error-codes"],
+      action: verifyResult.action,
+      hostname: verifyResult.hostname,
+      expectedHostnames: [...expectedHostnames],
+    });
     return failResponse();
   }
 
