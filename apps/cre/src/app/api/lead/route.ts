@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
   const remoteIp = forwardedFor?.split(",")[0]?.trim();
 
   // Real secret: enforce action + hostname. No secret: test keys, except in production (fail closed).
-  const realSecret = process.env.TURNSTILE_SECRET_KEY;
+  const realSecret = process.env.TURNSTILE_SECRET_KEY?.trim() || undefined;
   if (!realSecret && process.env.VERCEL_ENV === "production") {
     return failResponse("TURNSTILE_SECRET_KEY not set in production");
   }
