@@ -3,6 +3,18 @@
 export const usd = (n: number) =>
   n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 
+/** Two decimals — for per-room-night figures, where the cents are the story.
+ *  RevPAR of $151.20 rounded to $151 loses the comparison it exists to make. */
+export const usdCents = (n: number) =>
+  n.toLocaleString("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
+
+export const signedUsdCents = (n: number) => (n > 0 ? `+${usdCents(n)}` : usdCents(n));
+
 /** $2.7M / $980K / $700 — for headline figures where precision is noise. */
 export function usdCompact(n: number) {
   const abs = Math.abs(n);
@@ -28,9 +40,11 @@ export const ratio = (n: number) => `${n.toFixed(2)}x`;
 
 export const int = (n: number) => Math.round(n).toLocaleString("en-US");
 
-/** "a" or "an" for a spoken number — 8, 11 and 18 take "an". Indemnity periods
- *  only ever run to a few dozen months, so the small cases are the whole domain. */
-export const article = (n: number) => ([8, 11, 18].includes(Math.round(n)) ? "an" : "a");
+/** "a" or "an" for a spoken number — 8, 11 and 18 take "an". The article follows
+ *  the first sound, so it reads the integer part: 8.5 is "an eight point five",
+ *  while 7.5 is "a seven point five". Indemnity periods and cap rates only run to
+ *  a few dozen, so the small cases are the whole domain. */
+export const article = (n: number) => ([8, 11, 18].includes(Math.floor(n)) ? "an" : "a");
 
 export const months = (n: number) => `${n.toFixed(1)} ${n === 1 ? "month" : "months"}`;
 

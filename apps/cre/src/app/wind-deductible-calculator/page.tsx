@@ -212,7 +212,7 @@ export default function WindDeductibleCalculatorPage() {
               ))}
             </div>
 
-            <div className="mt-14 grid gap-4 sm:grid-cols-2">
+            <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               <div className="border-l-2 border-gold bg-ivory p-6">
                 <p className="font-display text-lg font-semibold text-obsidian">
                   Own apartments?
@@ -226,6 +226,19 @@ export default function WindDeductibleCalculatorPage() {
                   className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
                 >
                   Multifamily insurance calculator <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+              <div className="border-l-2 border-gold bg-ivory p-6">
+                <p className="font-display text-lg font-semibold text-obsidian">Own hotels?</p>
+                <p className="mt-2 text-sm leading-relaxed text-slate">
+                  Price the premium in RevPAR, see the ADR move a renewal implies, and check whether
+                  business income funds a peak-season closure.
+                </p>
+                <Link
+                  href="/hotel-insurance-calculator"
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
+                >
+                  Hotel insurance calculator <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
               <div className="border-l-2 border-gold bg-ivory p-6">

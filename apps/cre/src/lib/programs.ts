@@ -38,6 +38,14 @@ const WIND_CALC: Tool = {
     "Free, no email required: a percentage deductible applies to each affected location's insured value, so one storm applies several. Size what you actually retain, per location, per storm, and per season — and what a buy-down is worth against it.",
 };
 
+const HOTEL_CALC: Tool = {
+  href: "/hotel-insurance-calculator",
+  label: "Hotel Insurance Impact Calculator",
+  cta: "Run your numbers",
+  blurb:
+    "Free, no email required: insurance is a fixed charge, so it never touches GOP — it comes out of EBITDA and capitalizes. See the premium per available room against your RevPAR, the ADR move a renewal implies, DSCR headroom, break-even occupancy, and whether business income funds a peak-season closure.",
+};
+
 export const PROGRAMS: Program[] = [
   {
     slug: "multifamily-apartment-insurance",
@@ -346,7 +354,7 @@ export const PROGRAMS: Program[] = [
       { q: "My resort is coastal. Can you place the property?", a: "Usually. Coastal and named-storm hospitality goes to surplus-lines and London capacity, often in layers, and the wind deductible is where the real negotiation happens. We assemble the capacity and structure the deductible so the limit stays adequate without gutting your cash position after a storm." },
       { q: "Do you handle liquor liability for hotel F&B?", a: "Yes. Bars, restaurants, banquets, and events all run through liquor liability coordinated with the GL and umbrella, so a claim doesn't fall between policies." },
     ],
-    tools: [WIND_CALC],
+    tools: [HOTEL_CALC, WIND_CALC],
     searchTerms: ["hotel insurance broker", "hospitality insurance", "resort property insurance", "hotel liquor liability"],
   },
   {

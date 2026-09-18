@@ -219,20 +219,28 @@ export default function Home() {
                 the premium into the terms you underwrite in — cost per unit, percent of EGI, DSCR,
                 and value at your cap rate. No email required to see your numbers.
               </p>
-              <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-4">
-                <Link
-                  href="/multifamily-insurance-calculator"
-                  className="inline-flex items-center gap-2 rounded-sm bg-gold px-5 py-3 text-sm font-semibold uppercase tracking-wide text-obsidian transition-colors hover:bg-gold-dark"
-                >
-                  Run your numbers <ArrowRight className="h-4 w-4" />
-                </Link>
+              <Link
+                href="/multifamily-insurance-calculator"
+                className="mt-7 inline-flex items-center gap-2 rounded-sm bg-gold px-5 py-3 text-sm font-semibold uppercase tracking-wide text-obsidian transition-colors hover:bg-gold-dark"
+              >
+                Run your numbers <ArrowRight className="h-4 w-4" />
+              </Link>
+              <p className="mt-5 text-sm text-slate">
+                Also free:{" "}
                 <Link
                   href="/wind-deductible-calculator"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
+                  className="font-semibold text-obsidian underline hover:text-gold"
                 >
-                  Or size a wind deductible <ArrowRight className="h-4 w-4" />
+                  wind &amp; hail deductible calculator
+                </Link>{" "}
+                ·{" "}
+                <Link
+                  href="/hotel-insurance-calculator"
+                  className="font-semibold text-obsidian underline hover:text-gold"
+                >
+                  hotel insurance calculator
                 </Link>
-              </div>
+              </p>
             </div>
             <ul className="space-y-3 border-t border-gold/30 bg-white p-6">
               {[
