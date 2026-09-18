@@ -8,7 +8,6 @@ import {
   windDeductibleExposure,
   itvGap,
   lossOfRentsCheck,
-  buyDownBreakeven,
 } from "./calc.js";
 
 const close = (actual, expected, tol = 0.01) =>
@@ -143,11 +142,6 @@ test("loss of rents limit against the real indemnity period", () => {
   close(l.requiredLimit, 21_873_600);
   close(l.gap, 18_873_600);
   close(l.monthsCovered, 1.645820, 0.000001);
-});
-
-test("buy-down breakeven is expected retained loss", () => {
-  close(buyDownBreakeven(1_500_000, 250_000, 0.08), 100_000);
-  close(buyDownBreakeven(250_000, 1_500_000, 0.08), 0);
 });
 
 test("a zero cap rate nulls the valuation instead of returning Infinity", () => {

@@ -2,7 +2,9 @@ export type Faq = { q: string; a: string };
 
 export type ProgramCategory = "program" | "asset" | "advisory";
 
-export type Program = {
+export type Tool = { href: string; label: string; cta: string; blurb: string };
+
+type Program = {
   slug: string;
   category: ProgramCategory;
   shortName: string; // for nav/cards
@@ -17,7 +19,23 @@ export type Program = {
   coverages: { title: string; body: string }[];
   faqs: Faq[];
   searchTerms: string[]; // the high-intent terms this page targets
-  tool?: { href: string; label: string; blurb: string }; // free calculator/tool for this class
+  tools?: Tool[]; // free calculators for this class
+};
+
+const MULTIFAMILY_CALC: Tool = {
+  href: "/multifamily-insurance-calculator",
+  label: "Multifamily Insurance Impact Calculator",
+  cta: "Run your numbers",
+  blurb:
+    "Free, no email required: see what your premium is doing to NOI, value at your cap rate, DSCR, and cost per unit — plus the deductible and valuation exposures sitting behind the premium.",
+};
+
+const WIND_CALC: Tool = {
+  href: "/wind-deductible-calculator",
+  label: "Wind & Hail Deductible Calculator",
+  cta: "Run your schedule",
+  blurb:
+    "Free, no email required: a percentage deductible applies to each affected location's insured value, so one storm applies several. Size what you actually retain, per location, per storm, and per season — and what a buy-down is worth against it.",
 };
 
 export const PROGRAMS: Program[] = [
@@ -59,12 +77,7 @@ export const PROGRAMS: Program[] = [
         a: "We work on accounts with roughly $50,000 and up in annual premium. That runs from a single large community to portfolios of 10,000+ units across several states.",
       },
     ],
-    tool: {
-      href: "/multifamily-insurance-calculator",
-      label: "Multifamily Insurance Impact Calculator",
-      blurb:
-        "Free, no email required: see what your premium is doing to NOI, value at your cap rate, DSCR, and cost per unit — plus the deductible and valuation exposures sitting behind the premium.",
-    },
+    tools: [MULTIFAMILY_CALC, WIND_CALC],
     searchTerms: [
       "multifamily insurance broker",
       "apartment building insurance",
@@ -110,6 +123,7 @@ export const PROGRAMS: Program[] = [
         a: "Yes. We model the catastrophe exposure on your SOV first, then place the program with the mix of carriers and capacity the modeling supports, including coastal wind, hail-belt, and quake-exposed locations.",
       },
     ],
+    tools: [WIND_CALC],
     searchTerms: [
       "real estate portfolio insurance",
       "master property insurance program",
@@ -155,6 +169,7 @@ export const PROGRAMS: Program[] = [
         a: "When they make sense, which is not always. Parametric covers and captives can be the cheapest way to finance catastrophe risk in a distressed market, and a waste of money outside one. We'll show you the math either way.",
       },
     ],
+    tools: [WIND_CALC],
     searchTerms: [
       "catastrophe property insurance broker",
       "coastal commercial property insurance",
@@ -331,6 +346,7 @@ export const PROGRAMS: Program[] = [
       { q: "My resort is coastal. Can you place the property?", a: "Usually. Coastal and named-storm hospitality goes to surplus-lines and London capacity, often in layers, and the wind deductible is where the real negotiation happens. We assemble the capacity and structure the deductible so the limit stays adequate without gutting your cash position after a storm." },
       { q: "Do you handle liquor liability for hotel F&B?", a: "Yes. Bars, restaurants, banquets, and events all run through liquor liability coordinated with the GL and umbrella, so a claim doesn't fall between policies." },
     ],
+    tools: [WIND_CALC],
     searchTerms: ["hotel insurance broker", "hospitality insurance", "resort property insurance", "hotel liquor liability"],
   },
   {
@@ -406,6 +422,7 @@ export const PROGRAMS: Program[] = [
         a: "Accounts with roughly $50,000 and up in annual premium. In self-storage that usually means several locations, or one or two large facilities with coastal exposure. If you're a single inland facility under 400 units, a standard package policy is probably the right answer and we'll tell you so.",
       },
     ],
+    tools: [WIND_CALC],
     searchTerms: [
       "self storage insurance broker",
       "self-storage facility insurance",

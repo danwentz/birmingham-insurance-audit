@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "rm -rf .test-build && tsc --outDir .test-build --module es2020 --target es2020 --moduleResolution bundler --strict src/lib/calc.ts && cp src/lib/calc.test.mjs .test-build/ && node --test .test-build/"
+    "test": "rm -rf .test-build && tsc --outDir .test-build --module es2020 --target es2020 --moduleResolution bundler --strict src/lib/calc.ts src/lib/wind.ts && cp src/lib/calc.test.mjs src/lib/wind.test.mjs .test-build/ && node --test .test-build/"
   },
   "dependencies": {
     "lucide-react": "^0.525.0",

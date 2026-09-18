@@ -204,20 +204,37 @@ export default function CalculatorPage() {
               ))}
             </div>
 
-            <div className="mt-14 border-l-2 border-gold bg-ivory p-6">
-              <p className="font-display text-lg font-semibold text-obsidian">
-                Looking for the program, not the math?
-              </p>
-              <p className="mt-2 text-sm leading-relaxed text-slate">
-                Habitational property, general liability, and umbrella for owners and operators of 50
-                to 10,000+ units.
-              </p>
-              <Link
-                href="/multifamily-apartment-insurance"
-                className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
-              >
-                Multifamily &amp; apartment insurance <ArrowRight className="h-4 w-4" />
-              </Link>
+            <div className="mt-14 grid gap-4 sm:grid-cols-2">
+              <div className="border-l-2 border-gold bg-ivory p-6">
+                <p className="font-display text-lg font-semibold text-obsidian">
+                  Carrying a percentage wind deductible?
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-slate">
+                  It applies to each affected location&apos;s insured value, so one storm applies
+                  several. Size what you actually retain across the schedule.
+                </p>
+                <Link
+                  href="/wind-deductible-calculator"
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
+                >
+                  Wind &amp; hail deductible calculator <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+              <div className="border-l-2 border-gold bg-ivory p-6">
+                <p className="font-display text-lg font-semibold text-obsidian">
+                  Looking for the program, not the math?
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-slate">
+                  Habitational property, general liability, and umbrella for owners and operators of
+                  50 to 10,000+ units.
+                </p>
+                <Link
+                  href="/multifamily-apartment-insurance"
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
+                >
+                  Multifamily &amp; apartment insurance <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
             </div>
           </div>
         </section>

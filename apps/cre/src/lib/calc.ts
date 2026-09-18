@@ -212,13 +212,3 @@ export function lossOfRentsCheck(i: CalcInput): LossOfRentsCheck | null {
     monthsCovered: monthlyEgi > 0 ? limit / monthlyEgi : null,
   };
 }
-
-/** Annual cost at which a deductible buy-down stops paying for itself,
- *  given a probability the deductible gets hit in any year. */
-export function buyDownBreakeven(
-  deductibleDollars: number,
-  newDeductibleDollars: number,
-  annualProbability: number,
-): number {
-  return Math.max(0, (deductibleDollars - newDeductibleDollars) * annualProbability);
-}
