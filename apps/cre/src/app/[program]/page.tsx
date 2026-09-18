@@ -129,6 +129,24 @@ export default async function ProgramPage({
         <section className="bg-white px-5 py-16">
           <div className="mx-auto max-w-3xl">
             <p className="text-lg leading-relaxed text-slate">{program.intro}</p>
+
+            {program.tool && (
+              <div className="mt-10 border-l-2 border-gold bg-ivory p-6">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+                  Free tool
+                </p>
+                <p className="mt-3 font-display text-lg font-semibold text-obsidian">
+                  {program.tool.label}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-slate">{program.tool.blurb}</p>
+                <Link
+                  href={program.tool.href}
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
+                >
+                  Run your numbers <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            )}
           </div>
         </section>
 

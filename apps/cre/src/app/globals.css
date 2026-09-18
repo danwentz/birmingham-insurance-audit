@@ -51,3 +51,32 @@ textarea:focus-visible {
   outline: 2px solid var(--color-gold);
   outline-offset: 2px;
 }
+
+/* Calculator results print/PDF view: drop the chrome, keep the numbers. */
+@media print {
+  header,
+  footer,
+  .print\:hidden {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+  }
+  section {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    background: #fff !important;
+    color: #10131e !important;
+    break-inside: avoid;
+  }
+  h1,
+  h2,
+  p,
+  td,
+  th {
+    color: #10131e !important;
+  }
+  details {
+    display: none;
+  }
+}

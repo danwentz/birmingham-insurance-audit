@@ -17,6 +17,7 @@ export type Program = {
   coverages: { title: string; body: string }[];
   faqs: Faq[];
   searchTerms: string[]; // the high-intent terms this page targets
+  tool?: { href: string; label: string; blurb: string }; // free calculator/tool for this class
 };
 
 export const PROGRAMS: Program[] = [
@@ -58,6 +59,12 @@ export const PROGRAMS: Program[] = [
         a: "We work on accounts with roughly $50,000 and up in annual premium. That runs from a single large community to portfolios of 10,000+ units across several states.",
       },
     ],
+    tool: {
+      href: "/multifamily-insurance-calculator",
+      label: "Multifamily Insurance Impact Calculator",
+      blurb:
+        "Free, no email required: see what your premium is doing to NOI, value at your cap rate, DSCR, and cost per unit — plus the deductible and valuation exposures sitting behind the premium.",
+    },
     searchTerms: [
       "multifamily insurance broker",
       "apartment building insurance",

@@ -205,6 +205,42 @@ export default function Home() {
           </div>
         </section>
 
+        {/* FREE TOOL */}
+        <section className="px-5 py-20">
+          <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Free tool</p>
+              <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-obsidian sm:text-4xl">
+                See what your insurance is doing to NOI and value.
+              </h2>
+              <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate">
+                Insurance is an expense you can move in sixty days, and every dollar of it carries
+                about eighteen dollars of asset value at a 5.5% cap. Our multifamily calculator puts
+                the premium into the terms you underwrite in — cost per unit, percent of EGI, DSCR,
+                and value at your cap rate. No email required to see your numbers.
+              </p>
+              <Link
+                href="/multifamily-insurance-calculator"
+                className="mt-7 inline-flex items-center gap-2 rounded-sm bg-gold px-5 py-3 text-sm font-semibold uppercase tracking-wide text-obsidian transition-colors hover:bg-gold-dark"
+              >
+                Run your numbers <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+            <ul className="space-y-3 border-t border-gold/30 bg-white p-6">
+              {[
+                "Insurance cost per unit, % of EGI, % of opex",
+                "Value created or destroyed at your cap rate",
+                "The premium increase that trips your DSCR covenant",
+                "Wind deductible, coinsurance, and loss-of-rents gaps",
+              ].map((item) => (
+                <li key={item} className="border-l-2 border-gold pl-3 text-slate">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
         {/* APPROACH (dark band) */}
         <section className="gold-rule-top bg-obsidian px-5 py-20 text-champagne">
           <div className="mx-auto max-w-6xl">
