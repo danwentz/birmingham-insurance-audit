@@ -64,7 +64,7 @@ const EXAMPLE: Record<FieldKey, string> = {
   rent: "1,350",
   occ: "94",
   opex: "1,400,000",
-  cap: "5.5",
+  cap: "7",
   other: "",
   ads: "",
   covenant: "",

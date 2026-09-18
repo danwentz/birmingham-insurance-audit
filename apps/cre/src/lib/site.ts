@@ -8,7 +8,10 @@ export const PHONE_DISPLAY = "(205) 999-4884";
 export const PHONE_HREF = "tel:+12059994884";
 export const PHONE_E164 = "+1-205-999-4884";
 
-export const DOMAIN = "https://acreinsure.com";
+// www is the host that serves 200 — the apex 307s here. Canonicals, og:url,
+// sitemap, robots host and schema @ids all derive from this, so it must match
+// the redirect target or every canonical points at a redirect.
+export const DOMAIN = "https://www.acreinsure.com";
 
 // CRE site GA4 measurement ID (separate from the audit site)
 export const GA_ID = "G-RJ6FTGFFZH";

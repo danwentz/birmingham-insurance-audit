@@ -23,7 +23,7 @@ export type CalcInput = {
   indemnityMonths?: number;
 };
 
-export const DEFAULT_CAP_RATE = 5.5;
+export const DEFAULT_CAP_RATE = 7;
 export const DEFAULT_DSCR_COVENANT = 1.2;
 export const DEFAULT_COINSURANCE = 90;
 

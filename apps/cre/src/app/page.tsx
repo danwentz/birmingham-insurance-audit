@@ -215,7 +215,7 @@ export default function Home() {
               </h2>
               <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate">
                 Insurance is an expense you can move in sixty days, and every dollar of it carries
-                about eighteen dollars of asset value at a 5.5% cap. Our multifamily calculator puts
+                about fourteen dollars of asset value at a 7% cap. Our multifamily calculator puts
                 the premium into the terms you underwrite in — cost per unit, percent of EGI, DSCR,
                 and value at your cap rate. No email required to see your numbers.
               </p>

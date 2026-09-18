@@ -6,9 +6,9 @@ import { ContactSection } from "@/components/ContactSection";
 import { MultifamilyCalculator } from "@/components/calculator/MultifamilyCalculator";
 import { BRAND_NAME, DOMAIN } from "@/lib/site";
 
-const TITLE = "Multifamily Insurance Impact Calculator | NOI, Cap Rate & Value";
+const TITLE = "Multifamily Insurance Calculator | NOI, Cap Rate & Value";
 const DESCRIPTION =
-  "Free calculator for apartment owners and operators: see how your insurance premium moves NOI, cap-rate value, DSCR, and cost per unit — plus the deductible and valuation exposures behind the premium.";
+  "See what your premium costs in NOI, value at your cap rate, DSCR, and cost per unit. Free multifamily insurance calculator — no email required.";
 const PATH = "/multifamily-insurance-calculator";
 
 export const metadata: Metadata = {
@@ -22,12 +22,13 @@ export const metadata: Metadata = {
     siteName: BRAND_NAME,
     type: "website",
   },
+  twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION },
 };
 
 const FAQS = [
   {
     q: "How does insurance affect NOI and property value?",
-    a: "Insurance is an operating expense, so every dollar of premium reduces net operating income by a dollar. Under direct capitalization, value is NOI divided by the cap rate — so a dollar of annual premium carries roughly $18 of asset value at a 5.5% cap, or $16.67 at 6%. A $100,000 premium reduction on a portfolio valued at a 5.5% cap adds about $1.8 million of value.",
+    a: "Insurance is an operating expense, so every dollar of premium reduces net operating income by a dollar. Under direct capitalization, value is NOI divided by the cap rate — so a dollar of annual premium carries roughly $14.29 of asset value at a 7% cap, or $16.67 at 6%. A $100,000 premium reduction on a portfolio valued at a 7% cap adds about $1.43 million of value.",
   },
   {
     q: "What is a normal insurance cost per unit for multifamily?",
@@ -35,7 +36,7 @@ const FAQS = [
   },
   {
     q: "How do I calculate the value impact of an insurance premium increase?",
-    a: "Divide the annual premium increase by your cap rate. A $60,000 renewal increase at a 5.5% cap is roughly $1.09 million of value destroyed, because the higher expense permanently lowers the NOI a buyer will capitalize. This is why a renewal is an asset-value event, not just a budget line.",
+    a: "Divide the annual premium increase by your cap rate. A $60,000 renewal increase at a 7% cap is roughly $857,000 of value destroyed, because the higher expense permanently lowers the NOI a buyer will capitalize. This is why a renewal is an asset-value event, not just a budget line.",
   },
   {
     q: "How does insurance affect DSCR and my loan covenants?",
@@ -64,6 +65,25 @@ const jsonLd = {
       description: DESCRIPTION,
       offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
       provider: { "@id": `${DOMAIN}/#org` },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${DOMAIN}${PATH}#breadcrumbs`,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: DOMAIN },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Multifamily & Apartment Insurance",
+          item: `${DOMAIN}/multifamily-apartment-insurance`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Insurance Impact Calculator",
+          item: `${DOMAIN}${PATH}`,
+        },
+      ],
     },
     {
       "@type": "FAQPage",
@@ -142,7 +162,7 @@ export default function CalculatorPage() {
               <p>
                 Ask an owner what a $75,000 premium increase costs and you&apos;ll get the right answer in
                 cash and the wrong answer in value. The cash answer is $75,000 a year. The value
-                answer, on a portfolio underwritten at a 5.5% cap, is about $1.36 million — because
+                answer, on a portfolio underwritten at a 7% cap, is about $1.07 million — because
                 the expense is permanent, it lowers the NOI a buyer capitalizes, and it shows up in
                 every appraisal, refinance, and sale from that point forward.
               </p>
