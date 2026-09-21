@@ -239,6 +239,13 @@ export default function Home() {
                   className="font-semibold text-obsidian underline hover:text-gold"
                 >
                   hotel insurance calculator
+                </Link>{" "}
+                ·{" "}
+                <Link
+                  href="/coinsurance-penalty-calculator"
+                  className="font-semibold text-obsidian underline hover:text-gold"
+                >
+                  coinsurance penalty calculator
                 </Link>
               </p>
             </div>

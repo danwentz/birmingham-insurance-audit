@@ -204,7 +204,7 @@ export default function CalculatorPage() {
               ))}
             </div>
 
-            <div className="mt-14 grid gap-4 sm:grid-cols-2">
+            <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               <div className="border-l-2 border-gold bg-ivory p-6">
                 <p className="font-display text-lg font-semibold text-obsidian">
                   Carrying a percentage wind deductible?
@@ -218,6 +218,21 @@ export default function CalculatorPage() {
                   className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
                 >
                   Wind &amp; hail deductible calculator <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+              <div className="border-l-2 border-gold bg-ivory p-6">
+                <p className="font-display text-lg font-semibold text-obsidian">
+                  Is your limit still enough?
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-slate">
+                  See the exact payout on a real loss, not just the full-loss haircut above — and
+                  what it takes to cure the gap.
+                </p>
+                <Link
+                  href="/coinsurance-penalty-calculator"
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
+                >
+                  Coinsurance penalty calculator <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
               <div className="border-l-2 border-gold bg-ivory p-6">

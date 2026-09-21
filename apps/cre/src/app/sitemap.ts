@@ -20,6 +20,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    {
+      url: `${DOMAIN}/coinsurance-penalty-calculator`,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
     { url: `${DOMAIN}/about`, changeFrequency: "yearly", priority: 0.5 },
     ...PROGRAMS.map((p) => ({
       url: `${DOMAIN}/${p.slug}`,

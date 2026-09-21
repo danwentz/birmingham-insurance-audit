@@ -222,7 +222,7 @@ export default function HotelCalculatorPage() {
               ))}
             </div>
 
-            <div className="mt-14 grid gap-4 sm:grid-cols-2">
+            <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               <div className="border-l-2 border-gold bg-ivory p-6">
                 <p className="font-display text-lg font-semibold text-obsidian">
                   Coastal or hail-belt hotel?
@@ -251,6 +251,21 @@ export default function HotelCalculatorPage() {
                   className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
                 >
                   Hospitality &amp; hotel insurance <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+              <div className="border-l-2 border-gold bg-ivory p-6">
+                <p className="font-display text-lg font-semibold text-obsidian">
+                  Is your limit still enough?
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-slate">
+                  A coinsurance clause cuts every claim, not just a total loss, when the limit trails
+                  replacement cost. Price the penalty on your own loss.
+                </p>
+                <Link
+                  href="/coinsurance-penalty-calculator"
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
+                >
+                  Coinsurance penalty calculator <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             </div>

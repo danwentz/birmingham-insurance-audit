@@ -160,6 +160,19 @@ export function windDeductibleExposure(i: CalcInput): WindExposure | null {
   };
 }
 
+/** Limit required to satisfy a coinsurance clause: replacement cost × coinsurance
+ *  percentage. Shared with coinsurance.ts, which runs the same clause against a
+ *  specific loss and deductible instead of just the full-loss haircut below. */
+export function coinsuranceRequiredLimit(replacementCost: number, coinsurancePct: number): number {
+  return replacementCost > 0 && coinsurancePct > 0 ? replacementCost * (coinsurancePct / 100) : 0;
+}
+
+/** Limit carried ÷ limit required, capped at 1 — there's no bonus for carrying
+ *  more than the clause requires. Also shared with coinsurance.ts. */
+export function coinsuranceRatio(limit: number, requiredLimit: number): number {
+  return requiredLimit > 0 ? Math.min(1, Math.max(0, limit) / requiredLimit) : 1;
+}
+
 export type ItvGap = {
   insuredValue: number;
   replacementCost: number;
@@ -175,9 +188,8 @@ export function itvGap(i: CalcInput): ItvGap | null {
   const insured = i.insuredValue;
   const rc = i.replacementCost;
   if (!insured || insured <= 0 || !rc || rc <= 0) return null;
-  const coins = (i.coinsurancePct ?? DEFAULT_COINSURANCE) / 100;
-  const requiredLimit = rc * coins;
-  const payoutRatio = Math.min(1, insured / requiredLimit);
+  const requiredLimit = coinsuranceRequiredLimit(rc, i.coinsurancePct ?? DEFAULT_COINSURANCE);
+  const payoutRatio = coinsuranceRatio(insured, requiredLimit);
   return {
     insuredValue: insured,
     replacementCost: rc,
