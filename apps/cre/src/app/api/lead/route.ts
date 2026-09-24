@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { PHONE_DISPLAY } from "@/lib/site";
+import { BRAND_SHORT, PHONE_DISPLAY } from "@/lib/site";
+import { parseMauticMessengerResponse } from "@/lib/mautic";
 
 export const runtime = "nodejs";
 
@@ -7,9 +8,6 @@ export const runtime = "nodejs";
 const TURNSTILE_TEST_SECRET = "1x0000000000000000000000000000000AA";
 // Must match data-action on the widget in LeadForm.
 const TURNSTILE_ACTION = "lead";
-
-// TODO: point at a dedicated CRE inbox/endpoint (reusing the audit FormSubmit id for now)
-const FORMSUBMIT_ENDPOINT = "https://formsubmit.co/ajax/88e98acda98937d69e8fea30fa6274a4";
 
 function failResponse(reason: string) {
   console.warn("lead rejected:", reason);
@@ -91,39 +89,67 @@ export async function POST(req: NextRequest) {
     })}`);
   }
 
-  const payload = {
-    _subject: "New CRE Insurance Inquiry",
-    _template: "table",
-    name: formData.get("name"),
-    company: formData.get("company"),
-    email: formData.get("email"),
-    phone: formData.get("phone"),
-    asset_type: formData.get("asset_type"),
-    premium_band: formData.get("premium_band"),
-    details: formData.get("details"),
-    site: formData.get("site"),
-    source: formData.get("source"),
+  // Leads go to the Mautic standalone form "CRE Lead Form" (alias cre_lead_f).
+  // Posting server-side keeps the Turnstile check authoritative; Mautic then
+  // creates/updates the contact and runs the form's actions (notification
+  // email, line:cre tag). Field keys below are the Mautic form field aliases.
+  const mauticUrl = (process.env.MAUTIC_URL?.trim() || "https://mautic.acreinsure.com").replace(/\/$/, "");
+  const formId = process.env.MAUTIC_FORM_ID?.trim() || "4";
+  const formName = process.env.MAUTIC_FORM_NAME?.trim() || "cre_lead_f";
+
+  const text = (key: string) => {
+    const value = formData.get(key);
+    return typeof value === "string" ? value.trim().slice(0, 2000) : "";
+  };
+  const [firstName, ...rest] = text("name").split(/\s+/);
+  const fields: Record<string, string> = {
+    first_name: firstName,
+    last_name: rest.join(" "),
+    email: text("email"),
+    phone: text("phone"),
+    company: text("company"),
+    asset_type: text("asset_type"),
+    premium_band: text("premium_band"),
+    details: text("details"),
+    business_line: "CRE",
+    lead_source: text("source") || "unknown",
   };
 
+  const body = new URLSearchParams();
+  for (const [alias, value] of Object.entries(fields)) body.set(`mauticform[${alias}]`, value);
+  body.set("mauticform[formId]", formId);
+  body.set("mauticform[formName]", formName);
+  body.set("mauticform[return]", "");
+  // Messenger mode is the only one that reports the outcome instead of redirecting.
+  body.set("mauticform[messenger]", "1");
+
   try {
-    const submitRes = await fetch(FORMSUBMIT_ENDPOINT, {
+    const submitRes = await fetch(`${mauticUrl}/form/submit?formId=${encodeURIComponent(formId)}`, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "X-Requested-With": "XMLHttpRequest",
         Accept: "application/json",
+        "User-Agent": `${BRAND_SHORT}-lead-relay/1.0`,
       },
-      body: JSON.stringify(payload),
+      redirect: "manual",
+      signal: AbortSignal.timeout(10_000),
+      body,
     });
-
-    // FormSubmit can return 200 with { success: "false" }, so check the body too.
-    const submitResult: { success?: string | boolean } = await submitRes.json().catch(() => ({}));
-    if (!submitRes.ok || String(submitResult.success) !== "true") {
+    const result = parseMauticMessengerResponse(await submitRes.text());
+    if (!submitRes.ok || !result.success) {
+      console.error(
+        "lead mautic failed:",
+        submitRes.status,
+        JSON.stringify(result.validationErrors ?? result.errorMessage ?? "(unparseable response)")
+      );
       return new NextResponse(
         `Something went wrong submitting your request. Please call ${PHONE_DISPLAY} instead.`,
         { status: 502 }
       );
     }
-  } catch {
+  } catch (err) {
+    console.error("lead mautic error:", err instanceof Error ? err.message : String(err));
     return new NextResponse(
       `Something went wrong submitting your request. Please call ${PHONE_DISPLAY} instead.`,
       { status: 502 }
