@@ -69,11 +69,18 @@ function FooterColumn({
   );
 }
 
+const CALCULATORS = [
+  { slug: "multifamily-insurance-calculator", shortName: "Multifamily Insurance Calculator" },
+  { slug: "wind-deductible-calculator", shortName: "Wind & Hail Deductible Calculator" },
+  { slug: "hotel-insurance-calculator", shortName: "Hotel Insurance Calculator" },
+  { slug: "coinsurance-penalty-calculator", shortName: "Coinsurance Penalty Calculator" },
+];
+
 export function SiteFooter() {
   return (
     <footer className="bg-obsidian text-slate">
       <div className="mx-auto max-w-6xl px-5">
-        <div className="grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-5">
           <div>
             <Wordmark className="text-lg text-white" />
             <p className="mt-3 max-w-[34ch] text-sm text-slate">
@@ -95,6 +102,7 @@ export function SiteFooter() {
           <FooterColumn title="Specialty Programs" items={programsByCategory("program")} />
           <FooterColumn title="By Asset Class" items={programsByCategory("asset")} />
           <FooterColumn title="Advisory" items={programsByCategory("advisory")} />
+          <FooterColumn title="Free Tools" items={CALCULATORS} />
         </div>
       </div>
       <div className="border-t border-gold/20">

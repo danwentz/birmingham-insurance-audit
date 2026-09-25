@@ -231,6 +231,7 @@ export const PROGRAMS: Program[] = [
         a: "Yes. Limits, additional insureds, waivers, evidence of coverage: we build the program to the loan and joint-venture requirements from day one and keep it compliant through completion, so insurance is never the reason a draw or a closing stalls.",
       },
     ],
+    tools: [COINSURANCE_CALC],
     searchTerms: [
       "builders risk insurance broker",
       "owner controlled insurance program OCIP",
@@ -269,6 +270,7 @@ export const PROGRAMS: Program[] = [
       { q: "Can you cover a building under renovation?", a: "Yes. A major tenant build-out or repositioning typically gets a builders risk or course-of-construction layer alongside the property program, structured so nothing falls in the gap between your coverage and the contractor's." },
       { q: "How large of an office portfolio do you handle?", a: "Accounts from roughly $50,000 in annual premium and up, whether that's one tower or a multi-state office portfolio." },
     ],
+    tools: [COINSURANCE_CALC],
     searchTerms: ["office building insurance broker", "office property insurance", "commercial office insurance portfolio"],
   },
   {
@@ -300,6 +302,7 @@ export const PROGRAMS: Program[] = [
       { q: "Do you track tenant certificates of insurance?", a: "Yes. We help set the insurance requirements in your leases, then track the certificates against them. An expired COI you discover after a loss is the most expensive piece of paper in real estate." },
       { q: "How large of a retail portfolio do you handle?", a: "Roughly $50,000+ in annual premium, from one center to a multi-state retail portfolio." },
     ],
+    tools: [WIND_CALC, COINSURANCE_CALC],
     searchTerms: ["shopping center insurance", "retail property insurance broker", "strip mall insurance"],
   },
   {
@@ -331,6 +334,7 @@ export const PROGRAMS: Program[] = [
       { q: "Do you write lessor's risk only (NNN) industrial?", a: "We do. For single-tenant net-leased industrial we structure an owner's program that lines up with the tenant's coverage and the lender's requirements, without paying twice for the same risk." },
       { q: "What size accounts do you take?", a: "Roughly $50,000 and up in annual premium, from one building to a multi-state industrial portfolio." },
     ],
+    tools: [COINSURANCE_CALC],
     searchTerms: ["warehouse insurance broker", "industrial property insurance", "distribution center insurance", "lessors risk NNN insurance"],
   },
   {
@@ -394,6 +398,7 @@ export const PROGRAMS: Program[] = [
       { q: "Is abuse & molestation coverage included?", a: "It has to be, and we place it explicitly, often with its own limit. A&M left to a buried sublimit or a silent exclusion is one of the most expensive discoveries a housing owner can make after a claim." },
       { q: "How is student housing summer vacancy handled?", a: "By telling the truth about it up front. We present the seasonal occupancy pattern accurately so the program is priced for the real risk and a vacancy provision doesn't void coverage over winter break." },
     ],
+    tools: [MULTIFAMILY_CALC, COINSURANCE_CALC],
     searchTerms: ["student housing insurance", "senior living insurance broker", "assisted living insurance", "habitational specialty insurance"],
   },
   {
@@ -477,6 +482,7 @@ export const PROGRAMS: Program[] = [
       { q: "Should our portfolio consider a captive?", a: "Sometimes. With enough predictable, retainable risk, a captive recaptures underwriting profit and smooths volatility. Without it, a captive is an expensive hobby. We model your portfolio's economics honestly before recommending one either way." },
       { q: "Do you handle claims for us?", a: "Yes, and it's core to the work. We manage the claim process and press the carrier so the recovery reflects the coverage you paid for, not the first number the adjuster offers." },
     ],
+    tools: [COINSURANCE_CALC],
     searchTerms: ["real estate risk management", "total cost of risk", "real estate captive insurance", "outsourced risk management"],
   },
   {
@@ -508,6 +514,7 @@ export const PROGRAMS: Program[] = [
       { q: "When should we start before renewal?", a: "Ideally 90 to 120 days out. That's enough time to gather data, model the exposure, and market the account properly instead of begging carriers for extensions. We can move faster when a non-renewal forces the issue; we'd just rather not have to." },
       { q: "Will this disrupt our current agent relationship?", a: "Not unless you want it to. Plenty of owners use the review purely as a benchmark. If we find material savings or better coverage, the decision and the timing stay yours." },
     ],
+    tools: [COINSURANCE_CALC],
     searchTerms: ["commercial insurance program review", "insurance renewal RFP", "second opinion commercial insurance", "insurance broker of record"],
   },
 ];

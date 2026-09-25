@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/chrome";
 import { ContactSection } from "@/components/ContactSection";
 import { WindDeductibleCalculator } from "@/components/calculator/WindDeductibleCalculator";
-import { BRAND_NAME, DOMAIN } from "@/lib/site";
+import { BRAND_NAME, DOMAIN, PHONE_E164 } from "@/lib/site";
 
 const TITLE = "Wind & Hail Deductible Calculator | Percentage Deductibles";
 const DESCRIPTION =
@@ -68,7 +68,13 @@ const jsonLd = {
       operatingSystem: "Any",
       description: DESCRIPTION,
       offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-      provider: { "@id": `${DOMAIN}/#org` },
+      provider: {
+        "@type": "Organization",
+        "@id": `${DOMAIN}/#org`,
+        name: BRAND_NAME,
+        url: DOMAIN,
+        telephone: PHONE_E164,
+      },
     },
     {
       "@type": "BreadcrumbList",
@@ -123,7 +129,7 @@ export default function WindDeductibleCalculatorPage() {
               Catastrophe &amp; Wind/Hail Property Insurance <ArrowRight className="h-3 w-3" />
             </Link>
             <h1 className="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
-              What a 5% wind deductible actually costs you.
+              Wind deductible calculator: what a 5% deductible actually costs you.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate">
               It is not 5% of the loss. It is 5% of the insured value of every location the storm

@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/chrome";
 import { ContactSection } from "@/components/ContactSection";
 import { CoinsuranceCalculator } from "@/components/calculator/CoinsuranceCalculator";
-import { BRAND_NAME, DOMAIN } from "@/lib/site";
+import { BRAND_NAME, DOMAIN, PHONE_E164 } from "@/lib/site";
 
 const TITLE = "Coinsurance Penalty Calculator | Insurance-to-Value Gap";
 const DESCRIPTION =
@@ -64,7 +64,13 @@ const jsonLd = {
       operatingSystem: "Any",
       description: DESCRIPTION,
       offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-      provider: { "@id": `${DOMAIN}/#org` },
+      provider: {
+        "@type": "Organization",
+        "@id": `${DOMAIN}/#org`,
+        name: BRAND_NAME,
+        url: DOMAIN,
+        telephone: PHONE_E164,
+      },
     },
     {
       "@type": "BreadcrumbList",
@@ -119,7 +125,7 @@ export default function CoinsurancePenaltyCalculatorPage() {
               Real Estate Portfolio &amp; High-TIV Master Programs <ArrowRight className="h-3 w-3" />
             </Link>
             <h1 className="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
-              What a coinsurance penalty actually costs you.
+              Coinsurance penalty calculator: what the clause actually costs you.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate">
               Carry less than the required percentage of replacement cost and the clause cuts every

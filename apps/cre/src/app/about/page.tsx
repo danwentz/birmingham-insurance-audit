@@ -18,6 +18,12 @@ export const metadata: Metadata = {
     url: `${DOMAIN}/about`,
     type: "profile",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Dan Wentz | ACREInsure",
+    description:
+      "The CRE insurance practice of Dan Wentz, risk consultant at USI Insurance Services in Birmingham.",
+  },
 };
 
 const WORK_AREAS = [

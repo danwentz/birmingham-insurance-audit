@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/chrome";
 import { ContactSection } from "@/components/ContactSection";
 import { HotelCalculator } from "@/components/calculator/HotelCalculator";
-import { BRAND_NAME, DOMAIN } from "@/lib/site";
+import { BRAND_NAME, DOMAIN, PHONE_E164 } from "@/lib/site";
 
 const TITLE = "Hotel Insurance Calculator | Cost Per Key, RevPAR & Value";
 const DESCRIPTION =
@@ -68,7 +68,13 @@ const jsonLd = {
       operatingSystem: "Any",
       description: DESCRIPTION,
       offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-      provider: { "@id": `${DOMAIN}/#org` },
+      provider: {
+        "@type": "Organization",
+        "@id": `${DOMAIN}/#org`,
+        name: BRAND_NAME,
+        url: DOMAIN,
+        telephone: PHONE_E164,
+      },
     },
     {
       "@type": "BreadcrumbList",
@@ -123,7 +129,7 @@ export default function HotelCalculatorPage() {
               Hospitality &amp; Hotel Insurance <ArrowRight className="h-3 w-3" />
             </Link>
             <h1 className="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
-              What your insurance costs in RevPAR.
+              Hotel insurance calculator: what your premium costs in RevPAR.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate">
               Insurance is a fixed charge. It sits below gross operating profit, so no amount of

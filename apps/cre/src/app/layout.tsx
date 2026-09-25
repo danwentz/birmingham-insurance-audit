@@ -42,6 +42,12 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Commercial Real Estate Insurance Broker | ACREInsure",
+    description:
+      "Broker for large CRE accounts: multifamily, high-TIV portfolios, coastal CAT property, and builders risk/OCIP. Alabama-based, placing nationwide. $50k+ premiums.",
+  },
   robots: { index: true, follow: true },
 };
 

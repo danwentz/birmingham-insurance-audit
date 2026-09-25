@@ -5,7 +5,11 @@ import ConversionTracker from "./ConversionTracker";
 
 export const metadata: Metadata = {
   title: "Thank You",
-  robots: { index: false, follow: false },
+  // noindex, but follow: the page is crawlable so the noindex is actually read,
+  // and its links back into the site still pass. Self-canonical overrides the
+  // root layout's canonical, which points at "/".
+  robots: { index: false, follow: true },
+  alternates: { canonical: "/thank-you" },
 };
 
 export default function ThankYou() {

@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/chrome";
 import { ContactSection } from "@/components/ContactSection";
 import { MultifamilyCalculator } from "@/components/calculator/MultifamilyCalculator";
-import { BRAND_NAME, DOMAIN } from "@/lib/site";
+import { BRAND_NAME, DOMAIN, PHONE_E164 } from "@/lib/site";
 
 const TITLE = "Multifamily Insurance Calculator | NOI, Cap Rate & Value";
 const DESCRIPTION =
@@ -64,7 +64,13 @@ const jsonLd = {
       operatingSystem: "Any",
       description: DESCRIPTION,
       offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-      provider: { "@id": `${DOMAIN}/#org` },
+      provider: {
+        "@type": "Organization",
+        "@id": `${DOMAIN}/#org`,
+        name: BRAND_NAME,
+        url: DOMAIN,
+        telephone: PHONE_E164,
+      },
     },
     {
       "@type": "BreadcrumbList",
@@ -119,7 +125,7 @@ export default function CalculatorPage() {
               Multifamily & Apartment Insurance <ArrowRight className="h-3 w-3" />
             </Link>
             <h1 className="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
-              What your insurance program is doing to NOI, value, and DSCR.
+              Multifamily insurance calculator: what your program is doing to NOI, value, and DSCR.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate">
               Insurance is the fastest-moving line on a multifamily operating statement and the only

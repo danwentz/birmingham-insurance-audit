@@ -34,6 +34,11 @@ export async function generateMetadata({
       siteName: BRAND_NAME,
       type: "website",
     },
+    twitter: {
+      card: "summary_large_image",
+      title: program.metaTitle,
+      description: program.metaDescription,
+    },
   };
 }
 
