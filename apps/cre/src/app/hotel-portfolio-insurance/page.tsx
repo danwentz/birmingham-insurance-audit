@@ -311,7 +311,11 @@ export default function HotelPortfolioInsurance() {
                 When a named storm is forecast to make landfall, carriers stop binding new wind
                 coverage in its path until it passes. If you&apos;re buying a coastal hotel between
                 June and November, get coverage bound early. Don&apos;t plan to add it the week of
-                closing.
+                closing. More in our{" "}
+                <Link href="/gulf-coast-hotel-insurance" className="font-semibold text-gold-dark underline underline-offset-2 hover:text-gold">
+                  Gulf Coast hotel insurance guide
+                </Link>
+                .
               </p>
             </div>
           </div>

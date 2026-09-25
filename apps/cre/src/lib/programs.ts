@@ -55,6 +55,15 @@ const HOTEL_PORTFOLIO_GUIDE: Tool = {
   kind: "guide",
 };
 
+const GULF_COAST_HOTEL_GUIDE: Tool = {
+  href: "/gulf-coast-hotel-insurance",
+  label: "Gulf Coast Hotel Insurance Guide",
+  cta: "Read the guide",
+  blurb:
+    "Why coastal hotels end up in E&S, how named-storm deductibles work, hurricane-season binding moratoriums, and a checklist for closing a refi, acquisition, or PIP.",
+  kind: "guide",
+};
+
 const COINSURANCE_CALC: Tool = {
   href: "/coinsurance-penalty-calculator",
   label: "Coinsurance Penalty Calculator",
@@ -194,7 +203,7 @@ export const PROGRAMS: Program[] = [
         a: "When they make sense, which is not always. Parametric covers and captives can be the cheapest way to finance catastrophe risk in a distressed market, and a waste of money outside one. We'll show you the math either way.",
       },
     ],
-    tools: [WIND_CALC, COINSURANCE_CALC],
+    tools: [WIND_CALC, COINSURANCE_CALC, GULF_COAST_HOTEL_GUIDE],
     searchTerms: [
       "catastrophe property insurance broker",
       "coastal commercial property insurance",
@@ -375,7 +384,7 @@ export const PROGRAMS: Program[] = [
       { q: "My resort is coastal. Can you place the property?", a: "Usually. Coastal and named-storm hospitality goes to surplus-lines and London capacity, often in layers, and the wind deductible is where the real negotiation happens. We assemble the capacity and structure the deductible so the limit stays adequate without gutting your cash position after a storm." },
       { q: "Do you handle liquor liability for hotel F&B?", a: "Yes. Bars, restaurants, banquets, and events all run through liquor liability coordinated with the GL and umbrella, so a claim doesn't fall between policies." },
     ],
-    tools: [HOTEL_CALC, WIND_CALC, COINSURANCE_CALC, HOTEL_PORTFOLIO_GUIDE],
+    tools: [HOTEL_CALC, WIND_CALC, COINSURANCE_CALC, HOTEL_PORTFOLIO_GUIDE, GULF_COAST_HOTEL_GUIDE],
     searchTerms: ["hotel insurance broker", "hospitality insurance", "resort property insurance", "hotel liquor liability"],
   },
   {
