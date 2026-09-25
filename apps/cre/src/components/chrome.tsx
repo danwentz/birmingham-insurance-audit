@@ -74,6 +74,7 @@ const CALCULATORS = [
   { slug: "wind-deductible-calculator", shortName: "Wind & Hail Deductible Calculator" },
   { slug: "hotel-insurance-calculator", shortName: "Hotel Insurance Calculator" },
   { slug: "coinsurance-penalty-calculator", shortName: "Coinsurance Penalty Calculator" },
+  { slug: "insurance-document-checklist", shortName: "Insurance Document Checklist" },
 ];
 
 export function SiteFooter() {
