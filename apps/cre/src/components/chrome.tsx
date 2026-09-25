@@ -75,6 +75,7 @@ const CALCULATORS = [
   { slug: "hotel-insurance-calculator", shortName: "Hotel Insurance Calculator" },
   { slug: "coinsurance-penalty-calculator", shortName: "Coinsurance Penalty Calculator" },
   { slug: "insurance-document-checklist", shortName: "Insurance Document Checklist" },
+  { slug: "commercial-insurance-claims-strategy", shortName: "Claims Strategy Guide" },
 ];
 
 export function SiteFooter() {
