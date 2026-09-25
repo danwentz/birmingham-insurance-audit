@@ -8,12 +8,6 @@ declare global {
   }
 }
 
-export const trackCall = () =>
-  window.gtag?.("event", "phone_call_click", {
-    event_category: "lead",
-    event_label: "tap_to_call",
-  });
-
 export const trackFormSubmit = (source: string) => () =>
   window.gtag?.("event", "lead_form_submit", {
     event_category: "lead",

@@ -156,5 +156,7 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  return NextResponse.redirect(new URL("/thank-you", req.url), 303);
+  const redirectUrl = new URL("/thank-you", req.url);
+  redirectUrl.searchParams.set("source", fields.lead_source);
+  return NextResponse.redirect(redirectUrl, 303);
 }

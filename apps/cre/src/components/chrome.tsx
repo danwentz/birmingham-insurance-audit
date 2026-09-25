@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Phone } from "lucide-react";
 import { BRAND_NAME, PHONE_DISPLAY, PHONE_HREF } from "@/lib/site";
 import { programsByCategory } from "@/lib/programs";
-import { trackCall } from "@/components/LeadForm";
 
 function Wordmark({ className = "" }: { className?: string }) {
   return (
@@ -30,7 +29,6 @@ export function SiteHeader() {
           </Link>
           <a
             href={PHONE_HREF}
-            onClick={trackCall}
             className="hidden items-center gap-2 text-xs font-semibold uppercase tracking-wide text-slate transition-colors hover:text-champagne sm:inline-flex"
           >
             <Phone className="h-4 w-4" />
@@ -83,7 +81,6 @@ export function SiteFooter() {
             </p>
             <a
               href={PHONE_HREF}
-              onClick={trackCall}
               className="mt-4 inline-flex items-center gap-2 font-semibold text-champagne transition-colors hover:text-gold"
             >
               <Phone className="h-4 w-4" /> {PHONE_DISPLAY}

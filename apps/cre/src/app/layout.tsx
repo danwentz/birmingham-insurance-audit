@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, DM_Sans, DM_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import PhoneClickTracker from "@/components/PhoneClickTracker";
 import { BRAND_NAME, DOMAIN, GA_ID } from "@/lib/site";
 
 const playfair = Playfair_Display({
@@ -60,6 +61,7 @@ export default function RootLayout({
             </Script>
           </>
         )}
+        <PhoneClickTracker />
         {children}
       </body>
     </html>
