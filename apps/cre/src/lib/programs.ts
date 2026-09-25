@@ -73,12 +73,12 @@ const LENDER_GUIDE: Tool = {
   kind: "guide",
 };
 
-const SECTION_8_GUIDE: Tool = {
-  href: "/section-8-property-insurance",
-  label: "Section 8 Property Insurance Guide",
+const AFFORDABLE_HOUSING_GUIDE: Tool = {
+  href: "/affordable-housing-insurance",
+  label: "Affordable Housing Insurance Guide",
   cta: "Read the guide",
   blurb:
-    "How voucher and project-based Section 8 housing fits into your insurance program: what underwriters price, what the law says, and how to present the account.",
+    "Section 8, HUD, and LIHTC properties in your insurance program: what underwriters price, what the law says, and how to present the account.",
   kind: "guide",
 };
 
@@ -129,7 +129,7 @@ export const PROGRAMS: Program[] = [
         a: "We work on accounts with roughly $50,000 and up in annual premium. That runs from a single large community to portfolios of 10,000+ units across several states.",
       },
     ],
-    tools: [MULTIFAMILY_CALC, WIND_CALC, COINSURANCE_CALC, LENDER_GUIDE, SECTION_8_GUIDE],
+    tools: [MULTIFAMILY_CALC, WIND_CALC, COINSURANCE_CALC, LENDER_GUIDE, AFFORDABLE_HOUSING_GUIDE],
     searchTerms: [
       "multifamily insurance broker",
       "apartment building insurance",

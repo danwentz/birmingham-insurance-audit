@@ -5,19 +5,19 @@ import { SiteHeader, SiteFooter } from "@/components/chrome";
 import { ContactSection } from "@/components/ContactSection";
 import { DOMAIN } from "@/lib/site";
 
-const TITLE = "Section 8 and Your Property Insurance Portfolio";
-const META_TITLE = "Section 8 Property Insurance for Owners | ACREInsure";
+const TITLE = "Affordable Housing Insurance: Section 8, HUD, and LIHTC Properties";
+const META_TITLE = "Affordable Housing & Section 8 Property Insurance | ACREInsure";
 const DESCRIPTION =
-  "How Housing Choice Voucher and project-based Section 8 housing fit into a commercial property insurance program: what underwriters actually price, what the law says, and how to present the account.";
+  "Insurance for affordable housing portfolios, including Housing Choice Voucher, project-based Section 8, HUD-financed, and LIHTC properties: what underwriters actually price, what the law says, and how to present the account.";
 
 export const metadata: Metadata = {
   title: { absolute: META_TITLE },
   description: DESCRIPTION,
-  alternates: { canonical: "/section-8-property-insurance" },
+  alternates: { canonical: "/affordable-housing-insurance" },
   openGraph: {
     title: META_TITLE,
     description: DESCRIPTION,
-    url: `${DOMAIN}/section-8-property-insurance`,
+    url: `${DOMAIN}/affordable-housing-insurance`,
     type: "article",
   },
   twitter: { card: "summary_large_image", title: META_TITLE, description: DESCRIPTION },
@@ -109,7 +109,7 @@ const jsonLd = {
       description: DESCRIPTION,
       author: { "@type": "Person", name: "Dan Wentz", url: `${DOMAIN}/about` },
       publisher: { "@type": "Organization", name: "ACREInsure", url: DOMAIN },
-      mainEntityOfPage: `${DOMAIN}/section-8-property-insurance`,
+      mainEntityOfPage: `${DOMAIN}/affordable-housing-insurance`,
     },
     {
       "@type": "FAQPage",
@@ -124,7 +124,7 @@ const jsonLd = {
 
 const LINK = "font-semibold text-gold-dark underline underline-offset-2 hover:text-gold";
 
-export default function Section8PropertyInsurance() {
+export default function AffordableHousingInsurance() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -139,11 +139,11 @@ export default function Section8PropertyInsurance() {
             </Link>
             <p className="mt-8 text-xs font-semibold uppercase tracking-[0.18em] text-gold">Guide</p>
             <h1 className="mt-3 max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
-              Section 8 and your property insurance portfolio
+              Affordable housing insurance: Section 8, HUD, and LIHTC properties
             </h1>
             <p className="mt-5 max-w-2xl text-xl text-slate">
-              What underwriters actually price, what the law says, and how to present a portfolio
-              that includes voucher and project-based housing.
+              What underwriters actually price, what the law says, and how to present an
+              affordable housing portfolio to carriers.
             </p>
           </div>
         </section>
@@ -153,7 +153,7 @@ export default function Section8PropertyInsurance() {
           <div className="mx-auto max-w-3xl">
             <div className="space-y-6 text-lg leading-relaxed text-slate">
               <p>
-                Plenty of multifamily portfolios include Section 8 housing. Some owners accept
+                Plenty of multifamily portfolios include affordable housing. Some owners accept
                 Housing Choice Vouchers at a few properties. Others own project-based Section 8
                 communities under a HAP contract with HUD. Either way, owners ask us the same
                 question: how does this affect my insurance?
@@ -312,7 +312,7 @@ export default function Section8PropertyInsurance() {
           <div className="mx-auto max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">FAQ</p>
             <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              Common questions about Section 8 and insurance
+              Common questions about affordable housing insurance
             </h2>
             <div className="mt-8 space-y-8">
               {FAQS.map((f) => (
@@ -356,7 +356,7 @@ export default function Section8PropertyInsurance() {
           </div>
         </section>
 
-        <ContactSection source="section 8 page" heading="Review your portfolio's coverage" />
+        <ContactSection source="affordable housing page" heading="Review your portfolio's coverage" />
       </main>
 
       <SiteFooter />

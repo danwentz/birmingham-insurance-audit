@@ -51,7 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${DOMAIN}/section-8-property-insurance`,
+      url: `${DOMAIN}/affordable-housing-insurance`,
       changeFrequency: "yearly",
       priority: 0.7,
     },
