@@ -138,7 +138,7 @@ export default async function ProgramPage({
             {program.tools?.map((tool) => (
               <div key={tool.href} className="mt-10 border-l-2 border-gold bg-ivory p-6">
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
-                  Free tool
+                  {tool.kind === "guide" ? "Guide" : "Free tool"}
                 </p>
                 <p className="mt-3 font-display text-lg font-semibold text-obsidian">{tool.label}</p>
                 <p className="mt-2 text-sm leading-relaxed text-slate">{tool.blurb}</p>

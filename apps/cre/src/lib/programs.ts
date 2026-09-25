@@ -2,7 +2,7 @@ export type Faq = { q: string; a: string };
 
 export type ProgramCategory = "program" | "asset" | "advisory";
 
-export type Tool = { href: string; label: string; cta: string; blurb: string };
+export type Tool = { href: string; label: string; cta: string; blurb: string; kind?: "guide" };
 
 type Program = {
   slug: string;
@@ -44,6 +44,15 @@ const HOTEL_CALC: Tool = {
   cta: "Run your numbers",
   blurb:
     "Free, no email required: insurance is a fixed charge, so it never touches GOP — it comes out of EBITDA and capitalizes. See the premium per available room against your RevPAR, the ADR move a renewal implies, DSCR headroom, break-even occupancy, and whether business income funds a peak-season closure.",
+};
+
+const HOTEL_PORTFOLIO_GUIDE: Tool = {
+  href: "/hotel-portfolio-insurance",
+  label: "Hotel Portfolio Insurance Guide",
+  cta: "Read the guide",
+  blurb:
+    "Own three or more hotels? Blanket vs. scheduled limits, catastrophe aggregates across locations, brand and lender requirements, and a portfolio review checklist.",
+  kind: "guide",
 };
 
 const COINSURANCE_CALC: Tool = {
@@ -139,7 +148,7 @@ export const PROGRAMS: Program[] = [
         a: "Yes. We model the catastrophe exposure on your SOV first, then place the program with the mix of carriers and capacity the modeling supports, including coastal wind, hail-belt, and quake-exposed locations.",
       },
     ],
-    tools: [WIND_CALC, COINSURANCE_CALC],
+    tools: [WIND_CALC, COINSURANCE_CALC, HOTEL_PORTFOLIO_GUIDE],
     searchTerms: [
       "real estate portfolio insurance",
       "master property insurance program",
@@ -366,7 +375,7 @@ export const PROGRAMS: Program[] = [
       { q: "My resort is coastal. Can you place the property?", a: "Usually. Coastal and named-storm hospitality goes to surplus-lines and London capacity, often in layers, and the wind deductible is where the real negotiation happens. We assemble the capacity and structure the deductible so the limit stays adequate without gutting your cash position after a storm." },
       { q: "Do you handle liquor liability for hotel F&B?", a: "Yes. Bars, restaurants, banquets, and events all run through liquor liability coordinated with the GL and umbrella, so a claim doesn't fall between policies." },
     ],
-    tools: [HOTEL_CALC, WIND_CALC, COINSURANCE_CALC],
+    tools: [HOTEL_CALC, WIND_CALC, COINSURANCE_CALC, HOTEL_PORTFOLIO_GUIDE],
     searchTerms: ["hotel insurance broker", "hospitality insurance", "resort property insurance", "hotel liquor liability"],
   },
   {
