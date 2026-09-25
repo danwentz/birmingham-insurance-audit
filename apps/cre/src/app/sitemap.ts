@@ -50,6 +50,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.7,
     },
+    {
+      url: `${DOMAIN}/section-8-property-insurance`,
+      changeFrequency: "yearly",
+      priority: 0.7,
+    },
     { url: `${DOMAIN}/about`, changeFrequency: "yearly", priority: 0.5 },
     ...PROGRAMS.map((p) => ({
       url: `${DOMAIN}/${p.slug}`,
