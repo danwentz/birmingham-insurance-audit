@@ -221,8 +221,9 @@ export default function ClaimsStrategy() {
               <p className="rounded-md border-l-2 border-gold bg-ivory p-5 text-base">
                 <strong className="font-semibold text-obsidian">One exception: liability.</strong>{" "}
                 Deciding not to file only applies to your own property damage. If someone is hurt
-                on your property, or says they were, call us and call the carrier immediately. Same
-                day, both calls. Liability claims can surface months later, and a carrier can deny coverage for late notice. On liability, not reporting
+                on your property, or says they were, call us and call the carrier immediately.
+                Liability claims can surface months later, and a carrier can deny coverage for late
+                notice. On liability, not reporting
                 isn&apos;t a strategy. It&apos;s a gap.
               </p>
             </div>
@@ -369,7 +370,7 @@ export default function ClaimsStrategy() {
           <div className="mx-auto max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Working with us</p>
             <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              Call us the day it happens
+              Call us when it happens
             </h2>
             <div className="mt-6 space-y-6 text-lg leading-relaxed text-slate">
               <p>
