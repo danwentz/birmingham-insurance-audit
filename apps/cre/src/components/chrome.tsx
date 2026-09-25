@@ -78,6 +78,7 @@ const CALCULATORS = [
   { slug: "commercial-insurance-claims-strategy", shortName: "Claims Strategy Guide" },
   { slug: "hotel-portfolio-insurance", shortName: "Hotel Portfolio Insurance Guide" },
   { slug: "gulf-coast-hotel-insurance", shortName: "Gulf Coast Hotel Insurance Guide" },
+  { slug: "lender-insurance-requirements", shortName: "Lender Insurance Requirements" },
 ];
 
 export function SiteFooter() {

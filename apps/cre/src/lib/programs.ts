@@ -64,6 +64,15 @@ const GULF_COAST_HOTEL_GUIDE: Tool = {
   kind: "guide",
 };
 
+const LENDER_GUIDE: Tool = {
+  href: "/lender-insurance-requirements",
+  label: "Lender Insurance Requirements Guide",
+  cta: "Read the guide",
+  blurb:
+    "What lenders require, Fannie Mae and Freddie Mac deductible and liability limits side by side, and where to find the requirements in your loan documents.",
+  kind: "guide",
+};
+
 const COINSURANCE_CALC: Tool = {
   href: "/coinsurance-penalty-calculator",
   label: "Coinsurance Penalty Calculator",
@@ -111,7 +120,7 @@ export const PROGRAMS: Program[] = [
         a: "We work on accounts with roughly $50,000 and up in annual premium. That runs from a single large community to portfolios of 10,000+ units across several states.",
       },
     ],
-    tools: [MULTIFAMILY_CALC, WIND_CALC, COINSURANCE_CALC],
+    tools: [MULTIFAMILY_CALC, WIND_CALC, COINSURANCE_CALC, LENDER_GUIDE],
     searchTerms: [
       "multifamily insurance broker",
       "apartment building insurance",
@@ -157,7 +166,7 @@ export const PROGRAMS: Program[] = [
         a: "Yes. We model the catastrophe exposure on your SOV first, then place the program with the mix of carriers and capacity the modeling supports, including coastal wind, hail-belt, and quake-exposed locations.",
       },
     ],
-    tools: [WIND_CALC, COINSURANCE_CALC, HOTEL_PORTFOLIO_GUIDE],
+    tools: [WIND_CALC, COINSURANCE_CALC, HOTEL_PORTFOLIO_GUIDE, LENDER_GUIDE],
     searchTerms: [
       "real estate portfolio insurance",
       "master property insurance program",
