@@ -54,7 +54,7 @@ const FOLDERS = [
     keep: [
       "Five years of loss runs for every line, from every carrier that wrote you",
       "Valued within the last 90 days",
-      "A short written explanation for any large or unusual claim",
+      "A short written explanation of every claim: what happened, what it cost, and what you fixed",
     ],
     why: "Underwriters price what they can't see as if it were bad. A large claim with a one-paragraph explanation of what happened and what you fixed reads very differently than the same number with no context.",
   },
@@ -118,7 +118,7 @@ const CALENDAR = [
   },
   {
     when: "90 days before renewal",
-    what: "Order current loss runs from every carrier. Write up any claim over $25,000. Send the full package to your broker.",
+    what: "Order current loss runs from every carrier. Write up every claim, no matter how small. Send the full package to your broker.",
   },
   {
     when: "30 days after binding",
