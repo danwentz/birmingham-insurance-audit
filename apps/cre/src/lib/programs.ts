@@ -202,7 +202,7 @@ export const PROGRAMS: Program[] = [
       "Portfolios needing layered or excess CAT limits",
     ],
     coverages: [
-      { title: "Wind & named storm", body: "Primary and excess wind, including named-storm placements through E&S markets and Lloyd's syndicates." },
+      { title: "Wind & named storm", body: "Primary and excess wind, including named-storm placements through E&S and London markets." },
       { title: "Hail, wildfire & quake", body: "Specialty capacity for hail-belt, wildfire, and earthquake-exposed locations that standard markets have sublimited or declined." },
       { title: "Deductible engineering", body: "Percentage-deductible buy-downs and structures that keep one storm from wrecking a year of cash flow." },
       { title: "Parametric & captive options", body: "Alternative risk transfer for when traditional capacity is scarce or priced past the point of sense." },

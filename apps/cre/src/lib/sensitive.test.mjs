@@ -28,7 +28,7 @@ test("ignores legitimate CRE lead details", () => {
     "Property at 1200 Main St, Birmingham AL 35209-1234",
     "FEIN 12-3456789",
     "Premium 425000 with a 5% named storm deductible",
-    "Account is with Zurich, policy CPP 1234567 renews 9/1",
+    "Account is with Carrier A, policy CPP 1234567 renews 9/1",
     "1234567890123456", // 16 digits that fail Luhn
   ];
   for (const text of ok) assert.deepEqual(findSensitive(text), [], text);

@@ -230,8 +230,8 @@ export default function InsuranceDocumentChecklist() {
               Date first, so files sort themselves. Then property, document type, and carrier.
             </p>
             <pre className="mt-4 overflow-x-auto rounded-md border border-gold/20 bg-white p-5 font-mono text-sm leading-relaxed text-obsidian">
-{`2026-06-01_Riverside_Property-Policy_Zurich.pdf
-2026-03-14_Riverside_Loss-Runs_Travelers.pdf
+{`2026-06-01_Riverside_Property-Policy_CarrierA.pdf
+2026-03-14_Riverside_Loss-Runs_CarrierB.pdf
 2026-04-02_Riverside_Roof-Photos.zip`}
             </pre>
           </div>
