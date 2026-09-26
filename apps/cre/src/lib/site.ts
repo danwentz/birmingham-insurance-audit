@@ -8,6 +8,9 @@ export const PHONE_DISPLAY = "(205) 999-4884";
 export const PHONE_HREF = "tel:+12059994884";
 export const PHONE_E164 = "+1-205-999-4884";
 
+// Where privacy requests go (listed on /privacy).
+export const PRIVACY_EMAIL = "dan.wentz@usi.com";
+
 // www is the host that serves 200 — the apex 307s here. Canonicals, og:url,
 // sitemap, robots host and schema @ids all derive from this, so it must match
 // the redirect target or every canonical points at a redirect.

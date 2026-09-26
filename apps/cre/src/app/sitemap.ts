@@ -56,6 +56,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     { url: `${DOMAIN}/about`, changeFrequency: "yearly", priority: 0.5 },
+    { url: `${DOMAIN}/privacy`, changeFrequency: "yearly", priority: 0.2 },
+    { url: `${DOMAIN}/terms`, changeFrequency: "yearly", priority: 0.2 },
     ...PROGRAMS.map((p) => ({
       url: `${DOMAIN}/${p.slug}`,
       changeFrequency: "monthly" as const,

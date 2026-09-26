@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Script from "next/script";
 
 declare global {
@@ -92,7 +93,8 @@ export function LeadForm({ source = "homepage" }: { source?: string }) {
       </p>
       <p className="text-center text-xs text-obsidian/70">
         By submitting, you agree that we may contact you about your request by phone or email.
-        Submitting this form does not bind coverage.
+        Submitting this form does not bind coverage. See our{" "}
+        <Link href="/privacy" className="underline hover:text-gold-dark">Privacy Policy</Link>.
       </p>
     </form>
   );

@@ -13,7 +13,8 @@ function Wordmark({ className = "" }: { className?: string }) {
   );
 }
 
-export function SiteHeader() {
+// Pages without a ContactSection (e.g. /privacy) pass contactHref="/#contact".
+export function SiteHeader({ contactHref = "#contact" }: { contactHref?: string }) {
   return (
     <header className="gold-rule-top sticky top-0 z-40 bg-obsidian">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-4">
@@ -35,7 +36,7 @@ export function SiteHeader() {
             {PHONE_DISPLAY}
           </a>
           <a
-            href="#contact"
+            href={contactHref}
             className="rounded-sm bg-gold px-4 py-2 text-xs font-semibold uppercase tracking-wide text-obsidian transition-colors hover:bg-gold-dark"
           >
             Request a Quote
@@ -82,7 +83,7 @@ const CALCULATORS = [
   { slug: "affordable-housing-insurance", shortName: "Affordable Housing Insurance Guide" },
 ];
 
-export function SiteFooter() {
+export function SiteFooter({ contactHref = "#contact" }: { contactHref?: string }) {
   return (
     <footer className="bg-obsidian text-slate">
       <div className="mx-auto max-w-6xl px-5">
@@ -90,7 +91,7 @@ export function SiteFooter() {
           <div>
             <Wordmark className="text-lg text-white" />
             <p className="mt-3 max-w-[34ch] text-sm text-slate">
-              Large-account CRE insurance. Brokered from Birmingham, placed nationwide.
+              Large-account CRE insurance, brokered from Birmingham.
             </p>
             <a
               href={PHONE_HREF}
@@ -98,7 +99,7 @@ export function SiteFooter() {
             >
               <Phone className="h-4 w-4" /> {PHONE_DISPLAY}
             </a>
-            <a href="#contact" className="mt-3 block text-sm font-semibold text-gold hover:underline">
+            <a href={contactHref} className="mt-3 block text-sm font-semibold text-gold hover:underline">
               Request a quote →
             </a>
             <Link href="/about" className="mt-2 block text-sm text-slate transition-colors hover:text-gold">
@@ -117,6 +118,10 @@ export function SiteFooter() {
             &copy; {new Date().getFullYear()} {BRAND_NAME}. All rights reserved.
           </span>
           <span>Insurance produced through Dan Wentz, USI Insurance Services, Birmingham, AL.</span>
+          <span className="flex gap-4">
+            <Link href="/privacy" className="transition-colors hover:text-gold">Privacy</Link>
+            <Link href="/terms" className="transition-colors hover:text-gold">Terms</Link>
+          </span>
         </div>
       </div>
     </footer>

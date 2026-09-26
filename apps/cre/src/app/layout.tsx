@@ -31,12 +31,12 @@ export const metadata: Metadata = {
     template: `%s | ${BRAND_NAME}`,
   },
   description:
-    "Broker for large CRE accounts: multifamily, high-TIV portfolios, coastal CAT property, and builders risk/OCIP. Alabama-based, placing nationwide. $50k+ premiums.",
+    "Broker for large CRE accounts: multifamily, high-TIV portfolios, coastal CAT property, and builders risk/OCIP. Based in Birmingham, Alabama. $50k+ premiums.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "Commercial Real Estate Insurance Broker | ACREInsure",
     description:
-      "Broker for large CRE accounts: multifamily, high-TIV portfolios, coastal CAT property, and builders risk/OCIP. Alabama-based, placing nationwide. $50k+ premiums.",
+      "Broker for large CRE accounts: multifamily, high-TIV portfolios, coastal CAT property, and builders risk/OCIP. Based in Birmingham, Alabama. $50k+ premiums.",
     url: DOMAIN,
     siteName: BRAND_NAME,
     locale: "en_US",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Commercial Real Estate Insurance Broker | ACREInsure",
     description:
-      "Broker for large CRE accounts: multifamily, high-TIV portfolios, coastal CAT property, and builders risk/OCIP. Alabama-based, placing nationwide. $50k+ premiums.",
+      "Broker for large CRE accounts: multifamily, high-TIV portfolios, coastal CAT property, and builders risk/OCIP. Based in Birmingham, Alabama. $50k+ premiums.",
   },
   robots: { index: true, follow: true },
 };

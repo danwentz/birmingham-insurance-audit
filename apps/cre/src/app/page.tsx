@@ -47,7 +47,6 @@ const jsonLd = {
     "Commercial real estate insurance brokerage for large accounts: multifamily/habitational, high-TIV portfolios, catastrophe property, and builders risk/OCIP.",
   url: DOMAIN,
   telephone: PHONE_E164,
-  areaServed: "US",
   address: { "@type": "PostalAddress", addressRegion: "AL", addressCountry: "US" },
 };
 
@@ -94,11 +93,11 @@ export default function Home() {
                 </a>
               </div>
               <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate">
-                <span>Licensed Alabama broker</span>
+                <span>Licensed Alabama producer</span>
                 <span className="text-gold" aria-hidden>·</span>
                 <span>Wholesale E&amp;S background</span>
                 <span className="text-gold" aria-hidden>·</span>
-                <span>Deals placed nationwide</span>
+                <span>Multi-state programs through licensed producers</span>
               </div>
             </div>
 
@@ -298,7 +297,7 @@ export default function Home() {
                 `We only take large accounts, ${PREMIUM_FLOOR}+ in premium, so the work goes deep instead of wide.`,
                 "Direct access to specialty and surplus-lines markets for hard-to-place and CAT-exposed risk.",
                 "We manage lender and equity insurance requirements so closings don't stall.",
-                "Licensed in Alabama, placing deals across the country.",
+                "Licensed in Alabama. Out-of-state properties are placed through producers licensed in that state.",
               ].map((point) => (
                 <li key={point} className="border-l-2 border-gold pl-4 text-slate">
                   {point}
