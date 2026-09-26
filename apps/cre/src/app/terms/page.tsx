@@ -35,8 +35,7 @@ export default function Terms() {
       </p>
       <p>
         <strong>
-          We do not solicit, negotiate, or place insurance for risks located in California, Florida,
-          or New York.
+          We do not solicit, negotiate, or place insurance for risks located in California.
         </strong>
       </p>
       <p>
