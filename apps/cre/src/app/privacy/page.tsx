@@ -17,7 +17,9 @@ export default function Privacy() {
       <p>
         This website (acreinsure.com, &ldquo;ACREInsure&rdquo;) is operated by Dan Wentz, a licensed
         insurance producer and risk consultant with USI Insurance Services LLC in Birmingham,
-        Alabama. ACREInsure is a marketing name, not a separate company. In this policy,
+        Alabama. ACREInsure is a marketing name, not a separate company, and no insurance is
+        sold, bound, or placed under this name. All insurance business is transacted through USI
+        Insurance Services LLC. In this policy,
         &ldquo;we&rdquo; and &ldquo;us&rdquo; mean Dan Wentz.
       </p>
 

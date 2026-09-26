@@ -22,8 +22,8 @@ export default function Terms() {
       <p>
         ACREInsure is a marketing name used by Dan Wentz, a licensed insurance producer and risk
         consultant with USI Insurance Services LLC in Birmingham, Alabama. ACREInsure is not an
-        insurance company or a separate insurance agency. Insurance is placed through USI Insurance
-        Services LLC.
+        insurance company or a separate insurance agency, and no insurance is sold, bound, or placed
+        under this name. All insurance business is transacted through USI Insurance Services LLC.
       </p>
 
       <h2>Licensing and where we do business</h2>
