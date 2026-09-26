@@ -91,7 +91,7 @@ export function SiteFooter({ contactHref = "#contact" }: { contactHref?: string 
           <div>
             <Wordmark className="text-lg text-white" />
             <p className="mt-3 max-w-[34ch] text-sm text-slate">
-              Large-account CRE insurance, brokered from Birmingham.
+              Large-account CRE insurance.
             </p>
             <a
               href={PHONE_HREF}
