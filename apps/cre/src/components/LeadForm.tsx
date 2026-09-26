@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import Script from "next/script";
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
+import { readFirstTouch, type FirstTouch } from "@/lib/firstTouch";
 import { findSensitive, SENSITIVE_LABELS } from "@/lib/sensitive";
 
 declare global {
@@ -27,6 +28,8 @@ const CHECKED_FIELDS = ["name", "company", "phone", "details"];
 
 export function LeadForm({ source = "homepage" }: { source?: string }) {
   const [sensitiveError, setSensitiveError] = useState("");
+  const [firstTouch, setFirstTouch] = useState<FirstTouch | null>(null);
+  useEffect(() => setFirstTouch(readFirstTouch()), []);
 
   function onSubmit(event: FormEvent<HTMLFormElement>) {
     const data = new FormData(event.currentTarget);
@@ -58,6 +61,8 @@ export function LeadForm({ source = "homepage" }: { source?: string }) {
       />
       <input type="hidden" name="site" value="CRE" />
       <input type="hidden" name="source" value={source} />
+      <input type="hidden" name="landing_page" value={firstTouch?.landingPage ?? ""} />
+      <input type="hidden" name="referrer" value={firstTouch?.referrer ?? ""} />
       <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
 
       <div className="grid sm:grid-cols-2 gap-3">

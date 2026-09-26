@@ -62,6 +62,11 @@ export default function Privacy() {
           which means Google Analytics may record them.
         </li>
         <li>
+          <strong>Your first visit.</strong> Your browser remembers the first page you landed on
+          and the site that referred you. If you request a quote, we receive that with your request
+          so we know which pages are useful.
+        </li>
+        <li>
           <strong>Cloudflare Turnstile</strong> checks browser and device signals, including your IP
           address, to block spam on our quote form.
         </li>

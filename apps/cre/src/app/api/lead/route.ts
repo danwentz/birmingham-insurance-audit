@@ -110,7 +110,18 @@ export async function POST(req: NextRequest) {
   };
   // <input type="date"> always submits YYYY-MM-DD; drop anything else.
   const renewalDate = /^\d{4}-\d{2}-\d{2}$/.test(text("renewal_date")) ? text("renewal_date") : "";
-  const details = [renewalDate && `Renewal date: ${renewalDate}`, text("details")].filter(Boolean).join("\n");
+  // First-touch attribution from FirstTouchTracker, so each lead email shows
+  // which page and referrer brought the visitor in.
+  const landingPage = text("landing_page").slice(0, 500);
+  const referrer = text("referrer").slice(0, 200);
+  const details = [
+    renewalDate && `Renewal date: ${renewalDate}`,
+    text("details"),
+    landingPage && `First landing page: ${landingPage}`,
+    referrer && `Referrer: ${referrer}`,
+  ]
+    .filter(Boolean)
+    .join("\n");
   const [firstName, ...rest] = text("name").split(/\s+/);
   const fields: Record<string, string> = {
     first_name: firstName,
