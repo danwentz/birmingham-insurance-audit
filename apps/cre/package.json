@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "rm -rf .test-build && tsc --outDir .test-build --module commonjs --target es2020 --esModuleInterop --strict src/lib/calc.ts src/lib/wind.ts src/lib/hotel.ts src/lib/coinsurance.ts && cp src/lib/calc.test.mjs src/lib/wind.test.mjs src/lib/hotel.test.mjs src/lib/coinsurance.test.mjs .test-build/ && node --test .test-build/"
+    "test": "rm -rf .test-build && tsc --outDir .test-build --module commonjs --target es2020 --esModuleInterop --strict src/lib/calc.ts src/lib/wind.ts src/lib/hotel.ts src/lib/coinsurance.ts src/lib/sensitive.ts && cp src/lib/calc.test.mjs src/lib/wind.test.mjs src/lib/hotel.test.mjs src/lib/coinsurance.test.mjs src/lib/sensitive.test.mjs .test-build/ && node --test .test-build/"
   },
   "dependencies": {
     "lucide-react": "^0.525.0",

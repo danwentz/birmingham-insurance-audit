@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { BRAND_SHORT, PHONE_DISPLAY } from "@/lib/site";
 import { parseMauticMessengerResponse } from "@/lib/mautic";
+import { findSensitive, redactSensitive } from "@/lib/sensitive";
 
 export const runtime = "nodejs";
 
@@ -97,9 +98,15 @@ export async function POST(req: NextRequest) {
   const formId = process.env.MAUTIC_FORM_ID?.trim() || "4";
   const formName = process.env.MAUTIC_FORM_NAME?.trim() || "cre_lead_f";
 
+  // Redact SSNs, card, and bank numbers server-side too: LeadForm blocks them,
+  // but a no-JS or direct POST would skip that check.
   const text = (key: string) => {
     const value = formData.get(key);
-    return typeof value === "string" ? value.trim().slice(0, 2000) : "";
+    if (typeof value !== "string") return "";
+    const trimmed = value.trim().slice(0, 2000);
+    if (findSensitive(trimmed).length === 0) return trimmed;
+    console.warn(`lead field "${key}" contained sensitive data; redacted`);
+    return redactSensitive(trimmed);
   };
   const [firstName, ...rest] = text("name").split(/\s+/);
   const fields: Record<string, string> = {

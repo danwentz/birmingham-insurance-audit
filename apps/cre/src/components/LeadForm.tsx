@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import Script from "next/script";
+import { useState, type FormEvent } from "react";
+import { findSensitive, SENSITIVE_LABELS } from "@/lib/sensitive";
 
 declare global {
   interface Window {
@@ -20,12 +22,32 @@ const inputClass =
 
 const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "1x00000000000000000000AA";
 
+// Free-text fields a visitor could paste an SSN, card, or bank number into.
+const CHECKED_FIELDS = ["name", "company", "phone", "details"];
+
 export function LeadForm({ source = "homepage" }: { source?: string }) {
+  const [sensitiveError, setSensitiveError] = useState("");
+
+  function onSubmit(event: FormEvent<HTMLFormElement>) {
+    const data = new FormData(event.currentTarget);
+    const text = CHECKED_FIELDS.map((f) => String(data.get(f) ?? "")).join("\n");
+    const kinds = findSensitive(text);
+    if (kinds.length > 0) {
+      event.preventDefault();
+      setSensitiveError(
+        `It looks like you entered ${kinds.map((k) => SENSITIVE_LABELS[k]).join(" and ")}. Please remove it. We never need that through this form.`
+      );
+      return;
+    }
+    setSensitiveError("");
+    trackFormSubmit(source)();
+  }
+
   return (
     <form
       action="/api/lead"
       method="POST"
-      onSubmit={trackFormSubmit(source)}
+      onSubmit={onSubmit}
       className="space-y-3 text-left"
     >
       <Script
@@ -81,6 +103,10 @@ export function LeadForm({ source = "homepage" }: { source?: string }) {
       />
 
       <div className="cf-turnstile mt-2" data-sitekey={TURNSTILE_SITE_KEY} data-action="lead" data-theme="light" data-size="flexible" />
+
+      <p role="alert" className={sensitiveError ? "text-sm font-semibold text-red-700" : "sr-only"}>
+        {sensitiveError}
+      </p>
 
       <button
         type="submit"
