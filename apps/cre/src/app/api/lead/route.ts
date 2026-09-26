@@ -108,6 +108,9 @@ export async function POST(req: NextRequest) {
     console.warn(`lead field "${key}" contained sensitive data; redacted`);
     return redactSensitive(trimmed);
   };
+  // <input type="date"> always submits YYYY-MM-DD; drop anything else.
+  const renewalDate = /^\d{4}-\d{2}-\d{2}$/.test(text("renewal_date")) ? text("renewal_date") : "";
+  const details = [renewalDate && `Renewal date: ${renewalDate}`, text("details")].filter(Boolean).join("\n");
   const [firstName, ...rest] = text("name").split(/\s+/);
   const fields: Record<string, string> = {
     first_name: firstName,
@@ -117,7 +120,10 @@ export async function POST(req: NextRequest) {
     company: text("company"),
     asset_type: text("asset_type"),
     premium_band: text("premium_band"),
-    details: text("details"),
+    // Also in details so it shows up in the lead email; renewal_date is the
+    // structured Mautic field for renewal-timed follow-up.
+    renewal_date: renewalDate,
+    details,
     business_line: "CRE",
     lead_source: text("source") || "unknown",
   };

@@ -95,10 +95,15 @@ export function LeadForm({ source = "homepage" }: { source?: string }) {
         <option>Not sure</option>
       </select>
 
+      <label className="block">
+        <span className="block pt-2 text-xs text-obsidian/70">Next renewal date (optional)</span>
+        <input type="date" name="renewal_date" className={inputClass} />
+      </label>
+
       <textarea
         rows={3}
         name="details"
-        placeholder="Briefly: total insured value, # of units/locations, renewal date, or what you need."
+        placeholder="Briefly: total insured value, # of units/locations, or what you need."
         className={inputClass}
       />
 
