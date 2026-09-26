@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowRight, ArrowLeft, CheckCircle2 } from "lucide-react";
 import { SiteHeader, SiteFooter } from "@/components/chrome";
 import { ContactSection } from "@/components/ContactSection";
+import { SurplusLinesNote } from "@/components/Disclaimers";
 import { PROGRAMS, getProgram } from "@/lib/programs";
 import { BRAND_NAME, DOMAIN, PHONE_E164 } from "@/lib/site";
 
@@ -185,6 +186,7 @@ export default async function ProgramPage({
                 </div>
               ))}
             </div>
+            {program.slug === "catastrophe-coastal-property-insurance" && <SurplusLinesNote />}
           </div>
         </section>
 

@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import Link from "next/link";
 import { SiteHeader, SiteFooter } from "@/components/chrome";
 import { ContactSection } from "@/components/ContactSection";
+import { GuideDisclaimerTop, GuideDisclaimerBottom, SurplusLinesNote } from "@/components/Disclaimers";
 import { DOMAIN } from "@/lib/site";
 
 const TITLE = "Gulf Coast Hotel Insurance: Named Storm, E&S, and What Drives Your Premium";
@@ -151,6 +152,7 @@ export default function GulfCoastHotelInsurance() {
               Why coastal hotels end up in the E&amp;S market, how named-storm deductibles work, and
               what to do before closing.
             </p>
+            <GuideDisclaimerTop asOf="September 2026" />
           </div>
         </section>
 
@@ -246,6 +248,7 @@ export default function GulfCoastHotelInsurance() {
                 admitted policies often can&apos;t, like flexible deductible structures and
                 wind-deductible buy-backs. What matters is how the program is structured.
               </p>
+              <SurplusLinesNote />
             </div>
           </div>
         </section>
@@ -430,10 +433,7 @@ export default function GulfCoastHotelInsurance() {
             <Link href="#contact" className="mt-10 inline-flex items-center gap-2 font-semibold text-gold-dark hover:text-gold">
               Send us your current program for a review <ArrowRight className="h-4 w-4" />
             </Link>
-            <p className="mt-10 text-sm text-slate">
-              This is general guidance, not legal advice. Your policy&apos;s terms control, and they
-              vary by carrier.
-            </p>
+            <GuideDisclaimerBottom />
           </div>
         </section>
 

@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import Link from "next/link";
 import { SiteHeader, SiteFooter } from "@/components/chrome";
 import { ContactSection } from "@/components/ContactSection";
+import { GuideDisclaimerTop, GuideDisclaimerBottom } from "@/components/Disclaimers";
 import { DOMAIN } from "@/lib/site";
 
 const TITLE = "Affordable Housing Insurance: Section 8, HUD, and LIHTC Properties";
@@ -145,6 +146,7 @@ export default function AffordableHousingInsurance() {
               What underwriters actually price, what the law says, and how to present an
               affordable housing portfolio to carriers.
             </p>
+            <GuideDisclaimerTop asOf="September 2026" />
           </div>
         </section>
 
@@ -349,10 +351,7 @@ export default function AffordableHousingInsurance() {
             <Link href="#contact" className="mt-10 inline-flex items-center gap-2 font-semibold text-gold-dark hover:text-gold">
               Talk to us about your portfolio <ArrowRight className="h-4 w-4" />
             </Link>
-            <p className="mt-10 text-sm text-slate">
-              This is general guidance, not legal advice. Fair housing and insurance rules vary by
-              state and city. Talk to your attorney about how they apply to your properties.
-            </p>
+            <GuideDisclaimerBottom />
           </div>
         </section>
 

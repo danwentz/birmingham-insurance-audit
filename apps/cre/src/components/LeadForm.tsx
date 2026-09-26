@@ -87,8 +87,12 @@ export function LeadForm({ source = "homepage" }: { source?: string }) {
       >
         Request a Quote
       </button>
-      <p className="text-center text-xs text-slate">
+      <p className="text-center text-xs text-obsidian/70">
         Confidential. No obligation. We respond within one business day.
+      </p>
+      <p className="text-center text-xs text-obsidian/70">
+        By submitting, you agree that we may contact you about your request by phone or email.
+        Submitting this form does not bind coverage.
       </p>
     </form>
   );

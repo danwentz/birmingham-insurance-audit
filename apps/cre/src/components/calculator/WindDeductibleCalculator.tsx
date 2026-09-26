@@ -12,6 +12,7 @@ import {
 } from "@/lib/wind";
 import { usd, usdCompact, pct, months, int, groupDigits, parseNum } from "@/lib/format";
 import { NumberField, Tile, SectionHeading, Finding } from "@/components/calculator/fields";
+import { CalculatorDisclaimer } from "@/components/Disclaimers";
 
 // Short URL keys so a shared link stays readable. `v` carries the whole
 // schedule, hyphen-joined, because a query string with one key per building
@@ -432,6 +433,8 @@ export function WindDeductibleCalculator() {
                   </p>
                 </div>
               </div>
+
+              <CalculatorDisclaimer tone="dark" />
             </div>
           </section>
 

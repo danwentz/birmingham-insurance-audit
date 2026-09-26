@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import Link from "next/link";
 import { SiteHeader, SiteFooter } from "@/components/chrome";
 import { ContactSection } from "@/components/ContactSection";
+import { GuideDisclaimerTop, GuideDisclaimerBottom, SurplusLinesNote } from "@/components/Disclaimers";
 import { DOMAIN } from "@/lib/site";
 
 const TITLE = "Hotel Portfolio Insurance for Owners of Three or More Hotels";
@@ -158,6 +159,7 @@ export default function HotelPortfolioInsurance() {
               How portfolio programs are built, where they go wrong, and what to check before
               your next renewal.
             </p>
+            <GuideDisclaimerTop asOf="September 2026" />
           </div>
         </section>
 
@@ -306,6 +308,7 @@ export default function HotelPortfolioInsurance() {
                 limit, largely in the excess and surplus lines market. That&apos;s not a warning
                 sign. It&apos;s the standard structure for concentrated coastal value.
               </p>
+              <SurplusLinesNote />
               <p className="rounded-md border-l-2 border-gold bg-white p-5 text-base">
                 <strong className="font-semibold text-obsidian">Hurricane season timing.</strong>{" "}
                 When a named storm is forecast to make landfall, carriers stop binding new wind
@@ -540,10 +543,7 @@ export default function HotelPortfolioInsurance() {
             <Link href="#contact" className="mt-10 inline-flex items-center gap-2 font-semibold text-gold-dark hover:text-gold">
               Send us your hotel schedule for a portfolio review <ArrowRight className="h-4 w-4" />
             </Link>
-            <p className="mt-10 text-sm text-slate">
-              This is general guidance, not legal advice. Your policy&apos;s terms control, and they
-              vary by carrier.
-            </p>
+            <GuideDisclaimerBottom />
           </div>
         </section>
 

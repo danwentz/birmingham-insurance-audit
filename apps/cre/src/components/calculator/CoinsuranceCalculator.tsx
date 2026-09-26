@@ -18,6 +18,7 @@ import {
 } from "@/lib/coinsurance";
 import { usd, usdCompact, pct, groupDigits, parseNum } from "@/lib/format";
 import { NumberField, Tile, SectionHeading, Finding } from "@/components/calculator/fields";
+import { CalculatorDisclaimer } from "@/components/Disclaimers";
 
 // Short URL keys so a shared link stays readable.
 const URL_KEYS = {
@@ -340,6 +341,8 @@ export function CoinsuranceCalculator() {
                   />
                 )}
               </div>
+
+              <CalculatorDisclaimer tone="dark" />
             </div>
           </section>
 

@@ -29,6 +29,7 @@ import {
 } from "@/lib/format";
 import { PER_UNIT_BAND, PER_UNIT_SOURCE, hasBenchmark } from "@/lib/benchmarks";
 import { NumberField, Tile, SectionHeading, Finding } from "@/components/calculator/fields";
+import { CalculatorDisclaimer } from "@/components/Disclaimers";
 
 // Short URL keys so a shared link stays readable.
 const URL_KEYS = {
@@ -342,6 +343,8 @@ export function MultifamilyCalculator() {
                   formula={f.ads ? "(Opex + debt service) ÷ gross potential rent." : "Opex ÷ gross potential rent. Add debt service for the levered figure."}
                 />
               </div>
+
+              <CalculatorDisclaimer />
             </div>
           </section>
 

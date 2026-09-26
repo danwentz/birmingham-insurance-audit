@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import Link from "next/link";
 import { SiteHeader, SiteFooter } from "@/components/chrome";
 import { ContactSection } from "@/components/ContactSection";
+import { GuideDisclaimerTop, GuideDisclaimerBottom } from "@/components/Disclaimers";
 import { DOMAIN } from "@/lib/site";
 
 const TITLE = "Lender Insurance Requirements for Commercial Real Estate Loans";
@@ -174,6 +175,7 @@ export default function LenderInsuranceRequirements() {
               What lenders require, how Fannie Mae and Freddie Mac differ, and where to find the
               requirements in your loan.
             </p>
+            <GuideDisclaimerTop asOf="September 2026" />
           </div>
         </section>
 
@@ -440,10 +442,7 @@ export default function LenderInsuranceRequirements() {
             <Link href="#contact" className="mt-10 inline-flex items-center gap-2 font-semibold text-gold-dark hover:text-gold">
               Send us your loan&apos;s insurance requirements <ArrowRight className="h-4 w-4" />
             </Link>
-            <p className="mt-10 text-sm text-slate">
-              This is general guidance, not legal advice. Your loan documents and the current agency
-              guides control.
-            </p>
+            <GuideDisclaimerBottom />
           </div>
         </section>
 

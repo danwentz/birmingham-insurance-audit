@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { SiteHeader, SiteFooter } from "@/components/chrome";
 import { ContactSection } from "@/components/ContactSection";
+import { GuideDisclaimerTop, GuideDisclaimerBottom } from "@/components/Disclaimers";
 import { DOMAIN } from "@/lib/site";
 
 const TITLE = "How to Organize Your Commercial Property Insurance Documents";
@@ -165,6 +166,7 @@ export default function InsuranceDocumentChecklist() {
               Eight folders, one naming rule, and a renewal calendar. The same setup we ask every
               client to build.
             </p>
+            <GuideDisclaimerTop asOf="September 2026" />
           </div>
         </section>
 
@@ -332,6 +334,7 @@ export default function InsuranceDocumentChecklist() {
             >
               Send us what you have. We&apos;ll tell you what&apos;s missing. <ArrowRight className="h-4 w-4" />
             </Link>
+            <GuideDisclaimerBottom />
           </div>
         </section>
 

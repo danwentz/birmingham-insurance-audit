@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight, Check, X } from "lucide-react";
 import Link from "next/link";
 import { SiteHeader, SiteFooter } from "@/components/chrome";
 import { ContactSection } from "@/components/ContactSection";
+import { GuideDisclaimerTop, GuideDisclaimerBottom } from "@/components/Disclaimers";
 import { DOMAIN } from "@/lib/site";
 
 const TITLE = "Commercial Insurance Claims Strategy for Property Owners";
@@ -121,6 +122,7 @@ export default function ClaimsStrategy() {
               How you handle a claim this year decides what you pay for the next five. Here&apos;s
               how to handle it well.
             </p>
+            <GuideDisclaimerTop asOf="September 2026" />
           </div>
         </section>
 
@@ -386,10 +388,7 @@ export default function ClaimsStrategy() {
             <Link href="#contact" className="mt-10 inline-flex items-center gap-2 font-semibold text-gold-dark hover:text-gold">
               Send us your loss runs. We&apos;ll tell you how they read. <ArrowRight className="h-4 w-4" />
             </Link>
-            <p className="mt-10 text-sm text-slate">
-              This is general guidance, not legal advice. Your policy&apos;s conditions control, and
-              they vary by carrier.
-            </p>
+            <GuideDisclaimerBottom />
           </div>
         </section>
 
