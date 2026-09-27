@@ -111,8 +111,8 @@ export default function RateBarometerPage() {
             <p className="mt-5 max-w-2xl font-mono text-sm text-slate sm:text-base">{subtitle}</p>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate">
               Where commercial property, general liability, and umbrella and excess renewal rates
-              are headed next quarter, built from the same catastrophe, construction, legal, and
-              claims data underwriters watch — not a survey of intentions.
+              are headed next quarter, forecast from the catastrophe, construction, legal, and
+              claims data that move pricing.
             </p>
           </div>
         </section>
