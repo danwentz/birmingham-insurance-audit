@@ -4,7 +4,7 @@ import { LegalPage } from "@/components/LegalPage";
 import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Terms of Use",
+  title: { absolute: "Terms of Use | ACREInsure" },
   description:
     "Terms for using ACREInsure: licensing and where we place business, no coverage until bound, and educational content.",
   alternates: { canonical: "/terms" },

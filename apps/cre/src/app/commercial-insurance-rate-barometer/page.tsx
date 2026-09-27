@@ -66,8 +66,7 @@ export default function RateBarometerPage() {
   const subtitle = `Data through ${lastQ}. Forecasts for ${q1} and ${q2}.`;
   const temporalCoverage = `${quarterStartMonth(firstQ)}/${quarterEndMonth(lastQ)}`;
 
-  const jsonLd = {
-    "@context": "https://schema.org",
+  const dataset = {
     "@type": "Dataset",
     "@id": `${DOMAIN}${PATH}#dataset`,
     name: TITLE,
@@ -93,6 +92,21 @@ export default function RateBarometerPage() {
       "Nuclear verdicts, trailing year (count)",
       "Medical care CPI, year over year (%)",
       "Casualty reserve charges, trailing year ($bn)",
+    ],
+  };
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      dataset,
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${DOMAIN}${PATH}#breadcrumbs`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: DOMAIN },
+          { "@type": "ListItem", position: 2, name: TITLE, item: `${DOMAIN}${PATH}` },
+        ],
+      },
     ],
   };
 

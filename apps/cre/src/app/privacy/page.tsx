@@ -4,7 +4,7 @@ import { LegalPage } from "@/components/LegalPage";
 import { PHONE_DISPLAY, PHONE_HREF, PRIVACY_EMAIL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
+  title: { absolute: "Privacy Policy | ACREInsure" },
   description:
     "How ACREInsure collects, uses, retains, and protects information. We don't sell or share your information.",
   alternates: { canonical: "/privacy" },

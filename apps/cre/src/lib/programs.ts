@@ -459,7 +459,7 @@ export const PROGRAMS: Program[] = [
     category: "asset",
     shortName: "Self-Storage",
     name: "Self-Storage Facility Insurance",
-    metaTitle: "Self-Storage Insurance Broker for Multi-Location Operators | ACREInsure",
+    metaTitle: "Self-Storage Facility Insurance Broker | ACREInsure",
     metaDescription:
       "Property, customer goods legal liability, and umbrella for multi-location self-storage operators. Coastal wind capacity, truck rental exposure. $50k+ premiums.",
     hook: "Master property, customer goods liability, and umbrella for self-storage operators with multiple locations and 400+ units.",
