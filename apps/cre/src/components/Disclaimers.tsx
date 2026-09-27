@@ -40,6 +40,16 @@ export function CalculatorDisclaimer({ tone = "light" }: { tone?: Tone }) {
   );
 }
 
+export function BarometerDisclaimer({ tone = "light" }: { tone?: Tone }) {
+  return (
+    <p className={`mt-4 max-w-3xl ${base} ${toneClass(tone)}`}>
+      These forecasts are a statistical estimate from historical market data, not a quote, rate
+      indication, or coverage recommendation. Actual renewal outcomes depend on your own loss
+      history, exposures, and underwriting, and can differ from the market-wide trend shown here.
+    </p>
+  );
+}
+
 export function SurplusLinesNote({ tone = "light" }: { tone?: Tone }) {
   return (
     <p className={`mt-6 ${base} ${toneClass(tone)}`}>
