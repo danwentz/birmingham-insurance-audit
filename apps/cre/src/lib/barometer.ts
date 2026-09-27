@@ -74,7 +74,7 @@ export const DRIVERS: Record<DriverKey, DriverMeta> = {
     dp: 1,
   },
   scs: {
-    name: "Alabama hail and tornado reports, YoY",
+    name: "U.S. hail and tornado reports, YoY",
     unit: "%",
     src: "NOAA NCEI Storm Events Database",
     dp: 0,

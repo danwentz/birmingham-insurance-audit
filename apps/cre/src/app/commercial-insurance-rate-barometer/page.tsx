@@ -88,7 +88,7 @@ export default function RateBarometerPage() {
       "Cat bond spread over expected loss (%)",
       "Insured catastrophe losses vs. 10-year average (%)",
       "Construction input prices, year over year (%)",
-      "Alabama hail and tornado reports, year over year (%)",
+      "U.S. hail and tornado reports, year over year (%)",
       "E&S premium growth, year over year (%)",
       "Nuclear verdicts, trailing year (count)",
       "Medical care CPI, year over year (%)",

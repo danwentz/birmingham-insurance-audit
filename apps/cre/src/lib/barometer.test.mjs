@@ -110,7 +110,7 @@ test("fit() on the real data reproduces the dashboard's 1-quarter forecasts", ()
   const gl = fit(DATA, "gl");
   const umb = fit(DATA, "umb");
 
-  close(property.h[0].f, -7.21, 0.01);
+  close(property.h[0].f, -7.45, 0.01);
   close(gl.h[0].f, 2.01, 0.01);
   close(umb.h[0].f, 4.75, 0.01);
   close(property.h[0].r2, 0.87, 0.01);
