@@ -23,6 +23,12 @@ export function SiteHeader({ contactHref = "#contact" }: { contactHref?: string 
         </Link>
         <nav className="flex items-center gap-6">
           <Link
+            href="/commercial-insurance-rate-barometer"
+            className="hidden text-xs font-semibold uppercase tracking-wide text-slate transition-colors hover:text-champagne sm:inline"
+          >
+            Rate Barometer
+          </Link>
+          <Link
             href="/about"
             className="hidden text-xs font-semibold uppercase tracking-wide text-slate transition-colors hover:text-champagne sm:inline"
           >
@@ -71,6 +77,10 @@ function FooterColumn({
 }
 
 const CALCULATORS = [
+  {
+    slug: "commercial-insurance-rate-barometer",
+    shortName: "Commercial Insurance Rate Barometer",
+  },
   { slug: "multifamily-insurance-calculator", shortName: "Multifamily Insurance Calculator" },
   { slug: "wind-deductible-calculator", shortName: "Wind & Hail Deductible Calculator" },
   { slug: "hotel-insurance-calculator", shortName: "Hotel Insurance Calculator" },

@@ -6,6 +6,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: DOMAIN, changeFrequency: "monthly", priority: 1 },
     {
+      url: `${DOMAIN}/commercial-insurance-rate-barometer`,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
       url: `${DOMAIN}/multifamily-insurance-calculator`,
       changeFrequency: "monthly",
       priority: 0.9,
