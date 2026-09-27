@@ -348,9 +348,9 @@ export default function HotelPortfolioInsurance() {
               </p>
               <p>
                 <strong className="font-semibold text-obsidian">Liability rates are still rising.</strong>{" "}
-                Nationally, general liability rose 2.6% and umbrella 4.8% in Q1 2026, according to
-                the Council of Insurance Agents &amp; Brokers, pushed by larger jury verdicts. Expect
-                relief on property, not on casualty.
+                Nationally, general liability rose 1.7% and umbrella 5.3% in the second quarter of
+                2026, according to the Council of Insurance Agents &amp; Brokers, pushed by larger
+                jury verdicts. Expect relief on property, not on casualty.
               </p>
             </div>
           </div>
@@ -430,22 +430,27 @@ export default function HotelPortfolioInsurance() {
             </h2>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               <div className="rounded-md border border-gold/20 bg-white p-6">
-                <p className="font-mono text-sm text-gold-dark">Commercial property, Q1 2026</p>
-                <p className="mt-2 font-display text-3xl font-bold text-obsidian">-5.5%</p>
+                <p className="font-mono text-sm text-gold-dark">Commercial property, Q2 2026</p>
+                <p className="mt-2 font-display text-3xl font-bold text-obsidian">-6.3%</p>
                 <p className="mt-4 text-slate">
-                  Down from a +20.4% peak in Q3 2023. All-lines commercial pricing fell for the
-                  first time since 2017.
+                  Down from a +20.4% peak in Q1 2023, and now four straight quarters of declines.
                 </p>
               </div>
               <div className="rounded-md border border-gold/20 bg-white p-6">
-                <p className="font-mono text-sm text-gold-dark">Umbrella, Q1 2026</p>
-                <p className="mt-2 font-display text-3xl font-bold text-obsidian">+4.8%</p>
+                <p className="font-mono text-sm text-gold-dark">Umbrella, Q2 2026</p>
+                <p className="mt-2 font-display text-3xl font-bold text-obsidian">+5.3%</p>
                 <p className="mt-4 text-slate">
-                  Casualty is still rising. General liability was up 2.6% and commercial auto 5.8%.
+                  Casualty is still rising. General liability was up 1.7% and commercial auto 4.5%.
                 </p>
               </div>
             </div>
             <p className="mt-3 text-sm text-slate">Source: Council of Insurance Agents &amp; Brokers.</p>
+            <Link
+              href="/commercial-insurance-rate-barometer"
+              className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-gold-dark hover:text-gold"
+            >
+              See the full rate barometer <ArrowRight className="h-4 w-4" />
+            </Link>
             <div className="mt-8 max-w-3xl space-y-6 text-lg leading-relaxed text-slate">
               <p>
                 The steepest property declines are in U.S. shared-and-layered commercial property,
