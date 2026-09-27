@@ -245,6 +245,13 @@ export default function Home() {
                   className="font-semibold text-obsidian underline hover:text-gold"
                 >
                   coinsurance penalty calculator
+                </Link>{" "}
+                ·{" "}
+                <Link
+                  href="/commercial-insurance-rate-barometer"
+                  className="font-semibold text-obsidian underline hover:text-gold"
+                >
+                  commercial insurance rate barometer
                 </Link>
               </p>
             </div>

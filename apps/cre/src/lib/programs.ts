@@ -46,6 +46,23 @@ const HOTEL_CALC: Tool = {
     "Free, no email required: insurance is a fixed charge, so it never touches GOP — it comes out of EBITDA and capitalizes. See the premium per available room against your RevPAR, the ADR move a renewal implies, DSCR headroom, break-even occupancy, and whether business income funds a peak-season closure.",
 };
 
+const BAROMETER: Tool = {
+  href: "/commercial-insurance-rate-barometer",
+  label: "Commercial Insurance Rate Barometer",
+  cta: "See the forecast",
+  blurb:
+    "Free: where property, general liability, and excess renewal rates are heading over the next two quarters, built from cat losses, cat bond spreads, construction costs, jury verdicts, and the other data that moves them.",
+};
+
+const CLAIMS_GUIDE: Tool = {
+  href: "/commercial-insurance-claims-strategy",
+  label: "Claims Strategy Guide",
+  cta: "Read the guide",
+  blurb:
+    "How you handle a claim this year sets what you pay for the next five. When to report, which claims to file, starting repairs before the adjuster arrives, and what an open claim tells an underwriter.",
+  kind: "guide",
+};
+
 const HOTEL_PORTFOLIO_GUIDE: Tool = {
   href: "/hotel-portfolio-insurance",
   label: "Hotel Portfolio Insurance Guide",
@@ -129,7 +146,7 @@ export const PROGRAMS: Program[] = [
         a: "We work on accounts with roughly $50,000 and up in annual premium. That runs from a single large community to portfolios of 10,000+ units across several states.",
       },
     ],
-    tools: [MULTIFAMILY_CALC, WIND_CALC, COINSURANCE_CALC, LENDER_GUIDE, AFFORDABLE_HOUSING_GUIDE],
+    tools: [MULTIFAMILY_CALC, WIND_CALC, COINSURANCE_CALC, BAROMETER, LENDER_GUIDE, AFFORDABLE_HOUSING_GUIDE],
     searchTerms: [
       "multifamily insurance broker",
       "apartment building insurance",
@@ -175,7 +192,7 @@ export const PROGRAMS: Program[] = [
         a: "Yes. We model the catastrophe exposure on your SOV first, then place the program with the mix of carriers and capacity the modeling supports, including coastal wind, hail-belt, and quake-exposed locations.",
       },
     ],
-    tools: [WIND_CALC, COINSURANCE_CALC, HOTEL_PORTFOLIO_GUIDE, LENDER_GUIDE],
+    tools: [WIND_CALC, COINSURANCE_CALC, BAROMETER, HOTEL_PORTFOLIO_GUIDE, LENDER_GUIDE],
     searchTerms: [
       "real estate portfolio insurance",
       "master property insurance program",
@@ -221,7 +238,7 @@ export const PROGRAMS: Program[] = [
         a: "When they make sense, which is not always. Parametric covers and captives can be the cheapest way to finance catastrophe risk in a distressed market, and a waste of money outside one. We'll show you the math either way.",
       },
     ],
-    tools: [WIND_CALC, COINSURANCE_CALC, GULF_COAST_HOTEL_GUIDE],
+    tools: [WIND_CALC, COINSURANCE_CALC, BAROMETER, GULF_COAST_HOTEL_GUIDE],
     searchTerms: [
       "catastrophe property insurance broker",
       "coastal commercial property insurance",
@@ -402,7 +419,7 @@ export const PROGRAMS: Program[] = [
       { q: "My resort is coastal. Can you place the property?", a: "Usually. Coastal and named-storm hospitality goes to surplus-lines and London capacity, often in layers, and the wind deductible is where the real negotiation happens. We assemble the capacity and structure the deductible so the limit stays adequate without gutting your cash position after a storm." },
       { q: "Do you handle liquor liability for hotel F&B?", a: "Yes. Bars, restaurants, banquets, and events all run through liquor liability coordinated with the GL and umbrella, so a claim doesn't fall between policies." },
     ],
-    tools: [HOTEL_CALC, WIND_CALC, COINSURANCE_CALC, HOTEL_PORTFOLIO_GUIDE, GULF_COAST_HOTEL_GUIDE],
+    tools: [HOTEL_CALC, WIND_CALC, COINSURANCE_CALC, BAROMETER, HOTEL_PORTFOLIO_GUIDE, GULF_COAST_HOTEL_GUIDE],
     searchTerms: ["hotel insurance broker", "hospitality insurance", "resort property insurance", "hotel liquor liability"],
   },
   {
@@ -518,7 +535,7 @@ export const PROGRAMS: Program[] = [
       { q: "Should our portfolio consider a captive?", a: "Sometimes. With enough predictable, retainable risk, a captive recaptures underwriting profit and smooths volatility. Without it, a captive is an expensive hobby. We model your portfolio's economics honestly before recommending one either way." },
       { q: "Do you handle claims for us?", a: "Yes, and it's core to the work. We manage the claim process and press the carrier so the recovery reflects the coverage you paid for, not the first number the adjuster offers." },
     ],
-    tools: [COINSURANCE_CALC],
+    tools: [COINSURANCE_CALC, CLAIMS_GUIDE],
     searchTerms: ["real estate risk management", "total cost of risk", "real estate captive insurance", "outsourced risk management"],
   },
   {
@@ -550,7 +567,7 @@ export const PROGRAMS: Program[] = [
       { q: "When should we start before renewal?", a: "Ideally 90 to 120 days out. That's enough time to gather data, model the exposure, and market the account properly instead of begging carriers for extensions. We can move faster when a non-renewal forces the issue; we'd just rather not have to." },
       { q: "Will this disrupt our current agent relationship?", a: "Not unless you want it to. Plenty of owners use the review purely as a benchmark. If we find material savings or better coverage, the decision and the timing stay yours." },
     ],
-    tools: [COINSURANCE_CALC],
+    tools: [COINSURANCE_CALC, BAROMETER, CLAIMS_GUIDE],
     searchTerms: ["commercial insurance program review", "insurance renewal RFP", "second opinion commercial insurance", "insurance broker of record"],
   },
 ];
