@@ -22,6 +22,7 @@ export const TOOLS: NavLink[] = [
 ];
 
 export const GUIDES: NavLink[] = [
+  { href: "/replacement-cost-value", label: "Replacement Cost Value" },
   { href: "/insurance-document-checklist", label: "Insurance Document Checklist" },
   { href: "/commercial-insurance-claims-strategy", label: "Claims Strategy Guide" },
   { href: "/lender-insurance-requirements", label: "Lender Insurance Requirements" },

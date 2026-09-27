@@ -246,6 +246,21 @@ export default function CoinsurancePenaltyCalculatorPage() {
               </div>
               <div className="border-l-2 border-gold bg-ivory p-6 sm:col-span-2">
                 <p className="font-display text-lg font-semibold text-obsidian">
+                  Not sure what replacement cost to enter?
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-slate">
+                  How replacement cost value is calculated, why it isn&apos;t your market value or
+                  appraisal, and why it needs updating every year.
+                </p>
+                <Link
+                  href="/replacement-cost-value"
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
+                >
+                  Replacement cost value guide <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+              <div className="border-l-2 border-gold bg-ivory p-6 sm:col-span-2">
+                <p className="font-display text-lg font-semibold text-obsidian">
                   Looking for the program, not the math?
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-slate">

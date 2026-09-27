@@ -54,6 +54,15 @@ const BAROMETER: Tool = {
     "Free: where property, general liability, and excess renewal rates are heading over the next two quarters, built from cat losses, cat bond spreads, construction costs, jury verdicts, and the other data that moves them.",
 };
 
+const RCV_GUIDE: Tool = {
+  href: "/replacement-cost-value",
+  label: "Replacement Cost Value Guide",
+  cta: "Read the guide",
+  blurb:
+    "Why your limit should be built on what it costs to rebuild, not what the building would sell for, how that number is calculated, and how a stale one shrinks every claim under a coinsurance clause.",
+  kind: "guide",
+};
+
 const CLAIMS_GUIDE: Tool = {
   href: "/commercial-insurance-claims-strategy",
   label: "Claims Strategy Guide",
@@ -192,7 +201,7 @@ export const PROGRAMS: Program[] = [
         a: "Yes. We model the catastrophe exposure on your SOV first, then place the program with the mix of carriers and capacity the modeling supports, including coastal wind, hail-belt, and quake-exposed locations.",
       },
     ],
-    tools: [WIND_CALC, COINSURANCE_CALC, BAROMETER, HOTEL_PORTFOLIO_GUIDE, LENDER_GUIDE],
+    tools: [WIND_CALC, COINSURANCE_CALC, BAROMETER, RCV_GUIDE, HOTEL_PORTFOLIO_GUIDE, LENDER_GUIDE],
     searchTerms: [
       "real estate portfolio insurance",
       "master property insurance program",
@@ -323,7 +332,7 @@ export const PROGRAMS: Program[] = [
       { q: "Can you cover a building under renovation?", a: "Yes. A major tenant build-out or repositioning typically gets a builders risk or course-of-construction layer alongside the property program, structured so nothing falls in the gap between your coverage and the contractor's." },
       { q: "How large of an office portfolio do you handle?", a: "Accounts from roughly $50,000 in annual premium and up, whether that's one tower or a multi-state office portfolio." },
     ],
-    tools: [COINSURANCE_CALC],
+    tools: [COINSURANCE_CALC, RCV_GUIDE],
     searchTerms: ["office building insurance broker", "office property insurance", "commercial office insurance portfolio"],
   },
   {
@@ -355,7 +364,7 @@ export const PROGRAMS: Program[] = [
       { q: "Do you track tenant certificates of insurance?", a: "Yes. We help set the insurance requirements in your leases, then track the certificates against them. An expired COI you discover after a loss is the most expensive piece of paper in real estate." },
       { q: "How large of a retail portfolio do you handle?", a: "Roughly $50,000+ in annual premium, from one center to a multi-state retail portfolio." },
     ],
-    tools: [WIND_CALC, COINSURANCE_CALC],
+    tools: [WIND_CALC, COINSURANCE_CALC, RCV_GUIDE],
     searchTerms: ["shopping center insurance", "retail property insurance broker", "strip mall insurance"],
   },
   {
@@ -387,7 +396,7 @@ export const PROGRAMS: Program[] = [
       { q: "Do you write lessor's risk only (NNN) industrial?", a: "We do. For single-tenant net-leased industrial we structure an owner's program that lines up with the tenant's coverage and the lender's requirements, without paying twice for the same risk." },
       { q: "What size accounts do you take?", a: "Roughly $50,000 and up in annual premium, from one building to a multi-state industrial portfolio." },
     ],
-    tools: [COINSURANCE_CALC],
+    tools: [COINSURANCE_CALC, RCV_GUIDE],
     searchTerms: ["warehouse insurance broker", "industrial property insurance", "distribution center insurance", "lessors risk NNN insurance"],
   },
   {
