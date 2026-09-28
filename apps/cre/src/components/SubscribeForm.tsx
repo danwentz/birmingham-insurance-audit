@@ -1,12 +1,37 @@
 "use client";
 
 import Script from "next/script";
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 
 const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "1x00000000000000000000AA";
 
 type Variant = "result" | "barometer";
 type Status = "idle" | "sending" | "sent" | "error";
+
+type TurnstileApi = {
+  render: (el: HTMLElement, opts: Record<string, unknown>) => string;
+  reset: (id: string) => void;
+  remove: (id: string) => void;
+};
+
+// Same src as LeadForm so next/script loads api.js once per page.
+const TURNSTILE_SRC = "https://challenges.cloudflare.com/turnstile/v0/api.js";
+
+// Render explicitly into our own (non-.cf-turnstile) div: this form can mount
+// after api.js has loaded (the "result" variant expands later), and implicit
+// rendering only scans the DOM once, at script load.
+function whenTurnstileReady(): Promise<TurnstileApi> {
+  const w = window as unknown as { turnstile?: TurnstileApi };
+  if (w.turnstile) return Promise.resolve(w.turnstile);
+  return new Promise((resolve) => {
+    const id = window.setInterval(() => {
+      if (w.turnstile) {
+        window.clearInterval(id);
+        resolve(w.turnstile);
+      }
+    }, 100);
+  });
+}
 
 /**
  * Quiet, secondary email-capture. Not the primary CTA — LeadForm ("Request a
@@ -22,13 +47,46 @@ export function SubscribeForm({ variant, source }: { variant: Variant; source: s
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const [barometerOptin, setBarometerOptin] = useState(false);
+  const [token, setToken] = useState("");
+  const widgetEl = useRef<HTMLDivElement>(null);
+  const widget = useRef<{ api: TurnstileApi; id: string } | null>(null);
+  const showForm = expanded && status !== "sent";
+
+  useEffect(() => {
+    if (!showForm) return;
+    let cancelled = false;
+    whenTurnstileReady().then((api) => {
+      if (cancelled || !widgetEl.current) return;
+      const id = api.render(widgetEl.current, {
+        sitekey: TURNSTILE_SITE_KEY,
+        action: "subscribe",
+        theme: dark ? "dark" : "light",
+        size: "flexible",
+        callback: (t: string) => setToken(t),
+        "expired-callback": () => setToken(""),
+        "error-callback": () => setToken(""),
+      });
+      widget.current = { api, id };
+    });
+    return () => {
+      cancelled = true;
+      if (widget.current) widget.current.api.remove(widget.current.id);
+      widget.current = null;
+      setToken("");
+    };
+  }, [showForm, dark]);
+
+  // Tokens are single-use; get a fresh one before any retry.
+  function resetWidget() {
+    setToken("");
+    if (widget.current) widget.current.api.reset(widget.current.id);
+  }
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const email = String(data.get("email") ?? "").trim();
     const honey = String(data.get("_honey") ?? "");
-    const token = String(data.get("cf-turnstile-response") ?? "");
 
     setStatus("sending");
     setErrorMsg("");
@@ -52,12 +110,14 @@ export function SubscribeForm({ variant, source }: { variant: Variant; source: s
         const errText = (json as { error?: unknown } | null)?.error;
         setStatus("error");
         setErrorMsg(typeof errText === "string" ? errText : "Something went wrong. Please try again.");
+        resetWidget();
         return;
       }
       setStatus("sent");
     } catch {
       setStatus("error");
       setErrorMsg("Something went wrong. Please try again.");
+      resetWidget();
     }
   }
 
@@ -83,12 +143,6 @@ export function SubscribeForm({ variant, source }: { variant: Variant; source: s
 
   return (
     <form onSubmit={onSubmit} className={variant === "result" ? "mt-3 max-w-sm space-y-3" : "max-w-sm space-y-3"}>
-      <Script
-        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-        async
-        defer
-        strategy="lazyOnload"
-      />
       <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
 
       <label className="block">
@@ -125,13 +179,8 @@ export function SubscribeForm({ variant, source }: { variant: Variant; source: s
         </label>
       )}
 
-      <div
-        className="cf-turnstile"
-        data-sitekey={TURNSTILE_SITE_KEY}
-        data-action="subscribe"
-        data-theme={dark ? "dark" : "light"}
-        data-size="flexible"
-      />
+      <Script src={TURNSTILE_SRC} strategy="lazyOnload" />
+      <div ref={widgetEl} />
 
       {status === "error" && (
         <p role="alert" className={`text-sm font-semibold ${dark ? "text-red-400" : "text-red-700"}`}>
@@ -141,7 +190,7 @@ export function SubscribeForm({ variant, source }: { variant: Variant; source: s
 
       <button
         type="submit"
-        disabled={status === "sending"}
+        disabled={status === "sending" || !token}
         className={
           dark
             ? "inline-flex items-center gap-2 rounded-sm border border-gold/40 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-champagne transition-colors hover:border-gold hover:text-gold disabled:opacity-50"
