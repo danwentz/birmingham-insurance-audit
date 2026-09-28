@@ -13,6 +13,7 @@ import {
 import { usd, usdCompact, pct, months, int, groupDigits, parseNum } from "@/lib/format";
 import { NumberField, Tile, SectionHeading, Finding } from "@/components/calculator/fields";
 import { CalculatorDisclaimer } from "@/components/Disclaimers";
+import { SubscribeForm } from "@/components/SubscribeForm";
 
 // Short URL keys so a shared link stays readable. `v` carries the whole
 // schedule, hyphen-joined, because a query string with one key per building
@@ -736,6 +737,9 @@ function SaveShare({ shareQuery }: { shareQuery: string }) {
             Print it, or copy the link — it reopens this page with the whole schedule filled in.
             Nothing was sent anywhere to produce any of this.
           </p>
+          <div className="mt-4">
+            <SubscribeForm variant="result" source="wind-deductible-calculator-result" />
+          </div>
         </div>
         <div className="flex shrink-0 flex-wrap gap-3">
           <button

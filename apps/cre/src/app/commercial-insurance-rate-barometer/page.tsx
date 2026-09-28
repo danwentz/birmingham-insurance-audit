@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SiteHeader, SiteFooter } from "@/components/chrome";
 import { BarometerDisclaimer } from "@/components/Disclaimers";
 import { BarometerApp } from "@/components/barometer/BarometerApp";
+import { SubscribeForm } from "@/components/SubscribeForm";
 import { DOMAIN, BRAND_NAME } from "@/lib/site";
 import { fit, nextQ, type LineKey, type BarometerData } from "@/lib/barometer";
 import DATA_JSON from "@/data/rate-barometer.json";
@@ -156,6 +157,21 @@ export default function RateBarometerPage() {
               </p>
             </div>
             <BarometerDisclaimer />
+          </div>
+        </section>
+
+        <section className="bg-ivory px-5 py-14">
+          <div className="mx-auto max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Stay current</p>
+            <h2 className="mt-3 font-display text-xl font-semibold tracking-tight text-obsidian">
+              Get the next rate read by email
+            </h2>
+            <p className="mt-2 max-w-xl text-sm leading-relaxed text-slate">
+              Quarterly. One email. Unsubscribe anytime.
+            </p>
+            <div className="mt-5">
+              <SubscribeForm variant="barometer" source="rate barometer page" />
+            </div>
           </div>
         </section>
       </main>
