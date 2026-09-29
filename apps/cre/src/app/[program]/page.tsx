@@ -189,6 +189,42 @@ export default async function ProgramPage({
           </div>
         </section>
 
+        {/* CASE STUDY (dark) */}
+        {program.caseStudy && (
+          <section className="bg-midnight px-5 py-16 text-champagne">
+            <div className="mx-auto max-w-4xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Case study</p>
+              <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-white sm:text-3xl">
+                {program.caseStudy.headline}
+              </h2>
+              <div className="mt-8 grid gap-10 md:grid-cols-[1fr_2fr]">
+                <div className="border-l-2 border-gold pl-5">
+                  <p className="font-display text-4xl font-bold text-gold sm:text-5xl">{program.caseStudy.result}</p>
+                  <p className="mt-2 text-sm uppercase tracking-wide text-slate">{program.caseStudy.resultLabel}</p>
+                </div>
+                <div className="space-y-4">
+                  {program.caseStudy.paragraphs.map((para) => (
+                    <p key={para} className="leading-relaxed text-slate">{para}</p>
+                  ))}
+                </div>
+              </div>
+              {program.caseStudy.quote && (
+                <figure className="mt-10 border-t border-gold/20 pt-8">
+                  <blockquote className="font-display text-xl italic text-white sm:text-2xl">
+                    &ldquo;{program.caseStudy.quote}&rdquo;
+                  </blockquote>
+                  {program.caseStudy.attribution && (
+                    <figcaption className="mt-3 text-sm text-slate">{program.caseStudy.attribution}</figcaption>
+                  )}
+                </figure>
+              )}
+              <p className="mt-8 text-xs text-slate/70">
+                Results depend on each account&rsquo;s exposures, loss history, and market conditions at renewal. Past results don&rsquo;t guarantee future savings.
+              </p>
+            </div>
+          </section>
+        )}
+
         {/* FAQ (ivory) */}
         <section className="px-5 py-16">
           <div className="mx-auto max-w-3xl">

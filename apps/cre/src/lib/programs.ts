@@ -20,6 +20,16 @@ type Program = {
   faqs: Faq[];
   searchTerms: string[]; // the high-intent terms this page targets
   tools?: Tool[]; // free calculators for this class
+  caseStudy?: CaseStudy;
+};
+
+type CaseStudy = {
+  headline: string;
+  result: string; // the big number
+  resultLabel: string;
+  paragraphs: string[];
+  quote?: string;
+  attribution?: string;
 };
 
 const MULTIFAMILY_CALC: Tool = {
@@ -428,6 +438,18 @@ export const PROGRAMS: Program[] = [
       { q: "My resort is coastal. Can you place the property?", a: "Usually. Coastal and named-storm hospitality goes to surplus-lines and London capacity, often in layers, and the wind deductible is where the real negotiation happens. We assemble the capacity and structure the deductible so the limit stays adequate without gutting your cash position after a storm." },
       { q: "Do you handle liquor liability for hotel F&B?", a: "Yes. Bars, restaurants, banquets, and events all run through liquor liability coordinated with the GL and umbrella, so a claim doesn't fall between policies." },
     ],
+    caseStudy: {
+      headline: "A 10-hotel portfolio in Central Alabama",
+      result: "$100,000",
+      resultLabel: "saved against the incumbent program",
+      paragraphs: [
+        "The owner had worked with the same agent for years, and every renewal came back higher than the last. Nobody had asked whether the program itself still made sense. They came to us looking for a more efficient way to insure the portfolio.",
+        "They shared the program details, and our analytics team found the problem quickly: the portfolio was buying full limits at every location. Ten hotels spread across Central Alabama don't all burn down in the same event, so paying for a total loss at all ten at once was money spent on risk the owner didn't have.",
+        "We modeled the portfolio's real loss exposure, sized the limits to it, and took the new structure to market. The result came in $100,000 under the incumbent policy.",
+      ],
+      quote: "It felt like you were sent by God to help us.",
+      attribution: "Owner, 10-hotel portfolio, Central Alabama",
+    },
     tools: [HOTEL_CALC, WIND_CALC, COINSURANCE_CALC, BAROMETER, HOTEL_PORTFOLIO_GUIDE, GULF_COAST_HOTEL_GUIDE],
     searchTerms: ["hotel insurance broker", "hospitality insurance", "resort property insurance", "hotel liquor liability"],
   },
