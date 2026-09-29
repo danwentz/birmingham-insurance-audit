@@ -101,12 +101,30 @@ const GULF_COAST_HOTEL_GUIDE: Tool = {
   kind: "guide",
 };
 
+const WIND_BUYDOWN_GUIDE: Tool = {
+  href: "/wind-deductible-buy-down",
+  label: "Wind Deductible Buy-Down Guide",
+  cta: "Read the guide",
+  blurb:
+    "A 5% named-storm deductible on a $20M building is $1M out of pocket. How a buy-down shrinks that retention, what it costs per dollar removed, when it pays, and how to place it before hurricane season.",
+  kind: "guide",
+};
+
 const LENDER_GUIDE: Tool = {
   href: "/lender-insurance-requirements",
   label: "Lender Insurance Requirements Guide",
   cta: "Read the guide",
   blurb:
     "What lenders require, Fannie Mae and Freddie Mac deductible and liability limits side by side, and where to find the requirements in your loan documents.",
+  kind: "guide",
+};
+
+const COI_GUIDE: Tool = {
+  href: "/certificate-of-insurance",
+  label: "Certificate of Insurance Guide",
+  cta: "Read the guide",
+  blurb:
+    "What a COI does and doesn't do, additional insured endorsements, and a checklist for reviewing the certificate a contractor hands you.",
   kind: "guide",
 };
 
@@ -167,7 +185,7 @@ export const PROGRAMS: Program[] = [
         a: "We work on accounts with roughly $50,000 and up in annual premium. That runs from a single large community to portfolios of 10,000+ units across several states.",
       },
     ],
-    tools: [MULTIFAMILY_CALC, WIND_CALC, COINSURANCE_CALC, BAROMETER, LENDER_GUIDE, AFFORDABLE_HOUSING_GUIDE],
+    tools: [MULTIFAMILY_CALC, WIND_CALC, WIND_BUYDOWN_GUIDE, COINSURANCE_CALC, BAROMETER, LENDER_GUIDE, AFFORDABLE_HOUSING_GUIDE, COI_GUIDE],
     caseStudy: {
       headline: "A 1940s apartment community in South Alabama",
       result: "$130,000",
@@ -188,7 +206,7 @@ export const PROGRAMS: Program[] = [
   },
   {
     slug: "real-estate-portfolio-insurance",
-    updated: "2026-09-27",
+    updated: "2026-09-29",
     category: "program",
     shortName: "Portfolio & High-TIV",
     name: "Real Estate Portfolio & High-TIV Master Programs",
@@ -225,7 +243,7 @@ export const PROGRAMS: Program[] = [
         a: "Yes. We model the catastrophe exposure on your SOV first, then place the program with the mix of carriers and capacity the modeling supports, including coastal wind, hail-belt, and quake-exposed locations.",
       },
     ],
-    tools: [WIND_CALC, COINSURANCE_CALC, BAROMETER, RCV_GUIDE, HOTEL_PORTFOLIO_GUIDE, LENDER_GUIDE],
+    tools: [WIND_CALC, WIND_BUYDOWN_GUIDE, COINSURANCE_CALC, BAROMETER, RCV_GUIDE, HOTEL_PORTFOLIO_GUIDE, LENDER_GUIDE],
     searchTerms: [
       "real estate portfolio insurance",
       "master property insurance program",
@@ -235,7 +253,7 @@ export const PROGRAMS: Program[] = [
   },
   {
     slug: "catastrophe-coastal-property-insurance",
-    updated: "2026-09-27",
+    updated: "2026-09-29",
     category: "program",
     shortName: "CAT / Coastal Property",
     name: "Catastrophe, Coastal & Wind/Hail Property Insurance",
@@ -272,7 +290,7 @@ export const PROGRAMS: Program[] = [
         a: "When they make sense, which is not always. Parametric covers and captives can be the cheapest way to finance catastrophe risk in a distressed market, and a waste of money outside one. We'll show you the math either way.",
       },
     ],
-    tools: [WIND_CALC, COINSURANCE_CALC, BAROMETER, GULF_COAST_HOTEL_GUIDE],
+    tools: [WIND_CALC, WIND_BUYDOWN_GUIDE, COINSURANCE_CALC, BAROMETER, GULF_COAST_HOTEL_GUIDE],
     searchTerms: [
       "catastrophe property insurance broker",
       "coastal commercial property insurance",
@@ -282,7 +300,7 @@ export const PROGRAMS: Program[] = [
   },
   {
     slug: "builders-risk-ocip",
-    updated: "2026-09-25",
+    updated: "2026-09-29",
     category: "program",
     shortName: "Builders Risk / OCIP",
     name: "Builders Risk & Owner-Controlled Insurance Programs (OCIP)",
@@ -319,7 +337,7 @@ export const PROGRAMS: Program[] = [
         a: "Yes. Limits, additional insureds, waivers, evidence of coverage: we build the program to the loan and joint-venture requirements from day one and keep it compliant through completion, so insurance is never the reason a draw or a closing stalls.",
       },
     ],
-    tools: [COINSURANCE_CALC],
+    tools: [COINSURANCE_CALC, COI_GUIDE],
     searchTerms: [
       "builders risk insurance broker",
       "owner controlled insurance program OCIP",
@@ -331,7 +349,7 @@ export const PROGRAMS: Program[] = [
   /* ─── Asset classes ─── */
   {
     slug: "office-building-insurance",
-    updated: "2026-09-27",
+    updated: "2026-09-29",
     category: "asset",
     shortName: "Office",
     name: "Office Building Insurance",
@@ -359,12 +377,12 @@ export const PROGRAMS: Program[] = [
       { q: "Can you cover a building under renovation?", a: "Yes. A major tenant build-out or repositioning typically gets a builders risk or course-of-construction layer alongside the property program, structured so nothing falls in the gap between your coverage and the contractor's." },
       { q: "How large of an office portfolio do you handle?", a: "Accounts from roughly $50,000 in annual premium and up, whether that's one tower or a multi-state office portfolio." },
     ],
-    tools: [COINSURANCE_CALC, RCV_GUIDE],
+    tools: [COINSURANCE_CALC, RCV_GUIDE, COI_GUIDE],
     searchTerms: ["office building insurance broker", "office property insurance", "commercial office insurance portfolio"],
   },
   {
     slug: "retail-shopping-center-insurance",
-    updated: "2026-09-27",
+    updated: "2026-09-29",
     category: "asset",
     shortName: "Retail & Shopping Centers",
     name: "Retail & Shopping Center Insurance",
@@ -392,12 +410,12 @@ export const PROGRAMS: Program[] = [
       { q: "Do you track tenant certificates of insurance?", a: "Yes. We help set the insurance requirements in your leases, then track the certificates against them. An expired COI you discover after a loss is the most expensive piece of paper in real estate." },
       { q: "How large of a retail portfolio do you handle?", a: "Roughly $50,000+ in annual premium, from one center to a multi-state retail portfolio." },
     ],
-    tools: [WIND_CALC, COINSURANCE_CALC, RCV_GUIDE],
+    tools: [WIND_CALC, COINSURANCE_CALC, RCV_GUIDE, COI_GUIDE],
     searchTerms: ["shopping center insurance", "retail property insurance broker", "strip mall insurance"],
   },
   {
     slug: "industrial-warehouse-insurance",
-    updated: "2026-09-27",
+    updated: "2026-09-29",
     category: "asset",
     shortName: "Industrial & Warehouse",
     name: "Industrial & Warehouse Insurance",
@@ -425,7 +443,7 @@ export const PROGRAMS: Program[] = [
       { q: "Do you write lessor's risk only (NNN) industrial?", a: "We do. For single-tenant net-leased industrial we structure an owner's program that lines up with the tenant's coverage and the lender's requirements, without paying twice for the same risk." },
       { q: "What size accounts do you take?", a: "Roughly $50,000 and up in annual premium, from one building to a multi-state industrial portfolio." },
     ],
-    tools: [COINSURANCE_CALC, RCV_GUIDE],
+    tools: [COINSURANCE_CALC, RCV_GUIDE, COI_GUIDE],
     searchTerms: ["warehouse insurance broker", "industrial property insurance", "distribution center insurance", "lessors risk NNN insurance"],
   },
   {
@@ -470,7 +488,7 @@ export const PROGRAMS: Program[] = [
       quote: "It felt like you were sent by God to help us.",
       attribution: "Owner, 10-hotel portfolio, Central Alabama",
     },
-    tools: [HOTEL_CALC, WIND_CALC, COINSURANCE_CALC, BAROMETER, HOTEL_PORTFOLIO_GUIDE, GULF_COAST_HOTEL_GUIDE],
+    tools: [HOTEL_CALC, WIND_CALC, WIND_BUYDOWN_GUIDE, COINSURANCE_CALC, BAROMETER, HOTEL_PORTFOLIO_GUIDE, GULF_COAST_HOTEL_GUIDE],
     searchTerms: ["hotel insurance broker", "hospitality insurance", "resort property insurance", "hotel liquor liability"],
   },
   {
@@ -561,7 +579,7 @@ export const PROGRAMS: Program[] = [
   /* ─── Advisory ─── */
   {
     slug: "real-estate-risk-management",
-    updated: "2026-09-27",
+    updated: "2026-09-29",
     category: "advisory",
     shortName: "Risk Management",
     name: "Real Estate Risk Management & Total Cost of Risk",
@@ -589,7 +607,7 @@ export const PROGRAMS: Program[] = [
       { q: "Should our portfolio consider a captive?", a: "Sometimes. With enough predictable, retainable risk, a captive recaptures underwriting profit and smooths volatility. Without it, a captive is an expensive hobby. We model your portfolio's economics honestly before recommending one either way." },
       { q: "Do you handle claims for us?", a: "Yes, and it's core to the work. We manage the claim process and press the carrier so the recovery reflects the coverage you paid for, not the first number the adjuster offers." },
     ],
-    tools: [COINSURANCE_CALC, CLAIMS_GUIDE],
+    tools: [COINSURANCE_CALC, CLAIMS_GUIDE, COI_GUIDE],
     searchTerms: ["real estate risk management", "total cost of risk", "real estate captive insurance", "outsourced risk management"],
   },
   {

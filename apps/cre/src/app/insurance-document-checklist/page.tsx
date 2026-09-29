@@ -255,7 +255,15 @@ export default function InsuranceDocumentChecklist() {
                       ))}
                     </ul>
                   </div>
-                  <p className="text-slate italic sm:self-center">{f.why}</p>
+                  <div className="sm:self-center">
+                    <p className="text-slate italic">{f.why}</p>
+                    {f.name === "Certificates" && (
+                      <p className="mt-3 text-slate">
+                        Not sure what to check on one? Read our{" "}
+                        <Link href="/certificate-of-insurance" className="font-semibold text-gold-dark underline underline-offset-2 hover:text-gold">certificate of insurance guide</Link>.
+                      </p>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>

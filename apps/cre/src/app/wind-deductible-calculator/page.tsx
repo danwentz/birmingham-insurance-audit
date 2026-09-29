@@ -200,7 +200,8 @@ export default function WindDeductibleCalculatorPage() {
                 actually finds your schedule, which is a judgment, not a fact — so the calculator
                 above puts that assumption on a slider rather than burying it. What usually matters
                 is not the precise number but whether the quoted buy-down sits near the break-even
-                line or nowhere near it.
+                line or nowhere near it. For how a buy-down is structured and placed, read our{" "}
+                <Link href="/wind-deductible-buy-down" className="font-semibold text-gold-dark underline underline-offset-2 hover:text-gold">wind deductible buy-down guide</Link>.
               </p>
             </div>
 

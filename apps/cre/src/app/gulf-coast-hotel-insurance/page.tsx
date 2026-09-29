@@ -280,7 +280,9 @@ export default function GulfCoastHotelInsurance() {
             </div>
             <p className="mt-6 max-w-3xl text-slate">
               Know the percentage, what value it applies to, and whether your lender caps it. Then
-              decide whether a buy-back is worth the premium.
+              decide whether a buy-back is worth the premium. Our{" "}
+              <Link href="/wind-deductible-buy-down" className={LINK}>wind deductible buy-down guide</Link>{" "}
+              walks through it.
             </p>
             <Link
               href="/wind-deductible-calculator"

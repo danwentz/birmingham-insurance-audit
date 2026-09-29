@@ -286,7 +286,10 @@ export default function LenderInsuranceRequirements() {
                 A 7.5% named-storm cap sounds generous until it becomes the only deductible a
                 coastal market will offer. If you&apos;re near the Gulf, price the wind program
                 against the agency cap before you commit to the loan. See our{" "}
-                <Link href="/wind-deductible-calculator" className={LINK}>wind deductible calculator</Link>.
+                <Link href="/wind-deductible-calculator" className={LINK}>wind deductible calculator</Link>,
+                and our{" "}
+                <Link href="/wind-deductible-buy-down" className={LINK}>wind deductible buy-down guide</Link>{" "}
+                if the cap is more than you can carry.
               </p>
             </div>
           </div>
@@ -314,7 +317,9 @@ export default function LenderInsuranceRequirements() {
               <p>
                 <strong className="font-semibold text-obsidian">Closings stall.</strong> Lenders
                 won&apos;t fund without compliant evidence of insurance. Finding a missing
-                endorsement the week of closing is how deals slip.
+                endorsement the week of closing is how deals slip. Our{" "}
+                <Link href="/certificate-of-insurance" className={LINK}>certificate of insurance guide</Link>{" "}
+                covers what a certificate does and doesn&apos;t prove.
               </p>
               <p>
                 <strong className="font-semibold text-obsidian">The lender controls the claim money.</strong>{" "}

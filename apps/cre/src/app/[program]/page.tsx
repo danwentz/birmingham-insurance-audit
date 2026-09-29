@@ -135,21 +135,6 @@ export default async function ProgramPage({
           <div className="mx-auto max-w-3xl">
             <p className="text-lg leading-relaxed text-slate">{program.intro}</p>
 
-            {program.tools?.map((tool) => (
-              <div key={tool.href} className="mt-10 border-l-2 border-gold bg-ivory p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
-                  {tool.kind === "guide" ? "Guide" : "Free tool"}
-                </p>
-                <p className="mt-3 font-display text-lg font-semibold text-obsidian">{tool.label}</p>
-                <p className="mt-2 text-sm leading-relaxed text-slate">{tool.blurb}</p>
-                <Link
-                  href={tool.href}
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
-                >
-                  {tool.cta} <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            ))}
           </div>
         </section>
 
@@ -221,6 +206,40 @@ export default async function ProgramPage({
               <p className="mt-8 text-xs text-slate/70">
                 Results depend on each account&rsquo;s exposures, loss history, and market conditions at renewal. Past results don&rsquo;t guarantee future savings.
               </p>
+            </div>
+          </section>
+        )}
+
+        {/* TOOLS & GUIDES (white) */}
+        {program.tools && program.tools.length > 0 && (
+          // Without a case study this follows the white coverages section directly, so add a divider.
+          <section className={`bg-white px-5 py-16 ${program.caseStudy ? "" : "gold-rule-top"}`}>
+            <div className="mx-auto max-w-5xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Tools &amp; guides</p>
+              <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                {program.tools.every((t) => t.kind === "guide")
+                  ? "Guides worth reading"
+                  : program.tools.some((t) => t.kind === "guide")
+                    ? "Tools and guides for this asset class"
+                    : "Run the numbers yourself"}
+              </h2>
+              <div className="mt-8 grid gap-6 md:grid-cols-2">
+                {program.tools.map((tool) => (
+                  <div key={tool.href} className="flex flex-col border-l-2 border-gold bg-ivory p-6">
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+                      {tool.kind === "guide" ? "Guide" : "Free tool"}
+                    </p>
+                    <p className="mt-3 font-display text-lg font-semibold text-obsidian">{tool.label}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-slate">{tool.blurb}</p>
+                    <Link
+                      href={tool.href}
+                      className="mt-auto inline-flex items-center gap-2 pt-4 text-sm font-semibold text-obsidian underline hover:text-gold"
+                    >
+                      {tool.cta} <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </div>
+                ))}
+              </div>
             </div>
           </section>
         )}
