@@ -166,6 +166,17 @@ export const PROGRAMS: Program[] = [
       },
     ],
     tools: [MULTIFAMILY_CALC, WIND_CALC, COINSURANCE_CALC, BAROMETER, LENDER_GUIDE, AFFORDABLE_HOUSING_GUIDE],
+    caseStudy: {
+      headline: "A 1940s apartment community in South Alabama",
+      result: "$130,000",
+      resultLabel: "premium saved year over year",
+      paragraphs: [
+        "The owner had renewed with the same agent for years, and the results never changed, no matter what the market was doing. The premium had climbed to the point that the property was losing money, and he didn't believe his agent was doing the work the account needed. With close to $50 million in total insured value, a property built in the 1940s gets priced on its age unless someone shows the underwriter what's actually there.",
+        "So we did. Our team documented the risk controls and the full COPE picture (construction, occupancy, protection, and exposure), then brought in a risk modeling team to put numbers behind it. Underwriters price what they can see. We made sure they could see everything.",
+        "With that data in hand, we took the account to market and got two major catastrophe carriers bidding against each other. The renewal closed $130,000 lower than the year before.",
+        "He was also up against a financing deadline. We kept the lender, the owner, and the carriers aligned, and the program was bound in time. Everyone left satisfied, except maybe the insurance carrier.",
+      ],
+    },
     searchTerms: [
       "multifamily insurance broker",
       "apartment building insurance",
