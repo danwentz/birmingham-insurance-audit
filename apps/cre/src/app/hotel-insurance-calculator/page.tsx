@@ -5,6 +5,7 @@ import { SiteHeader, SiteFooter } from "@/components/chrome";
 import { ContactSection } from "@/components/ContactSection";
 import { HotelCalculator } from "@/components/calculator/HotelCalculator";
 import { BRAND_NAME, DOMAIN, PHONE_E164 } from "@/lib/site";
+import { HeroBackground, CALCULATOR_HERO } from "@/components/HeroBackground";
 
 const TITLE = "Hotel Insurance Calculator | Cost Per Key, RevPAR & Value";
 const DESCRIPTION =
@@ -115,12 +116,7 @@ export default function HotelCalculatorPage() {
 
       <main>
         <section className="relative overflow-hidden bg-midnight px-5 pt-14 pb-16 text-champagne">
-          <span
-            aria-hidden
-            className="pointer-events-none absolute top-1/2 right-[-2%] -translate-y-1/2 select-none font-display text-[22vw] font-bold leading-none tracking-tight text-gold opacity-[0.04]"
-          >
-            RevPAR
-          </span>
+          <HeroBackground src={CALCULATOR_HERO} dim="opacity-55" />
           <div className="relative mx-auto max-w-6xl">
             <Link
               href="/hospitality-hotel-insurance"
@@ -164,115 +160,117 @@ export default function HotelCalculatorPage() {
 
         {/* ---------------------------------------------- SEO / context copy */}
         <section className="bg-white px-5 py-16">
-          <div className="mx-auto max-w-3xl">
-            <h2 className="font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              The one line on a hotel P&amp;L that operations can&apos;t fix
-            </h2>
-            <div className="mt-6 space-y-5 leading-relaxed text-slate">
-              <p>
-                Almost everything on a hotel operating statement responds to how well the hotel is
-                run. Rooms profit moves with rate and mix. F&amp;B moves with covers and cost of
-                sales. Labor moves with scheduling. Insurance does none of that. Under the Uniform
-                System of Accounts it is a fixed charge, booked below gross operating profit
-                alongside property taxes and ground rent, which means a general manager can run a
-                flawless year and the premium lands exactly where the carrier put it.
-              </p>
-              <p>
-                That placement is also what makes a renewal an asset-value event. Because insurance
-                sits below GOP, every dollar of it comes out of EBITDA, and EBITDA is what a buyer
-                capitalizes. At an 8.5% cap, a dollar of annual premium carries about $11.76 of asset
-                value — so a $60,000 increase is roughly $706,000 off the next appraisal. Owners
-                price that increase in cash and get the right answer. Priced against value, it is
-                frequently the largest single move available on the asset that year.
-              </p>
-              <p>
-                The useful reframe is per available room. Your hotel sells the same room count every
-                night whether anyone stays or not, so spreading the premium across available room
-                nights puts it directly alongside RevPAR — the number you already manage to. A
-                180-key hotel paying $420,000 is carrying about $6.39 of insurance per available room
-                night against $151 of RevPAR. Stated that way, the renewal question stops being a
-                budget line and starts being a pricing decision: at 72% occupancy, an $84,000
-                increase is $1.78 of ADR.
-              </p>
-              <p>
-                No property type got repriced harder. Hospitality sits at the intersection of two
-                hard markets at once — catastrophe property for coastal and resort assets, and
-                premises liability at a moment when hotel verdicts routinely clear eight figures,
-                with pools, bars, banquets, and assault-and-battery exposure all underwritten
-                separately. Meanwhile the flag dictates limits in the franchise agreement, so the
-                program has to satisfy the brand before it can be shopped on price.
-              </p>
-              <p>
-                The calculator above also sizes the parts that never appear in the premium: the
-                occupancy you need to cover a fixed block that insurance is inside of, the DSCR
-                headroom a premium increase consumes, and whether business income actually funds a
-                closure. That last one is where hospitality differs most from every other asset
-                class. Business income limits get sized on an average month, and a hurricane does not
-                arrive in an average month — a resort earning 42% of its revenue in three months
-                burns through the same limit far faster if the closure starts at the top of the
-                season.
-              </p>
-            </div>
-
-            <h2 className="mt-14 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              Common questions
-            </h2>
-            <div className="mt-6 space-y-4">
-              {FAQS.map((faq) => (
-                <details key={faq.q} className="border-b border-gold/20 pb-4">
-                  <summary className="cursor-pointer font-display font-semibold text-obsidian">
-                    {faq.q}
-                  </summary>
-                  <p className="mt-3 leading-relaxed text-slate">{faq.a}</p>
-                </details>
-              ))}
-            </div>
-
-            <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <div className="border-l-2 border-gold bg-ivory p-6">
-                <p className="font-display text-lg font-semibold text-obsidian">
-                  Coastal or hail-belt hotel?
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl">
+              <h2 className="font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                The one line on a hotel P&amp;L that operations can&apos;t fix
+              </h2>
+              <div className="mt-6 space-y-5 leading-relaxed text-slate">
+                <p>
+                  Almost everything on a hotel operating statement responds to how well the hotel is
+                  run. Rooms profit moves with rate and mix. F&amp;B moves with covers and cost of
+                  sales. Labor moves with scheduling. Insurance does none of that. Under the Uniform
+                  System of Accounts it is a fixed charge, booked below gross operating profit
+                  alongside property taxes and ground rent, which means a general manager can run a
+                  flawless year and the premium lands exactly where the carrier put it.
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-slate">
-                  A percentage wind deductible applies to each affected location&apos;s insured value,
-                  so one storm applies several. Size what you actually retain.
+                <p>
+                  That placement is also what makes a renewal an asset-value event. Because insurance
+                  sits below GOP, every dollar of it comes out of EBITDA, and EBITDA is what a buyer
+                  capitalizes. At an 8.5% cap, a dollar of annual premium carries about $11.76 of asset
+                  value — so a $60,000 increase is roughly $706,000 off the next appraisal. Owners
+                  price that increase in cash and get the right answer. Priced against value, it is
+                  frequently the largest single move available on the asset that year.
                 </p>
-                <Link
-                  href="/wind-deductible-calculator"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
-                >
-                  Wind &amp; hail deductible calculator <ArrowRight className="h-4 w-4" />
-                </Link>
+                <p>
+                  The useful reframe is per available room. Your hotel sells the same room count every
+                  night whether anyone stays or not, so spreading the premium across available room
+                  nights puts it directly alongside RevPAR — the number you already manage to. A
+                  180-key hotel paying $420,000 is carrying about $6.39 of insurance per available room
+                  night against $151 of RevPAR. Stated that way, the renewal question stops being a
+                  budget line and starts being a pricing decision: at 72% occupancy, an $84,000
+                  increase is $1.78 of ADR.
+                </p>
+                <p>
+                  No property type got repriced harder. Hospitality sits at the intersection of two
+                  hard markets at once — catastrophe property for coastal and resort assets, and
+                  premises liability at a moment when hotel verdicts routinely clear eight figures,
+                  with pools, bars, banquets, and assault-and-battery exposure all underwritten
+                  separately. Meanwhile the flag dictates limits in the franchise agreement, so the
+                  program has to satisfy the brand before it can be shopped on price.
+                </p>
+                <p>
+                  The calculator above also sizes the parts that never appear in the premium: the
+                  occupancy you need to cover a fixed block that insurance is inside of, the DSCR
+                  headroom a premium increase consumes, and whether business income actually funds a
+                  closure. That last one is where hospitality differs most from every other asset
+                  class. Business income limits get sized on an average month, and a hurricane does not
+                  arrive in an average month — a resort earning 42% of its revenue in three months
+                  burns through the same limit far faster if the closure starts at the top of the
+                  season.
+                </p>
               </div>
-              <div className="border-l-2 border-gold bg-ivory p-6">
-                <p className="font-display text-lg font-semibold text-obsidian">
-                  Looking for the program, not the math?
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-slate">
-                  Property, guest and premises liability, liquor, and brand-required umbrella towers
-                  for flagged and independent hotels.
-                </p>
-                <Link
-                  href="/hospitality-hotel-insurance"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
-                >
-                  Hospitality &amp; hotel insurance <ArrowRight className="h-4 w-4" />
-                </Link>
+
+              <h2 className="mt-14 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                Common questions
+              </h2>
+              <div className="mt-6 space-y-4">
+                {FAQS.map((faq) => (
+                  <details key={faq.q} className="border-b border-gold/20 pb-4">
+                    <summary className="cursor-pointer font-display font-semibold text-obsidian">
+                      {faq.q}
+                    </summary>
+                    <p className="mt-3 leading-relaxed text-slate">{faq.a}</p>
+                  </details>
+                ))}
               </div>
-              <div className="border-l-2 border-gold bg-ivory p-6">
-                <p className="font-display text-lg font-semibold text-obsidian">
-                  Is your limit still enough?
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-slate">
-                  A coinsurance clause cuts every claim, not just a total loss, when the limit trails
-                  replacement cost. Price the penalty on your own loss.
-                </p>
-                <Link
-                  href="/coinsurance-penalty-calculator"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
-                >
-                  Coinsurance penalty calculator <ArrowRight className="h-4 w-4" />
-                </Link>
+
+              <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="border-l-2 border-gold bg-ivory p-6">
+                  <p className="font-display text-lg font-semibold text-obsidian">
+                    Coastal or hail-belt hotel?
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate">
+                    A percentage wind deductible applies to each affected location&apos;s insured value,
+                    so one storm applies several. Size what you actually retain.
+                  </p>
+                  <Link
+                    href="/wind-deductible-calculator"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
+                  >
+                    Wind &amp; hail deductible calculator <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+                <div className="border-l-2 border-gold bg-ivory p-6">
+                  <p className="font-display text-lg font-semibold text-obsidian">
+                    Looking for the program, not the math?
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate">
+                    Property, guest and premises liability, liquor, and brand-required umbrella towers
+                    for flagged and independent hotels.
+                  </p>
+                  <Link
+                    href="/hospitality-hotel-insurance"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
+                  >
+                    Hospitality &amp; hotel insurance <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+                <div className="border-l-2 border-gold bg-ivory p-6">
+                  <p className="font-display text-lg font-semibold text-obsidian">
+                    Is your limit still enough?
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate">
+                    A coinsurance clause cuts every claim, not just a total loss, when the limit trails
+                    replacement cost. Price the penalty on your own loss.
+                  </p>
+                  <Link
+                    href="/coinsurance-penalty-calculator"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
+                  >
+                    Coinsurance penalty calculator <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

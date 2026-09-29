@@ -72,7 +72,7 @@ export default function About() {
           >
             DW
           </span>
-          <div className="relative mx-auto max-w-4xl">
+          <div className="relative mx-auto max-w-6xl">
             <Link href="/" className="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wide text-gold hover:underline">
               <ArrowLeft className="h-4 w-4" /> Home
             </Link>
@@ -103,70 +103,76 @@ export default function About() {
 
         {/* BIO (white) */}
         <section className="bg-white px-5 py-16">
-          <div className="mx-auto max-w-3xl space-y-6 text-lg leading-relaxed text-slate">
-            <p>
-              ACREInsure is the commercial real estate practice of Dan Wentz, a risk consultant at
-              USI Insurance Services in Birmingham. Dan works with owners, managers, and developers
-              of commercial real estate and hotels, building insurance programs for accounts with{" "}
-              {PREMIUM_FLOOR} and up in annual premium.
-            </p>
-            <p>
-              Dan came up on the wholesale side of the business: nine years at CRC Group and two at
-              CAC Group, marketing and placing the risk standard agents send out when they
-              can&apos;t write it themselves. So the E&amp;S and specialty capacity this site keeps
-              mentioning isn&apos;t an abstraction. It&apos;s a set of working relationships.
-            </p>
-            <p>
-              Before insurance, he spent 14 years in radio, seven of them at iHeartMedia. Which is
-              why you&apos;ll get your renewal explained in plain English instead of a 40-page
-              proposal nobody reads.
-            </p>
-            <p>
-              He writes on commercial insurance for the Alabama Center for Real Estate (ACRE) at
-              the University of Alabama and is a member of the ACRE 100 Leadership Council.
-            </p>
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl space-y-6 text-lg leading-relaxed text-slate">
+              <p>
+                ACREInsure is the commercial real estate practice of Dan Wentz, a risk consultant at
+                USI Insurance Services in Birmingham. Dan works with owners, managers, and developers
+                of commercial real estate and hotels, building insurance programs for accounts with{" "}
+                {PREMIUM_FLOOR} and up in annual premium.
+              </p>
+              <p>
+                Dan came up on the wholesale side of the business: nine years at CRC Group and two at
+                CAC Group, marketing and placing the risk standard agents send out when they
+                can&apos;t write it themselves. So the E&amp;S and specialty capacity this site keeps
+                mentioning isn&apos;t an abstraction. It&apos;s a set of working relationships.
+              </p>
+              <p>
+                Before insurance, he spent 14 years in radio, seven of them at iHeartMedia. Which is
+                why you&apos;ll get your renewal explained in plain English instead of a 40-page
+                proposal nobody reads.
+              </p>
+              <p>
+                He writes on commercial insurance for the Alabama Center for Real Estate (ACRE) at
+                the University of Alabama and is a member of the ACRE 100 Leadership Council.
+              </p>
+            </div>
           </div>
         </section>
 
         {/* WORK AREAS (ivory) */}
         <section className="px-5 py-16">
-          <div className="mx-auto max-w-4xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">The work</p>
-            <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              Where the exposures get addressed
-            </h2>
-            <p className="mt-3 max-w-2xl text-slate">
-              Through USI&apos;s ONE&trade; platform, which pairs analytics with specialist
-              resources, the work covers:
-            </p>
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {WORK_AREAS.map((item) => (
-                <div key={item} className="flex items-start gap-3 rounded-md border border-gold/20 bg-white p-4">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
-                  <span className="text-slate">{item}</span>
-                </div>
-              ))}
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-4xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">The work</p>
+              <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                Where the exposures get addressed
+              </h2>
+              <p className="mt-3 max-w-2xl text-slate">
+                Through USI&apos;s ONE&trade; platform, which pairs analytics with specialist
+                resources, the work covers:
+              </p>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                {WORK_AREAS.map((item) => (
+                  <div key={item} className="flex items-start gap-3 rounded-md border border-gold/20 bg-white p-4">
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
+                    <span className="text-slate">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-8 text-lg text-obsidian">
+                Clear, actionable strategies to protect your projects, people, and profits.
+              </p>
             </div>
-            <p className="mt-8 text-lg text-obsidian">
-              Clear, actionable strategies to protect your projects, people, and profits.
-            </p>
           </div>
         </section>
 
         {/* TIMELINE (white) */}
         <section className="gold-rule-top bg-white px-5 py-16">
-          <div className="mx-auto max-w-3xl">
-            <h2 className="font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              Where he&apos;s been
-            </h2>
-            <div className="mt-8 space-y-8">
-              {TIMELINE.map((t) => (
-                <div key={`${t.role}-${t.years}`} className="border-l-2 border-gold pl-5">
-                  <p className="font-display text-lg font-semibold text-obsidian">{t.role}</p>
-                  <p className="mt-1 text-slate">{t.org}</p>
-                  <p className="mt-1 font-mono text-sm text-slate">{t.years}</p>
-                </div>
-              ))}
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl">
+              <h2 className="font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                Where he&apos;s been
+              </h2>
+              <div className="mt-8 space-y-8">
+                {TIMELINE.map((t) => (
+                  <div key={`${t.role}-${t.years}`} className="border-l-2 border-gold pl-5">
+                    <p className="font-display text-lg font-semibold text-obsidian">{t.role}</p>
+                    <p className="mt-1 text-slate">{t.org}</p>
+                    <p className="mt-1 font-mono text-sm text-slate">{t.years}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>

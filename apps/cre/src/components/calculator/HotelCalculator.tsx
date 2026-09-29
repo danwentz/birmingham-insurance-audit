@@ -197,7 +197,7 @@ export function HotelCalculator() {
     <>
       {/* ------------------------------------------------ inputs */}
       <section id="calculator" className="print:hidden bg-white px-5 py-14">
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-6xl">
           <SectionHeading eyebrow="Step one" title="Your hotel">
             <p>
               Seven numbers off your last STR report and operating statement. Nothing leaves your
@@ -343,7 +343,7 @@ export function HotelCalculator() {
 
       {!ready && (
         <section className="bg-ivory px-5 py-14">
-          <div className="mx-auto max-w-5xl border-l-2 border-gold bg-white p-6">
+          <div className="mx-auto max-w-6xl border-l-2 border-gold bg-white p-6">
             <p className="font-display text-lg font-semibold text-obsidian">
               Fill in keys, ADR, occupancy, expenses, premium, and a cap rate.
             </p>
@@ -359,7 +359,7 @@ export function HotelCalculator() {
         <>
           {/* ------------------------------------------------ RevPAR headline */}
           <section className="gold-rule-top bg-obsidian px-5 py-14 text-champagne">
-            <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-6xl">
               <SectionHeading eyebrow="Per available room" title="What insurance costs in RevPAR">
                 <p className="text-slate">
                   Hotels price everything per available room, so that is where a premium belongs too.
@@ -438,7 +438,7 @@ export function HotelCalculator() {
 
           {/* ------------------------------------------------ renewal scenario */}
           <section className="bg-white px-5 py-14">
-            <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-6xl">
               <SectionHeading eyebrow="The renewal" title="What a premium move is worth">
                 <p>
                   Insurance is a fixed charge, so a premium change moves EBITDA dollar for dollar and
@@ -588,7 +588,7 @@ export function HotelCalculator() {
 
           {/* ------------------------------------------------ leverage + exposures */}
           <section className="bg-ivory px-5 py-14">
-            <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-6xl">
               <SectionHeading eyebrow="Where it bites" title="Leverage, operating leverage, and the loss you don't budget for">
                 <p>
                   Three things a premium touches that the premium line doesn&apos;t show: your covenant,
@@ -746,7 +746,7 @@ function SaveShare({ shareQuery }: { shareQuery: string }) {
 
   return (
     <section className="print:hidden gold-rule-top bg-obsidian px-5 py-14 text-champagne">
-      <div className="mx-auto flex max-w-5xl flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
         <div className="max-w-xl">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Keep this</p>
           <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-white sm:text-3xl">

@@ -5,6 +5,7 @@ import { SiteHeader, SiteFooter } from "@/components/chrome";
 import { ContactSection } from "@/components/ContactSection";
 import { GuideDisclaimerTop, GuideDisclaimerBottom } from "@/components/Disclaimers";
 import { DOMAIN } from "@/lib/site";
+import { HeroBackground, GUIDE_HERO } from "@/components/HeroBackground";
 
 const TITLE = "Lender Insurance Requirements for Commercial Real Estate Loans";
 const META_TITLE = "Lender Insurance Requirements | Fannie & Freddie | ACREInsure";
@@ -163,7 +164,8 @@ export default function LenderInsuranceRequirements() {
       <main>
         {/* HERO (dark) */}
         <section className="relative overflow-hidden bg-midnight px-5 pt-14 pb-16 text-champagne">
-          <div className="relative mx-auto max-w-4xl">
+          <HeroBackground src={GUIDE_HERO} />
+          <div className="relative mx-auto max-w-6xl">
             <Link href="/" className="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wide text-gold hover:underline">
               <ArrowLeft className="h-4 w-4" /> Home
             </Link>
@@ -181,273 +183,289 @@ export default function LenderInsuranceRequirements() {
 
         {/* INTRO (white) */}
         <section className="bg-white px-5 py-16">
-          <div className="mx-auto max-w-3xl">
-            <div className="space-y-6 text-lg leading-relaxed text-slate">
-              <p>
-                Your lender owns a big piece of your property&apos;s risk, so your loan documents tell
-                you how to insure it. Those requirements decide your limits, your deductibles, and
-                which carriers can write you. Miss one and you can hold up a closing, get billed for
-                force-placed insurance, or put the loan in default.
-              </p>
-              <p>
-                Most lenders ask for the same core coverage. Fannie Mae and Freddie Mac are the
-                exception: their requirements are published, specific, and much harder to
-                negotiate.
-              </p>
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl">
+              <div className="space-y-6 text-lg leading-relaxed text-slate">
+                <p>
+                  Your lender owns a big piece of your property&apos;s risk, so your loan documents tell
+                  you how to insure it. Those requirements decide your limits, your deductibles, and
+                  which carriers can write you. Miss one and you can hold up a closing, get billed for
+                  force-placed insurance, or put the loan in default.
+                </p>
+                <p>
+                  Most lenders ask for the same core coverage. Fannie Mae and Freddie Mac are the
+                  exception: their requirements are published, specific, and much harder to
+                  negotiate.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         {/* TYPICAL (ivory) */}
         <section className="px-5 py-16">
-          <div className="mx-auto max-w-4xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Typical requirements</p>
-            <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              What most lenders require
-            </h2>
-            <p className="mt-3 max-w-2xl text-slate">
-              Banks, life companies, debt funds, and CMBS lenders each write their own, but the core
-              is consistent. The exact limits and deductible caps are negotiated deal by deal.
-            </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {TYPICAL.map((t) => (
-                <div key={t.title} className="rounded-md border border-gold/20 bg-white p-6">
-                  <p className="font-display text-lg font-semibold text-obsidian">{t.title}</p>
-                  <p className="mt-2 text-slate">{t.body}</p>
-                </div>
-              ))}
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-4xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Typical requirements</p>
+              <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                What most lenders require
+              </h2>
+              <p className="mt-3 max-w-2xl text-slate">
+                Banks, life companies, debt funds, and CMBS lenders each write their own, but the core
+                is consistent. The exact limits and deductible caps are negotiated deal by deal.
+              </p>
+              <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {TYPICAL.map((t) => (
+                  <div key={t.title} className="rounded-md border border-gold/20 bg-white p-6">
+                    <p className="font-display text-lg font-semibold text-obsidian">{t.title}</p>
+                    <p className="mt-2 text-slate">{t.body}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-6 max-w-3xl text-slate">
+                Flood is the one that isn&apos;t negotiable. Federal law requires flood insurance on
+                buildings in a FEMA Special Flood Hazard Area when the loan comes from a federally
+                regulated lender.
+              </p>
             </div>
-            <p className="mt-6 max-w-3xl text-slate">
-              Flood is the one that isn&apos;t negotiable. Federal law requires flood insurance on
-              buildings in a FEMA Special Flood Hazard Area when the loan comes from a federally
-              regulated lender.
-            </p>
           </div>
         </section>
 
         {/* AGENCY (white) */}
         <section className="gold-rule-top bg-white px-5 py-16">
-          <div className="mx-auto max-w-4xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">The exception</p>
-            <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              Fannie Mae and Freddie Mac
-            </h2>
-            <div className="mt-6 max-w-3xl space-y-6 text-lg leading-relaxed text-slate">
-              <p>
-                Agency multifamily loans don&apos;t negotiate insurance deal by deal. The
-                requirements are written into Fannie Mae&apos;s Multifamily Selling and Servicing
-                Guide (Part II, Chapter 5) and Freddie Mac&apos;s Multifamily Seller/Servicer Guide
-                (Chapter 31), and your servicer has to enforce them every year for the life of the
-                loan.
-              </p>
-              <p>
-                They&apos;re also more specific than most lenders&apos;: hard dollar caps on
-                deductibles, liability limits tied to unit count, and narrow, conditional paths to a
-                waiver.
-              </p>
-            </div>
-            <div className="mt-8 overflow-x-auto rounded-md border border-gold/20">
-              <table className="w-full min-w-[40rem] text-left text-sm">
-                <thead className="bg-ivory">
-                  <tr>
-                    <th className="p-4 font-semibold text-obsidian">Requirement</th>
-                    <th className="p-4 font-semibold text-obsidian">Fannie Mae</th>
-                    <th className="p-4 font-semibold text-obsidian">Freddie Mac</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gold/20">
-                  {AGENCY_ROWS.map((r) => (
-                    <tr key={r.item}>
-                      <td className="p-4 font-mono text-gold-dark">{r.item}</td>
-                      <td className="p-4 text-slate">{r.fannie}</td>
-                      <td className="p-4 text-slate">{r.freddie}</td>
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-4xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">The exception</p>
+              <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                Fannie Mae and Freddie Mac
+              </h2>
+              <div className="mt-6 max-w-3xl space-y-6 text-lg leading-relaxed text-slate">
+                <p>
+                  Agency multifamily loans don&apos;t negotiate insurance deal by deal. The
+                  requirements are written into Fannie Mae&apos;s Multifamily Selling and Servicing
+                  Guide (Part II, Chapter 5) and Freddie Mac&apos;s Multifamily Seller/Servicer Guide
+                  (Chapter 31), and your servicer has to enforce them every year for the life of the
+                  loan.
+                </p>
+                <p>
+                  They&apos;re also more specific than most lenders&apos;: hard dollar caps on
+                  deductibles, liability limits tied to unit count, and narrow, conditional paths to a
+                  waiver.
+                </p>
+              </div>
+              <div className="mt-8 overflow-x-auto rounded-md border border-gold/20">
+                <table className="w-full min-w-[40rem] text-left text-sm">
+                  <thead className="bg-ivory">
+                    <tr>
+                      <th className="p-4 font-semibold text-obsidian">Requirement</th>
+                      <th className="p-4 font-semibold text-obsidian">Fannie Mae</th>
+                      <th className="p-4 font-semibold text-obsidian">Freddie Mac</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <p className="mt-3 text-sm text-slate">
-              Sources: Fannie Mae Multifamily Selling and Servicing Guide, Part II, Section 501.02,
-              effective September 14, 2026; Freddie Mac Multifamily Seller/Servicer Guide, Chapter 31,
-              updated August 25, 2026. IV = insurable value; TIV = total insurable value. Both guides
-              change often, so confirm against the current version and your loan documents.
-            </p>
-            <div className="mt-8 max-w-3xl space-y-6 text-lg leading-relaxed text-slate">
-              <p>
-                <strong className="font-semibold text-obsidian">Expanded deductibles are possible, with conditions.</strong>{" "}
-                Both agencies allow a higher deductible ($100,000 under $10 million of insurable
-                value, $150,000 above) only when a compliant policy isn&apos;t available and the
-                borrower meets tests like liquidity of at least four times the deductible and no
-                recent delinquency. Freddie Mac&apos;s waiver lasts one policy term and has to be
-                renewed.
+                  </thead>
+                  <tbody className="divide-y divide-gold/20">
+                    {AGENCY_ROWS.map((r) => (
+                      <tr key={r.item}>
+                        <td className="p-4 font-mono text-gold-dark">{r.item}</td>
+                        <td className="p-4 text-slate">{r.fannie}</td>
+                        <td className="p-4 text-slate">{r.freddie}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-3 text-sm text-slate">
+                Sources: Fannie Mae Multifamily Selling and Servicing Guide, Part II, Section 501.02,
+                effective September 14, 2026; Freddie Mac Multifamily Seller/Servicer Guide, Chapter 31,
+                updated August 25, 2026. IV = insurable value; TIV = total insurable value. Both guides
+                change often, so confirm against the current version and your loan documents.
               </p>
-              <p>
-                <strong className="font-semibold text-obsidian">Coastal owners, watch the percentages.</strong>{" "}
-                A 7.5% named-storm cap sounds generous until it becomes the only deductible a
-                coastal market will offer. If you&apos;re near the Gulf, price the wind program
-                against the agency cap before you commit to the loan. See our{" "}
-                <Link href="/wind-deductible-calculator" className={LINK}>wind deductible calculator</Link>,
-                and our{" "}
-                <Link href="/wind-deductible-buy-down" className={LINK}>wind deductible buy-down guide</Link>{" "}
-                if the cap is more than you can carry.
-              </p>
+              <div className="mt-8 max-w-3xl space-y-6 text-lg leading-relaxed text-slate">
+                <p>
+                  <strong className="font-semibold text-obsidian">Expanded deductibles are possible, with conditions.</strong>{" "}
+                  Both agencies allow a higher deductible ($100,000 under $10 million of insurable
+                  value, $150,000 above) only when a compliant policy isn&apos;t available and the
+                  borrower meets tests like liquidity of at least four times the deductible and no
+                  recent delinquency. Freddie Mac&apos;s waiver lasts one policy term and has to be
+                  renewed.
+                </p>
+                <p>
+                  <strong className="font-semibold text-obsidian">Coastal owners, watch the percentages.</strong>{" "}
+                  A 7.5% named-storm cap sounds generous until it becomes the only deductible a
+                  coastal market will offer. If you&apos;re near the Gulf, price the wind program
+                  against the agency cap before you commit to the loan. See our{" "}
+                  <Link href="/wind-deductible-calculator" className={LINK}>wind deductible calculator</Link>,
+                  and our{" "}
+                  <Link href="/wind-deductible-buy-down" className={LINK}>wind deductible buy-down guide</Link>{" "}
+                  if the cap is more than you can carry.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         {/* WHY COMPLY (ivory) */}
         <section className="px-5 py-16">
-          <div className="mx-auto max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Why it matters</p>
-            <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              Why you should meet them
-            </h2>
-            <div className="mt-6 space-y-6 text-lg leading-relaxed text-slate">
-              <p>
-                <strong className="font-semibold text-obsidian">It&apos;s a loan covenant.</strong>{" "}
-                Most loan documents make insurance compliance a condition of the loan. A gap can be
-                treated as a covenant breach, and in serious cases a default.
-              </p>
-              <p>
-                <strong className="font-semibold text-obsidian">Force-placed insurance is expensive.</strong>{" "}
-                If your coverage lapses or falls short, the lender or servicer can buy a policy and
-                charge you for it. Force-placed coverage protects the lender, not you, and it
-                usually costs far more than a policy you buy yourself.
-              </p>
-              <p>
-                <strong className="font-semibold text-obsidian">Closings stall.</strong> Lenders
-                won&apos;t fund without compliant evidence of insurance. Finding a missing
-                endorsement the week of closing is how deals slip. Our{" "}
-                <Link href="/certificate-of-insurance" className={LINK}>certificate of insurance guide</Link>{" "}
-                covers what a certificate does and doesn&apos;t prove.
-              </p>
-              <p>
-                <strong className="font-semibold text-obsidian">The lender controls the claim money.</strong>{" "}
-                As mortgagee and loss payee, the lender is on the claim check. If your policy
-                doesn&apos;t match the loan, expect a harder, slower path to getting repairs
-                funded.
-              </p>
-              <p>
-                <strong className="font-semibold text-obsidian">It usually protects you too.</strong>{" "}
-                Replacement cost, no coinsurance penalty, and 12 months of rent loss are coverage you
-                should want anyway. The requirements are a floor, not a ceiling.
-              </p>
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Why it matters</p>
+              <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                Why you should meet them
+              </h2>
+              <div className="mt-6 space-y-6 text-lg leading-relaxed text-slate">
+                <p>
+                  <strong className="font-semibold text-obsidian">It&apos;s a loan covenant.</strong>{" "}
+                  Most loan documents make insurance compliance a condition of the loan. A gap can be
+                  treated as a covenant breach, and in serious cases a default.
+                </p>
+                <p>
+                  <strong className="font-semibold text-obsidian">Force-placed insurance is expensive.</strong>{" "}
+                  If your coverage lapses or falls short, the lender or servicer can buy a policy and
+                  charge you for it. Force-placed coverage protects the lender, not you, and it
+                  usually costs far more than a policy you buy yourself.
+                </p>
+                <p>
+                  <strong className="font-semibold text-obsidian">Closings stall.</strong> Lenders
+                  won&apos;t fund without compliant evidence of insurance. Finding a missing
+                  endorsement the week of closing is how deals slip. Our{" "}
+                  <Link href="/certificate-of-insurance" className={LINK}>certificate of insurance guide</Link>{" "}
+                  covers what a certificate does and doesn&apos;t prove.
+                </p>
+                <p>
+                  <strong className="font-semibold text-obsidian">The lender controls the claim money.</strong>{" "}
+                  As mortgagee and loss payee, the lender is on the claim check. If your policy
+                  doesn&apos;t match the loan, expect a harder, slower path to getting repairs
+                  funded.
+                </p>
+                <p>
+                  <strong className="font-semibold text-obsidian">It usually protects you too.</strong>{" "}
+                  Replacement cost, no coinsurance penalty, and 12 months of rent loss are coverage you
+                  should want anyway. The requirements are a floor, not a ceiling.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         {/* WHERE TO FIND (white) */}
         <section className="gold-rule-top bg-white px-5 py-16">
-          <div className="mx-auto max-w-4xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Your documents</p>
-            <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              How to find your lender&apos;s requirements
-            </h2>
-            <p className="mt-3 max-w-2xl text-slate">
-              The requirements are spread across several documents. Check them in this order.
-            </p>
-            <div className="mt-8 divide-y divide-gold/20 rounded-md border border-gold/20 bg-white">
-              {WHERE.map((w) => (
-                <div key={w.doc} className="grid gap-2 p-5 sm:grid-cols-[14rem_1fr] sm:gap-6">
-                  <p className="font-mono text-sm font-medium text-gold-dark">{w.doc}</p>
-                  <p className="text-slate">{w.what}</p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-8 max-w-3xl space-y-6 text-lg leading-relaxed text-slate">
-              <p>
-                <strong className="font-semibold text-obsidian">Searching a long PDF?</strong> Try
-                these terms: insurance, casualty, deductible, mortgagee, loss payee, additional
-                insured, rating, and flood.
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-4xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Your documents</p>
+              <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                How to find your lender&apos;s requirements
+              </h2>
+              <p className="mt-3 max-w-2xl text-slate">
+                The requirements are spread across several documents. Check them in this order.
               </p>
-              <p>
-                <strong className="font-semibold text-obsidian">Agency loans point to the guide.</strong>{" "}
-                A Fannie Mae or Freddie Mac loan agreement often refers to the agency guide rather
-                than listing every requirement. Ask your servicer for its current insurance
-                requirements in writing.
-              </p>
-              <p>
-                <strong className="font-semibold text-obsidian">Can&apos;t find them?</strong> Ask
-                the lender or servicer directly. They would much rather answer now than chase you
-                at renewal.
-              </p>
+              <div className="mt-8 divide-y divide-gold/20 rounded-md border border-gold/20 bg-white">
+                {WHERE.map((w) => (
+                  <div key={w.doc} className="grid gap-2 p-5 sm:grid-cols-[14rem_1fr] sm:gap-6">
+                    <p className="font-mono text-sm font-medium text-gold-dark">{w.doc}</p>
+                    <p className="text-slate">{w.what}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 max-w-3xl space-y-6 text-lg leading-relaxed text-slate">
+                <p>
+                  <strong className="font-semibold text-obsidian">Searching a long PDF?</strong> Try
+                  these terms: insurance, casualty, deductible, mortgagee, loss payee, additional
+                  insured, rating, and flood.
+                </p>
+                <p>
+                  <strong className="font-semibold text-obsidian">Agency loans point to the guide.</strong>{" "}
+                  A Fannie Mae or Freddie Mac loan agreement often refers to the agency guide rather
+                  than listing every requirement. Ask your servicer for its current insurance
+                  requirements in writing.
+                </p>
+                <p>
+                  <strong className="font-semibold text-obsidian">Can&apos;t find them?</strong> Ask
+                  the lender or servicer directly. They would much rather answer now than chase you
+                  at renewal.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         {/* CHECKLIST (ivory) */}
         <section className="px-5 py-16">
-          <div className="mx-auto max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Checklist</p>
-            <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              Before you close, and every renewal
-            </h2>
-            <ul className="mt-8 space-y-3">
-              {[
-                "Get the requirements in writing, from the loan agreement, its exhibit, or the servicer.",
-                "Compare every requirement against your current policies, line by line, before renewal goes to market.",
-                "Confirm deductibles, including wind and named storm percentages, are within the caps.",
-                "Confirm the property limit meets the required percentage of insurable value, with no uncovered coinsurance clause.",
-                "Check every carrier's rating against the minimum.",
-                "Confirm the exact mortgagee and loss payee wording, and additional insured status on liability and umbrella.",
-                "Deliver evidence of property insurance (ACORD 28) and liability certificates before the lender's deadline.",
-                "If something can't be met, ask for a waiver early, in writing. Don't let the servicer find it.",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-slate">
-                  <Check className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <Link href="/insurance-document-checklist" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold-dark hover:text-gold">
-              See our insurance document checklist <ArrowRight className="h-4 w-4" />
-            </Link>
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Checklist</p>
+              <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                Before you close, and every renewal
+              </h2>
+              <ul className="mt-8 space-y-3">
+                {[
+                  "Get the requirements in writing, from the loan agreement, its exhibit, or the servicer.",
+                  "Compare every requirement against your current policies, line by line, before renewal goes to market.",
+                  "Confirm deductibles, including wind and named storm percentages, are within the caps.",
+                  "Confirm the property limit meets the required percentage of insurable value, with no uncovered coinsurance clause.",
+                  "Check every carrier's rating against the minimum.",
+                  "Confirm the exact mortgagee and loss payee wording, and additional insured status on liability and umbrella.",
+                  "Deliver evidence of property insurance (ACORD 28) and liability certificates before the lender's deadline.",
+                  "If something can't be met, ask for a waiver early, in writing. Don't let the servicer find it.",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-slate">
+                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link href="/insurance-document-checklist" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold-dark hover:text-gold">
+                See our insurance document checklist <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
           </div>
         </section>
 
         {/* FAQ (white) */}
         <section className="gold-rule-top bg-white px-5 py-16">
-          <div className="mx-auto max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">FAQ</p>
-            <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              Common questions about lender insurance requirements
-            </h2>
-            <div className="mt-8 space-y-8">
-              {FAQS.map((f) => (
-                <div key={f.q} className="border-l-2 border-gold pl-5">
-                  <h3 className="font-display text-xl font-semibold text-obsidian">{f.q}</h3>
-                  <p className="mt-2 text-slate">{f.a}</p>
-                </div>
-              ))}
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">FAQ</p>
+              <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                Common questions about lender insurance requirements
+              </h2>
+              <div className="mt-8 space-y-8">
+                {FAQS.map((f) => (
+                  <div key={f.q} className="border-l-2 border-gold pl-5">
+                    <h3 className="font-display text-xl font-semibold text-obsidian">{f.q}</h3>
+                    <p className="mt-2 text-slate">{f.a}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
         {/* WORKING WITH US (ivory) */}
         <section className="px-5 py-16">
-          <div className="mx-auto max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Working with us</p>
-            <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              Send us your loan documents
-            </h2>
-            <div className="mt-6 space-y-6 text-lg leading-relaxed text-slate">
-              <p>
-                We read the insurance section of your loan before we market your program, so the
-                coverage we bind is coverage your lender accepts. That goes for bank, life company,
-                CMBS, and agency loans.
-              </p>
-              <p>
-                Heading into a closing or refinance? Send us the commitment letter. We&apos;ll tell
-                you what it requires and whether your current program meets it. See also{" "}
-                <Link href="/real-estate-portfolio-insurance" className={LINK}>real estate portfolio insurance</Link>{" "}
-                and{" "}
-                <Link href="/multifamily-apartment-insurance" className={LINK}>multifamily insurance</Link>.
-              </p>
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Working with us</p>
+              <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                Send us your loan documents
+              </h2>
+              <div className="mt-6 space-y-6 text-lg leading-relaxed text-slate">
+                <p>
+                  We read the insurance section of your loan before we market your program, so the
+                  coverage we bind is coverage your lender accepts. That goes for bank, life company,
+                  CMBS, and agency loans.
+                </p>
+                <p>
+                  Heading into a closing or refinance? Send us the commitment letter. We&apos;ll tell
+                  you what it requires and whether your current program meets it. See also{" "}
+                  <Link href="/real-estate-portfolio-insurance" className={LINK}>real estate portfolio insurance</Link>{" "}
+                  and{" "}
+                  <Link href="/multifamily-apartment-insurance" className={LINK}>multifamily insurance</Link>.
+                </p>
+              </div>
+              <Link href="#contact" className="mt-10 inline-flex items-center gap-2 font-semibold text-gold-dark hover:text-gold">
+                Send us your loan&apos;s insurance requirements <ArrowRight className="h-4 w-4" />
+              </Link>
+              <GuideDisclaimerBottom />
             </div>
-            <Link href="#contact" className="mt-10 inline-flex items-center gap-2 font-semibold text-gold-dark hover:text-gold">
-              Send us your loan&apos;s insurance requirements <ArrowRight className="h-4 w-4" />
-            </Link>
-            <GuideDisclaimerBottom />
           </div>
         </section>
 

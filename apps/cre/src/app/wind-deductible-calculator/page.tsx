@@ -5,6 +5,7 @@ import { SiteHeader, SiteFooter } from "@/components/chrome";
 import { ContactSection } from "@/components/ContactSection";
 import { WindDeductibleCalculator } from "@/components/calculator/WindDeductibleCalculator";
 import { BRAND_NAME, DOMAIN, PHONE_E164 } from "@/lib/site";
+import { HeroBackground, CALCULATOR_HERO } from "@/components/HeroBackground";
 
 const TITLE = "Wind & Hail Deductible Calculator | Percentage Deductibles";
 const DESCRIPTION =
@@ -115,12 +116,7 @@ export default function WindDeductibleCalculatorPage() {
 
       <main>
         <section className="relative overflow-hidden bg-midnight px-5 pt-14 pb-16 text-champagne">
-          <span
-            aria-hidden
-            className="pointer-events-none absolute top-1/2 right-[-2%] -translate-y-1/2 select-none font-display text-[30vw] font-bold leading-none tracking-tight text-gold opacity-[0.04]"
-          >
-            5%
-          </span>
+          <HeroBackground src={CALCULATOR_HERO} dim="opacity-55" />
           <div className="relative mx-auto max-w-6xl">
             <Link
               href="/catastrophe-coastal-property-insurance"
@@ -164,119 +160,121 @@ export default function WindDeductibleCalculatorPage() {
 
         {/* ---------------------------------------------- SEO / context copy */}
         <section className="bg-white px-5 py-16">
-          <div className="mx-auto max-w-3xl">
-            <h2 className="font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              The deductible is the part of the program nobody prices
-            </h2>
-            <div className="mt-6 space-y-5 leading-relaxed text-slate">
-              <p>
-                Every owner can tell you their premium. Far fewer can tell you what they retain
-                before that premium buys them anything, and almost nobody has added it up across a
-                schedule. A percentage wind deductible is retained risk carried at a stated value of
-                zero — it appears on no statement, accrues to no reserve, and shows up for the first
-                time in the week after a storm.
-              </p>
-              <p>
-                The mechanics are where it gets expensive. The percentage applies to the insured
-                value of the damaged property, not to the size of the loss, so a $400,000 roof claim
-                on a building carrying a $1.5 million deductible is not a partial recovery — it is no
-                recovery. And on nearly every commercial form the deductible applies per location, so
-                a named storm that tracks across four assets applies four deductibles. Owners budget
-                for one.
-              </p>
-              <p>
-                That structure is also the quietest way a renewal gets worse. Moving a schedule from
-                a 2% deductible to 5% is a larger transfer of risk than most rate increases, costs
-                the carrier nothing to ask for, and arrives inside a quote that looks flat or better
-                on premium. Deductible minimums do the same thing from the other direction: a
-                $250,000 per-location minimum makes every building under $5 million retain more than
-                its stated percentage, which is why portfolios with a long tail of small assets get
-                hit hardest by a term that reads like a rounding detail.
-              </p>
-              <p>
-                The buy-down question follows directly. A buy-down replaces the per-location
-                percentage with one flat retention, and it is worth buying whenever it costs less
-                than the risk it removes. That calculation needs a view on how often a damaging event
-                actually finds your schedule, which is a judgment, not a fact — so the calculator
-                above puts that assumption on a slider rather than burying it. What usually matters
-                is not the precise number but whether the quoted buy-down sits near the break-even
-                line or nowhere near it. For how a buy-down is structured and placed, read our{" "}
-                <Link href="/wind-deductible-buy-down" className="font-semibold text-gold-dark underline underline-offset-2 hover:text-gold">wind deductible buy-down guide</Link>.
-              </p>
-            </div>
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl">
+              <h2 className="font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                The deductible is the part of the program nobody prices
+              </h2>
+              <div className="mt-6 space-y-5 leading-relaxed text-slate">
+                <p>
+                  Every owner can tell you their premium. Far fewer can tell you what they retain
+                  before that premium buys them anything, and almost nobody has added it up across a
+                  schedule. A percentage wind deductible is retained risk carried at a stated value of
+                  zero — it appears on no statement, accrues to no reserve, and shows up for the first
+                  time in the week after a storm.
+                </p>
+                <p>
+                  The mechanics are where it gets expensive. The percentage applies to the insured
+                  value of the damaged property, not to the size of the loss, so a $400,000 roof claim
+                  on a building carrying a $1.5 million deductible is not a partial recovery — it is no
+                  recovery. And on nearly every commercial form the deductible applies per location, so
+                  a named storm that tracks across four assets applies four deductibles. Owners budget
+                  for one.
+                </p>
+                <p>
+                  That structure is also the quietest way a renewal gets worse. Moving a schedule from
+                  a 2% deductible to 5% is a larger transfer of risk than most rate increases, costs
+                  the carrier nothing to ask for, and arrives inside a quote that looks flat or better
+                  on premium. Deductible minimums do the same thing from the other direction: a
+                  $250,000 per-location minimum makes every building under $5 million retain more than
+                  its stated percentage, which is why portfolios with a long tail of small assets get
+                  hit hardest by a term that reads like a rounding detail.
+                </p>
+                <p>
+                  The buy-down question follows directly. A buy-down replaces the per-location
+                  percentage with one flat retention, and it is worth buying whenever it costs less
+                  than the risk it removes. That calculation needs a view on how often a damaging event
+                  actually finds your schedule, which is a judgment, not a fact — so the calculator
+                  above puts that assumption on a slider rather than burying it. What usually matters
+                  is not the precise number but whether the quoted buy-down sits near the break-even
+                  line or nowhere near it. For how a buy-down is structured and placed, read our{" "}
+                  <Link href="/wind-deductible-buy-down" className="font-semibold text-gold-dark underline underline-offset-2 hover:text-gold">wind deductible buy-down guide</Link>.
+                </p>
+              </div>
 
-            <h2 className="mt-14 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              Common questions
-            </h2>
-            <div className="mt-6 space-y-4">
-              {FAQS.map((faq) => (
-                <details key={faq.q} className="border-b border-gold/20 pb-4">
-                  <summary className="cursor-pointer font-display font-semibold text-obsidian">
-                    {faq.q}
-                  </summary>
-                  <p className="mt-3 leading-relaxed text-slate">{faq.a}</p>
-                </details>
-              ))}
-            </div>
+              <h2 className="mt-14 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                Common questions
+              </h2>
+              <div className="mt-6 space-y-4">
+                {FAQS.map((faq) => (
+                  <details key={faq.q} className="border-b border-gold/20 pb-4">
+                    <summary className="cursor-pointer font-display font-semibold text-obsidian">
+                      {faq.q}
+                    </summary>
+                    <p className="mt-3 leading-relaxed text-slate">{faq.a}</p>
+                  </details>
+                ))}
+              </div>
 
-            <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <div className="border-l-2 border-gold bg-ivory p-6">
-                <p className="font-display text-lg font-semibold text-obsidian">
-                  Own apartments?
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-slate">
-                  Size the whole program — premium against NOI, value at your cap rate, DSCR
-                  headroom, and this deductible alongside it.
-                </p>
-                <Link
-                  href="/multifamily-insurance-calculator"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
-                >
-                  Multifamily insurance calculator <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-              <div className="border-l-2 border-gold bg-ivory p-6">
-                <p className="font-display text-lg font-semibold text-obsidian">Own hotels?</p>
-                <p className="mt-2 text-sm leading-relaxed text-slate">
-                  Price the premium in RevPAR, see the ADR move a renewal implies, and check whether
-                  business income funds a peak-season closure.
-                </p>
-                <Link
-                  href="/hotel-insurance-calculator"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
-                >
-                  Hotel insurance calculator <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-              <div className="border-l-2 border-gold bg-ivory p-6">
-                <p className="font-display text-lg font-semibold text-obsidian">
-                  Looking for the program, not the math?
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-slate">
-                  Named storm and hail capacity, deductible buy-downs, and parametric structures for
-                  coastal and hail-belt schedules.
-                </p>
-                <Link
-                  href="/catastrophe-coastal-property-insurance"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
-                >
-                  Catastrophe &amp; coastal property insurance <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-              <div className="border-l-2 border-gold bg-ivory p-6">
-                <p className="font-display text-lg font-semibold text-obsidian">
-                  Is your limit still enough?
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-slate">
-                  A coinsurance clause cuts every claim, not just a total loss, when the limit trails
-                  replacement cost. Price the penalty on your own loss.
-                </p>
-                <Link
-                  href="/coinsurance-penalty-calculator"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
-                >
-                  Coinsurance penalty calculator <ArrowRight className="h-4 w-4" />
-                </Link>
+              <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="border-l-2 border-gold bg-ivory p-6">
+                  <p className="font-display text-lg font-semibold text-obsidian">
+                    Own apartments?
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate">
+                    Size the whole program — premium against NOI, value at your cap rate, DSCR
+                    headroom, and this deductible alongside it.
+                  </p>
+                  <Link
+                    href="/multifamily-insurance-calculator"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
+                  >
+                    Multifamily insurance calculator <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+                <div className="border-l-2 border-gold bg-ivory p-6">
+                  <p className="font-display text-lg font-semibold text-obsidian">Own hotels?</p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate">
+                    Price the premium in RevPAR, see the ADR move a renewal implies, and check whether
+                    business income funds a peak-season closure.
+                  </p>
+                  <Link
+                    href="/hotel-insurance-calculator"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
+                  >
+                    Hotel insurance calculator <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+                <div className="border-l-2 border-gold bg-ivory p-6">
+                  <p className="font-display text-lg font-semibold text-obsidian">
+                    Looking for the program, not the math?
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate">
+                    Named storm and hail capacity, deductible buy-downs, and parametric structures for
+                    coastal and hail-belt schedules.
+                  </p>
+                  <Link
+                    href="/catastrophe-coastal-property-insurance"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
+                  >
+                    Catastrophe &amp; coastal property insurance <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+                <div className="border-l-2 border-gold bg-ivory p-6">
+                  <p className="font-display text-lg font-semibold text-obsidian">
+                    Is your limit still enough?
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate">
+                    A coinsurance clause cuts every claim, not just a total loss, when the limit trails
+                    replacement cost. Price the penalty on your own loss.
+                  </p>
+                  <Link
+                    href="/coinsurance-penalty-calculator"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
+                  >
+                    Coinsurance penalty calculator <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

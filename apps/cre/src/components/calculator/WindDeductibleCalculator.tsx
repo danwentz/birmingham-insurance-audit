@@ -182,7 +182,7 @@ export function WindDeductibleCalculator() {
     <>
       {/* ------------------------------------------------ inputs */}
       <section id="calculator" className="print:hidden bg-white px-5 py-14">
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-6xl">
           <SectionHeading eyebrow="Step one" title="Your schedule of values">
             <p>
               Insured value per location, as the policy schedules it — building, contents, and loss
@@ -327,7 +327,7 @@ export function WindDeductibleCalculator() {
 
       {!ready && (
         <section className="bg-ivory px-5 py-14">
-          <div className="mx-auto max-w-5xl border-l-2 border-gold bg-white p-6">
+          <div className="mx-auto max-w-6xl border-l-2 border-gold bg-white p-6">
             <p className="font-display text-lg font-semibold text-obsidian">
               Add at least one insured value and a deductible percentage.
             </p>
@@ -342,7 +342,7 @@ export function WindDeductibleCalculator() {
         <>
           {/* ------------------------------------------------ headline */}
           <section className="gold-rule-top bg-obsidian px-5 py-14 text-champagne">
-            <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-6xl">
               <SectionHeading eyebrow="What you retain" title="Before the policy pays a dollar">
                 <p className="text-slate">
                   A {pct(input.deductiblePct / 100, 1)} deductible is {pct(input.deductiblePct / 100, 1)} of
@@ -441,7 +441,7 @@ export function WindDeductibleCalculator() {
 
           {/* ------------------------------------------------ schedule table */}
           <section className="bg-white px-5 py-14">
-            <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-6xl">
               <SectionHeading eyebrow="Location by location" title="Where the retention sits">
                 <p>
                   Sorted by deductible, not by value — because the dollar minimum can put a small
@@ -522,7 +522,7 @@ export function WindDeductibleCalculator() {
 
           {/* ------------------------------------------------ season + ladder */}
           <section className="bg-ivory px-5 py-14">
-            <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-6xl">
               <SectionHeading eyebrow="Two ways it gets worse" title="A season, and a renewal">
                 <p>
                   A deductible is an annual exposure, not a one-time one — and the percentage on your
@@ -617,7 +617,7 @@ export function WindDeductibleCalculator() {
 
           {/* ------------------------------------------------ buy-down */}
           <section className="bg-white px-5 py-14">
-            <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-6xl">
               <SectionHeading eyebrow="What a buy-down is worth" title="Price the trade before you take it">
                 <p>
                   A buy-down replaces the per-location percentage with one flat retention. It is worth
@@ -727,7 +727,7 @@ function SaveShare({ shareQuery }: { shareQuery: string }) {
 
   return (
     <section className="print:hidden gold-rule-top bg-obsidian px-5 py-14 text-champagne">
-      <div className="mx-auto flex max-w-5xl flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
         <div className="max-w-xl">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Keep this</p>
           <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-white sm:text-3xl">

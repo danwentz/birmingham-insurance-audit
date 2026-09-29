@@ -295,22 +295,24 @@ export default function Home() {
 
         {/* WHY US */}
         <section className="px-5 py-20">
-          <div className="mx-auto max-w-3xl">
-            <h2 className="font-display text-3xl font-bold tracking-tight text-obsidian sm:text-4xl">
-              Why owners and CFOs work with us
-            </h2>
-            <ul className="mt-8 space-y-4">
-              {[
-                `We only take large accounts, ${PREMIUM_FLOOR}+ in premium, so the work goes deep instead of wide.`,
-                "Direct access to specialty and surplus-lines markets for hard-to-place and CAT-exposed risk.",
-                "We manage lender and equity insurance requirements so closings don't stall.",
-                "Licensed in Alabama. Out-of-state properties are placed through producers licensed in that state.",
-              ].map((point) => (
-                <li key={point} className="border-l-2 border-gold pl-4 text-slate">
-                  {point}
-                </li>
-              ))}
-            </ul>
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl">
+              <h2 className="font-display text-3xl font-bold tracking-tight text-obsidian sm:text-4xl">
+                Why owners and CFOs work with us
+              </h2>
+              <ul className="mt-8 space-y-4">
+                {[
+                  `We only take large accounts, ${PREMIUM_FLOOR}+ in premium, so the work goes deep instead of wide.`,
+                  "Direct access to specialty and surplus-lines markets for hard-to-place and CAT-exposed risk.",
+                  "We manage lender and equity insurance requirements so closings don't stall.",
+                  "Licensed in Alabama. Out-of-state properties are placed through producers licensed in that state.",
+                ].map((point) => (
+                  <li key={point} className="border-l-2 border-gold pl-4 text-slate">
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
 

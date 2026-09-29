@@ -5,6 +5,7 @@ import { SiteHeader, SiteFooter } from "@/components/chrome";
 import { ContactSection } from "@/components/ContactSection";
 import { GuideDisclaimerTop, GuideDisclaimerBottom } from "@/components/Disclaimers";
 import { DOMAIN } from "@/lib/site";
+import { HeroBackground, GUIDE_HERO } from "@/components/HeroBackground";
 
 const TITLE = "Certificates of Insurance for Commercial Real Estate Owners";
 const META_TITLE = "Certificate of Insurance (COI) Guide for Owners | ACREInsure";
@@ -235,7 +236,8 @@ export default function CertificateOfInsurance() {
       <main>
         {/* HERO (dark) */}
         <section className="relative overflow-hidden bg-midnight px-5 pt-14 pb-16 text-champagne">
-          <div className="relative mx-auto max-w-4xl">
+          <HeroBackground src={GUIDE_HERO} />
+          <div className="relative mx-auto max-w-6xl">
             <Link href="/" className="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wide text-gold hover:underline">
               <ArrowLeft className="h-4 w-4" /> Home
             </Link>
@@ -253,240 +255,258 @@ export default function CertificateOfInsurance() {
 
         {/* INTRO (white) */}
         <section className="bg-white px-5 py-16">
-          <div className="mx-auto max-w-3xl">
-            <div className="space-y-6 text-lg leading-relaxed text-slate">
-              <p>
-                A certificate of insurance is a one-page summary of someone&apos;s coverage. Owners
-                collect them by the dozen. Most of them get filed and never read.
-              </p>
-              <p>
-                That&apos;s where the trouble starts. A roofer&apos;s crew injures a tenant&apos;s
-                customer on a walkway. The roofer handed over a certificate before the job, so
-                everyone assumed the owner was protected. But nobody asked for an additional
-                insured endorsement, and the policy doesn&apos;t name the owner. The claim comes to
-                the owner&apos;s general liability policy instead, shows up in the owner&apos;s loss
-                history, and gets priced into the next renewal.
-              </p>
-              <p>
-                The certificate isn&apos;t the protection. The endorsements behind it are.
-              </p>
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl">
+              <div className="space-y-6 text-lg leading-relaxed text-slate">
+                <p>
+                  A certificate of insurance is a one-page summary of someone&apos;s coverage. Owners
+                  collect them by the dozen. Most of them get filed and never read.
+                </p>
+                <p>
+                  That&apos;s where the trouble starts. A roofer&apos;s crew injures a tenant&apos;s
+                  customer on a walkway. The roofer handed over a certificate before the job, so
+                  everyone assumed the owner was protected. But nobody asked for an additional
+                  insured endorsement, and the policy doesn&apos;t name the owner. The claim comes to
+                  the owner&apos;s general liability policy instead, shows up in the owner&apos;s loss
+                  history, and gets priced into the next renewal.
+                </p>
+                <p>
+                  The certificate isn&apos;t the protection. The endorsements behind it are.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         {/* WHAT IT IS (ivory) */}
         <section className="px-5 py-16">
-          <div className="mx-auto max-w-4xl">
-            <p className={EYEBROW}>The basics</p>
-            <h2 className={H2}>What a COI does, and what it doesn&apos;t</h2>
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              {DOES.map((d) => (
-                <div key={d.title} className="rounded-md border border-gold/20 bg-white p-6">
-                  <p className="font-display text-lg font-semibold text-obsidian">{d.title}</p>
-                  <p className="mt-2 text-slate">{d.body}</p>
-                </div>
-              ))}
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-4xl">
+              <p className={EYEBROW}>The basics</p>
+              <h2 className={H2}>What a COI does, and what it doesn&apos;t</h2>
+              <div className="mt-8 grid gap-4 sm:grid-cols-3">
+                {DOES.map((d) => (
+                  <div key={d.title} className="rounded-md border border-gold/20 bg-white p-6">
+                    <p className="font-display text-lg font-semibold text-obsidian">{d.title}</p>
+                    <p className="mt-2 text-slate">{d.body}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
         {/* HOLDER VS AI (white) */}
         <section className="gold-rule-top bg-white px-5 py-16">
-          <div className="mx-auto max-w-4xl">
-            <p className={EYEBROW}>Two different things</p>
-            <h2 className={H2}>Certificate holder vs. additional insured</h2>
-            <div className="mt-8 divide-y divide-gold/20 rounded-md border border-gold/20 bg-white">
-              {HOLDER_VS_AI.map((h) => (
-                <div key={h.term} className="grid gap-2 p-5 sm:grid-cols-[14rem_1fr] sm:gap-6">
-                  <p className="font-mono text-sm font-medium text-gold-dark">{h.term}</p>
-                  <p className="text-slate">{h.what}</p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-8 max-w-3xl space-y-6 text-lg leading-relaxed text-slate">
-              <p>
-                Additional insured status has to be on the policy. It comes from an endorsement.
-                These ISO forms are the ones you&apos;ll see most on general liability policies:
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-4xl">
+              <p className={EYEBROW}>Two different things</p>
+              <h2 className={H2}>Certificate holder vs. additional insured</h2>
+              <div className="mt-8 divide-y divide-gold/20 rounded-md border border-gold/20 bg-white">
+                {HOLDER_VS_AI.map((h) => (
+                  <div key={h.term} className="grid gap-2 p-5 sm:grid-cols-[14rem_1fr] sm:gap-6">
+                    <p className="font-mono text-sm font-medium text-gold-dark">{h.term}</p>
+                    <p className="text-slate">{h.what}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 max-w-3xl space-y-6 text-lg leading-relaxed text-slate">
+                <p>
+                  Additional insured status has to be on the policy. It comes from an endorsement.
+                  These ISO forms are the ones you&apos;ll see most on general liability policies:
+                </p>
+              </div>
+              <div className="mt-6 divide-y divide-gold/20 rounded-md border border-gold/20 bg-white">
+                {ENDORSEMENTS.map((e) => (
+                  <div key={e.form} className="grid gap-2 p-5 sm:grid-cols-[14rem_1fr] sm:gap-6">
+                    <p className="font-mono text-sm font-medium text-gold-dark">{e.form}</p>
+                    <p className="text-slate">{e.what}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-4 max-w-3xl text-slate">
+                Not every carrier uses ISO forms, and edition dates change the wording. Read the
+                endorsement on the policy, not just its title.
               </p>
-            </div>
-            <div className="mt-6 divide-y divide-gold/20 rounded-md border border-gold/20 bg-white">
-              {ENDORSEMENTS.map((e) => (
-                <div key={e.form} className="grid gap-2 p-5 sm:grid-cols-[14rem_1fr] sm:gap-6">
-                  <p className="font-mono text-sm font-medium text-gold-dark">{e.form}</p>
-                  <p className="text-slate">{e.what}</p>
-                </div>
-              ))}
-            </div>
-            <p className="mt-4 max-w-3xl text-slate">
-              Not every carrier uses ISO forms, and edition dates change the wording. Read the
-              endorsement on the policy, not just its title.
-            </p>
 
-            <h3 className="mt-12 font-display text-xl font-semibold text-obsidian">Which form is which</h3>
-            <div className="mt-4 divide-y divide-gold/20 rounded-md border border-gold/20 bg-white">
-              {ACORD.map((a) => (
-                <div key={a.form} className="grid gap-2 p-5 sm:grid-cols-[14rem_1fr] sm:gap-6">
-                  <p className="font-mono text-sm font-medium text-gold-dark">{a.form}</p>
-                  <p className="text-slate">{a.what}</p>
-                </div>
-              ))}
+              <h3 className="mt-12 font-display text-xl font-semibold text-obsidian">Which form is which</h3>
+              <div className="mt-4 divide-y divide-gold/20 rounded-md border border-gold/20 bg-white">
+                {ACORD.map((a) => (
+                  <div key={a.form} className="grid gap-2 p-5 sm:grid-cols-[14rem_1fr] sm:gap-6">
+                    <p className="font-mono text-sm font-medium text-gold-dark">{a.form}</p>
+                    <p className="text-slate">{a.what}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
         {/* USES (ivory) */}
         <section className="px-5 py-16">
-          <div className="mx-auto max-w-4xl">
-            <p className={EYEBROW}>How they&apos;re used</p>
-            <h2 className={H2}>Certificates go both directions</h2>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {USES.map((u) => (
-                <div key={u.title} className="rounded-md border border-gold/20 bg-white p-6">
-                  <p className="font-display text-lg font-semibold text-obsidian">{u.title}</p>
-                  <p className="mt-2 text-slate">{u.body}</p>
-                </div>
-              ))}
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-4xl">
+              <p className={EYEBROW}>How they&apos;re used</p>
+              <h2 className={H2}>Certificates go both directions</h2>
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {USES.map((u) => (
+                  <div key={u.title} className="rounded-md border border-gold/20 bg-white p-6">
+                    <p className="font-display text-lg font-semibold text-obsidian">{u.title}</p>
+                    <p className="mt-2 text-slate">{u.body}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-6 max-w-3xl text-slate">
+                For what lenders ask of you, see our{" "}
+                <Link href="/lender-insurance-requirements" className={LINK}>lender insurance requirements guide</Link>.
+              </p>
             </div>
-            <p className="mt-6 max-w-3xl text-slate">
-              For what lenders ask of you, see our{" "}
-              <Link href="/lender-insurance-requirements" className={LINK}>lender insurance requirements guide</Link>.
-            </p>
           </div>
         </section>
 
         {/* GETTING ONE (white) */}
         <section className="gold-rule-top bg-white px-5 py-16">
-          <div className="mx-auto max-w-4xl">
-            <p className={EYEBROW}>Getting one</p>
-            <h2 className={H2}>How to get a certificate</h2>
-            <div className="mt-8 divide-y divide-gold/20 rounded-md border border-gold/20 bg-white">
-              {GETTING.map((g) => (
-                <div key={g.title} className="grid gap-2 p-5 sm:grid-cols-[16rem_1fr] sm:gap-6">
-                  <p className="font-display text-lg font-semibold text-obsidian">{g.title}</p>
-                  <p className="text-slate">{g.body}</p>
-                </div>
-              ))}
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-4xl">
+              <p className={EYEBROW}>Getting one</p>
+              <h2 className={H2}>How to get a certificate</h2>
+              <div className="mt-8 divide-y divide-gold/20 rounded-md border border-gold/20 bg-white">
+                {GETTING.map((g) => (
+                  <div key={g.title} className="grid gap-2 p-5 sm:grid-cols-[16rem_1fr] sm:gap-6">
+                    <p className="font-display text-lg font-semibold text-obsidian">{g.title}</p>
+                    <p className="text-slate">{g.body}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
         {/* CONTRACTORS (ivory) */}
         <section className="px-5 py-16">
-          <div className="mx-auto max-w-4xl">
-            <p className={EYEBROW}>Contractors and vendors</p>
-            <h2 className={H2}>When to require one</h2>
-            <div className="mt-6 max-w-3xl space-y-6 text-lg leading-relaxed text-slate">
-              <p>
-                Any time someone other than your own employees works on your property. Get the
-                certificate before work starts, and put the insurance requirements in the
-                contract so the certificate is the proof of something you already required.
-              </p>
-            </div>
-            <ul className="mt-6 grid gap-2 sm:grid-cols-2">
-              {WHO.map((w) => (
-                <li key={w} className="flex items-start gap-3 text-slate">
-                  <Check className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
-                  <span>{w}</span>
-                </li>
-              ))}
-            </ul>
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-4xl">
+              <p className={EYEBROW}>Contractors and vendors</p>
+              <h2 className={H2}>When to require one</h2>
+              <div className="mt-6 max-w-3xl space-y-6 text-lg leading-relaxed text-slate">
+                <p>
+                  Any time someone other than your own employees works on your property. Get the
+                  certificate before work starts, and put the insurance requirements in the
+                  contract so the certificate is the proof of something you already required.
+                </p>
+              </div>
+              <ul className="mt-6 grid gap-2 sm:grid-cols-2">
+                {WHO.map((w) => (
+                  <li key={w} className="flex items-start gap-3 text-slate">
+                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
+                    <span>{w}</span>
+                  </li>
+                ))}
+              </ul>
 
-            <h3 className="mt-12 font-display text-xl font-semibold text-obsidian">What to require</h3>
-            <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {WHAT_TO_REQUIRE.map((w) => (
-                <div key={w.title} className="rounded-md border border-gold/20 bg-white p-6">
-                  <p className="font-display text-lg font-semibold text-obsidian">{w.title}</p>
-                  <p className="mt-2 text-slate">{w.body}</p>
-                </div>
-              ))}
-            </div>
-            <p className="mt-4 max-w-3xl text-slate">
-              Limits vary with the size and hazard of the work. Set them in the contract, check
-              them against your lender&apos;s requirements, and have your attorney review the
-              wording.
-            </p>
+              <h3 className="mt-12 font-display text-xl font-semibold text-obsidian">What to require</h3>
+              <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {WHAT_TO_REQUIRE.map((w) => (
+                  <div key={w.title} className="rounded-md border border-gold/20 bg-white p-6">
+                    <p className="font-display text-lg font-semibold text-obsidian">{w.title}</p>
+                    <p className="mt-2 text-slate">{w.body}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-4 max-w-3xl text-slate">
+                Limits vary with the size and hazard of the work. Set them in the contract, check
+                them against your lender&apos;s requirements, and have your attorney review the
+                wording.
+              </p>
 
-            <div className="mt-10 max-w-3xl space-y-6 text-lg leading-relaxed text-slate">
-              <p>
-                <strong className="font-semibold text-obsidian">Track expirations.</strong> A
-                certificate is good on the day it&apos;s issued. Put every policy expiration date in
-                a spreadsheet or tracking system, and ask for a renewal certificate before the
-                policy ends.
-              </p>
-              <p>
-                <strong className="font-semibold text-obsidian">The cost of skipping it.</strong>{" "}
-                When a contractor has no coverage, or coverage that doesn&apos;t name you, the
-                injured party looks for the next pocket. That&apos;s you. The loss lands on your
-                policy, counts against your loss history, and raises questions at renewal. See{" "}
-                <Link href="/real-estate-risk-management" className={LINK}>real estate risk management</Link>{" "}
-                and{" "}
-                <Link href="/builders-risk-ocip" className={LINK}>builders risk and OCIP</Link>{" "}
-                for larger projects.
-              </p>
-              <p>
-                <strong className="font-semibold text-obsidian">Tenant buildouts count.</strong>{" "}
-                When a tenant hires a contractor to build out a suite, that contractor is working
-                on your building. Your lease should require the tenant to deliver the contractor&apos;s
-                certificates and endorsements before work starts.
-              </p>
+              <div className="mt-10 max-w-3xl space-y-6 text-lg leading-relaxed text-slate">
+                <p>
+                  <strong className="font-semibold text-obsidian">Track expirations.</strong> A
+                  certificate is good on the day it&apos;s issued. Put every policy expiration date in
+                  a spreadsheet or tracking system, and ask for a renewal certificate before the
+                  policy ends.
+                </p>
+                <p>
+                  <strong className="font-semibold text-obsidian">The cost of skipping it.</strong>{" "}
+                  When a contractor has no coverage, or coverage that doesn&apos;t name you, the
+                  injured party looks for the next pocket. That&apos;s you. The loss lands on your
+                  policy, counts against your loss history, and raises questions at renewal. See{" "}
+                  <Link href="/real-estate-risk-management" className={LINK}>real estate risk management</Link>{" "}
+                  and{" "}
+                  <Link href="/builders-risk-ocip" className={LINK}>builders risk and OCIP</Link>{" "}
+                  for larger projects.
+                </p>
+                <p>
+                  <strong className="font-semibold text-obsidian">Tenant buildouts count.</strong>{" "}
+                  When a tenant hires a contractor to build out a suite, that contractor is working
+                  on your building. Your lease should require the tenant to deliver the contractor&apos;s
+                  certificates and endorsements before work starts.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         {/* CHECKLIST (white) */}
         <section className="gold-rule-top bg-white px-5 py-16">
-          <div className="mx-auto max-w-3xl">
-            <p className={EYEBROW}>Checklist</p>
-            <h2 className={H2}>How to review a contractor&apos;s certificate of insurance (COI)</h2>
-            <ul className="mt-8 space-y-3">
-              {CHECKLIST.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-slate">
-                  <Check className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-6 text-slate">
-              If any of these fail, send the certificate back. Don&apos;t let the crew start work
-              while it gets sorted out. See also our{" "}
-              <Link href="/insurance-document-checklist" className={LINK}>insurance document checklist</Link>.
-            </p>
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl">
+              <p className={EYEBROW}>Checklist</p>
+              <h2 className={H2}>How to review a contractor&apos;s certificate of insurance (COI)</h2>
+              <ul className="mt-8 space-y-3">
+                {CHECKLIST.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-slate">
+                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-6 text-slate">
+                If any of these fail, send the certificate back. Don&apos;t let the crew start work
+                while it gets sorted out. See also our{" "}
+                <Link href="/insurance-document-checklist" className={LINK}>insurance document checklist</Link>.
+              </p>
+            </div>
           </div>
         </section>
 
         {/* FAQ (ivory) */}
         <section className="px-5 py-16">
-          <div className="mx-auto max-w-3xl">
-            <p className={EYEBROW}>FAQ</p>
-            <h2 className={H2}>Common questions about certificates of insurance</h2>
-            <div className="mt-8 space-y-8">
-              {FAQS.map((f) => (
-                <div key={f.q} className="border-l-2 border-gold pl-5">
-                  <h3 className="font-display text-xl font-semibold text-obsidian">{f.q}</h3>
-                  <p className="mt-2 text-slate">{f.a}</p>
-                </div>
-              ))}
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl">
+              <p className={EYEBROW}>FAQ</p>
+              <h2 className={H2}>Common questions about certificates of insurance</h2>
+              <div className="mt-8 space-y-8">
+                {FAQS.map((f) => (
+                  <div key={f.q} className="border-l-2 border-gold pl-5">
+                    <h3 className="font-display text-xl font-semibold text-obsidian">{f.q}</h3>
+                    <p className="mt-2 text-slate">{f.a}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
         {/* WORKING WITH US (white) */}
         <section className="gold-rule-top bg-white px-5 py-16">
-          <div className="mx-auto max-w-3xl">
-            <p className={EYEBROW}>Working with us</p>
-            <h2 className={H2}>Send us the contract</h2>
-            <div className="mt-6 space-y-6 text-lg leading-relaxed text-slate">
-              <p>
-                We&apos;ll read the insurance section of your vendor contract, lease, or loan and
-                tell you what to require and whether your own policies respond. If you need
-                certificates issued on your program, we handle those too, and our clients can
-                issue standard certificates themselves, any time, through an online portal.
-              </p>
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl">
+              <p className={EYEBROW}>Working with us</p>
+              <h2 className={H2}>Send us the contract</h2>
+              <div className="mt-6 space-y-6 text-lg leading-relaxed text-slate">
+                <p>
+                  We&apos;ll read the insurance section of your vendor contract, lease, or loan and
+                  tell you what to require and whether your own policies respond. If you need
+                  certificates issued on your program, we handle those too, and our clients can
+                  issue standard certificates themselves, any time, through an online portal.
+                </p>
+              </div>
+              <Link href="#contact" className="mt-10 inline-flex items-center gap-2 font-semibold text-gold-dark hover:text-gold">
+                Send us your insurance requirements <ArrowRight className="h-4 w-4" />
+              </Link>
+              <GuideDisclaimerBottom />
             </div>
-            <Link href="#contact" className="mt-10 inline-flex items-center gap-2 font-semibold text-gold-dark hover:text-gold">
-              Send us your insurance requirements <ArrowRight className="h-4 w-4" />
-            </Link>
-            <GuideDisclaimerBottom />
           </div>
         </section>
 

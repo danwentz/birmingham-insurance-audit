@@ -5,6 +5,7 @@ import { SiteHeader, SiteFooter } from "@/components/chrome";
 import { ContactSection } from "@/components/ContactSection";
 import { MultifamilyCalculator } from "@/components/calculator/MultifamilyCalculator";
 import { BRAND_NAME, DOMAIN, PHONE_E164 } from "@/lib/site";
+import { HeroBackground, CALCULATOR_HERO } from "@/components/HeroBackground";
 
 const TITLE = "Multifamily Insurance Calculator | NOI, Cap Rate & Value";
 const DESCRIPTION =
@@ -111,12 +112,7 @@ export default function CalculatorPage() {
 
       <main>
         <section className="relative overflow-hidden bg-midnight px-5 pt-14 pb-16 text-champagne">
-          <span
-            aria-hidden
-            className="pointer-events-none absolute top-1/2 right-[-2%] -translate-y-1/2 select-none font-display text-[30vw] font-bold leading-none tracking-tight text-gold opacity-[0.04]"
-          >
-            NOI
-          </span>
+          <HeroBackground src={CALCULATOR_HERO} dim="opacity-55" />
           <div className="relative mx-auto max-w-6xl">
             <Link
               href="/multifamily-apartment-insurance"
@@ -160,101 +156,103 @@ export default function CalculatorPage() {
 
         {/* ---------------------------------------------- SEO / context copy */}
         <section className="bg-white px-5 py-16">
-          <div className="mx-auto max-w-3xl">
-            <h2 className="font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              Why operators underprice their own insurance decisions
-            </h2>
-            <div className="mt-6 space-y-5 leading-relaxed text-slate">
-              <p>
-                Ask an owner what a $75,000 premium increase costs and you&apos;ll get the right answer in
-                cash and the wrong answer in value. The cash answer is $75,000 a year. The value
-                answer, on a portfolio underwritten at a 7% cap, is about $1.07 million — because
-                the expense is permanent, it lowers the NOI a buyer capitalizes, and it shows up in
-                every appraisal, refinance, and sale from that point forward.
-              </p>
-              <p>
-                That asymmetry is why insurance gets managed like a bill and not like an asset.
-                Renewal season is short, the increase looks survivable against a budget, and the
-                decision to roll over with the incumbent carrier costs nothing today. Priced against
-                value, the same decision is frequently the largest single move available on the
-                property that year — larger than a rent bump the market won&apos;t support or a capex
-                project that takes eighteen months to earn back.
-              </p>
-              <p>
-                No property class got repriced harder than multifamily. Premiums rose sharply between
-                2019 and 2024, standard carriers retreated from habitational general liability, and
-                renewals started arriving with percentage wind and hail deductibles and
-                assault-and-battery sublimits attached. Plenty of owners are still paying hard-market
-                pricing on programs that were never re-marketed once the market softened.
-              </p>
-              <p>
-                The calculator above is built to make that comparison in the terms you already
-                underwrite in. It also sizes the parts of a program that don&apos;t appear in the premium
-                at all — the retained deductible, the coinsurance haircut, the loss-of-rents limit
-                that runs out before the building is rebuilt — because those are usually where a
-                cheap-looking renewal turns expensive.
-              </p>
-            </div>
-
-            <h2 className="mt-14 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              Common questions
-            </h2>
-            <div className="mt-6 space-y-4">
-              {FAQS.map((faq) => (
-                <details key={faq.q} className="border-b border-gold/20 pb-4">
-                  <summary className="cursor-pointer font-display font-semibold text-obsidian">
-                    {faq.q}
-                  </summary>
-                  <p className="mt-3 leading-relaxed text-slate">{faq.a}</p>
-                </details>
-              ))}
-            </div>
-
-            <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <div className="border-l-2 border-gold bg-ivory p-6">
-                <p className="font-display text-lg font-semibold text-obsidian">
-                  Carrying a percentage wind deductible?
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl">
+              <h2 className="font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                Why operators underprice their own insurance decisions
+              </h2>
+              <div className="mt-6 space-y-5 leading-relaxed text-slate">
+                <p>
+                  Ask an owner what a $75,000 premium increase costs and you&apos;ll get the right answer in
+                  cash and the wrong answer in value. The cash answer is $75,000 a year. The value
+                  answer, on a portfolio underwritten at a 7% cap, is about $1.07 million — because
+                  the expense is permanent, it lowers the NOI a buyer capitalizes, and it shows up in
+                  every appraisal, refinance, and sale from that point forward.
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-slate">
-                  It applies to each affected location&apos;s insured value, so one storm applies
-                  several. Size what you actually retain across the schedule.
+                <p>
+                  That asymmetry is why insurance gets managed like a bill and not like an asset.
+                  Renewal season is short, the increase looks survivable against a budget, and the
+                  decision to roll over with the incumbent carrier costs nothing today. Priced against
+                  value, the same decision is frequently the largest single move available on the
+                  property that year — larger than a rent bump the market won&apos;t support or a capex
+                  project that takes eighteen months to earn back.
                 </p>
-                <Link
-                  href="/wind-deductible-calculator"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
-                >
-                  Wind &amp; hail deductible calculator <ArrowRight className="h-4 w-4" />
-                </Link>
+                <p>
+                  No property class got repriced harder than multifamily. Premiums rose sharply between
+                  2019 and 2024, standard carriers retreated from habitational general liability, and
+                  renewals started arriving with percentage wind and hail deductibles and
+                  assault-and-battery sublimits attached. Plenty of owners are still paying hard-market
+                  pricing on programs that were never re-marketed once the market softened.
+                </p>
+                <p>
+                  The calculator above is built to make that comparison in the terms you already
+                  underwrite in. It also sizes the parts of a program that don&apos;t appear in the premium
+                  at all — the retained deductible, the coinsurance haircut, the loss-of-rents limit
+                  that runs out before the building is rebuilt — because those are usually where a
+                  cheap-looking renewal turns expensive.
+                </p>
               </div>
-              <div className="border-l-2 border-gold bg-ivory p-6">
-                <p className="font-display text-lg font-semibold text-obsidian">
-                  Is your limit still enough?
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-slate">
-                  See the exact payout on a real loss, not just the full-loss haircut above — and
-                  what it takes to cure the gap.
-                </p>
-                <Link
-                  href="/coinsurance-penalty-calculator"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
-                >
-                  Coinsurance penalty calculator <ArrowRight className="h-4 w-4" />
-                </Link>
+
+              <h2 className="mt-14 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                Common questions
+              </h2>
+              <div className="mt-6 space-y-4">
+                {FAQS.map((faq) => (
+                  <details key={faq.q} className="border-b border-gold/20 pb-4">
+                    <summary className="cursor-pointer font-display font-semibold text-obsidian">
+                      {faq.q}
+                    </summary>
+                    <p className="mt-3 leading-relaxed text-slate">{faq.a}</p>
+                  </details>
+                ))}
               </div>
-              <div className="border-l-2 border-gold bg-ivory p-6">
-                <p className="font-display text-lg font-semibold text-obsidian">
-                  Looking for the program, not the math?
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-slate">
-                  Habitational property, general liability, and umbrella for owners and operators of
-                  50 to 10,000+ units.
-                </p>
-                <Link
-                  href="/multifamily-apartment-insurance"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
-                >
-                  Multifamily &amp; apartment insurance <ArrowRight className="h-4 w-4" />
-                </Link>
+
+              <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="border-l-2 border-gold bg-ivory p-6">
+                  <p className="font-display text-lg font-semibold text-obsidian">
+                    Carrying a percentage wind deductible?
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate">
+                    It applies to each affected location&apos;s insured value, so one storm applies
+                    several. Size what you actually retain across the schedule.
+                  </p>
+                  <Link
+                    href="/wind-deductible-calculator"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
+                  >
+                    Wind &amp; hail deductible calculator <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+                <div className="border-l-2 border-gold bg-ivory p-6">
+                  <p className="font-display text-lg font-semibold text-obsidian">
+                    Is your limit still enough?
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate">
+                    See the exact payout on a real loss, not just the full-loss haircut above — and
+                    what it takes to cure the gap.
+                  </p>
+                  <Link
+                    href="/coinsurance-penalty-calculator"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
+                  >
+                    Coinsurance penalty calculator <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+                <div className="border-l-2 border-gold bg-ivory p-6">
+                  <p className="font-display text-lg font-semibold text-obsidian">
+                    Looking for the program, not the math?
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate">
+                    Habitational property, general liability, and umbrella for owners and operators of
+                    50 to 10,000+ units.
+                  </p>
+                  <Link
+                    href="/multifamily-apartment-insurance"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
+                  >
+                    Multifamily &amp; apartment insurance <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

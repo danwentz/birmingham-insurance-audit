@@ -110,6 +110,15 @@ const WIND_BUYDOWN_GUIDE: Tool = {
   kind: "guide",
 };
 
+const FRANCHISE_HOTEL_GUIDE: Tool = {
+  href: "/franchise-hotel-insurance-requirements",
+  label: "Franchise Hotel Insurance Requirements Guide",
+  cta: "Read the guide",
+  blurb:
+    "What your flag requires you to carry, why requirements change mid-year, and how we negotiate grandfathering so updates land at renewal instead of mid-term.",
+  kind: "guide",
+};
+
 const LENDER_GUIDE: Tool = {
   href: "/lender-insurance-requirements",
   label: "Lender Insurance Requirements Guide",
@@ -488,7 +497,7 @@ export const PROGRAMS: Program[] = [
       quote: "It felt like you were sent by God to help us.",
       attribution: "Owner, 10-hotel portfolio, Central Alabama",
     },
-    tools: [HOTEL_CALC, WIND_CALC, WIND_BUYDOWN_GUIDE, COINSURANCE_CALC, BAROMETER, HOTEL_PORTFOLIO_GUIDE, GULF_COAST_HOTEL_GUIDE],
+    tools: [HOTEL_CALC, WIND_CALC, WIND_BUYDOWN_GUIDE, COINSURANCE_CALC, BAROMETER, HOTEL_PORTFOLIO_GUIDE, FRANCHISE_HOTEL_GUIDE, GULF_COAST_HOTEL_GUIDE],
     searchTerms: ["hotel insurance broker", "hospitality insurance", "resort property insurance", "hotel liquor liability"],
   },
   {

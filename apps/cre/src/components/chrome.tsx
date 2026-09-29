@@ -21,8 +21,8 @@ const MENUS: NavMenu[] = [
 // Pages without a ContactSection (e.g. /privacy) pass contactHref="/#contact".
 export function SiteHeader({ contactHref = "#contact" }: { contactHref?: string }) {
   return (
-    <header className="gold-rule-top sticky top-0 z-40 bg-obsidian">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-4">
+    <header className="gold-rule-top sticky top-0 z-40 bg-obsidian px-5">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 py-4">
         {/* contents below lg so the hamburger (order-last) lands at the far right */}
         <div className="contents lg:flex lg:items-center lg:gap-10">
           <Link href="/">
@@ -97,9 +97,9 @@ function MobileActionBar({ contactHref }: { contactHref: string }) {
 export function SiteFooter({ contactHref = "#contact" }: { contactHref?: string }) {
   return (
     // pb reserves room so the fixed MobileActionBar never covers the last footer row
-    <footer className="bg-obsidian pb-[calc(4.5rem+env(safe-area-inset-bottom))] text-slate lg:pb-0">
+    <footer className="bg-obsidian px-5 pb-[calc(4.5rem+env(safe-area-inset-bottom))] text-slate lg:pb-0">
       <MobileActionBar contactHref={contactHref} />
-      <div className="mx-auto max-w-6xl px-5">
+      <div className="mx-auto max-w-6xl">
         <div className="grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-5">
           <div>
             <Wordmark className="text-lg text-white" />
@@ -128,8 +128,8 @@ export function SiteFooter({ contactHref = "#contact" }: { contactHref?: string 
           </div>
         </div>
       </div>
-      <div className="border-t border-gold/20">
-        <div className="mx-auto flex max-w-6xl flex-wrap justify-between gap-x-6 gap-y-2 px-5 py-6 text-xs text-slate">
+      <div className="-mx-5 border-t border-gold/20 px-5">
+        <div className="mx-auto flex max-w-6xl flex-wrap justify-between gap-x-6 gap-y-2 py-6 text-xs text-slate">
           <span>
             &copy; {new Date().getFullYear()} {BRAND_NAME}. All rights reserved.
           </span>

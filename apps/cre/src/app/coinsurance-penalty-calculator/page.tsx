@@ -5,6 +5,7 @@ import { SiteHeader, SiteFooter } from "@/components/chrome";
 import { ContactSection } from "@/components/ContactSection";
 import { CoinsuranceCalculator } from "@/components/calculator/CoinsuranceCalculator";
 import { BRAND_NAME, DOMAIN, PHONE_E164 } from "@/lib/site";
+import { HeroBackground, CALCULATOR_HERO } from "@/components/HeroBackground";
 
 const TITLE = "Coinsurance Penalty Calculator | Insurance-to-Value Gap";
 const DESCRIPTION =
@@ -111,12 +112,7 @@ export default function CoinsurancePenaltyCalculatorPage() {
 
       <main>
         <section className="relative overflow-hidden bg-midnight px-5 pt-14 pb-16 text-champagne">
-          <span
-            aria-hidden
-            className="pointer-events-none absolute top-1/2 right-[-2%] -translate-y-1/2 select-none font-display text-[30vw] font-bold leading-none tracking-tight text-gold opacity-[0.04]"
-          >
-            90%
-          </span>
+          <HeroBackground src={CALCULATOR_HERO} dim="opacity-55" />
           <div className="relative mx-auto max-w-6xl">
             <Link
               href="/real-estate-portfolio-insurance"
@@ -160,120 +156,122 @@ export default function CoinsurancePenaltyCalculatorPage() {
 
         {/* ---------------------------------------------- SEO / context copy */}
         <section className="bg-white px-5 py-16">
-          <div className="mx-auto max-w-3xl">
-            <h2 className="font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              The clause that punishes a claim you already have
-            </h2>
-            <div className="mt-6 space-y-5 leading-relaxed text-slate">
-              <p>
-                Owners think about insurance-to-value as a total-loss problem: burn the building
-                down, find out the limit was short, argue with the adjuster. Coinsurance doesn&apos;t
-                wait for that. It tests the ratio between what you carry and what the clause requires
-                on every claim, and if the ratio comes up short, every payout comes up short with it —
-                a roof, a pipe break, a kitchen fire, all cut by the same percentage a total loss
-                would be.
-              </p>
-              <p>
-                The mechanics matter because the order of operations is not intuitive. The clause
-                applies its ratio to the loss first, then the deductible comes out, then the whole
-                thing is capped at the limit. Do the subtraction before the ratio — a mistake even
-                some adjusters make on a first pass — and the number comes out wrong, usually in the
-                carrier&apos;s favor.
-              </p>
-              <p>
-                What makes it worse is how it gets there. Replacement cost rises with construction
-                costs, not with what the building last appraised for, and a schedule of values that
-                hasn&apos;t been revisited in three or four years routinely falls behind. Roughly
-                three-quarters of commercial properties are underinsured by 40% or more against
-                today&apos;s replacement cost — nobody set out to underinsure the asset, the number
-                just drifted.
-              </p>
-              <p>
-                Moving to an agreed-value endorsement or a blanket program doesn&apos;t make the
-                question go away, either. Agreed value suspends coinsurance for the values on file,
-                which is only as good as how current those values are. A blanket program usually
-                trades coinsurance for a margin clause, which caps what one location can recover at
-                its scheduled value rather than testing a ratio — a different mechanism, the same
-                underlying exposure to a stale schedule of values. The optional sections in the
-                calculator above price both.
-              </p>
-            </div>
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl">
+              <h2 className="font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                The clause that punishes a claim you already have
+              </h2>
+              <div className="mt-6 space-y-5 leading-relaxed text-slate">
+                <p>
+                  Owners think about insurance-to-value as a total-loss problem: burn the building
+                  down, find out the limit was short, argue with the adjuster. Coinsurance doesn&apos;t
+                  wait for that. It tests the ratio between what you carry and what the clause requires
+                  on every claim, and if the ratio comes up short, every payout comes up short with it —
+                  a roof, a pipe break, a kitchen fire, all cut by the same percentage a total loss
+                  would be.
+                </p>
+                <p>
+                  The mechanics matter because the order of operations is not intuitive. The clause
+                  applies its ratio to the loss first, then the deductible comes out, then the whole
+                  thing is capped at the limit. Do the subtraction before the ratio — a mistake even
+                  some adjusters make on a first pass — and the number comes out wrong, usually in the
+                  carrier&apos;s favor.
+                </p>
+                <p>
+                  What makes it worse is how it gets there. Replacement cost rises with construction
+                  costs, not with what the building last appraised for, and a schedule of values that
+                  hasn&apos;t been revisited in three or four years routinely falls behind. Roughly
+                  three-quarters of commercial properties are underinsured by 40% or more against
+                  today&apos;s replacement cost — nobody set out to underinsure the asset, the number
+                  just drifted.
+                </p>
+                <p>
+                  Moving to an agreed-value endorsement or a blanket program doesn&apos;t make the
+                  question go away, either. Agreed value suspends coinsurance for the values on file,
+                  which is only as good as how current those values are. A blanket program usually
+                  trades coinsurance for a margin clause, which caps what one location can recover at
+                  its scheduled value rather than testing a ratio — a different mechanism, the same
+                  underlying exposure to a stale schedule of values. The optional sections in the
+                  calculator above price both.
+                </p>
+              </div>
 
-            <h2 className="mt-14 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              Common questions
-            </h2>
-            <div className="mt-6 space-y-4">
-              {FAQS.map((faq) => (
-                <details key={faq.q} className="border-b border-gold/20 pb-4">
-                  <summary className="cursor-pointer font-display font-semibold text-obsidian">
-                    {faq.q}
-                  </summary>
-                  <p className="mt-3 leading-relaxed text-slate">{faq.a}</p>
-                </details>
-              ))}
-            </div>
+              <h2 className="mt-14 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                Common questions
+              </h2>
+              <div className="mt-6 space-y-4">
+                {FAQS.map((faq) => (
+                  <details key={faq.q} className="border-b border-gold/20 pb-4">
+                    <summary className="cursor-pointer font-display font-semibold text-obsidian">
+                      {faq.q}
+                    </summary>
+                    <p className="mt-3 leading-relaxed text-slate">{faq.a}</p>
+                  </details>
+                ))}
+              </div>
 
-            <div className="mt-14 grid gap-4 sm:grid-cols-2">
-              <div className="border-l-2 border-gold bg-ivory p-6">
-                <p className="font-display text-lg font-semibold text-obsidian">
-                  Own apartments or a portfolio?
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-slate">
-                  See the same coinsurance gap alongside NOI, value at your cap rate, DSCR, and the
-                  wind deductible sitting behind the premium.
-                </p>
-                <Link
-                  href="/multifamily-insurance-calculator"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
-                >
-                  Multifamily insurance calculator <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-              <div className="border-l-2 border-gold bg-ivory p-6">
-                <p className="font-display text-lg font-semibold text-obsidian">
-                  Carrying a percentage wind deductible too?
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-slate">
-                  It applies to each affected location&apos;s insured value, so one storm applies
-                  several. Size what you actually retain across the schedule.
-                </p>
-                <Link
-                  href="/wind-deductible-calculator"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
-                >
-                  Wind &amp; hail deductible calculator <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-              <div className="border-l-2 border-gold bg-ivory p-6 sm:col-span-2">
-                <p className="font-display text-lg font-semibold text-obsidian">
-                  Not sure what replacement cost to enter?
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-slate">
-                  How replacement cost value is calculated, why it isn&apos;t your market value or
-                  appraisal, and why it needs updating every year.
-                </p>
-                <Link
-                  href="/replacement-cost-value"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
-                >
-                  Replacement cost value guide <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-              <div className="border-l-2 border-gold bg-ivory p-6 sm:col-span-2">
-                <p className="font-display text-lg font-semibold text-obsidian">
-                  Looking for the program, not the math?
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-slate">
-                  Master and schedule property programs for portfolios with $100M to $2B+ in total
-                  insured value, built with valuations that survive a coinsurance or margin-clause
-                  test at claim time.
-                </p>
-                <Link
-                  href="/real-estate-portfolio-insurance"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
-                >
-                  Real estate portfolio &amp; high-TIV programs <ArrowRight className="h-4 w-4" />
-                </Link>
+              <div className="mt-14 grid gap-4 sm:grid-cols-2">
+                <div className="border-l-2 border-gold bg-ivory p-6">
+                  <p className="font-display text-lg font-semibold text-obsidian">
+                    Own apartments or a portfolio?
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate">
+                    See the same coinsurance gap alongside NOI, value at your cap rate, DSCR, and the
+                    wind deductible sitting behind the premium.
+                  </p>
+                  <Link
+                    href="/multifamily-insurance-calculator"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
+                  >
+                    Multifamily insurance calculator <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+                <div className="border-l-2 border-gold bg-ivory p-6">
+                  <p className="font-display text-lg font-semibold text-obsidian">
+                    Carrying a percentage wind deductible too?
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate">
+                    It applies to each affected location&apos;s insured value, so one storm applies
+                    several. Size what you actually retain across the schedule.
+                  </p>
+                  <Link
+                    href="/wind-deductible-calculator"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
+                  >
+                    Wind &amp; hail deductible calculator <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+                <div className="border-l-2 border-gold bg-ivory p-6 sm:col-span-2">
+                  <p className="font-display text-lg font-semibold text-obsidian">
+                    Not sure what replacement cost to enter?
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate">
+                    How replacement cost value is calculated, why it isn&apos;t your market value or
+                    appraisal, and why it needs updating every year.
+                  </p>
+                  <Link
+                    href="/replacement-cost-value"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
+                  >
+                    Replacement cost value guide <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+                <div className="border-l-2 border-gold bg-ivory p-6 sm:col-span-2">
+                  <p className="font-display text-lg font-semibold text-obsidian">
+                    Looking for the program, not the math?
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate">
+                    Master and schedule property programs for portfolios with $100M to $2B+ in total
+                    insured value, built with valuations that survive a coinsurance or margin-clause
+                    test at claim time.
+                  </p>
+                  <Link
+                    href="/real-estate-portfolio-insurance"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-obsidian underline hover:text-gold"
+                  >
+                    Real estate portfolio &amp; high-TIV programs <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

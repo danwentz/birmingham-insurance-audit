@@ -111,14 +111,14 @@ export default async function ProgramPage({
               CRE
             </span>
           )}
-          <div className="relative mx-auto max-w-4xl">
+          <div className="relative mx-auto max-w-6xl">
             <Link href="/" className="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wide text-gold hover:underline">
               <ArrowLeft className="h-4 w-4" /> All programs
             </Link>
-            <h1 className="mt-5 font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
+            <h1 className="mt-5 max-w-4xl font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
               {program.name}
             </h1>
-            <p className="mt-5 text-xl text-slate">{program.hook}</p>
+            <p className="mt-5 max-w-3xl text-xl text-slate">{program.hook}</p>
             <div className="mt-8">
               <a
                 href="#contact"
@@ -132,33 +132,37 @@ export default async function ProgramPage({
 
         {/* INTRO (white) */}
         <section className="bg-white px-5 py-16">
-          <div className="mx-auto max-w-3xl">
-            <p className="text-lg leading-relaxed text-slate">{program.intro}</p>
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl">
+              <p className="text-lg leading-relaxed text-slate">{program.intro}</p>
 
+            </div>
           </div>
         </section>
 
         {/* IDEAL FOR (ivory) */}
         <section className="px-5 py-16">
-          <div className="mx-auto max-w-4xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Who this is for</p>
-            <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              Built for accounts like yours
-            </h2>
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {program.idealFor.map((item) => (
-                <div key={item} className="flex items-start gap-3 rounded-md border border-gold/20 bg-white p-4">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
-                  <span className="text-slate">{item}</span>
-                </div>
-              ))}
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-4xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Who this is for</p>
+              <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                Built for accounts like yours
+              </h2>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                {program.idealFor.map((item) => (
+                  <div key={item} className="flex items-start gap-3 rounded-md border border-gold/20 bg-white p-4">
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
+                    <span className="text-slate">{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
         {/* COVERAGES (white) */}
         <section className="gold-rule-top bg-white px-5 py-16">
-          <div className="mx-auto max-w-5xl">
+          <div className="mx-auto max-w-6xl">
             <h2 className="font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
               {program.coveragesTitle ?? "What we structure"}
             </h2>
@@ -177,35 +181,37 @@ export default async function ProgramPage({
         {/* CASE STUDY (dark) */}
         {program.caseStudy && (
           <section className="bg-midnight px-5 py-16 text-champagne">
-            <div className="mx-auto max-w-4xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Case study</p>
-              <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-white sm:text-3xl">
-                {program.caseStudy.headline}
-              </h2>
-              <div className="mt-8 grid gap-10 md:grid-cols-[1fr_2fr]">
-                <div className="border-l-2 border-gold pl-5">
-                  <p className="font-display text-4xl font-bold text-gold sm:text-5xl">{program.caseStudy.result}</p>
-                  <p className="mt-2 text-sm uppercase tracking-wide text-slate">{program.caseStudy.resultLabel}</p>
+            <div className="mx-auto max-w-6xl">
+              <div className="max-w-4xl">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Case study</p>
+                <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-white sm:text-3xl">
+                  {program.caseStudy.headline}
+                </h2>
+                <div className="mt-8 grid gap-10 md:grid-cols-[1fr_2fr]">
+                  <div className="border-l-2 border-gold pl-5">
+                    <p className="font-display text-4xl font-bold text-gold sm:text-5xl">{program.caseStudy.result}</p>
+                    <p className="mt-2 text-sm uppercase tracking-wide text-slate">{program.caseStudy.resultLabel}</p>
+                  </div>
+                  <div className="space-y-4">
+                    {program.caseStudy.paragraphs.map((para) => (
+                      <p key={para} className="leading-relaxed text-slate">{para}</p>
+                    ))}
+                  </div>
                 </div>
-                <div className="space-y-4">
-                  {program.caseStudy.paragraphs.map((para) => (
-                    <p key={para} className="leading-relaxed text-slate">{para}</p>
-                  ))}
-                </div>
+                {program.caseStudy.quote && (
+                  <figure className="mt-10 border-t border-gold/20 pt-8">
+                    <blockquote className="font-display text-xl italic text-white sm:text-2xl">
+                      &ldquo;{program.caseStudy.quote}&rdquo;
+                    </blockquote>
+                    {program.caseStudy.attribution && (
+                      <figcaption className="mt-3 text-sm text-slate">{program.caseStudy.attribution}</figcaption>
+                    )}
+                  </figure>
+                )}
+                <p className="mt-8 text-xs text-slate/70">
+                  Results depend on each account&rsquo;s exposures, loss history, and market conditions at renewal. Past results don&rsquo;t guarantee future savings.
+                </p>
               </div>
-              {program.caseStudy.quote && (
-                <figure className="mt-10 border-t border-gold/20 pt-8">
-                  <blockquote className="font-display text-xl italic text-white sm:text-2xl">
-                    &ldquo;{program.caseStudy.quote}&rdquo;
-                  </blockquote>
-                  {program.caseStudy.attribution && (
-                    <figcaption className="mt-3 text-sm text-slate">{program.caseStudy.attribution}</figcaption>
-                  )}
-                </figure>
-              )}
-              <p className="mt-8 text-xs text-slate/70">
-                Results depend on each account&rsquo;s exposures, loss history, and market conditions at renewal. Past results don&rsquo;t guarantee future savings.
-              </p>
             </div>
           </section>
         )}
@@ -214,7 +220,7 @@ export default async function ProgramPage({
         {program.tools && program.tools.length > 0 && (
           // Without a case study this follows the white coverages section directly, so add a divider.
           <section className={`bg-white px-5 py-16 ${program.caseStudy ? "" : "gold-rule-top"}`}>
-            <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-6xl">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Tools &amp; guides</p>
               <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
                 {program.tools.every((t) => t.kind === "guide")
@@ -246,24 +252,26 @@ export default async function ProgramPage({
 
         {/* FAQ (ivory) */}
         <section className="px-5 py-16">
-          <div className="mx-auto max-w-3xl">
-            <h2 className="font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              Common questions
-            </h2>
-            <div className="mt-8 space-y-4">
-              {program.faqs.map((f) => (
-                <details key={f.q} className="rounded-md border border-gold/20 bg-white p-5">
-                  <summary className="cursor-pointer font-display font-semibold text-obsidian">{f.q}</summary>
-                  <p className="mt-3 text-slate">{f.a}</p>
-                </details>
-              ))}
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl">
+              <h2 className="font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                Common questions
+              </h2>
+              <div className="mt-8 space-y-4">
+                {program.faqs.map((f) => (
+                  <details key={f.q} className="rounded-md border border-gold/20 bg-white p-5">
+                    <summary className="cursor-pointer font-display font-semibold text-obsidian">{f.q}</summary>
+                    <p className="mt-3 text-slate">{f.a}</p>
+                  </details>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
         {/* CROSS-LINKS (white) */}
         <section className="bg-white px-5 py-16">
-          <div className="mx-auto max-w-5xl">
+          <div className="mx-auto max-w-6xl">
             <h2 className="font-display text-2xl font-bold tracking-tight text-obsidian">Other programs</h2>
             <div className="mt-6 grid gap-4 sm:grid-cols-3">
               {others.map((p) => (

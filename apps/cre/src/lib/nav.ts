@@ -30,6 +30,7 @@ export const GUIDES: DatedLink[] = [
   { href: "/lender-insurance-requirements", label: "Lender Insurance Requirements", updated: "2026-09-29" },
   { href: "/hotel-portfolio-insurance", label: "Hotel Portfolio Insurance", updated: "2026-09-27" },
   { href: "/gulf-coast-hotel-insurance", label: "Gulf Coast Hotel Insurance", updated: "2026-09-29" },
+  { href: "/franchise-hotel-insurance-requirements", label: "Franchise Hotel Insurance Requirements", updated: "2026-09-29" },
   { href: "/wind-deductible-buy-down", label: "Wind Deductible Buy-Downs", updated: "2026-09-29" },
   { href: "/affordable-housing-insurance", label: "Affordable Housing Insurance", updated: "2026-09-27" },
   { href: "/certificate-of-insurance", label: "Certificates of Insurance", updated: "2026-09-29" },

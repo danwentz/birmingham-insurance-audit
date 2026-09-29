@@ -5,6 +5,7 @@ import { SiteHeader, SiteFooter } from "@/components/chrome";
 import { ContactSection } from "@/components/ContactSection";
 import { GuideDisclaimerTop, GuideDisclaimerBottom, SurplusLinesNote } from "@/components/Disclaimers";
 import { DOMAIN } from "@/lib/site";
+import { HeroBackground, GUIDE_HERO } from "@/components/HeroBackground";
 
 const TITLE = "Wind Deductible Buy-Down: What It Is and When a CRE Owner Needs One";
 const META_TITLE = "Wind Deductible Buy-Down for Commercial Property | ACREInsure";
@@ -149,7 +150,8 @@ export default function WindDeductibleBuyDown() {
       <main>
         {/* HERO (dark) */}
         <section className="relative overflow-hidden bg-midnight px-5 pt-14 pb-16 text-champagne">
-          <div className="relative mx-auto max-w-4xl">
+          <HeroBackground src={GUIDE_HERO} />
+          <div className="relative mx-auto max-w-6xl">
             <Link href="/" className="inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wide text-gold hover:underline">
               <ArrowLeft className="h-4 w-4" /> Home
             </Link>
@@ -167,233 +169,247 @@ export default function WindDeductibleBuyDown() {
 
         {/* INTRO (white) */}
         <section className="bg-white px-5 py-16">
-          <div className="mx-auto max-w-3xl">
-            <div className="space-y-6 text-lg leading-relaxed text-slate">
-              <p>
-                A wind deductible buy-down is a separate policy that pays part of the percentage
-                named-storm or wind/hail deductible on your primary property policy. It is usually
-                written by a surplus lines carrier, sometimes by a London market. You may also hear it
-                called a wind deductible buy-back or a named-storm deductible buy-down.
-              </p>
-              <p>
-                It exists because of how percentage deductibles work. They apply to each
-                location&apos;s insured value (TIV), not to the size of the loss. Gulf Coast
-                named-storm deductibles commonly start around 5% of TIV. On a $20M building, that
-                is $1M out of pocket before the primary pays anything.
-              </p>
-              <p>
-                Most owners can&apos;t write that check on short notice. A buy-down turns part of
-                it into a premium you can plan for.
-              </p>
-              <p className="rounded-md border-l-2 border-gold bg-ivory p-5 text-base">
-                <strong className="font-semibold text-obsidian">Want the numbers for your own schedule?</strong>{" "}
-                Our free{" "}
-                <Link href="/wind-deductible-calculator" className={LINK}>wind deductible calculator</Link>{" "}
-                models your retention by location, storm, and season, and shows what a buy-down
-                is worth.
-              </p>
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl">
+              <div className="space-y-6 text-lg leading-relaxed text-slate">
+                <p>
+                  A wind deductible buy-down is a separate policy that pays part of the percentage
+                  named-storm or wind/hail deductible on your primary property policy. It is usually
+                  written by a surplus lines carrier, sometimes by a London market. You may also hear it
+                  called a wind deductible buy-back or a named-storm deductible buy-down.
+                </p>
+                <p>
+                  It exists because of how percentage deductibles work. They apply to each
+                  location&apos;s insured value (TIV), not to the size of the loss. Gulf Coast
+                  named-storm deductibles commonly start around 5% of TIV. On a $20M building, that
+                  is $1M out of pocket before the primary pays anything.
+                </p>
+                <p>
+                  Most owners can&apos;t write that check on short notice. A buy-down turns part of
+                  it into a premium you can plan for.
+                </p>
+                <p className="rounded-md border-l-2 border-gold bg-ivory p-5 text-base">
+                  <strong className="font-semibold text-obsidian">Want the numbers for your own schedule?</strong>{" "}
+                  Our free{" "}
+                  <Link href="/wind-deductible-calculator" className={LINK}>wind deductible calculator</Link>{" "}
+                  models your retention by location, storm, and season, and shows what a buy-down
+                  is worth.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         {/* HOW IT WORKS (ivory) */}
         <section className="px-5 py-16">
-          <div className="mx-auto max-w-4xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Mechanics</p>
-            <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              How a buy-down works
-            </h2>
-            <p className="mt-3 max-w-2xl text-slate">
-              It responds when the primary&apos;s deductible is triggered. Four things decide
-              whether it does its job.
-            </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {MECHANICS.map((m) => (
-                <div key={m.title} className="rounded-md border border-gold/20 bg-white p-6">
-                  <p className="font-display text-lg font-semibold text-obsidian">{m.title}</p>
-                  <p className="mt-2 text-slate">{m.body}</p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-8 max-w-3xl space-y-6 text-lg leading-relaxed text-slate">
-              <p>
-                <strong className="font-semibold text-obsidian">The price reflects the risk.</strong>{" "}
-                A buy-down is priced as a layer of catastrophe risk. That layer is the first
-                dollars of a hurricane loss, so it can cost a lot relative to the limit you buy.
-                That is the trade: you swap an uncertain seven-figure hit for a certain premium.
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-4xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Mechanics</p>
+              <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                How a buy-down works
+              </h2>
+              <p className="mt-3 max-w-2xl text-slate">
+                It responds when the primary&apos;s deductible is triggered. Four things decide
+                whether it does its job.
               </p>
-              <SurplusLinesNote />
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {MECHANICS.map((m) => (
+                  <div key={m.title} className="rounded-md border border-gold/20 bg-white p-6">
+                    <p className="font-display text-lg font-semibold text-obsidian">{m.title}</p>
+                    <p className="mt-2 text-slate">{m.body}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 max-w-3xl space-y-6 text-lg leading-relaxed text-slate">
+                <p>
+                  <strong className="font-semibold text-obsidian">The price reflects the risk.</strong>{" "}
+                  A buy-down is priced as a layer of catastrophe risk. That layer is the first
+                  dollars of a hurricane loss, so it can cost a lot relative to the limit you buy.
+                  That is the trade: you swap an uncertain seven-figure hit for a certain premium.
+                </p>
+                <SurplusLinesNote />
+              </div>
             </div>
           </div>
         </section>
 
         {/* WORKED EXAMPLE (white) */}
         <section className="gold-rule-top bg-white px-5 py-16">
-          <div className="mx-auto max-w-4xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Example</p>
-            <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              A $20M coastal building, with and without a buy-down
-            </h2>
-            <p className="mt-3 max-w-2xl text-slate">
-              Round numbers, one location, a named storm that triggers the primary&apos;s deductible
-              and causes a loss well above it.
-            </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-md border border-gold/20 bg-ivory p-6">
-                <p className="font-mono text-sm text-gold-dark">Without a buy-down</p>
-                <p className="mt-2 font-display text-3xl font-bold text-obsidian">$1,000,000</p>
-                <p className="mt-4 text-slate">
-                  5% of $20M TIV. Yours to pay before the primary responds.
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-4xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Example</p>
+              <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                A $20M coastal building, with and without a buy-down
+              </h2>
+              <p className="mt-3 max-w-2xl text-slate">
+                Round numbers, one location, a named storm that triggers the primary&apos;s deductible
+                and causes a loss well above it.
+              </p>
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-md border border-gold/20 bg-ivory p-6">
+                  <p className="font-mono text-sm text-gold-dark">Without a buy-down</p>
+                  <p className="mt-2 font-display text-3xl font-bold text-obsidian">$1,000,000</p>
+                  <p className="mt-4 text-slate">
+                    5% of $20M TIV. Yours to pay before the primary responds.
+                  </p>
+                </div>
+                <div className="rounded-md border border-gold/20 bg-ivory p-6">
+                  <p className="font-mono text-sm text-gold-dark">With a buy-down to 1%</p>
+                  <p className="mt-2 font-display text-3xl font-bold text-obsidian">$200,000</p>
+                  <p className="mt-4 text-slate">
+                    The buy-down pays the other $800,000, if its limit is at least that much.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-8 max-w-3xl space-y-6 text-lg leading-relaxed text-slate">
+                <p>
+                  Now the cost side. Say a buy-down quote for that $800,000 layer came in at
+                  $120,000 a year. <strong className="font-semibold text-obsidian">That figure is
+                  illustrative only.</strong> Real pricing depends on the location, construction,
+                  and the market. At that price you pay $0.15 of premium for every $1 of retention
+                  removed, every year, whether or not a storm comes.
+                </p>
+                <p>
+                  Whether that is a good deal depends on your reserves, your lender, and how much
+                  exposure you are really carrying. Two schedules can look the same on paper and
+                  still call for different answers.
                 </p>
               </div>
-              <div className="rounded-md border border-gold/20 bg-ivory p-6">
-                <p className="font-mono text-sm text-gold-dark">With a buy-down to 1%</p>
-                <p className="mt-2 font-display text-3xl font-bold text-obsidian">$200,000</p>
-                <p className="mt-4 text-slate">
-                  The buy-down pays the other $800,000, if its limit is at least that much.
-                </p>
-              </div>
+              <Link
+                href="/wind-deductible-calculator"
+                className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold-dark hover:text-gold"
+              >
+                Run your own numbers in the wind deductible calculator <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
-            <div className="mt-8 max-w-3xl space-y-6 text-lg leading-relaxed text-slate">
-              <p>
-                Now the cost side. Say a buy-down quote for that $800,000 layer came in at
-                $120,000 a year. <strong className="font-semibold text-obsidian">That figure is
-                illustrative only.</strong> Real pricing depends on the location, construction,
-                and the market. At that price you pay $0.15 of premium for every $1 of retention
-                removed, every year, whether or not a storm comes.
-              </p>
-              <p>
-                Whether that is a good deal depends on your reserves, your lender, and how much
-                exposure you are really carrying. Two schedules can look the same on paper and
-                still call for different answers.
-              </p>
-            </div>
-            <Link
-              href="/wind-deductible-calculator"
-              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold-dark hover:text-gold"
-            >
-              Run your own numbers in the wind deductible calculator <ArrowRight className="h-4 w-4" />
-            </Link>
           </div>
         </section>
 
         {/* WHEN YOU NEED ONE (ivory) */}
         <section className="px-5 py-16">
-          <div className="mx-auto max-w-4xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Fit</p>
-            <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              When you need one, and when you don&apos;t
-            </h2>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-md border border-gold/20 bg-white p-6">
-                <p className="font-display text-lg font-semibold text-obsidian">It usually makes sense when</p>
-                <ul className="mt-4 space-y-3">
-                  {NEED_IT.map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-slate">
-                      <Check className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-4xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Fit</p>
+              <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                When you need one, and when you don&apos;t
+              </h2>
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-md border border-gold/20 bg-white p-6">
+                  <p className="font-display text-lg font-semibold text-obsidian">It usually makes sense when</p>
+                  <ul className="mt-4 space-y-3">
+                    {NEED_IT.map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-slate">
+                        <Check className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="rounded-md border border-gold/20 bg-white p-6">
+                  <p className="font-display text-lg font-semibold text-obsidian">It may not when</p>
+                  <ul className="mt-4 space-y-3">
+                    {SKIP_IT.map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-slate">
+                        <Minus className="mt-0.5 h-5 w-5 shrink-0 text-slate" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <div className="rounded-md border border-gold/20 bg-white p-6">
-                <p className="font-display text-lg font-semibold text-obsidian">It may not when</p>
-                <ul className="mt-4 space-y-3">
-                  {SKIP_IT.map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-slate">
-                      <Minus className="mt-0.5 h-5 w-5 shrink-0 text-slate" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div className="mt-8 max-w-3xl space-y-6 text-lg leading-relaxed text-slate">
+                <p>
+                  <strong className="font-semibold text-obsidian">Multiple locations change the math.</strong>{" "}
+                  One storm can hit several buildings on your schedule, and each location carries its
+                  own deductible. Five buildings at 5% is five deductibles, not one.
+                </p>
+                <p>
+                  <strong className="font-semibold text-obsidian">Loan documents set the floor.</strong>{" "}
+                  Many loan agreements limit how large a deductible you can carry. If yours does, a
+                  buy-down may be the difference between compliant and in default on the insurance
+                  covenant. Check what your loan documents say, and{" "}
+                  <Link href="/lender-insurance-requirements" className={LINK}>read our lender requirements guide</Link>.
+                </p>
+                <p className="text-base">
+                  Coastal hotel owner? See{" "}
+                  <Link href="/gulf-coast-hotel-insurance" className={LINK}>Gulf Coast hotel insurance</Link>.
+                  For the full coastal wind program, see{" "}
+                  <Link href="/catastrophe-coastal-property-insurance" className={LINK}>coastal and catastrophe property insurance</Link>.
+                </p>
               </div>
-            </div>
-            <div className="mt-8 max-w-3xl space-y-6 text-lg leading-relaxed text-slate">
-              <p>
-                <strong className="font-semibold text-obsidian">Multiple locations change the math.</strong>{" "}
-                One storm can hit several buildings on your schedule, and each location carries its
-                own deductible. Five buildings at 5% is five deductibles, not one.
-              </p>
-              <p>
-                <strong className="font-semibold text-obsidian">Loan documents set the floor.</strong>{" "}
-                Many loan agreements limit how large a deductible you can carry. If yours does, a
-                buy-down may be the difference between compliant and in default on the insurance
-                covenant. Check what your loan documents say, and{" "}
-                <Link href="/lender-insurance-requirements" className={LINK}>read our lender requirements guide</Link>.
-              </p>
-              <p className="text-base">
-                Coastal hotel owner? See{" "}
-                <Link href="/gulf-coast-hotel-insurance" className={LINK}>Gulf Coast hotel insurance</Link>.
-                For the full coastal wind program, see{" "}
-                <Link href="/catastrophe-coastal-property-insurance" className={LINK}>coastal and catastrophe property insurance</Link>.
-              </p>
             </div>
           </div>
         </section>
 
         {/* HOW TO GET ONE (white) */}
         <section className="gold-rule-top bg-white px-5 py-16">
-          <div className="mx-auto max-w-4xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Placement</p>
-            <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              How to get one
-            </h2>
-            <p className="mt-3 max-w-2xl text-slate">
-              You buy it through your broker. The work is in the timing and the fit with the
-              primary.
-            </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {STEPS.map((s, i) => (
-                <div key={s.title} className="rounded-md border border-gold/20 bg-ivory p-6">
-                  <p className="font-mono text-sm text-gold-dark">Step {i + 1}</p>
-                  <p className="mt-1 font-display text-lg font-semibold text-obsidian">{s.title}</p>
-                  <p className="mt-2 text-slate">{s.body}</p>
-                </div>
-              ))}
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-4xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Placement</p>
+              <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                How to get one
+              </h2>
+              <p className="mt-3 max-w-2xl text-slate">
+                You buy it through your broker. The work is in the timing and the fit with the
+                primary.
+              </p>
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {STEPS.map((s, i) => (
+                  <div key={s.title} className="rounded-md border border-gold/20 bg-ivory p-6">
+                    <p className="font-mono text-sm text-gold-dark">Step {i + 1}</p>
+                    <p className="mt-1 font-display text-lg font-semibold text-obsidian">{s.title}</p>
+                    <p className="mt-2 text-slate">{s.body}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
         {/* FAQ (ivory) */}
         <section className="px-5 py-16">
-          <div className="mx-auto max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">FAQ</p>
-            <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              Common questions about wind buy-downs
-            </h2>
-            <div className="mt-8 space-y-8">
-              {FAQS.map((f) => (
-                <div key={f.q} className="border-l-2 border-gold pl-5">
-                  <h3 className="font-display text-xl font-semibold text-obsidian">{f.q}</h3>
-                  <p className="mt-2 text-slate">{f.a}</p>
-                </div>
-              ))}
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">FAQ</p>
+              <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                Common questions about wind buy-downs
+              </h2>
+              <div className="mt-8 space-y-8">
+                {FAQS.map((f) => (
+                  <div key={f.q} className="border-l-2 border-gold pl-5">
+                    <h3 className="font-display text-xl font-semibold text-obsidian">{f.q}</h3>
+                    <p className="mt-2 text-slate">{f.a}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
         {/* WORKING WITH US (white) */}
         <section className="gold-rule-top bg-white px-5 py-16">
-          <div className="mx-auto max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Working with us</p>
-            <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
-              Price the retention before renewal
-            </h2>
-            <div className="mt-6 space-y-6 text-lg leading-relaxed text-slate">
-              <p>
-                We place coastal wind programs and the buy-downs that sit under them. We build both
-                together so the definitions match and the retention fits your reserves and your
-                loan.
-              </p>
-              <p>
-                Send us your SOV and current policy. We&apos;ll show you what your retention is
-                today, what it would be with a buy-down, and whether the trade is worth making.
-              </p>
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Working with us</p>
+              <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-obsidian sm:text-3xl">
+                Price the retention before renewal
+              </h2>
+              <div className="mt-6 space-y-6 text-lg leading-relaxed text-slate">
+                <p>
+                  We place coastal wind programs and the buy-downs that sit under them. We build both
+                  together so the definitions match and the retention fits your reserves and your
+                  loan.
+                </p>
+                <p>
+                  Send us your SOV and current policy. We&apos;ll show you what your retention is
+                  today, what it would be with a buy-down, and whether the trade is worth making.
+                </p>
+              </div>
+              <Link href="#contact" className="mt-10 inline-flex items-center gap-2 font-semibold text-gold-dark hover:text-gold">
+                Send us your program for a wind deductible review <ArrowRight className="h-4 w-4" />
+              </Link>
+              <GuideDisclaimerBottom />
             </div>
-            <Link href="#contact" className="mt-10 inline-flex items-center gap-2 font-semibold text-gold-dark hover:text-gold">
-              Send us your program for a wind deductible review <ArrowRight className="h-4 w-4" />
-            </Link>
-            <GuideDisclaimerBottom />
           </div>
         </section>
 

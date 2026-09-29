@@ -155,7 +155,7 @@ export function CoinsuranceCalculator() {
     <>
       {/* ------------------------------------------------ inputs */}
       <section id="calculator" className="print:hidden bg-white px-5 py-14">
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-6xl">
           <SectionHeading eyebrow="Step one" title="Your policy and your loss">
             <p>
               Five numbers off the declarations page and the claim you want to test. Nothing leaves
@@ -242,7 +242,7 @@ export function CoinsuranceCalculator() {
 
       {!ready && (
         <section className="bg-ivory px-5 py-14">
-          <div className="mx-auto max-w-5xl border-l-2 border-gold bg-white p-6">
+          <div className="mx-auto max-w-6xl border-l-2 border-gold bg-white p-6">
             <p className="font-display text-lg font-semibold text-obsidian">
               Add replacement cost, the limit carried, and a coinsurance percentage.
             </p>
@@ -258,7 +258,7 @@ export function CoinsuranceCalculator() {
         <>
           {/* ------------------------------------------------ headline */}
           <section className="gold-rule-top bg-obsidian px-5 py-14 text-champagne">
-            <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-6xl">
               <SectionHeading eyebrow="What the clause does to this loss" title="Before you dispute the number">
                 <p className="text-slate">
                   {r.hasPenalty
@@ -349,7 +349,7 @@ export function CoinsuranceCalculator() {
 
           {/* ------------------------------------------------ penalty ladder */}
           <section className="bg-white px-5 py-14">
-            <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-6xl">
               <SectionHeading eyebrow="Partial losses are penalized too" title="The same ratio at every loss size">
                 <p>
                   Most claims are not total losses. The coinsurance ratio doesn&apos;t know the
@@ -399,7 +399,7 @@ export function CoinsuranceCalculator() {
 
           {/* ------------------------------------------------ margin clause (optional) */}
           <section className="bg-ivory px-5 py-14">
-            <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-6xl">
               <details
                 ref={marginRef}
                 open={marginOpen}
@@ -505,7 +505,7 @@ export function CoinsuranceCalculator() {
 
           {/* ------------------------------------------------ stale valuation (optional) */}
           <section className="bg-white px-5 py-14">
-            <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-6xl">
               <details
                 ref={staleRef}
                 open={staleOpen}
@@ -578,7 +578,7 @@ export function CoinsuranceCalculator() {
 
           {/* ------------------------------------------------ cost to cure (optional) */}
           <section className="bg-ivory px-5 py-14">
-            <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-6xl">
               <details
                 ref={cureRef}
                 open={cureOpen}
@@ -646,33 +646,35 @@ export function CoinsuranceCalculator() {
 
           {/* ------------------------------------------------ methodology */}
           <section className="px-5 py-14">
-            <div className="mx-auto max-w-3xl">
-              <SectionHeading eyebrow="Methodology" title="Every formula on this page" />
-              <dl className="mt-6 space-y-4 text-sm">
-                {[
-                  ["Required limit", "Replacement cost × coinsurance percentage."],
-                  ["Payout ratio", "Limit carried ÷ required limit, capped at 1."],
-                  ["Payout", "min(limit, max(0, loss × ratio − deductible)) — ISO CP 00 10 order: ratio first, then the deductible, then the limit."],
-                  ["No-penalty payout", "min(limit, max(0, loss − deductible)) — what the same claim pays at a 100% ratio."],
-                  ["Coinsurance penalty", "No-penalty payout minus actual payout."],
-                  ["Owner retains", "Loss minus actual payout."],
-                  ["Shortfall to cure", "Required limit minus limit carried, floored at zero."],
-                  ["Margin clause cap", "Scheduled (SOV) value × margin percentage."],
-                  ["SOV needed", "Replacement cost today ÷ margin percentage."],
-                  ["Trended replacement cost", "Last known value × (1 + annual trend)^years since."],
-                  ["Cost to cure", "(Shortfall ÷ 100) × property rate per $100 of TIV."],
-                ].map(([term, def]) => (
-                  <div key={term} className="border-b border-gold/15 pb-4">
-                    <dt className="font-display font-semibold text-obsidian">{term}</dt>
-                    <dd className="mt-1 font-mono text-slate">{def}</dd>
-                  </div>
-                ))}
-              </dl>
-              <p className="mt-6 text-sm leading-relaxed text-slate">
-                This prices what the clause does mechanically. It doesn&apos;t replace a public
-                adjuster or your broker&apos;s read of the actual policy language, which varies by
-                form and by carrier.
-              </p>
+            <div className="mx-auto max-w-6xl">
+              <div className="max-w-3xl">
+                <SectionHeading eyebrow="Methodology" title="Every formula on this page" />
+                <dl className="mt-6 space-y-4 text-sm">
+                  {[
+                    ["Required limit", "Replacement cost × coinsurance percentage."],
+                    ["Payout ratio", "Limit carried ÷ required limit, capped at 1."],
+                    ["Payout", "min(limit, max(0, loss × ratio − deductible)) — ISO CP 00 10 order: ratio first, then the deductible, then the limit."],
+                    ["No-penalty payout", "min(limit, max(0, loss − deductible)) — what the same claim pays at a 100% ratio."],
+                    ["Coinsurance penalty", "No-penalty payout minus actual payout."],
+                    ["Owner retains", "Loss minus actual payout."],
+                    ["Shortfall to cure", "Required limit minus limit carried, floored at zero."],
+                    ["Margin clause cap", "Scheduled (SOV) value × margin percentage."],
+                    ["SOV needed", "Replacement cost today ÷ margin percentage."],
+                    ["Trended replacement cost", "Last known value × (1 + annual trend)^years since."],
+                    ["Cost to cure", "(Shortfall ÷ 100) × property rate per $100 of TIV."],
+                  ].map(([term, def]) => (
+                    <div key={term} className="border-b border-gold/15 pb-4">
+                      <dt className="font-display font-semibold text-obsidian">{term}</dt>
+                      <dd className="mt-1 font-mono text-slate">{def}</dd>
+                    </div>
+                  ))}
+                </dl>
+                <p className="mt-6 text-sm leading-relaxed text-slate">
+                  This prices what the clause does mechanically. It doesn&apos;t replace a public
+                  adjuster or your broker&apos;s read of the actual policy language, which varies by
+                  form and by carrier.
+                </p>
+              </div>
             </div>
           </section>
         </>
@@ -706,7 +708,7 @@ function SaveShare({ shareQuery }: { shareQuery: string }) {
 
   return (
     <section className="print:hidden gold-rule-top bg-obsidian px-5 py-14 text-champagne">
-      <div className="mx-auto flex max-w-5xl flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
         <div className="max-w-xl">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Keep this</p>
           <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-white sm:text-3xl">

@@ -6,6 +6,7 @@ import { SubscribeForm } from "@/components/SubscribeForm";
 import { DOMAIN, BRAND_NAME } from "@/lib/site";
 import { fit, nextQ, type LineKey, type BarometerData } from "@/lib/barometer";
 import DATA_JSON from "@/data/rate-barometer.json";
+import { HeroBackground, CALCULATOR_HERO } from "@/components/HeroBackground";
 
 const DATA = DATA_JSON as BarometerData;
 
@@ -117,8 +118,9 @@ export default function RateBarometerPage() {
       <SiteHeader />
 
       <main>
-        <section className="gold-rule-top bg-obsidian px-5 pt-14 pb-12 text-champagne">
-          <div className="mx-auto max-w-6xl">
+        <section className="relative overflow-hidden bg-midnight px-5 pt-14 pb-12 text-champagne">
+          <HeroBackground src={CALCULATOR_HERO} dim="opacity-55" />
+          <div className="relative mx-auto max-w-6xl">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Free tool</p>
             <h1 className="mt-3 max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
               Commercial Insurance Rate Barometer
@@ -139,38 +141,42 @@ export default function RateBarometerPage() {
         </section>
 
         <section className="bg-white px-5 py-14">
-          <div className="mx-auto max-w-3xl">
-            <h2 className="font-display text-xl font-semibold tracking-tight text-obsidian">
-              How this works
-            </h2>
-            <div className="mt-4 space-y-4 text-sm leading-relaxed text-slate">
-              <p>
-                Each driver is scored against its own history since 2019, weighted by line, and
-                combined into a pressure index. Next quarter&apos;s CIAB renewal rate change is
-                estimated from that index and the current quarter&apos;s CIAB rate; ranges are 80%
-                intervals.
-              </p>
-              <p>
-                Sources: CIAB Commercial P&amp;C Market Survey, Artemis, Munich Re NatCatSERVICE,
-                NOAA Storm Events, WSIA stamping offices, BLS via FRED, Marathon Strategies, and The
-                Hartford and CNA SEC filings.
-              </p>
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl">
+              <h2 className="font-display text-xl font-semibold tracking-tight text-obsidian">
+                How this works
+              </h2>
+              <div className="mt-4 space-y-4 text-sm leading-relaxed text-slate">
+                <p>
+                  Each driver is scored against its own history since 2019, weighted by line, and
+                  combined into a pressure index. Next quarter&apos;s CIAB renewal rate change is
+                  estimated from that index and the current quarter&apos;s CIAB rate; ranges are 80%
+                  intervals.
+                </p>
+                <p>
+                  Sources: CIAB Commercial P&amp;C Market Survey, Artemis, Munich Re NatCatSERVICE,
+                  NOAA Storm Events, WSIA stamping offices, BLS via FRED, Marathon Strategies, and The
+                  Hartford and CNA SEC filings.
+                </p>
+              </div>
+              <BarometerDisclaimer />
             </div>
-            <BarometerDisclaimer />
           </div>
         </section>
 
         <section className="bg-ivory px-5 py-14">
-          <div className="mx-auto max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Stay current</p>
-            <h2 className="mt-3 font-display text-xl font-semibold tracking-tight text-obsidian">
-              Get the next rate read by email
-            </h2>
-            <p className="mt-2 max-w-xl text-sm leading-relaxed text-slate">
-              Quarterly. One email. Unsubscribe anytime.
-            </p>
-            <div className="mt-5">
-              <SubscribeForm variant="barometer" source="rate barometer page" />
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Stay current</p>
+              <h2 className="mt-3 font-display text-xl font-semibold tracking-tight text-obsidian">
+                Get the next rate read by email
+              </h2>
+              <p className="mt-2 max-w-xl text-sm leading-relaxed text-slate">
+                Quarterly. One email. Unsubscribe anytime.
+              </p>
+              <div className="mt-5">
+                <SubscribeForm variant="barometer" source="rate barometer page" />
+              </div>
             </div>
           </div>
         </section>

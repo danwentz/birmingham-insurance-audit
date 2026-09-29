@@ -195,7 +195,7 @@ export function MultifamilyCalculator() {
     <>
       {/* ------------------------------------------------ inputs */}
       <section id="calculator" className="print:hidden bg-white px-5 py-14">
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-6xl">
           <SectionHeading eyebrow="Step one" title="Your portfolio">
             <p>
               Six numbers off your last operating statement. Nothing leaves your browser — there is no
@@ -285,7 +285,7 @@ export function MultifamilyCalculator() {
 
       {!ready ? (
         <section className="px-5 py-14">
-          <div className="mx-auto max-w-5xl border-l-2 border-gold bg-white p-6">
+          <div className="mx-auto max-w-6xl border-l-2 border-gold bg-white p-6">
             <p className="font-display text-lg font-semibold text-obsidian">Waiting on a few numbers.</p>
             <p className="mt-2 text-sm text-slate">
               Units, premium, rent, occupancy, operating expenses, and a cap rate — with operating
@@ -297,7 +297,7 @@ export function MultifamilyCalculator() {
         <>
           {/* ------------------------------------------------ where you stand */}
           <section className="px-5 py-14">
-            <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-6xl">
               <SectionHeading eyebrow="Step two" title="Where you stand">
                 <p>The ratios an underwriter, a lender, and your asset manager all look at first.</p>
               </SectionHeading>
@@ -351,7 +351,7 @@ export function MultifamilyCalculator() {
 
           {/* ------------------------------------------------ the capitalized premium */}
           <section className="gold-rule-top bg-obsidian px-5 py-16 text-champagne">
-            <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-6xl">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
                 What most operators never calculate
               </p>
@@ -385,7 +385,7 @@ export function MultifamilyCalculator() {
 
           {/* ------------------------------------------------ the lever */}
           <section className="bg-white px-5 py-14">
-            <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-6xl">
               <SectionHeading eyebrow="Step three" title="What a renewal is worth">
                 <p>
                   Move the premium and watch NOI, value, and coverage move with it. Both directions —
@@ -468,7 +468,7 @@ export function MultifamilyCalculator() {
 
           {/* ------------------------------------------------ sensitivity grid */}
           <section className="px-5 py-14">
-            <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-6xl">
               <SectionHeading eyebrow="Step four" title="Against the exit cap">
                 <p>
                   The same premium change is worth more the tighter the cap rate. Value impact of each
@@ -523,7 +523,7 @@ export function MultifamilyCalculator() {
 
           {/* ------------------------------------------------ retained risk */}
           <section className="bg-white px-5 py-14">
-            <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-6xl">
               <SectionHeading eyebrow="Step five" title="What the premium doesn't cover">
                 <p>
                   Cost of risk is not just premium. These are the exposures that sit behind a program
@@ -627,35 +627,37 @@ export function MultifamilyCalculator() {
 
           {/* ------------------------------------------------ methodology */}
           <section className="px-5 py-14">
-            <div className="mx-auto max-w-3xl">
-              <SectionHeading eyebrow="Methodology" title="Every formula on this page" />
-              <dl className="mt-6 space-y-4 text-sm">
-                {[
-                  ["Gross potential rent", "Units × average monthly rent × 12."],
-                  ["Effective gross income", "Gross potential rent × economic occupancy + other income."],
-                  ["Net operating income", "EGI − total operating expenses (insurance included)."],
-                  ["Value", "NOI ÷ cap rate. Direct capitalization, no growth or reversion assumptions."],
-                  ["Capitalized insurance", "Annual premium ÷ cap rate."],
-                  ["Value per premium dollar", "1 ÷ cap rate."],
-                  ["Change in value", "−(premium × premium change) ÷ cap rate."],
-                  ["DSCR", "NOI ÷ annual debt service."],
-                  ["Covenant breach point", "(NOI − covenant × debt service) ÷ premium, as a fraction of current premium."],
-                  ["Wind deductible", "Building insured value × deductible percentage."],
-                  ["Coinsurance payout ratio", "Insured value ÷ (replacement cost × coinsurance percentage), capped at 1."],
-                  ["Loss of rents required", "(EGI ÷ 12) × indemnity months."],
-                ].map(([term, def]) => (
-                  <div key={term} className="border-b border-gold/15 pb-4">
-                    <dt className="font-display font-semibold text-obsidian">{term}</dt>
-                    <dd className="mt-1 font-mono text-slate">{def}</dd>
-                  </div>
-                ))}
-              </dl>
-              <p className="mt-6 text-sm leading-relaxed text-slate">
-                Direct capitalization is a screening tool, not an appraisal. It assumes the premium
-                change is permanent and that nothing else in the operating statement moves. Real
-                renewals arrive with deductible, sublimit, and valuation changes attached, which is
-                why the sections above matter as much as the premium line.
-              </p>
+            <div className="mx-auto max-w-6xl">
+              <div className="max-w-3xl">
+                <SectionHeading eyebrow="Methodology" title="Every formula on this page" />
+                <dl className="mt-6 space-y-4 text-sm">
+                  {[
+                    ["Gross potential rent", "Units × average monthly rent × 12."],
+                    ["Effective gross income", "Gross potential rent × economic occupancy + other income."],
+                    ["Net operating income", "EGI − total operating expenses (insurance included)."],
+                    ["Value", "NOI ÷ cap rate. Direct capitalization, no growth or reversion assumptions."],
+                    ["Capitalized insurance", "Annual premium ÷ cap rate."],
+                    ["Value per premium dollar", "1 ÷ cap rate."],
+                    ["Change in value", "−(premium × premium change) ÷ cap rate."],
+                    ["DSCR", "NOI ÷ annual debt service."],
+                    ["Covenant breach point", "(NOI − covenant × debt service) ÷ premium, as a fraction of current premium."],
+                    ["Wind deductible", "Building insured value × deductible percentage."],
+                    ["Coinsurance payout ratio", "Insured value ÷ (replacement cost × coinsurance percentage), capped at 1."],
+                    ["Loss of rents required", "(EGI ÷ 12) × indemnity months."],
+                  ].map(([term, def]) => (
+                    <div key={term} className="border-b border-gold/15 pb-4">
+                      <dt className="font-display font-semibold text-obsidian">{term}</dt>
+                      <dd className="mt-1 font-mono text-slate">{def}</dd>
+                    </div>
+                  ))}
+                </dl>
+                <p className="mt-6 text-sm leading-relaxed text-slate">
+                  Direct capitalization is a screening tool, not an appraisal. It assumes the premium
+                  change is permanent and that nothing else in the operating statement moves. Real
+                  renewals arrive with deductible, sublimit, and valuation changes attached, which is
+                  why the sections above matter as much as the premium line.
+                </p>
+              </div>
             </div>
           </section>
         </>
@@ -715,7 +717,7 @@ function SaveShare({ shareQuery }: { shareQuery: string }) {
 
   return (
     <section className="print:hidden gold-rule-top bg-obsidian px-5 py-14 text-champagne">
-      <div className="mx-auto flex max-w-5xl flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
         <div className="max-w-xl">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Keep this</p>
           <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-white sm:text-3xl">
