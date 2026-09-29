@@ -8,9 +8,9 @@ import { DOMAIN } from "@/lib/site";
 import { HeroBackground, GUIDE_HERO } from "@/components/HeroBackground";
 
 const TITLE = "Wind Deductible Buy-Down: What It Is and When a CRE Owner Needs One";
-const META_TITLE = "Wind Deductible Buy-Down for Commercial Property | ACREInsure";
+const META_TITLE = "Wind Deductible Buy-Down (Buy-Back) Guide | ACREInsure";
 const DESCRIPTION =
-  "How a wind or named-storm deductible buy-down (buy-back) works, a worked example with and without one, when it pays, and how to place it before hurricane season.";
+  "How a wind or named-storm deductible buy-down (buy-back) works, a worked example, when it pays, and how to place one before hurricane season.";
 
 export const metadata: Metadata = {
   title: { absolute: META_TITLE },

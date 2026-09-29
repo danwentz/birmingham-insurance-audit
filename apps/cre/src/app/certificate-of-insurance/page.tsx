@@ -10,7 +10,7 @@ import { HeroBackground, GUIDE_HERO } from "@/components/HeroBackground";
 const TITLE = "Certificates of Insurance for Commercial Real Estate Owners";
 const META_TITLE = "Certificate of Insurance (COI) Guide for Owners | ACREInsure";
 const DESCRIPTION =
-  "What a certificate of insurance does and doesn't do, certificate holder vs. additional insured, and what to check on a contractor's COI before they work on your property.";
+  "What a certificate of insurance does, certificate holder vs. additional insured, and what to check on a contractor's COI before work starts.";
 
 export const metadata: Metadata = {
   title: { absolute: META_TITLE },
