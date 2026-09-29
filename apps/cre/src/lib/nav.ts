@@ -2,6 +2,8 @@
 import { programsByCategory, type ProgramCategory } from "@/lib/programs";
 
 export type NavLink = { href: string; label: string };
+// `updated` (YYYY-MM-DD) feeds sitemap lastmod; bump it when the page or its calculator/data changes.
+export type DatedLink = NavLink & { updated: string };
 export type NavGroup = { title: string; links: NavLink[] };
 
 const programLinks = (category: ProgramCategory): NavLink[] =>
@@ -13,20 +15,20 @@ export const COVERAGE_GROUPS: NavGroup[] = [
   { title: "Advisory", links: programLinks("advisory") },
 ];
 
-export const TOOLS: NavLink[] = [
-  { href: "/commercial-insurance-rate-barometer", label: "Commercial Insurance Rate Barometer" },
-  { href: "/multifamily-insurance-calculator", label: "Multifamily Insurance Calculator" },
-  { href: "/wind-deductible-calculator", label: "Wind & Hail Deductible Calculator" },
-  { href: "/hotel-insurance-calculator", label: "Hotel Insurance Calculator" },
-  { href: "/coinsurance-penalty-calculator", label: "Coinsurance Penalty Calculator" },
+export const TOOLS: DatedLink[] = [
+  { href: "/commercial-insurance-rate-barometer", label: "Commercial Insurance Rate Barometer", updated: "2026-09-28" },
+  { href: "/multifamily-insurance-calculator", label: "Multifamily Insurance Calculator", updated: "2026-09-28" },
+  { href: "/wind-deductible-calculator", label: "Wind & Hail Deductible Calculator", updated: "2026-09-28" },
+  { href: "/hotel-insurance-calculator", label: "Hotel Insurance Calculator", updated: "2026-09-28" },
+  { href: "/coinsurance-penalty-calculator", label: "Coinsurance Penalty Calculator", updated: "2026-09-28" },
 ];
 
-export const GUIDES: NavLink[] = [
-  { href: "/replacement-cost-value", label: "Replacement Cost Value" },
-  { href: "/insurance-document-checklist", label: "Insurance Document Checklist" },
-  { href: "/commercial-insurance-claims-strategy", label: "Claims Strategy Guide" },
-  { href: "/lender-insurance-requirements", label: "Lender Insurance Requirements" },
-  { href: "/hotel-portfolio-insurance", label: "Hotel Portfolio Insurance" },
-  { href: "/gulf-coast-hotel-insurance", label: "Gulf Coast Hotel Insurance" },
-  { href: "/affordable-housing-insurance", label: "Affordable Housing Insurance" },
+export const GUIDES: DatedLink[] = [
+  { href: "/replacement-cost-value", label: "Replacement Cost Value", updated: "2026-09-27" },
+  { href: "/insurance-document-checklist", label: "Insurance Document Checklist", updated: "2026-09-27" },
+  { href: "/commercial-insurance-claims-strategy", label: "Claims Strategy Guide", updated: "2026-09-27" },
+  { href: "/lender-insurance-requirements", label: "Lender Insurance Requirements", updated: "2026-09-27" },
+  { href: "/hotel-portfolio-insurance", label: "Hotel Portfolio Insurance", updated: "2026-09-27" },
+  { href: "/gulf-coast-hotel-insurance", label: "Gulf Coast Hotel Insurance", updated: "2026-09-27" },
+  { href: "/affordable-housing-insurance", label: "Affordable Housing Insurance", updated: "2026-09-27" },
 ];

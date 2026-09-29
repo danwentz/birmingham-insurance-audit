@@ -6,6 +6,7 @@ export type Tool = { href: string; label: string; cta: string; blurb: string; ki
 
 type Program = {
   slug: string;
+  updated: string; // YYYY-MM-DD; bump when this page's copy changes (sitemap lastmod)
   category: ProgramCategory;
   shortName: string; // for nav/cards
   name: string; // H1
@@ -129,6 +130,7 @@ const COINSURANCE_CALC: Tool = {
 export const PROGRAMS: Program[] = [
   {
     slug: "multifamily-apartment-insurance",
+    updated: "2026-09-29",
     category: "program",
     shortName: "Multifamily & Apartment",
     name: "Multifamily & Apartment (Habitational) Insurance",
@@ -186,6 +188,7 @@ export const PROGRAMS: Program[] = [
   },
   {
     slug: "real-estate-portfolio-insurance",
+    updated: "2026-09-27",
     category: "program",
     shortName: "Portfolio & High-TIV",
     name: "Real Estate Portfolio & High-TIV Master Programs",
@@ -232,6 +235,7 @@ export const PROGRAMS: Program[] = [
   },
   {
     slug: "catastrophe-coastal-property-insurance",
+    updated: "2026-09-27",
     category: "program",
     shortName: "CAT / Coastal Property",
     name: "Catastrophe, Coastal & Wind/Hail Property Insurance",
@@ -278,6 +282,7 @@ export const PROGRAMS: Program[] = [
   },
   {
     slug: "builders-risk-ocip",
+    updated: "2026-09-25",
     category: "program",
     shortName: "Builders Risk / OCIP",
     name: "Builders Risk & Owner-Controlled Insurance Programs (OCIP)",
@@ -326,6 +331,7 @@ export const PROGRAMS: Program[] = [
   /* ─── Asset classes ─── */
   {
     slug: "office-building-insurance",
+    updated: "2026-09-27",
     category: "asset",
     shortName: "Office",
     name: "Office Building Insurance",
@@ -358,6 +364,7 @@ export const PROGRAMS: Program[] = [
   },
   {
     slug: "retail-shopping-center-insurance",
+    updated: "2026-09-27",
     category: "asset",
     shortName: "Retail & Shopping Centers",
     name: "Retail & Shopping Center Insurance",
@@ -390,6 +397,7 @@ export const PROGRAMS: Program[] = [
   },
   {
     slug: "industrial-warehouse-insurance",
+    updated: "2026-09-27",
     category: "asset",
     shortName: "Industrial & Warehouse",
     name: "Industrial & Warehouse Insurance",
@@ -422,6 +430,7 @@ export const PROGRAMS: Program[] = [
   },
   {
     slug: "hospitality-hotel-insurance",
+    updated: "2026-09-29",
     category: "asset",
     shortName: "Hospitality & Hotels",
     name: "Hospitality & Hotel Insurance",
@@ -466,6 +475,7 @@ export const PROGRAMS: Program[] = [
   },
   {
     slug: "student-senior-housing-insurance",
+    updated: "2026-09-25",
     category: "asset",
     shortName: "Student & Senior Housing",
     name: "Student & Senior Housing Insurance",
@@ -498,6 +508,7 @@ export const PROGRAMS: Program[] = [
   },
   {
     slug: "self-storage-insurance",
+    updated: "2026-09-27",
     category: "asset",
     shortName: "Self-Storage",
     name: "Self-Storage Facility Insurance",
@@ -550,6 +561,7 @@ export const PROGRAMS: Program[] = [
   /* ─── Advisory ─── */
   {
     slug: "real-estate-risk-management",
+    updated: "2026-09-27",
     category: "advisory",
     shortName: "Risk Management",
     name: "Real Estate Risk Management & Total Cost of Risk",
@@ -582,6 +594,7 @@ export const PROGRAMS: Program[] = [
   },
   {
     slug: "insurance-program-review",
+    updated: "2026-09-27",
     category: "advisory",
     shortName: "Program Review",
     name: "Insurance Program Review & Renewal Marketing",
