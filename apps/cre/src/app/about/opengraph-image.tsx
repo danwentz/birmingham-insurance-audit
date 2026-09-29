@@ -40,7 +40,7 @@ export default function Image() {
             About Dan Wentz
           </div>
           <div style={{ display: "flex", marginTop: 24, fontSize: 28, color: "#7a8494", fontFamily: "sans-serif" }}>
-            The CRE insurance practice of Dan Wentz, risk consultant at USI Insurance Services in Birmingham.
+            The CRE insurance practice of Dan Wentz, commercial lines risk consultant at USI Insurance Services in Birmingham.
           </div>
         </div>
         <div

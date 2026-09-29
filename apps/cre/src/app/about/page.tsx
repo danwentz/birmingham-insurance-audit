@@ -9,12 +9,12 @@ import { DOMAIN, PHONE_E164, PREMIUM_FLOOR } from "@/lib/site";
 export const metadata: Metadata = {
   title: { absolute: "About Dan Wentz | ACREInsure" },
   description:
-    "The CRE insurance practice of Dan Wentz, risk consultant at USI Insurance Services in Birmingham. Wholesale E&S background, ACRE 100 Leadership Council member.",
+    "The CRE insurance practice of Dan Wentz, commercial lines risk consultant at USI in Birmingham. Wholesale E&S background, ACRE 100 Leadership Council member.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About Dan Wentz | ACREInsure",
     description:
-      "The CRE insurance practice of Dan Wentz, risk consultant at USI Insurance Services in Birmingham.",
+      "The CRE insurance practice of Dan Wentz, commercial lines risk consultant at USI Insurance Services in Birmingham.",
     url: `${DOMAIN}/about`,
     type: "profile",
   },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Dan Wentz | ACREInsure",
     description:
-      "The CRE insurance practice of Dan Wentz, risk consultant at USI Insurance Services in Birmingham.",
+      "The CRE insurance practice of Dan Wentz, commercial lines risk consultant at USI Insurance Services in Birmingham.",
   },
 };
 
@@ -36,7 +36,7 @@ const WORK_AREAS = [
 ];
 
 const TIMELINE = [
-  { role: "Select Consultant", org: "USI Insurance Services", years: "2025 – present" },
+  { role: "Commercial Lines Risk Consultant", org: "USI Insurance Services", years: "2025 – present" },
   { role: "Vice President, Marketing", org: "CAC Group · Cobbs Allen · CAC Specialty", years: "2023 – 2025" },
   { role: "Assistant Vice President, Marketing", org: "CRC Group", years: "2014 – 2023" },
   { role: "Director of Marketing & Radio Host", org: "iHeartMedia", years: "2007 – 2014" },
@@ -48,7 +48,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Dan Wentz",
-  jobTitle: "Risk Consultant",
+  jobTitle: "Commercial Lines Risk Consultant",
   worksFor: { "@type": "Organization", name: "USI Insurance Services" },
   alumniOf: { "@type": "CollegeOrUniversity", name: "Penn State University" },
   memberOf: "ACRE 100 Leadership Council",
@@ -106,8 +106,8 @@ export default function About() {
           <div className="mx-auto max-w-6xl">
             <div className="max-w-3xl space-y-6 text-lg leading-relaxed text-slate">
               <p>
-                ACREInsure is the commercial real estate practice of Dan Wentz, a risk consultant at
-                USI Insurance Services in Birmingham. Dan works with owners, managers, and developers
+                ACREInsure is the commercial real estate practice of Dan Wentz, a commercial lines risk consultant
+                at USI Insurance Services in Birmingham. Dan works with owners, managers, and developers
                 of commercial real estate and hotels, building insurance programs for accounts with{" "}
                 {PREMIUM_FLOOR} and up in annual premium.
               </p>
