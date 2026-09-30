@@ -30,6 +30,20 @@ export function GuideDisclaimerBottom({ tone = "light" }: { tone?: Tone }) {
   );
 }
 
+// Goes at the top of any section that summarizes case law or statutes, in addition to the guide disclaimers.
+// Pass `state` for a single-state page; omit it on multi-state pages.
+export function LegalInfoDisclaimer({ asOf, state, tone = "light" }: { asOf: string; state?: string; tone?: Tone }) {
+  return (
+    <p className={`mt-4 max-w-3xl ${base} ${toneClass(tone)}`}>
+      We are insurance brokers, not attorneys. This summary of {state ? `${state} law` : "the law"} is
+      general information, not legal advice, and reading it doesn&apos;t create an attorney–client
+      relationship. Court decisions and statutes change, and how they apply depends on the facts of
+      each case. Current as of {asOf}. If you face a claim or a lawsuit, talk to{" "}
+      {state ? `a licensed ${state} attorney` : "an attorney licensed in your state"}.
+    </p>
+  );
+}
+
 export function CalculatorDisclaimer({ tone = "light" }: { tone?: Tone }) {
   return (
     <p className={`mt-4 ${base} ${toneClass(tone)}`}>

@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: t.href.endsWith("barometer") ? ("weekly" as const) : ("monthly" as const),
       priority: 0.9,
     })),
+    { url: `${DOMAIN}/guides`, lastModified: "2026-09-30", changeFrequency: "monthly", priority: 0.7 },
     ...GUIDES.map((g) => ({
       url: `${DOMAIN}${g.href}`,
       lastModified: g.updated,

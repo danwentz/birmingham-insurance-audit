@@ -5,14 +5,22 @@ import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
 import { ChevronDown, Menu as MenuIcon, Phone, X } from "lucide-react";
 import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/site";
-import type { NavGroup } from "@/lib/nav";
+import type { NavGroup, NavLink } from "@/lib/nav";
 
 export type NavMenu = {
   id: string;
   label: string;
   groups: NavGroup[]; // a single untitled group renders as a plain list
-  wide?: boolean;
+  columns?: 3 | 4; // multi-column panel; omit for a narrow single-column list
+  alignRight?: boolean; // anchor the panel to the right edge of the header container
+  footer?: NavLink; // link shown at the bottom of the panel and mobile section
 };
+
+// Static strings so Tailwind can see every class.
+const COLUMN_CLASS = {
+  3: "grid w-[44rem] grid-cols-3 gap-4",
+  4: "grid w-[48rem] grid-cols-4 gap-4",
+} as const;
 
 const TRIGGER =
   "inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wide transition-colors hover:text-champagne";
@@ -129,7 +137,8 @@ export function MainNav({ menus, contactHref }: { menus: NavMenu[]; contactHref:
           return (
             <div
               key={m.id}
-              className="relative"
+              // Right-aligned panels position against the header container (chrome.tsx), not the trigger.
+              className={m.alignRight ? undefined : "relative"}
               onPointerEnter={(e) => {
                 if (e.pointerType !== "mouse") return;
                 clearTimeout(hoverTimer.current);
@@ -159,10 +168,11 @@ export function MainNav({ menus, contactHref }: { menus: NavMenu[]; contactHref:
                 />
               </button>
               {/* pt-3 (not mt-3) keeps the hover bridge between trigger and panel unbroken */}
-              <div id={panelId} hidden={!isOpen} className="absolute left-0 top-full z-50 pt-3">
+              <div id={panelId} hidden={!isOpen} className={`absolute top-full z-50 pt-3 ${m.alignRight ? "right-0" : "left-0"}`}
+              >
                 <div
                   className={`gold-rule-top rounded-sm border border-white/10 bg-midnight p-4 shadow-2xl shadow-black/40 ${
-                    m.wide ? "grid w-[44rem] grid-cols-3 gap-4" : "w-80"
+                    m.columns ? COLUMN_CLASS[m.columns] : "w-80"
                   }`}
                 >
                   {m.groups.map((g) => (
@@ -173,6 +183,17 @@ export function MainNav({ menus, contactHref }: { menus: NavMenu[]; contactHref:
                       onNavigate={() => setOpen(null)}
                     />
                   ))}
+                  {m.footer && (
+                    <div className="col-span-full border-t border-white/10 pt-3">
+                      <Link
+                        href={m.footer.href}
+                        onClick={() => setOpen(null)}
+                        className="block px-3 py-1 text-sm font-semibold text-gold hover:underline"
+                      >
+                        {m.footer.label} →
+                      </Link>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -234,6 +255,15 @@ export function MainNav({ menus, contactHref }: { menus: NavMenu[]; contactHref:
                         onNavigate={closeAll}
                       />
                     ))}
+                    {m.footer && (
+                      <Link
+                        href={m.footer.href}
+                        onClick={closeAll}
+                        className="block px-3 py-2 text-sm font-semibold text-gold"
+                      >
+                        {m.footer.label} →
+                      </Link>
+                    )}
                   </div>
                 </div>
               );

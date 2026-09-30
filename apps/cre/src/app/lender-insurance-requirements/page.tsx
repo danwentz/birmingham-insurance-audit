@@ -189,8 +189,9 @@ export default function LenderInsuranceRequirements() {
                 <p>
                   Your lender owns a big piece of your property&apos;s risk, so your loan documents tell
                   you how to insure it. Those requirements decide your limits, your deductibles, and
-                  which carriers can write you. Miss one and you can hold up a closing, get billed for
-                  force-placed insurance, or put the loan in default.
+                  which carriers can write you. Miss one and you can hold up a closing, get billed for{" "}
+                  <Link href="/force-placed-insurance-commercial-property" className={LINK}>force-placed insurance</Link>,
+                  or put the loan in default.
                 </p>
                 <p>
                   Most lenders ask for the same core coverage. Fannie Mae and Freddie Mac are the
@@ -297,6 +298,17 @@ export default function LenderInsuranceRequirements() {
                   and our{" "}
                   <Link href="/wind-deductible-buy-down" className={LINK}>wind deductible buy-down guide</Link>{" "}
                   if the cap is more than you can carry.
+                </p>
+                <p>
+                  <strong className="font-semibold text-obsidian">Check the limit, not just the deductible.</strong>{" "}
+                  A named-storm limit sized to a PML study can fail the agency test even when the
+                  deductible is well under the cap. Our{" "}
+                  <Link href="/fannie-mae-freddie-mac-named-storm-deductible" className={LINK}>
+                    agency named storm guide
+                  </Link>{" "}
+                  walks through the rules section by section. If a renewal increase threatens your debt
+                  coverage ratio, read{" "}
+                  <Link href="/insurance-increase-dscr-covenant" className={LINK}>what to do before the DSCR test</Link>.
                 </p>
               </div>
             </div>

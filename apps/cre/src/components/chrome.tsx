@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Phone } from "lucide-react";
 import { BRAND_NAME, PHONE_DISPLAY, PHONE_HREF } from "@/lib/site";
-import { COVERAGE_GROUPS, GUIDES, TOOLS, type NavLink } from "@/lib/nav";
+import { COVERAGE_GROUPS, GUIDE_GROUPS, GUIDE_MENU_GROUPS, TOOLS, groupId, type NavLink } from "@/lib/nav";
 import { MainNav, type NavMenu } from "@/components/MainNav";
 
 function Wordmark({ className = "" }: { className?: string }) {
@@ -13,16 +13,24 @@ function Wordmark({ className = "" }: { className?: string }) {
 }
 
 const MENUS: NavMenu[] = [
-  { id: "coverage", label: "Coverage", groups: COVERAGE_GROUPS, wide: true },
+  { id: "coverage", label: "Coverage", groups: COVERAGE_GROUPS, columns: 3 },
   { id: "tools", label: "Tools", groups: [{ title: "", links: TOOLS }] },
-  { id: "guides", label: "Guides", groups: [{ title: "", links: GUIDES }] },
+  {
+    id: "guides",
+    label: "Guides",
+    groups: GUIDE_MENU_GROUPS,
+    columns: 4,
+    alignRight: true,
+    footer: { href: "/guides", label: "All guides" },
+  },
 ];
 
 // Pages without a ContactSection (e.g. /privacy) pass contactHref="/#contact".
 export function SiteHeader({ contactHref = "#contact" }: { contactHref?: string }) {
   return (
-    <header className="gold-rule-top sticky top-0 z-40 bg-obsidian px-5">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 py-4">
+    <header className="gold-rule-top sticky top-0 z-40 bg-obsidian px-5 py-4">
+      {/* relative: anchors the right-aligned Guides panel to the container edge */}
+      <div className="relative mx-auto flex max-w-6xl items-center justify-between gap-3">
         {/* contents below lg so the hamburger (order-last) lands at the far right */}
         <div className="contents lg:flex lg:items-center lg:gap-10">
           <Link href="/">
@@ -124,7 +132,13 @@ export function SiteFooter({ contactHref = "#contact" }: { contactHref?: string 
           ))}
           <div className="space-y-10">
             <FooterColumn title="Free Tools" items={TOOLS} />
-            <FooterColumn title="Guides" items={GUIDES} />
+            <FooterColumn
+              title="Guides"
+              items={[
+                ...GUIDE_GROUPS.map((g) => ({ href: `/guides#${groupId(g.title)}`, label: g.title })),
+                { href: "/guides", label: "All guides" },
+              ]}
+            />
           </div>
         </div>
       </div>
