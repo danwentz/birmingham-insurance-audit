@@ -7,8 +7,6 @@
   ],
   "scripts": {
     "build:audit": "npm run build -w insurance-audit-landing",
-    "build:cre": "npm run build -w cre-insurance-landing",
-    "dev:audit": "npm run dev -w insurance-audit-landing",
-    "dev:cre": "npm run dev -w cre-insurance-landing"
+    "dev:audit": "npm run dev -w insurance-audit-landing"
   }
 }
